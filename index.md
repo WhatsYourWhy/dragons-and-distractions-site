@@ -12,11 +12,11 @@ Where executive dysfunction becomes epic adventure.
 
 ## 🧭 Start Here
 
-- [🗺️ Meet the Monsters](monsters/index.md)
-- [⚔️ Visit the Armory & Spellbook](spellbook/index.md)
-- [📜 Read the Codex](codex/index.md)
-- [🎨 View the Artifacts](art/index.md)
-- [🧰 Site Tools & Templates](site/index.md)
+<div class="section-callout">
+Pick your quest below. Each path holds a different way to tame distractions and gather the tools you need.
+</div>
+
+{% include nav-cards.html %}
 
 ---
 
