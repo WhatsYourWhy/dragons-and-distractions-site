@@ -15,4 +15,4 @@
   - [Guiding Principles](/codex/)
 - **🎨 Art Gallery**
   - [Illustrations & Prompts](/art/)
-- **📖 README**(/README.md) • **📜 LICENSE**(/LICENSE)
+- **📖 [README](/README.md)** • **📜 [LICENSE](/LICENSE)**

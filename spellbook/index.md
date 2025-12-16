@@ -2,6 +2,10 @@
 
 Welcome to the working shelf of rituals, tools, and templates. This space gathers the counter-spells mentioned in each monster page so you can grab a ritual without rereading the whole bestiary.
 
+<div class="section-callout">
+  Want the printable versions fast? Jump to the <a href="../site/">Site Tools</a> cabinet or use the links in each ritual block below to download PDFs.
+</div>
+
 ## 🧪 Rituals at a Glance
 
 - [Single-Task Oath & 3-Item Rule](#task-hydra-rituals) — choose the head, limit the list.
