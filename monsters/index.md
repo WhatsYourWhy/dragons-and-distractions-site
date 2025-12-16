@@ -11,3 +11,11 @@ Each monster represents a real executive function challenge — named, described
 - [The Cave Bear](cave-bear.md)
 
 More monsters await...
+
+---
+
+🔗 Quick Navigation
+
+- 🧭 Return to the [Welcome Page](../index.md)
+- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
+- 📜 Visit [Site Tools & Templates](../site/index.md)

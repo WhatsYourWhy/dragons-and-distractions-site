@@ -112,4 +112,13 @@ tags:
 
 #adhd #dragons-and-distractions #temporal-shark #monster-page #obsidian
 
+---
+
+🔗 Quick Navigation
+
+- 🗺️ Back to the [Monster Index](index.md)
+- 🧭 Return to the [Welcome Page](../index.md)
+- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
+- 📜 Visit [Site Tools & Templates](../site/index.md)
+
 > “The shark is real. So is the clock. Make time visible, and you decide when to dive.”

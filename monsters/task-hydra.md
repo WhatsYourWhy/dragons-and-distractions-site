@@ -132,4 +132,13 @@ tags:
 
 #adhd #dragons-and-distractions #task-hydra #monster-page #obsidian
 
+---
+
+🔗 Quick Navigation
+
+- 🗺️ Back to the [Monster Index](index.md)
+- 🧭 Return to the [Welcome Page](../index.md)
+- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
+- 📜 Visit [Site Tools & Templates](../site/index.md)
+
 > “The Hydra cannot be slain in one swing. But one head at a time? That’s how heroes win.”

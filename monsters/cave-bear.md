@@ -115,4 +115,13 @@ tags:
 
 #adhd #dragons-and-distractions #cave-bear #monster-page #obsidian
 
+---
+
+🔗 Quick Navigation
+
+- 🗺️ Back to the [Monster Index](index.md)
+- 🧭 Return to the [Welcome Page](../index.md)
+- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
+- 📜 Visit [Site Tools & Templates](../site/index.md)
+
 > “The cave kept you safe once. Now it keeps you small. Step out—the world is waiting.”

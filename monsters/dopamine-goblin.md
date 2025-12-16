@@ -117,4 +117,13 @@ tags:
 
 #adhd #dragons-and-distractions #dopamine-goblin #monster-page #obsidian
 
+---
+
+🔗 Quick Navigation
+
+- 🗺️ Back to the [Monster Index](index.md)
+- 🧭 Return to the [Welcome Page](../index.md)
+- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
+- 📜 Visit [Site Tools & Templates](../site/index.md)
+
 > “The Goblin is clever. Be cleverer.”

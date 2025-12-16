@@ -112,4 +112,13 @@ tags:
 
 #adhd #dragons-and-distractions #slumber-troll #monster-page #obsidian
 
+---
+
+🔗 Quick Navigation
+
+- 🗺️ Back to the [Monster Index](index.md)
+- 🧭 Return to the [Welcome Page](../index.md)
+- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
+- 📜 Visit [Site Tools & Templates](../site/index.md)
+
 > “The Troll is strongest before dawn. Slay it once, and the rest of the day is yours.”
