@@ -2,6 +2,12 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Iterable
+try:
+    from fpdf import FPDF
+except ModuleNotFoundError as exc:
+    raise SystemExit(
+        "Missing dependency 'fpdf2'. Install with `pip install -r requirements.txt` before generating PDFs."
+    ) from exc
 from fpdf import FPDF
 import re
 
