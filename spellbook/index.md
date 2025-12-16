@@ -20,6 +20,8 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Pick **one** task, put all other tools away, and work until the first stump is cauterized.
 
 [Print the card in markdown.](../site/printables/single-task-oath-card.md) · [Ink-friendly PDF](../site/printables/pdf/single-task-oath-card-ink.pdf) · [Art header PDF](../site/printables/pdf/single-task-oath-card-art.pdf)
+[Print/PDF the Single-Task Oath card.](../site/printables/pdf/single-task-oath-card.pdf)
+[Print the Single-Task Oath card.](./single-task-oath.md)
 
 **3-Item Rule**  
 - Write only three critical quests for today.  
@@ -37,12 +39,15 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Lay out the first action so it’s waiting when the alarm rings.
 
 [Use the Tide Mark calendar prompt.](./tide-mark-calendar.md) · [Ink-friendly PDF](../site/printables/pdf/tide-mark-calendar-card-ink.pdf) · [Art header PDF](../site/printables/pdf/tide-mark-calendar-card-art.pdf) · [Markdown card](../site/printables/tide-mark-calendar-card.md)
+[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md) · [Print/PDF the calendar card.](../site/printables/pdf/tide-mark-calendar-card.pdf)
 
 **Buddy Buoy Template**
 - Pre-written DM/email script for start-time pings.
 - Print it or copy/paste to an ally for T-10 accountability.
 
 [Download the Buddy Ping template.](../site/printables/tide-marks-buddy-ping.md) · [Ink-friendly PDF](../site/printables/pdf/tide-marks-buddy-ping-ink.pdf) · [Art header PDF](../site/printables/pdf/tide-marks-buddy-ping-art.pdf)
+[Download the Buddy Ping template.](../site/printables/pdf/tide-marks-buddy-ping.pdf)
+[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md)
 
 **Sandbar Sprint**  
 - Do a 10-minute “first bite” the day before: open the doc, title it, jot bullets.  
@@ -64,6 +69,8 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Keep the alarm away from bed so standing is mandatory.
 
 [Grab the Wake Invocation checklist.](./wake-invocation.md) · [Ink-friendly PDF](../site/printables/pdf/wake-invocation-checklist-ink.pdf) · [Art header PDF](../site/printables/pdf/wake-invocation-checklist-art.pdf)
+[Grab the Wake Invocation checklist.](./wake-invocation.md) · [Print/PDF bedside card.](../site/printables/pdf/wake-invocation-checklist.pdf)
+[Grab the Wake Invocation checklist.](./wake-invocation.md)
 
 **Beacon of Dawn**  
 - Light on, curtains open, play one hype song.  
