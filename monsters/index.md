@@ -16,6 +16,8 @@ More monsters await...
 
 🔗 Quick Navigation
 
-- 🧭 Return to the [Welcome Page](../index.md)
-- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+<div class="section-callout">
+Need a different tool or want to jump back to the guild hall? Choose a shortcut below.
+</div>
+
+{% include nav-cards.html %}

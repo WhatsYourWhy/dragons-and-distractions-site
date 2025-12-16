@@ -19,8 +19,10 @@ More tools and printables will be added as the Guild forges them.
 
 🔗 Quick Navigation
 
-- 🗺️ Browse the [Monster Index](../monsters/index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
+<div class="section-callout">
+Ready to swap zones? Use the shortcuts below to move around the guild.
+</div>
+
+{% include nav-cards.html %}
 
 > “A good tool is a spell you can hold.”
