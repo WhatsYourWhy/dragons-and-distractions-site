@@ -3,7 +3,7 @@
 A printable pledge to keep the Hydra from sprouting new heads. Use it as a desk tent, sticky note, or phone lock-screen during deep work.
 
 **Download:** [Print-friendly Single-Task Oath card](../site/printables/single-task-oath-card.md) (PDF-ready layout)
-**Download:** [Print-friendly Single-Task Oath card](../site/printables/pdf/single-task-oath-card.pdf) (PDF-ready layout)
+**Download:** [Print-friendly Single-Task Oath card (ink)](../site/printables/pdf/single-task-oath-card-ink.pdf) or [Single-Task Oath with art](../site/printables/pdf/single-task-oath-card-art.pdf)
 
 ## ✍️ Oath Text (copy or print)
 
