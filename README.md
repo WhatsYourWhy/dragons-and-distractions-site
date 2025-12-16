@@ -35,4 +35,43 @@ If you'd like to collaborate, build with it, or bring it into a product or offer
 > Respect the sword. Share the scroll.
 
 See LICENSE file for full details.
-# dragons-and-distractions-site
+
+## 🧾 Regenerating ritual printables
+
+If you update any ritual text, keep the downloadable PDFs in sync:
+
+1. Install the PDF dependency (Python 3.9+):
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Regenerate all ritual PDFs (ink-friendly + art headers):
+   ```bash
+   python scripts/generate_printable_pdfs.py
+   ```
+3. The files land in `site/printables/pdf/` and are linked from the Spellbook and Site Tools index.
+   - The PDFs are **gitignored** to keep the repo text-only. Regenerate them locally (or in CI before publishing) so the links stay live on your built site.
+
+Tip: run `python scripts/check_printable_links.py` after generating to verify every referenced PDF exists before pushing to Pages.
+
+## 🚀 Publishing to GitHub Pages
+
+This repo ships with a ready-to-go GitHub Actions workflow that builds the site and deploys it to Pages (including regenerated PDFs):
+
+1. Enable **GitHub Pages** in the repo settings and choose **GitHub Actions** as the source.
+2. Push to `main` (or `work`); the workflow at `.github/workflows/pages.yml` will:
+   - Install Python and `fpdf2`
+   - Regenerate the printable PDFs
+   - Run the printable link checker
+   - Build the site with GitHub's Jekyll runner into `_site/`
+   - Upload `_site/` as the static site artifact
+3. The `deploy` job publishes that artifact to the `github-pages` environment. Once it completes, the job output lists your live URL.
+
+### Local preview
+
+Before pushing, you can preview the site locally as a static bundle (requires [Ruby + Bundler + Jekyll](https://jekyllrb.com/docs/)):
+
+```bash
+python scripts/generate_printable_pdfs.py
+bundle exec jekyll serve --livereload --trace
+```
+Then open http://localhost:4000 in your browser; Jekyll will render the markdown pages and copy the regenerated PDFs into the `_site/` output.
