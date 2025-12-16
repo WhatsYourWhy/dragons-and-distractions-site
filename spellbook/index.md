@@ -2,6 +2,10 @@
 
 Welcome to the working shelf of rituals, tools, and templates. This space gathers the counter-spells mentioned in each monster page so you can grab a ritual without rereading the whole bestiary.
 
+<div class="section-callout">
+  Want the printable versions fast? Jump to the <a href="../site/">Site Tools</a> cabinet or use the links in each ritual block below to download PDFs.
+</div>
+
 ## 🧪 Rituals at a Glance
 
 - [Single-Task Oath & 3-Item Rule](#task-hydra-rituals) — choose the head, limit the list.
@@ -19,8 +23,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Light a candle or lamp as your *Torch Ritual* to mark focus.
 - Pick **one** task, put all other tools away, and work until the first stump is cauterized.
 
-[Print the card in markdown.](../site/printables/single-task-oath-card.md) · [Ink-friendly PDF](../site/printables/pdf/single-task-oath-card-ink.pdf) · [Art header PDF](../site/printables/pdf/single-task-oath-card-art.pdf)
-[Print the Single-Task Oath card.](./single-task-oath.md)
+[View the spell write-up.](./single-task-oath.md) · [Printable card](../site/printables/single-task-oath-card.md) · [Ink-friendly PDF](../site/printables/pdf/single-task-oath-card-ink.pdf) · [Art header PDF](../site/printables/pdf/single-task-oath-card-art.pdf)
 
 **3-Item Rule**  
 - Write only three critical quests for today.  
@@ -44,7 +47,6 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Print it or copy/paste to an ally for T-10 accountability.
 
 [Download the Buddy Ping template.](../site/printables/tide-marks-buddy-ping.md) · [Ink-friendly PDF](../site/printables/pdf/tide-marks-buddy-ping-ink.pdf) · [Art header PDF](../site/printables/pdf/tide-marks-buddy-ping-art.pdf)
-[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md)
 
 **Sandbar Sprint**  
 - Do a 10-minute “first bite” the day before: open the doc, title it, jot bullets.  
@@ -66,7 +68,6 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Keep the alarm away from bed so standing is mandatory.
 
 [Grab the Wake Invocation checklist.](./wake-invocation.md) · [Ink-friendly PDF](../site/printables/pdf/wake-invocation-checklist-ink.pdf) · [Art header PDF](../site/printables/pdf/wake-invocation-checklist-art.pdf)
-[Grab the Wake Invocation checklist.](./wake-invocation.md)
 
 **Beacon of Dawn**  
 - Light on, curtains open, play one hype song.  
@@ -118,8 +119,10 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 
 🔗 Quick Navigation
 
-- 🗺️ Browse the [Monster Index](../monsters/index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+<div class="section-callout">
+Prefer a different path? These shortcuts take you straight to the other guild halls.
+</div>
+
+{% include nav-cards.html %}
 
 > “Every hero needs a spellbook. Yours can start with one good ritual.”
