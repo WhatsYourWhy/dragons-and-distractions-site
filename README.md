@@ -69,14 +69,16 @@ This repo ships with a ready-to-go GitHub Actions workflow that builds the site 
 
 ### Local preview
 
-Before pushing, you can preview the site locally as a static bundle (requires [Ruby + Bundler + Jekyll](https://jekyllrb.com/docs/)):
+Preview with Jekyll (Ruby + Bundler + Jekyll required):
 
 ```bash
 python scripts/generate_printable_pdfs.py
 bundle exec jekyll serve --livereload --trace
 ```
+
 Then open http://localhost:4000 in your browser; Jekyll will render the markdown pages and copy the regenerated PDFs into the `_site/` output.
-Before pushing, you can preview the site locally as a static bundle:
+
+For a lightweight static preview without Jekyll:
 
 ```bash
 python scripts/generate_printable_pdfs.py

@@ -7,15 +7,12 @@
   - [The Dopamine Goblin](/monsters/dopamine-goblin)
   - [The Cave Bear](/monsters/cave-bear)
   - [The Temporal Shark](/monsters/temporal-shark)
-- **🛠️ Artifacts & Rituals**  
-  – [All Tools](/tools/index)
-- **📜 The Codex**  
-  – [Origin & Philosophy](/codex/origin)  
-  – [Tone & Voice](/codex/tone)
-- **✨ Spellbook**  
-  – [Command Spells](/spellbook/index)
-- **🎨 Art Gallery**  
-  – [Illustrations & Prompts](/art/index)
-- **🖨️ Printables**  
-  – [Ritual Sheets & PDFs](/site/index)
+- **⚔️ Armory & Spellbook**
+  - [Rituals & Artifacts](/spellbook/)
+- **🧰 Site Tools & Printables**
+  - [Printable Cards & Templates](/site/)
+- **📜 The Codex**
+  - [Guiding Principles](/codex/)
+- **🎨 Art Gallery**
+  - [Illustrations & Prompts](/art/)
 - **📖 README**(/README.md) • **📜 LICENSE**(/LICENSE)
