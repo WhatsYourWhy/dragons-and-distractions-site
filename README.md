@@ -62,11 +62,20 @@ This repo ships with a ready-to-go GitHub Actions workflow that builds the site 
    - Install Python and `fpdf2`
    - Regenerate the printable PDFs
    - Run the printable link checker
+   - Build the site with GitHub's Jekyll runner into `_site/`
+   - Upload `_site/` as the static site artifact
    - Upload the entire repo (including generated PDFs) as the static site artifact
 3. The `deploy` job publishes that artifact to the `github-pages` environment. Once it completes, the job output lists your live URL.
 
 ### Local preview
 
+Before pushing, you can preview the site locally as a static bundle (requires [Ruby + Bundler + Jekyll](https://jekyllrb.com/docs/)):
+
+```bash
+python scripts/generate_printable_pdfs.py
+bundle exec jekyll serve --livereload --trace
+```
+Then open http://localhost:4000 in your browser; Jekyll will render the markdown pages and copy the regenerated PDFs into the `_site/` output.
 Before pushing, you can preview the site locally as a static bundle:
 
 ```bash
