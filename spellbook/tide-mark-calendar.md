@@ -3,7 +3,7 @@
 A compact guide and printable prompt to make start times real before the Temporal Shark circles.
 
 **Download:** [Tide Mark calendar card](../site/printables/tide-mark-calendar-card.md) and [Buddy Ping template](../site/printables/tide-marks-buddy-ping.md) (PDF-ready, ink-friendly)
-**Download:** [Tide Mark calendar card](../site/printables/pdf/tide-mark-calendar-card.pdf) and [Buddy Ping template](../site/printables/pdf/tide-marks-buddy-ping.pdf) (PDF-ready, ink-friendly)
+**Download:** [Tide Mark calendar card (ink)](../site/printables/pdf/tide-mark-calendar-card-ink.pdf), [Tide Mark calendar card (art)](../site/printables/pdf/tide-mark-calendar-card-art.pdf), and [Buddy Ping template (ink)](../site/printables/pdf/tide-marks-buddy-ping-ink.pdf)
 
 ## 🗺️ Setup Steps
 

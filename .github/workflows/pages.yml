@@ -37,27 +37,24 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: jekyll
 
       - name: Build site with Jekyll
         uses: actions/jekyll-build-pages@v1
-        with:
-          source: .
-          destination: ./_site
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
-          path: .
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
