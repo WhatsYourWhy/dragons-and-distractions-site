@@ -1,0 +1,21 @@
+title: "Dragons & Distractions"
+description: "ADHD-friendly rituals, monsters, and tools"
+markdown: kramdown
+theme: minima
+
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+titles_from_headings:
+  strip_title: true
+
+optional_front_matter:
+  remove_originals: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page

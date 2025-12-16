@@ -1,3 +1,8 @@
+---
+layout: home
+title: "Dragons & Distractions"
+---
+
 # 🐉 Welcome, Adventurer
 
 **This is Dragons & Distractions.**  
