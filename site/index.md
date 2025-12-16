@@ -9,6 +9,9 @@ This folder holds printable aids, onboarding scrolls, and any shared checklists 
 - [Tide Mark calendar card](./printables/tide-mark-calendar-card.md) — ink-friendly setup for start times and alarms.
 - [Buddy Ping template](./printables/tide-marks-buddy-ping.md) — script for T-10 accountability pings.
 - [Wake Invocation bedside card](./printables/wake-invocation-checklist.md) — printable checklist to exit the Slumber Troll’s realm.
+- [Single-Task Oath card](../spellbook/single-task-oath.md) — printable pledge for the Task Hydra.
+- [Tide Mark calendar prompt](../spellbook/tide-mark-calendar.md) — quick setup for start times and alarms.
+- [Wake Invocation checklist](../spellbook/wake-invocation.md) — bedside ritual to exit the Slumber Troll’s realm.
 
 More tools and printables will be added as the Guild forges them.
 

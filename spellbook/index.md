@@ -20,6 +20,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Pick **one** task, put all other tools away, and work until the first stump is cauterized.
 
 [Print/PDF the Single-Task Oath card.](../site/printables/single-task-oath-card.md)
+[Print the Single-Task Oath card.](./single-task-oath.md)
 
 **3-Item Rule**  
 - Write only three critical quests for today.  
@@ -43,6 +44,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Print it or copy/paste to an ally for T-10 accountability.
 
 [Download the Buddy Ping template.](../site/printables/tide-marks-buddy-ping.md)
+[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md)
 
 **Sandbar Sprint**  
 - Do a 10-minute “first bite” the day before: open the doc, title it, jot bullets.  
@@ -64,6 +66,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Keep the alarm away from bed so standing is mandatory.
 
 [Grab the Wake Invocation checklist.](./wake-invocation.md) · [Print/PDF bedside card.](../site/printables/wake-invocation-checklist.md)
+[Grab the Wake Invocation checklist.](./wake-invocation.md)
 
 **Beacon of Dawn**  
 - Light on, curtains open, play one hype song.  
