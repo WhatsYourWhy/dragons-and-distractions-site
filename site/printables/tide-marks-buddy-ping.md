@@ -2,6 +2,8 @@
 
 A ready-to-send script for accountability pings. Copy/paste into DM/email or print and keep at your desk to handwrite.
 
+**Downloads:** [Ink-friendly PDF](./pdf/tide-marks-buddy-ping-ink.pdf) · [Art header PDF](./pdf/tide-marks-buddy-ping-art.pdf)
+
 **How to use**
 - Send the **Pre-Start** message when you set your start time.
 - Ask for a **T-10 ping** (or T-15) and promise a short **Post-Battle** note.

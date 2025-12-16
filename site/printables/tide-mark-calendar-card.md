@@ -2,6 +2,8 @@
 
 Minimal, ink-friendly worksheet to schedule start times before the Shark circles. Print and fill by hand or save as a one-page PDF.
 
+**Downloads:** [Ink-friendly PDF](./pdf/tide-mark-calendar-card-ink.pdf) · [Art header PDF](./pdf/tide-mark-calendar-card-art.pdf)
+
 **How to use**
 - Print one for each project or week.
 - Post it near your screen; set alarms as you write the times.

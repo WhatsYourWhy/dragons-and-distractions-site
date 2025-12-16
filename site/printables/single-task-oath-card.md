@@ -2,6 +2,8 @@
 
 Simple, high-contrast layout for printing or saving as PDF. Keep it beside your desk to resist Hydra head-growth.
 
+**Downloads:** [Ink-friendly PDF](./pdf/single-task-oath-card-ink.pdf) · [Art header PDF](./pdf/single-task-oath-card-art.pdf)
+
 **How to use**
 - Print one per page or two per page for wallet size. 
 - Fold or trim at the line, then place it where you start work.

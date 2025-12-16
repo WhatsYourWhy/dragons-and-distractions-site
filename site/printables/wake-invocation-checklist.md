@@ -2,6 +2,8 @@
 
 One-page checklist to outrun the Slumber Troll. Built for black-and-white printing or quick PDF save on your phone.
 
+**Downloads:** [Ink-friendly PDF](./pdf/wake-invocation-checklist-ink.pdf) · [Art header PDF](./pdf/wake-invocation-checklist-art.pdf)
+
 **How to use**
 - Place beside the alarm/phone; check items with a pen or tap when using PDF.
 - Read the command phrase first, then move before your brain negotiates.
