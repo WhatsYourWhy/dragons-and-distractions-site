@@ -11,7 +11,8 @@ As new art is added, this gallery will include download-friendly files and guida
 
 🔗 Quick Navigation
 
-- 🗺️ Browse the [Monster Index](../monsters/index.md)
-- ⚔️ Visit the [Armory & Spellbook](../spellbook/index.md)
-- 🧰 Use [Site Tools & Templates](../site/index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
+<div class="section-callout">
+Hop to another hall while the gallery fills up.
+</div>
+
+{% include nav-cards.html %}

@@ -118,8 +118,10 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 
 🔗 Quick Navigation
 
-- 🗺️ Browse the [Monster Index](../monsters/index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+<div class="section-callout">
+Prefer a different path? These shortcuts take you straight to the other guild halls.
+</div>
+
+{% include nav-cards.html %}
 
 > “Every hero needs a spellbook. Yours can start with one good ritual.”

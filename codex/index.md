@@ -12,7 +12,8 @@ While the full codex is being transcribed, you can still explore the creatures a
 
 🔗 Quick Navigation
 
-- 🗺️ Browse the [Monster Index](../monsters/index.md)
-- ⚔️ Visit the [Armory & Spellbook](../spellbook/index.md)
-- 🧰 Use [Site Tools & Templates](../site/index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
+<div class="section-callout">
+Jump to the other realms whenever you’re ready to read, print, or fight.
+</div>
+
+{% include nav-cards.html %}
