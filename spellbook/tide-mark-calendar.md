@@ -2,6 +2,8 @@
 
 A compact guide and printable prompt to make start times real before the Temporal Shark circles.
 
+**Download:** [Tide Mark calendar card](../site/printables/tide-mark-calendar-card.md) and [Buddy Ping template](../site/printables/tide-marks-buddy-ping.md) (PDF-ready, ink-friendly)
+
 ## 🗺️ Setup Steps
 
 1. Choose tomorrow’s three start times and create **calendar events** named with verbs (e.g., “Open slides,” “Draft email”).
