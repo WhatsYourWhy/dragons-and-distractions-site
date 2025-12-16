@@ -52,3 +52,26 @@ If you update any ritual text, keep the downloadable PDFs in sync:
    - The PDFs are **gitignored** to keep the repo text-only. Regenerate them locally (or in CI before publishing) so the links stay live on your built site.
 
 Tip: run `python scripts/check_printable_links.py` after generating to verify every referenced PDF exists before pushing to Pages.
+
+## 🚀 Publishing to GitHub Pages
+
+This repo ships with a ready-to-go GitHub Actions workflow that builds the site and deploys it to Pages (including regenerated PDFs):
+
+1. Enable **GitHub Pages** in the repo settings and choose **GitHub Actions** as the source.
+2. Push to `main` (or `work`); the workflow at `.github/workflows/pages.yml` will:
+   - Install Python and `fpdf2`
+   - Regenerate the printable PDFs
+   - Run the printable link checker
+   - Upload the entire repo (including generated PDFs) as the static site artifact
+3. The `deploy` job publishes that artifact to the `github-pages` environment. Once it completes, the job output lists your live URL.
+
+### Local preview
+
+Before pushing, you can preview the site locally as a static bundle:
+
+```bash
+python scripts/generate_printable_pdfs.py
+python -m http.server 4000
+```
+
+Then open http://localhost:4000 in your browser; the markdown files and PDFs will serve as static files.
