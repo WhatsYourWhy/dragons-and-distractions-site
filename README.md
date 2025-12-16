@@ -35,4 +35,20 @@ If you'd like to collaborate, build with it, or bring it into a product or offer
 > Respect the sword. Share the scroll.
 
 See LICENSE file for full details.
-# dragons-and-distractions-site
+
+## 🧾 Regenerating ritual printables
+
+If you update any ritual text, keep the downloadable PDFs in sync:
+
+1. Install the PDF dependency (Python 3.9+):
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Regenerate all ritual PDFs (ink-friendly + art headers):
+   ```bash
+   python scripts/generate_printable_pdfs.py
+   ```
+3. The files land in `site/printables/pdf/` and are linked from the Spellbook and Site Tools index.
+   - The PDFs are **gitignored** to keep the repo text-only. Regenerate them locally (or in CI before publishing) so the links stay live on your built site.
+
+Tip: run `python scripts/check_printable_links.py` after generating to verify every referenced PDF exists before pushing to Pages.
