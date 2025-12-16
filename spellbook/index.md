@@ -14,10 +14,12 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 
 ## 🐉 Task Hydra Rituals
 
-**Single-Task Oath**  
-- Whisper: “I do not grow new heads.”  
-- Light a candle or lamp as your *Torch Ritual* to mark focus.  
+**Single-Task Oath**
+- Whisper: “I do not grow new heads.”
+- Light a candle or lamp as your *Torch Ritual* to mark focus.
 - Pick **one** task, put all other tools away, and work until the first stump is cauterized.
+
+[Print the Single-Task Oath card.](./single-task-oath.md)
 
 **3-Item Rule**  
 - Write only three critical quests for today.  
@@ -29,10 +31,12 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 
 ## 🦈 Temporal Shark Rituals
 
-**Tide Mark Ritual**  
-- Place start times on your calendar as real events.  
-- Set two alarms (T-60, T-15) labeled with verbs: “Open slides,” “Email draft.”  
+**Tide Mark Ritual**
+- Place start times on your calendar as real events.
+- Set two alarms (T-60, T-15) labeled with verbs: “Open slides,” “Email draft.”
 - Lay out the first action so it’s waiting when the alarm rings.
+
+[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md)
 
 **Sandbar Sprint**  
 - Do a 10-minute “first bite” the day before: open the doc, title it, jot bullets.  
@@ -48,10 +52,12 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 
 ## 🐲 Slumber Troll Rituals
 
-**Wake Invocation**  
-- Speak your command phrase (“Arise, motherfucker.”).  
-- Count 3-2-1 and move before your brain negotiates.  
+**Wake Invocation**
+- Speak your command phrase (“Arise, motherfucker.”).
+- Count 3-2-1 and move before your brain negotiates.
 - Keep the alarm away from bed so standing is mandatory.
+
+[Grab the Wake Invocation checklist.](./wake-invocation.md)
 
 **Beacon of Dawn**  
 - Light on, curtains open, play one hype song.  
