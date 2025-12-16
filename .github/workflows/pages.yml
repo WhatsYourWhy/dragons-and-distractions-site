@@ -44,12 +44,12 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: .
-          destination: ./_site
+          destination: _site
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: _site
 
   deploy:
     environment:
