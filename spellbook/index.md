@@ -19,7 +19,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Light a candle or lamp as your *Torch Ritual* to mark focus.
 - Pick **one** task, put all other tools away, and work until the first stump is cauterized.
 
-[Print/PDF the Single-Task Oath card.](../site/printables/single-task-oath-card.md)
+[Print/PDF the Single-Task Oath card.](../site/printables/pdf/single-task-oath-card.pdf)
 [Print the Single-Task Oath card.](./single-task-oath.md)
 
 **3-Item Rule**  
@@ -37,13 +37,13 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Set two alarms (T-60, T-15) labeled with verbs: “Open slides,” “Email draft.”
 - Lay out the first action so it’s waiting when the alarm rings.
 
-[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md) · [Print/PDF the calendar card.](../site/printables/tide-mark-calendar-card.md)
+[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md) · [Print/PDF the calendar card.](../site/printables/pdf/tide-mark-calendar-card.pdf)
 
 **Buddy Buoy Template**
 - Pre-written DM/email script for start-time pings.
 - Print it or copy/paste to an ally for T-10 accountability.
 
-[Download the Buddy Ping template.](../site/printables/tide-marks-buddy-ping.md)
+[Download the Buddy Ping template.](../site/printables/pdf/tide-marks-buddy-ping.pdf)
 [Use the Tide Mark calendar prompt.](./tide-mark-calendar.md)
 
 **Sandbar Sprint**  
@@ -65,7 +65,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Count 3-2-1 and move before your brain negotiates.
 - Keep the alarm away from bed so standing is mandatory.
 
-[Grab the Wake Invocation checklist.](./wake-invocation.md) · [Print/PDF bedside card.](../site/printables/wake-invocation-checklist.md)
+[Grab the Wake Invocation checklist.](./wake-invocation.md) · [Print/PDF bedside card.](../site/printables/pdf/wake-invocation-checklist.pdf)
 [Grab the Wake Invocation checklist.](./wake-invocation.md)
 
 **Beacon of Dawn**  
