@@ -85,3 +85,29 @@ def test_check_broken_pdf_links_flags_missing_pdf(monkeypatch, tmp_path):
         "site/printables/missing.md:",
         "  • site/printables/pdf/missing.pdf",
     ]
+
+
+def test_check_broken_pdf_links_flags_links_outside_repo(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    external_md = root / "site" / "printables" / "nested" / "deep" / "external.md"
+    external_md.parent.mkdir(parents=True, exist_ok=True)
+
+    absolute_pdf = Path("/absolute/outside.pdf")
+    parent_traversing_pdf = root.parent / "outside.pdf"
+    external_md.write_text(
+        "\n".join(
+            [
+                f"[absolute]({absolute_pdf})",
+                "[parent](../../../../../outside.pdf)",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.check_broken_pdf_links([external_md])
+
+    assert errors == [
+        "site/printables/nested/deep/external.md:",
+        f"  • {absolute_pdf} (outside repo)",
+        f"  • {parent_traversing_pdf} (outside repo)",
+    ]
