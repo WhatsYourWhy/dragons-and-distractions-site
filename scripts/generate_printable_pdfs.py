@@ -44,12 +44,14 @@ NAV_MARKER = "🔗 Quick Navigation"
 def cleaned_lines(path: Path) -> Iterable[str]:
     nav_seen = False
     for raw in path.read_text(encoding="utf-8").splitlines():
-        if raw.strip().startswith(NAV_MARKER):
+        stripped = raw.strip()
+        nav_heading = stripped.lstrip("#").strip()
+        if stripped.startswith(NAV_MARKER) or nav_heading.startswith(NAV_MARKER):
             nav_seen = True
             continue
         if nav_seen:
             continue
-        line = raw.strip()
+        line = stripped
         if not line:
             yield ""
             continue
