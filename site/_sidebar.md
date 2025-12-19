@@ -9,8 +9,8 @@
   - [The Temporal Shark](/monsters/temporal-shark)
 - **⚔️ Armory & Spellbook**
   - [Rituals & Artifacts](/spellbook/)
-- **🧰 Site Tools & Printables**
-  - [Printable Cards & Templates](/site/)
+- **🧰 Site Tools & Templates**
+  - [Site Tools & Templates](/site/)
 - **📜 The Codex**
   - [Guiding Principles](/codex/)
 - **🎨 Art Gallery**
