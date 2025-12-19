@@ -8,7 +8,6 @@ except ModuleNotFoundError as exc:
     raise SystemExit(
         "Missing dependency 'fpdf2'. Install with `pip install -r requirements.txt` before generating PDFs."
     ) from exc
-from fpdf import FPDF
 import re
 
 ROOT = Path(__file__).resolve().parent.parent
