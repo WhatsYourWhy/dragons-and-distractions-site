@@ -38,14 +38,18 @@ This version is:
 
 ```
 dragons-and-distractions-site/
-├── index.md               ← Homepage (summoned)
-├── monsters/              ← Monster files (need full pages)
-├── tools/                 ← Artifacts, rituals, etc.
-├── codex/                 ← Tone, origin, philosophy
-├── spellbook/             ← Command phrases, neuro-spells
-├── art/                   ← Future art prompts or gallery
-├── site/                  ← Public printables, onboarding
-├── README.md + LICENSE   ← Already live
+├── index.md                ← Homepage (summoned)
+├── monsters/               ← Monster files (need full pages)
+├── codex/                  ← Tone, origin, philosophy
+├── spellbook/              ← Command phrases, neuro-spells
+├── art/                    ← Gallery and prompt references
+├── assets/                 ← Supporting images and downloads
+├── site/                   ← Public printables, onboarding
+│   └── printables/pdf/     ← Exported PDFs
+├── scripts/                ← Helper scripts and automations
+├── tests/                  ← Checks and fixtures
+├── _includes/              ← Shared layout snippets
+├── README.md + LICENSE + _config.yml
 ```
 
 ---
