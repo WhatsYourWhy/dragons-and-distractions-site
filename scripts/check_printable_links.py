@@ -97,16 +97,18 @@ def ensure_pdf_directory_exists(pdf_dir: Path) -> list[str]:
 
 
 def check_required_links(check: LinkCheck) -> list[str]:
-    if not check.path.exists():
-        return [f"File not found: {check.path}"]
+    resolved_path = check.path if check.path.is_absolute() else ROOT / check.path
 
-    content = check.path.read_text(encoding="utf-8")
+    if not resolved_path.exists():
+        return [f"File not found: {resolved_path}"]
+
+    content = resolved_path.read_text(encoding="utf-8")
     links = set(find_md_links(content))
 
     errors: list[str] = []
     for required in check.required_links:
         if required not in links:
-            errors.append(f"{check.path}: missing link to {required}")
+            errors.append(f"{resolved_path}: missing link to {required}")
 
     return errors
 
