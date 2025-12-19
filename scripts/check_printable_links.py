@@ -10,9 +10,7 @@ from typing import Iterable
 
 ROOT = Path(__file__).resolve().parent.parent
 PDF_DIR = ROOT / "site" / "printables" / "pdf"
-
-# Matches any Markdown link that targets a PDF under site/printables/pdf
-PDF_PATTERN = re.compile(r"\(([^)]+site/printables/pdf/[^)]+\.pdf)\)")
+PRINTABLE_PDF_PARTS = ("site", "printables", "pdf")
 
 
 @dataclass
@@ -69,10 +67,20 @@ CHECKS: list[LinkCheck] = [
 def find_pdf_links(path: Path) -> list[Path]:
     links: list[Path] = []
     text = path.read_text(encoding="utf-8", errors="ignore")
-    for match in PDF_PATTERN.finditer(text):
-        link = match.group(1)
+    for link in find_md_links(text):
+        if not link.lower().endswith(".pdf"):
+            continue
+
         target = (path.parent / link).resolve()
-        links.append(target)
+        try:
+            rel_target = target.relative_to(ROOT)
+        except ValueError:
+            # Outside the repository; it will be flagged later as broken.
+            links.append(target)
+            continue
+
+        if rel_target.parts[:3] == PRINTABLE_PDF_PARTS:
+            links.append(target)
     return links
 
 
