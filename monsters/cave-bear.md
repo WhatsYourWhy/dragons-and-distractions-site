@@ -17,6 +17,23 @@ tags:
   </div>
 </div>
 
+<div class="battle-card">
+  <div class="battle-card__eyebrow">Battle Card</div>
+  <ul class="battle-card__list">
+    <li><strong>Triggers:</strong> Doomscrolling dens, “I’ll get up later” loops, comfort that turns into isolation.</li>
+    <li><strong>First counter-move:</strong> Light on, feet on floor, and a single text to your rope-holder.</li>
+    <li><strong>Printable:</strong> <a href="../site/printables/pdf/tide-marks-buddy-ping-ink.pdf">Buddy Ping template (ink PDF)</a></li>
+  </ul>
+</div>
+
+<div class="monster-mini-toc" aria-label="On this page">
+  <span class="monster-mini-toc__label">Jump to</span>
+  <a href="#lore">Lore</a>
+  <a href="#weaknesses">Weaknesses</a>
+  <a href="#rituals">Rituals</a>
+  <a href="#tools">Tools</a>
+</div>
+
 🏰 I. Bestiary Entry
 
 > The Cave Bear is the ancient beast of isolation and retreat.
@@ -27,7 +44,7 @@ tags:
 > It hoards your energy for a threat that never comes, until your world shrinks to the glow of a screen.
 > Heroes are not made in caves—but they are forged by leaving them.
 
-🔎 II. Monster Ecology (Lore and Sources)
+## 🔎 Monster Ecology (Lore and Sources) {#lore}
 
 ✅ Folklore bears = strength + hibernation → here, strength turned inward.
 ✅ ADHD inertia → difficulty re-engaging after rest; comfort becomes trap.
@@ -51,7 +68,7 @@ tags:
 - Cancelling plans even when you miss people.
 - Wearing the same “cave clothes” for days.
 
-🗝️ V. The Cave Bear’s Weaknesses
+## 🗝️ The Cave Bear’s Weaknesses {#weaknesses}
 
 ✅ Light & sound → crack the cave’s darkness.
 ✅ Body-first activation → move before you plan.
@@ -70,7 +87,7 @@ tags:
 - Text a friend: “Pull me out in 10?”
 - Set a timer; when it rings, reply with a selfie outside the blankets.
 
-🪄 VI. Rituals and Counter-Spells
+## 🪄 Rituals and Counter-Spells {#rituals}
 
 ⭐ **Threshold Spell:**
 > “Step to the mouth of the cave.”
@@ -87,7 +104,7 @@ tags:
 - If you rest, set a timer (20–90 minutes).
 - Name the wake-up action before you lie down.
 
-🛠️ VII. Artifacts and Weapons
+## 🛠️ Artifacts and Weapons {#tools}
 
 - Lantern of Dawn → sunrise alarm, bright lamp, open blinds.
 - Warm Cloak of Action → hoodie you only wear once you’re up.

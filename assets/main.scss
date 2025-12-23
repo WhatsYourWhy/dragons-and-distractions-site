@@ -401,3 +401,88 @@
 .monster-hero__links a:focus {
   text-decoration: underline;
 }
+
+.battle-card {
+  margin: 1.25rem 0;
+  padding: 1.05rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f4;
+  background: linear-gradient(135deg, #ffffff, #f5f8ff);
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.08);
+}
+
+.battle-card__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #10223f;
+  font-size: 0.95rem;
+}
+
+.battle-card__eyebrow::before {
+  content: "⚔️";
+  font-size: 1rem;
+}
+
+.battle-card__list {
+  margin: 0.45rem 0 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.3rem;
+  color: #2d3a55;
+  line-height: 1.55;
+}
+
+.battle-card__list strong {
+  color: #0f172a;
+}
+
+.monster-mini-toc {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.35rem 0 1.25rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f4;
+  background: #f7f9ff;
+  box-shadow: 0 8px 16px rgba(17, 24, 39, 0.06);
+}
+
+.monster-mini-toc__label {
+  font-weight: 750;
+  color: #1a2b4f;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+}
+
+.monster-mini-toc a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #2f51c6;
+  font-weight: 650;
+  background: #ffffff;
+  border: 1px solid #e2e8f4;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.monster-mini-toc a:hover,
+.monster-mini-toc a:focus {
+  transform: translateY(-1px);
+  border-color: #c3cff8;
+  box-shadow: 0 8px 16px rgba(17, 24, 39, 0.12);
+  outline: none;
+}
+
+h2[id] {
+  scroll-margin-top: 90px;
+}
