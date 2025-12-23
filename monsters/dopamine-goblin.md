@@ -9,6 +9,14 @@ tags:
   - obsidian
 ---
 
+<div class="monster-hero">
+  <img src="../DopamineGoblin.png" alt="Illustration of the Dopamine Goblin clutching shiny objects">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Dopamine Goblin Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="../DopamineGoblin.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+  </div>
+</div>
+
 🏰 I. Bestiary Entry
 
 > The Dopamine Goblin is small but mighty.

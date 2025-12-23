@@ -91,4 +91,10 @@ More monsters await...
 Need a different tool or want to jump back to the guild hall? Choose a shortcut below.
 </div>
 
+- 🌙 [The Slumber Troll](slumber-troll.md)
+- 🐲 [The Task Hydra](task-hydra.md)
+- 🧝‍♂️ [The Dopamine Goblin](dopamine-goblin.md)
+- 🦈 [The Temporal Shark](temporal-shark.md)
+- 🐻 [The Cave Bear](cave-bear.md)
+
 {% include nav-cards.html %}

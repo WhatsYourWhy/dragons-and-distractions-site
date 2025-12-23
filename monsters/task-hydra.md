@@ -9,6 +9,14 @@ tags:
   - obsidian
 ---
 
+<div class="monster-hero">
+  <img src="../TaskHydra.png" alt="Illustration of the Task Hydra with many heads symbolizing overwhelming tasks">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Task Hydra Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="../TaskHydra.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+  </div>
+</div>
+
 🏰 I. Bestiary Entry
 
 > The Task Hydra is the many-headed beast of overwhelm.

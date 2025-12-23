@@ -9,6 +9,14 @@ tags:
   - obsidian
 ---
 
+<div class="monster-hero">
+  <img src="../SlumberTroll.png" alt="Illustration of the Slumber Troll, a sleepy giant emerging from blankets">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Slumber Troll Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="../SlumberTroll.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+  </div>
+</div>
+
 🏰 I. Bestiary Entry
 
 > Deep beneath the blankets of your mind’s realm lives the Slumber Troll.
