@@ -2,6 +2,132 @@
 ---
 @import "minima";
 
+.skip-to-content {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  background: #0b1a3b;
+  color: #ffffff;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 10px 24px rgba(11, 26, 59, 0.22);
+  z-index: 1000;
+}
+
+.skip-to-content:focus,
+.skip-to-content:focus-visible {
+  transform: translate(-50%, 15%);
+  outline: 3px solid #ffbf00;
+  outline-offset: 4px;
+}
+
+.site-header {
+  border-bottom: 1px solid #dce3f3;
+  background: linear-gradient(135deg, #ffffff, #f3f6ff);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(13, 27, 54, 0.08);
+}
+
+.site-banner {
+  padding: 0.75rem 0;
+}
+
+.site-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.site-banner__brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #0f172a;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 12px;
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+}
+
+.site-banner__brand:focus,
+.site-banner__brand:focus-visible {
+  outline: 3px solid #ffbf00;
+  outline-offset: 4px;
+  background: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 0 0 6px rgba(255, 191, 0, 0.25);
+}
+
+.site-banner__nav {
+  margin-left: auto;
+}
+
+.site-banner__links {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-banner__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #0f172a;
+  transition: background-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+
+.site-banner__link:hover {
+  background: #e8edff;
+}
+
+.site-banner__link:focus,
+.site-banner__link:focus-visible {
+  outline: 3px solid #ffbf00;
+  outline-offset: 3px;
+  background: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 0 0 6px rgba(255, 191, 0, 0.25);
+}
+
+.site-banner__emoji {
+  font-size: 1.1rem;
+}
+
+.site-banner__text {
+  line-height: 1.2;
+}
+
+@media (max-width: 720px) {
+  .site-banner__inner {
+    align-items: flex-start;
+  }
+
+  .site-banner__nav {
+    width: 100%;
+  }
+
+  .site-banner__links {
+    justify-content: flex-start;
+  }
+}
+
 .nav-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
