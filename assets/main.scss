@@ -191,6 +191,62 @@
   margin: 1rem 0 0.5rem;
 }
 
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1rem 0 1.25rem;
+  padding: 0.35rem 0.15rem;
+}
+
+.quick-actions__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.05rem;
+  border-radius: 12px;
+  border: 1px solid #dfe5f5;
+  background: #ffffff;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background-color 120ms ease;
+  min-width: 0;
+}
+
+.quick-actions__item:hover {
+  transform: translateY(-1px);
+  border-color: #c3cff8;
+  box-shadow: 0 8px 16px rgba(17, 24, 39, 0.1);
+  background: linear-gradient(135deg, #f8faff, #eef3ff);
+}
+
+.quick-actions__item:focus,
+.quick-actions__item:focus-visible {
+  outline: 3px solid #ffbf00;
+  outline-offset: 3px;
+  border-color: #0f172a;
+  box-shadow: 0 0 0 6px rgba(255, 191, 0, 0.22);
+}
+
+.quick-actions__emoji {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.quick-actions__text {
+  line-height: 1.1;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 600px) {
+  .quick-actions__item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .status-pill {
   display: inline-flex;
   align-items: center;
