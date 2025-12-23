@@ -163,3 +163,59 @@
   border: 1px solid #dfe5f5;
   white-space: nowrap;
 }
+
+.monster-hero {
+  margin: 1.5rem 0 1rem;
+  border: 1px solid #e2e8f4;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f9fbff;
+  box-shadow: 0 12px 26px rgba(17, 24, 39, 0.12);
+}
+
+.monster-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.monster-hero__caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #f4f7ff, #eef3ff);
+  color: #3c4660;
+  font-size: 0.95rem;
+}
+
+.monster-hero__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #dfe5f5;
+  font-weight: 700;
+  color: #2d3a55;
+}
+
+.monster-hero__links {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: inherit;
+}
+
+.monster-hero__links a {
+  color: #2f51c6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.monster-hero__links a:hover,
+.monster-hero__links a:focus {
+  text-decoration: underline;
+}

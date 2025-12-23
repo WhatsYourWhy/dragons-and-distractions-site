@@ -9,6 +9,14 @@ tags:
   - obsidian
 ---
 
+<div class="monster-hero">
+  <img src="../TheTemporalShark.png" alt="Illustration of the Temporal Shark circling with a clock-themed fin">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Temporal Shark Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="../TheTemporalShark.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+  </div>
+</div>
+
 🏰 I. Bestiary Entry
 
 > The Temporal Shark stalks the waters of your day, invisible until a deadline bleeds.

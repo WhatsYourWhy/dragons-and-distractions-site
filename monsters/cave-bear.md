@@ -9,6 +9,14 @@ tags:
   - obsidian
 ---
 
+<div class="monster-hero">
+  <img src="../CaveBear.png" alt="Illustration of the Cave Bear emerging from a cave entrance">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Cave Bear Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="../CaveBear.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+  </div>
+</div>
+
 🏰 I. Bestiary Entry
 
 > The Cave Bear is the ancient beast of isolation and retreat.
