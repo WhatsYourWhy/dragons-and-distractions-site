@@ -17,6 +17,23 @@ tags:
   </div>
 </div>
 
+<div class="battle-card">
+  <div class="battle-card__eyebrow">Battle Card</div>
+  <ul class="battle-card__list">
+    <li><strong>Triggers:</strong> Endless to-do lists, new heads sprouting mid-task, panic from scattered priorities.</li>
+    <li><strong>First counter-move:</strong> Choose one head, light the focus torch, and swear the Single-Task Oath.</li>
+    <li><strong>Printable:</strong> <a href="../site/printables/pdf/single-task-oath-card-ink.pdf">Single-Task Oath card (ink PDF)</a></li>
+  </ul>
+</div>
+
+<div class="monster-mini-toc" aria-label="On this page">
+  <span class="monster-mini-toc__label">Jump to</span>
+  <a href="#lore">Lore</a>
+  <a href="#weaknesses">Weaknesses</a>
+  <a href="#rituals">Rituals</a>
+  <a href="#tools">Tools</a>
+</div>
+
 🏰 I. Bestiary Entry
 
 > The Task Hydra is the many-headed beast of overwhelm.
@@ -29,7 +46,7 @@ tags:
 > In ancient myth, the Hydra was nearly invincible because cut heads regrew. Heroes needed strategy, fire, and persistence.
 > The Task Hydra is no different. You can’t kill it all at once—you must choose which head to strike, cauterize the stump, and call on allies to hold the torch while you swing.
 
-🔎 II. Monster Ecology (Lore and Sources)
+## 🔎 Monster Ecology (Lore and Sources) {#lore}
 
 ✅ The Lernaean Hydra → Greek myth.
 ✅ Heads regrow unless burned shut = metaphor for unclosed tasks multiplying.
@@ -56,7 +73,7 @@ tags:
 - Feeling defeated before even beginning.
 - Procrastinating because you can’t pick where to start.
 
-🗝️ V. The Task Hydra’s Weaknesses
+## 🗝️ The Task Hydra’s Weaknesses {#weaknesses}
 
 ✅ Prioritization Rituals → Limit decision fatigue.
 ✅ Chunking → Break tasks into small, defined steps.
@@ -75,7 +92,7 @@ tags:
 ⭐ Accountability Spell
 - Text or tell someone what you’ll do → Social contract.
 
-🪄 VI. Rituals and Counter-Spells
+## 🪄 Rituals and Counter-Spells {#rituals}
 
 ⭐ **Invocation:**
 > “Choose the head.”
@@ -94,7 +111,7 @@ tags:
 - Daily list limited to **3** critical tasks.
 - Research-backed prioritization.
 
-🛠️ VII. Artifacts and Weapons
+## 🛠️ Artifacts and Weapons {#tools}
 
 - Torch of Focus → Candle or lamp to mark work time.
 - Blade of Choice → A physical object (pen, knife) to point at today’s single task.
