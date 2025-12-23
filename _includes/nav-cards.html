@@ -1,22 +1,9 @@
 <div class="nav-grid">
-  <a class="nav-card" href="{{ '/monsters/' | relative_url }}">
-    <div class="nav-card__label"><span class="nav-card__emoji">🗺️</span>Monster Index</div>
-    <p class="nav-card__description">Name the foes and read their lore so you can spot them in the wild.</p>
+  {% assign nav_links = site.data.nav_links %}
+  {% for link in nav_links %}
+  <a class="nav-card" href="{{ link.url | relative_url }}">
+    <div class="nav-card__label"><span class="nav-card__emoji">{{ link.emoji }}</span>{{ link.label }}</div>
+    <p class="nav-card__description">{{ link.description }}</p>
   </a>
-  <a class="nav-card" href="{{ '/spellbook/' | relative_url }}">
-    <div class="nav-card__label"><span class="nav-card__emoji">⚔️</span>Armory &amp; Spellbook</div>
-    <p class="nav-card__description">Grab rituals, printable cards, and counter-spells for each monster.</p>
-  </a>
-  <a class="nav-card" href="{{ '/codex/' | relative_url }}">
-    <div class="nav-card__label"><span class="nav-card__emoji">📜</span>Codex</div>
-    <p class="nav-card__description">Read the guiding principles and world-building that shape the guild.</p>
-  </a>
-  <a class="nav-card" href="{{ '/art/' | relative_url }}">
-    <div class="nav-card__label"><span class="nav-card__emoji">🎨</span>Artifacts &amp; Art</div>
-    <p class="nav-card__description">Preview the illustrated companions and download high-res assets.</p>
-  </a>
-  <a class="nav-card" href="{{ '/site/' | relative_url }}">
-    <div class="nav-card__label"><span class="nav-card__emoji">🧰</span>Site Tools &amp; Templates</div>
-    <p class="nav-card__description">Jump to printable checklists, onboarding scrolls, and shared templates.</p>
-  </a>
+  {% endfor %}
 </div>
