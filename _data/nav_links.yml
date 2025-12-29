@@ -2,19 +2,24 @@
   emoji: "🗺️"
   url: "/monsters/"
   description: "Name the foes and read their lore so you can spot them in the wild."
+  cta: "Open Index"
 - label: Armory & Spellbook
   emoji: "⚔️"
   url: "/spellbook/"
   description: "Grab rituals, printable cards, and counter-spells for each monster."
+  cta: "Open Spellbook"
 - label: Codex
   emoji: "📜"
   url: "/codex/"
   description: "Read the guiding principles and world-building that shape the guild."
+  cta: "Read Codex"
 - label: Artifacts & Art
   emoji: "🎨"
   url: "/art/"
   description: "Preview the illustrated companions and download high-res assets."
+  cta: "View Art"
 - label: Site Tools & Templates
   emoji: "🧰"
   url: "/site/"
   description: "Jump to printable checklists, onboarding scrolls, and shared templates."
+  cta: "Open Tools"

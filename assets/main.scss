@@ -177,6 +177,22 @@
   line-height: 1.5;
 }
 
+.nav-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+  font-weight: 750;
+  color: #2f51c6;
+  letter-spacing: 0.01em;
+}
+
+.nav-card__cta::after {
+  content: "›";
+  font-size: 0.95rem;
+  transform: translateY(1px);
+}
+
 @media (max-width: 640px) {
   .nav-grid {
     grid-template-columns: 1fr;
@@ -323,6 +339,22 @@
   margin: 0.35rem 0 0.5rem;
   color: #3c4660;
   line-height: 1.55;
+}
+
+.monster-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.05rem 0 0.55rem;
+  color: #2f51c6;
+  font-weight: 750;
+  letter-spacing: 0.01em;
+}
+
+.monster-card__cta::after {
+  content: "›";
+  font-size: 0.95rem;
+  transform: translateY(1px);
 }
 
 .monster-card__meta {
