@@ -7,6 +7,19 @@ cta: "Wake rituals"
 badges:
   - "Rituals: Wake Invocation, Beacon of Dawn"
   - "Printable bedside card"
+quick_links:
+  - label: "Lore"
+    url: "#lore"
+    emoji: "📜"
+  - label: "Weaknesses"
+    url: "#weaknesses"
+    emoji: "🛡️"
+  - label: "Rituals"
+    url: "#rituals"
+    emoji: "🪄"
+  - label: "Tools"
+    url: "#tools"
+    emoji: "🧰"
 order: 1
 tags:
   - adhd
@@ -118,7 +131,7 @@ tags:
 
 ## 🧰 Printables to Equip
 
-{% include printable-groups.html slugs:"slumber-troll" %}
+{% include printable-groups.html slugs="slumber-troll" %}
 
 ⚡️ VIII. Command Phrases
 

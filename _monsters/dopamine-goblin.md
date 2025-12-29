@@ -7,6 +7,19 @@ cta: "Boundaries guide"
 badges:
   - "Rituals: Goblin Jar, Reward Binding"
   - "Tactical environmental tweaks"
+quick_links:
+  - label: "Lore"
+    url: "#lore"
+    emoji: "📜"
+  - label: "Weaknesses"
+    url: "#weaknesses"
+    emoji: "🛡️"
+  - label: "Rituals"
+    url: "#rituals"
+    emoji: "🪄"
+  - label: "Tools"
+    url: "#tools"
+    emoji: "🧰"
 order: 3
 tags:
   - adhd

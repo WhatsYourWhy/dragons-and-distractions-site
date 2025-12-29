@@ -7,6 +7,19 @@ cta: "Gentle start"
 badges:
   - "Rituals: Threshold, Rope of Returning"
   - "Gentle activation routines"
+quick_links:
+  - label: "Lore"
+    url: "#lore"
+    emoji: "📜"
+  - label: "Weaknesses"
+    url: "#weaknesses"
+    emoji: "🛡️"
+  - label: "Rituals"
+    url: "#rituals"
+    emoji: "🪄"
+  - label: "Tools"
+    url: "#tools"
+    emoji: "🧰"
 order: 5
 tags:
   - adhd
@@ -123,7 +136,7 @@ tags:
 
 ## 🧰 Printables to Equip
 
-{% include printable-groups.html slugs:"buddy-support" %}
+{% include printable-groups.html slugs="buddy-support" %}
 
 ⚡️ VIII. Command Phrases
 

@@ -7,6 +7,19 @@ cta: "Time spells"
 badges:
   - "Rituals: Tide Marks, Buddy Buoy"
   - "Printable calendar prompts"
+quick_links:
+  - label: "Lore"
+    url: "#lore"
+    emoji: "📜"
+  - label: "Weaknesses"
+    url: "#weaknesses"
+    emoji: "🛡️"
+  - label: "Rituals"
+    url: "#rituals"
+    emoji: "🪄"
+  - label: "Tools"
+    url: "#tools"
+    emoji: "🧰"
 order: 4
 tags:
   - adhd
@@ -120,7 +133,7 @@ tags:
 
 ## 🧰 Printables to Equip
 
-{% include printable-groups.html slugs:"temporal-shark,buddy-support" %}
+{% include printable-groups.html slugs="temporal-shark,buddy-support" %}
 
 ⚡️ VIII. Command Phrases
 

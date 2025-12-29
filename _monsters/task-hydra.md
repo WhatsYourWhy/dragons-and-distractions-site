@@ -7,6 +7,19 @@ cta: "Focus oath"
 badges:
   - "Rituals: Single-Task Oath, 3-Item Rule"
   - "Printable focus card"
+quick_links:
+  - label: "Lore"
+    url: "#lore"
+    emoji: "📜"
+  - label: "Weaknesses"
+    url: "#weaknesses"
+    emoji: "🛡️"
+  - label: "Rituals"
+    url: "#rituals"
+    emoji: "🪄"
+  - label: "Tools"
+    url: "#tools"
+    emoji: "🧰"
 order: 2
 tags:
   - adhd
@@ -131,7 +144,7 @@ tags:
 
 ## 🧰 Printables to Equip
 
-{% include printable-groups.html slugs:"task-hydra" %}
+{% include printable-groups.html slugs="task-hydra" %}
 
 ⚡️ VIII. Command Phrases
 
