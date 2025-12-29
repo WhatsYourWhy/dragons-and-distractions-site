@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Iterable
 try:
     from fpdf import FPDF
+    from fpdf.enums import XPos, YPos
 except ModuleNotFoundError as exc:
     raise SystemExit(
         "Missing dependency 'fpdf2'. Install with `pip install -r requirements.txt` before generating PDFs."
@@ -101,7 +102,7 @@ def build_pdf(title: str, lines: Iterable[str], output: Path, image: Path | None
 
     pdf.set_y(top_margin)
     pdf.set_font("Helvetica", "B", 16)
-    pdf.cell(0, 10, title, ln=True)
+    pdf.cell(0, 10, title, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.ln(4)
     add_body(pdf, lines)
     output.parent.mkdir(parents=True, exist_ok=True)
