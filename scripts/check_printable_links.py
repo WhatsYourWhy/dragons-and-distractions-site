@@ -8,9 +8,16 @@ import re
 import sys
 from typing import Iterable
 
+try:
+    import yaml
+except ModuleNotFoundError:
+    yaml = None
+
 ROOT = Path(__file__).resolve().parent.parent
 PDF_DIR = ROOT / "site" / "printables" / "pdf"
 PRINTABLE_PDF_PARTS = ("site", "printables", "pdf")
+YAML_PDF_PREFIX = "/site/printables/pdf/"
+SITE_INDEX_RELATIVE_PREFIX = "./printables/pdf/"
 
 
 @dataclass
@@ -90,6 +97,32 @@ def find_md_links(markdown: str) -> Iterable[str]:
         yield match.group(1)
 
 
+def extract_yaml_pdf_links(yaml_path: Path) -> list[str]:
+    """Extract PDF links from a YAML data file (e.g., _data/printables.yml)."""
+    if not yaml:
+        return []
+    
+    if not yaml_path.exists():
+        return []
+    
+    try:
+        with open(yaml_path, encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+        
+        links = []
+        if isinstance(data, list):
+            for group in data:
+                if isinstance(group, dict) and "printables" in group:
+                    for item in group["printables"]:
+                        if isinstance(item, dict):
+                            for key in ["ink_pdf", "art_pdf"]:
+                                if key in item and item[key]:
+                                    links.append(item[key])
+        return links
+    except (yaml.YAMLError, FileNotFoundError, UnicodeDecodeError):
+        return []
+
+
 def ensure_pdf_directory_exists(pdf_dir: Path) -> list[str]:
     if pdf_dir.exists():
         return []
@@ -104,6 +137,18 @@ def check_required_links(check: LinkCheck) -> list[str]:
 
     content = resolved_path.read_text(encoding="utf-8")
     links = set(find_md_links(content))
+    
+    # For site/index.md, also check YAML data file
+    if check.path == Path("site/index.md"):
+        yaml_path = ROOT / "_data" / "printables.yml"
+        yaml_links = extract_yaml_pdf_links(yaml_path)
+        # Convert absolute paths from YAML to relative paths from site/index.md
+        for link in yaml_links:
+            # YAML links are like /site/printables/pdf/filename.pdf
+            # site/index.md needs ./printables/pdf/filename.pdf
+            if link.startswith(YAML_PDF_PREFIX):
+                relative_link = SITE_INDEX_RELATIVE_PREFIX + link[len(YAML_PDF_PREFIX):]
+                links.add(relative_link)
 
     errors: list[str] = []
     for required in check.required_links:
