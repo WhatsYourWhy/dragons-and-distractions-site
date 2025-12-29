@@ -1,6 +1,13 @@
 ---
-id: dopamine-goblin
-title: "🐉 The Dopamine Goblin"
+name: "The Dopamine Goblin"
+emoji: "🧝‍♂️"
+tagline: "Shiny distractions & impulse trades"
+description: "Contain novelty cravings with reward binding, goblin jars, and clear boundaries around the work you choose."
+cta: "Boundaries guide"
+badges:
+  - "Rituals: Goblin Jar, Reward Binding"
+  - "Tactical environmental tweaks"
+order: 3
 tags:
   - adhd
   - dragons-and-distractions
@@ -10,13 +17,12 @@ tags:
 ---
 
 # 🧝‍♂️ The Dopamine Goblin
-{% include breadcrumbs.html %}
 
 <div class="monster-hero">
-  <img src="../DopamineGoblin.png" alt="Illustration of the Dopamine Goblin clutching shiny objects">
+  <img src="{{ "/DopamineGoblin.png" | relative_url }}" alt="Illustration of the Dopamine Goblin clutching shiny objects">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Dopamine Goblin Portrait</span>
-    <span class="monster-hero__links">Download the art file: <a href="../DopamineGoblin.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/DopamineGoblin.png" | relative_url }}">PNG</a> · <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
   </div>
 </div>
 
@@ -25,7 +31,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Shiny tabs, phone pings, novelty cravings when tasks feel dull.</li>
     <li><strong>First counter-move:</strong> Make a 20-minute Goblin deal with a pre-picked reward.</li>
-    <li><strong>Printable:</strong> <a href="../site/printables/pdf/single-task-oath-card-ink.pdf">Single-Task Oath card (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }}">Single-Task Oath card (ink PDF)</a></li>
   </ul>
 </div>
 
@@ -149,9 +155,9 @@ tags:
 
 🔗 Quick Navigation
 
-- 🗺️ Back to the [Monster Index](index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
+- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
+- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
+- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
 
 > “The Goblin is clever. Be cleverer.”

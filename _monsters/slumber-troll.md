@@ -1,6 +1,13 @@
 ---
-id: slumber-troll
-title: "🐲 The Slumber Troll"
+name: "The Slumber Troll"
+emoji: "🌙"
+tagline: "Sleep inertia & morning bridges"
+description: "Cross from blankets to momentum with wake invocations, light cues, and accountability ropes."
+cta: "Wake rituals"
+badges:
+  - "Rituals: Wake Invocation, Beacon of Dawn"
+  - "Printable bedside card"
+order: 1
 tags:
   - adhd
   - dragons-and-distractions
@@ -9,14 +16,13 @@ tags:
   - obsidian
 ---
 
-# 🐲 The Slumber Troll
-{% include breadcrumbs.html %}
+# 🌙 The Slumber Troll
 
 <div class="monster-hero">
-  <img src="../SlumberTroll.png" alt="Illustration of the Slumber Troll, a sleepy giant emerging from blankets">
+  <img src="{{ "/SlumberTroll.png" | relative_url }}" alt="Illustration of the Slumber Troll, a sleepy giant emerging from blankets">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Slumber Troll Portrait</span>
-    <span class="monster-hero__links">Download the art file: <a href="../SlumberTroll.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/SlumberTroll.png" | relative_url }}">PNG</a> · <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
   </div>
 </div>
 
@@ -25,7 +31,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Snooze spirals, warm darkness, “just five more minutes” bargaining.</li>
     <li><strong>First counter-move:</strong> 3-2-1 Go, flip on light, and send the “I’m vertical” text.</li>
-    <li><strong>Printable:</strong> <a href="../site/printables/pdf/wake-invocation-checklist-ink.pdf">Wake Invocation checklist (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/wake-invocation-checklist-ink.pdf" | relative_url }}">Wake Invocation checklist (ink PDF)</a></li>
   </ul>
 </div>
 
@@ -144,9 +150,9 @@ tags:
 
 🔗 Quick Navigation
 
-- 🗺️ Back to the [Monster Index](index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
+- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
+- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
+- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
 
 > “The Troll is strongest before dawn. Slay it once, and the rest of the day is yours.”

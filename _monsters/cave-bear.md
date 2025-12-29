@@ -1,6 +1,13 @@
 ---
-id: cave-bear
-title: "🐻 The Cave Bear"
+name: "The Cave Bear"
+emoji: "🐻"
+tagline: "Avoidance & hibernation holes"
+description: "Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave."
+cta: "Gentle start"
+badges:
+  - "Rituals: Threshold, Rope of Returning"
+  - "Gentle activation routines"
+order: 5
 tags:
   - adhd
   - dragons-and-distractions
@@ -10,13 +17,12 @@ tags:
 ---
 
 # 🐻 The Cave Bear
-{% include breadcrumbs.html %}
 
 <div class="monster-hero">
-  <img src="../CaveBear.png" alt="Illustration of the Cave Bear emerging from a cave entrance">
+  <img src="{{ "/CaveBear.png" | relative_url }}" alt="Illustration of the Cave Bear emerging from a cave entrance">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Cave Bear Portrait</span>
-    <span class="monster-hero__links">Download the art file: <a href="../CaveBear.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/CaveBear.png" | relative_url }}">PNG</a> · <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
   </div>
 </div>
 
@@ -25,7 +31,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Doomscrolling dens, “I’ll get up later” loops, comfort that turns into isolation.</li>
     <li><strong>First counter-move:</strong> Light on, feet on floor, and a single text to your rope-holder.</li>
-    <li><strong>Printable:</strong> <a href="../site/printables/pdf/tide-marks-buddy-ping-ink.pdf">Buddy Ping template (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf" | relative_url }}">Buddy Ping template (ink PDF)</a></li>
   </ul>
 </div>
 
@@ -147,9 +153,9 @@ tags:
 
 🔗 Quick Navigation
 
-- 🗺️ Back to the [Monster Index](index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
+- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
+- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
+- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
 
 > “The cave kept you safe once. Now it keeps you small. Step out—the world is waiting.”
