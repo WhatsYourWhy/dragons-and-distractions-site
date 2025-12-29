@@ -40,5 +40,5 @@ Simple, high-contrast layout for printing or saving as PDF. Keep it beside your 
 🔗 Quick Navigation
 
 - 🧭 Return to the [Spellbook](../../spellbook/index.md)
-- 🗺️ Browse the [Monster Index](../../monsters/index.md)
+- 🗺️ Browse the [Monster Index](../../monsters/)
 - 🧰 Visit [Site Tools & Templates](../index.md)

@@ -9,7 +9,7 @@ Each monster represents a real executive function challenge—named, described, 
 {% include quick-actions.html %}
 
 <div class="monster-grid">
-  <a class="monster-card" href="./slumber-troll.md">
+  <a class="monster-card" href="./slumber-troll/">
     <div class="monster-card__header">
       <span class="monster-card__emoji">🌙</span>
       <div>
@@ -25,7 +25,7 @@ Each monster represents a real executive function challenge—named, described, 
     </div>
   </a>
 
-  <a class="monster-card" href="./task-hydra.md">
+  <a class="monster-card" href="./task-hydra/">
     <div class="monster-card__header">
       <span class="monster-card__emoji">🐲</span>
       <div>
@@ -41,7 +41,7 @@ Each monster represents a real executive function challenge—named, described, 
     </div>
   </a>
 
-  <a class="monster-card" href="./dopamine-goblin.md">
+  <a class="monster-card" href="./dopamine-goblin/">
     <div class="monster-card__header">
       <span class="monster-card__emoji">🧝‍♂️</span>
       <div>
@@ -57,7 +57,7 @@ Each monster represents a real executive function challenge—named, described, 
     </div>
   </a>
 
-  <a class="monster-card" href="./temporal-shark.md">
+  <a class="monster-card" href="./temporal-shark/">
     <div class="monster-card__header">
       <span class="monster-card__emoji">🦈</span>
       <div>
@@ -73,7 +73,7 @@ Each monster represents a real executive function challenge—named, described, 
     </div>
   </a>
 
-  <a class="monster-card" href="./cave-bear.md">
+  <a class="monster-card" href="./cave-bear/">
     <div class="monster-card__header">
       <span class="monster-card__emoji">🐻</span>
       <div>
@@ -100,10 +100,10 @@ More monsters await...
 Need a different tool or want to jump back to the guild hall? Choose a shortcut below.
 </div>
 
-- 🌙 [The Slumber Troll](slumber-troll.md)
-- 🐲 [The Task Hydra](task-hydra.md)
-- 🧝‍♂️ [The Dopamine Goblin](dopamine-goblin.md)
-- 🦈 [The Temporal Shark](temporal-shark.md)
-- 🐻 [The Cave Bear](cave-bear.md)
+- 🌙 [The Slumber Troll](slumber-troll/)
+- 🐲 [The Task Hydra](task-hydra/)
+- 🧝‍♂️ [The Dopamine Goblin](dopamine-goblin/)
+- 🦈 [The Temporal Shark](temporal-shark/)
+- 🐻 [The Cave Bear](cave-bear/)
 
 {% include nav-cards.html %}

@@ -28,5 +28,5 @@ A printable morning bridge to move past the Slumber Troll. Keep it on your night
 ## 🔗 Quick Navigation
 
 - 🧭 Return to the [Armory & Spellbook](./index.md)
-- 🐲 Review the [Slumber Troll rituals](../monsters/slumber-troll.md)
+- 🐲 Review the [Slumber Troll rituals](../monsters/slumber-troll/)
 - 🧰 Browse [Site Tools & Templates](../site/index.md)

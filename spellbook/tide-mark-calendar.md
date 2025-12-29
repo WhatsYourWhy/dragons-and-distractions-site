@@ -30,5 +30,5 @@ Print, fold, or copy into your planner. Check the boxes as you set your tide mar
 ## 🔗 Quick Navigation
 
 - 🧭 Return to the [Armory & Spellbook](./index.md)
-- 🦈 Review the [Temporal Shark rituals](../monsters/temporal-shark.md)
+- 🦈 Review the [Temporal Shark rituals](../monsters/temporal-shark/)
 - 🧰 Browse [Site Tools & Templates](../site/index.md)

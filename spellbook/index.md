@@ -33,7 +33,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Write only three critical quests for today.  
 - Start at the top, finish, then proceed. New ideas go to a parking lot, not the active list.
 
-[Learn the Hydra’s full lore.](../monsters/task-hydra.md)
+[Learn the Hydra’s full lore.](../monsters/task-hydra/)
 
 ---
 
@@ -60,7 +60,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Tell a friend your start time and ask for a ping at T-10.  
 - Send a post-battle note with start/end times to teach your body what duration feels like.
 
-[Swim with allies against the Shark.](../monsters/temporal-shark.md)
+[Swim with allies against the Shark.](../monsters/temporal-shark/)
 
 ---
 
@@ -81,7 +81,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Text “I’m vertical” to a friend or coworking chat.  
 - Send a photo outside the blankets at the agreed time.
 
-[Cross the bridge past the Troll.](../monsters/slumber-troll.md)
+[Cross the bridge past the Troll.](../monsters/slumber-troll/)
 
 ---
 
@@ -99,7 +99,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - If you rest, set a 20–90 minute timer.  
 - Name your wake-up action before lying down (e.g., “When it rings, I open blinds and drink water.”).
 
-[Leave the cave with gentle activation.](../monsters/cave-bear.md)
+[Leave the cave with gentle activation.](../monsters/cave-bear/)
 
 ---
 
@@ -117,7 +117,7 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 - Add friction: phone off-desk, blockers on, timer running.  
 - Redirect novelty on purpose—new playlist, new pen, or a different chair *after* a work block.
 
-[Cut a deal with the Goblin.](../monsters/dopamine-goblin.md)
+[Cut a deal with the Goblin.](../monsters/dopamine-goblin/)
 
 ---
 
