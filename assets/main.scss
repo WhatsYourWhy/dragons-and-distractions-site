@@ -486,3 +486,103 @@
 h2[id] {
   scroll-margin-top: 90px;
 }
+
+.breadcrumbs {
+  margin: 0.35rem 0 1.1rem;
+}
+
+.breadcrumbs__list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  margin: 0;
+  list-style: none;
+  border-radius: 12px;
+  background: #f7f9ff;
+  border: 1px solid #e2e8f4;
+  box-shadow: 0 8px 16px rgba(17, 24, 39, 0.06);
+}
+
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #2d3a55;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "›";
+  color: #6b728c;
+  font-weight: 700;
+}
+
+.breadcrumbs__link {
+  color: #2f51c6;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.2rem 0.4rem;
+  border-radius: 8px;
+  transition: background-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus,
+.breadcrumbs__link:focus-visible {
+  background: #e8edff;
+  color: #0f172a;
+  box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.18);
+  outline: 2px solid #ffbf00;
+  outline-offset: 2px;
+}
+
+.breadcrumbs__current {
+  padding: 0.2rem 0.4rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f4;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 750;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.28);
+  opacity: 0.82;
+  transition: opacity 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+  z-index: 15;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.32);
+}
+
+.back-to-top:focus,
+.back-to-top:focus-visible {
+  opacity: 1;
+  outline: 3px solid #ffbf00;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(255, 191, 0, 0.25);
+}
+
+@media (max-width: 640px) {
+  .back-to-top {
+    right: 0.9rem;
+    bottom: 0.9rem;
+  }
+}

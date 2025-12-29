@@ -1,0 +1,55 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="{{ '/' | relative_url }}">Home</a>
+    </li>
+    {%- assign current_url = page.url | default: '' -%}
+
+    {%- if current_url contains '/monsters/' or current_url == '/monsters/' -%}
+      <li class="breadcrumbs__item">
+        {%- if current_url == '/monsters/' -%}
+          <span class="breadcrumbs__current" aria-current="page">Monsters</span>
+        {%- else -%}
+          <a class="breadcrumbs__link" href="{{ '/monsters/' | relative_url }}">Monsters</a>
+        {%- endif -%}
+      </li>
+      {%- unless current_url == '/monsters/' -%}
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__current" aria-current="page">
+            {{ page.breadcrumb_label | default: page.title | default: page.name }}
+          </span>
+        </li>
+      {%- endunless -%}
+    {%- elsif current_url contains '/spellbook/' or current_url == '/spellbook/' -%}
+      <li class="breadcrumbs__item">
+        {%- if current_url == '/spellbook/' -%}
+          <span class="breadcrumbs__current" aria-current="page">Spellbook</span>
+        {%- else -%}
+          <a class="breadcrumbs__link" href="{{ '/spellbook/' | relative_url }}">Spellbook</a>
+        {%- endif -%}
+      </li>
+      {%- unless current_url == '/spellbook/' -%}
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__current" aria-current="page">
+            {{ page.breadcrumb_label | default: page.title | default: page.name }}
+          </span>
+        </li>
+      {%- endunless -%}
+    {%- elsif current_url contains '/site/' or current_url == '/site/' -%}
+      <li class="breadcrumbs__item">
+        {%- if current_url == '/site/' -%}
+          <span class="breadcrumbs__current" aria-current="page">Site Tools</span>
+        {%- else -%}
+          <a class="breadcrumbs__link" href="{{ '/site/' | relative_url }}">Site Tools</a>
+        {%- endif -%}
+      </li>
+      {%- unless current_url == '/site/' -%}
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__current" aria-current="page">
+            {{ page.breadcrumb_label | default: page.title | default: page.name }}
+          </span>
+        </li>
+      {%- endunless -%}
+    {%- endif -%}
+  </ol>
+</nav>

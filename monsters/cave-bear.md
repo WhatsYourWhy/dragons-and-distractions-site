@@ -9,6 +9,9 @@ tags:
   - obsidian
 ---
 
+# 🐻 The Cave Bear
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../CaveBear.png" alt="Illustration of the Cave Bear emerging from a cave entrance">
   <div class="monster-hero__caption">

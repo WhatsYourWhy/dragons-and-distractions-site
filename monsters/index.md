@@ -1,5 +1,7 @@
 # 🗺️ Monster Index
 
+{% include breadcrumbs.html %}
+
 Welcome to the Bestiary.
 
 Each monster represents a real executive function challenge—named, described, and disarmed with humor, science, and ritual. Choose your foe to jump straight to its lore and counter-spells.

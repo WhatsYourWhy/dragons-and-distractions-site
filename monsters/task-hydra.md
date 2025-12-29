@@ -9,6 +9,9 @@ tags:
   - obsidian
 ---
 
+# 🐉 The Task Hydra
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../TaskHydra.png" alt="Illustration of the Task Hydra with many heads symbolizing overwhelming tasks">
   <div class="monster-hero__caption">
