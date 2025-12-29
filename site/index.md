@@ -44,8 +44,6 @@ When to use: Deploy the Slumber Troll wake kit when mornings are sluggish and yo
 
 More tools and printables will be added as the Guild forges them.
 
----
-
 🔗 Quick Navigation
 
 <div class="section-callout">
