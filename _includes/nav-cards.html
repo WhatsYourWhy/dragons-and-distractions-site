@@ -4,6 +4,7 @@
   <a class="nav-card" href="{{ link.url | relative_url }}">
     <div class="nav-card__label"><span class="nav-card__emoji">{{ link.emoji }}</span>{{ link.label }}</div>
     <p class="nav-card__description">{{ link.description }}</p>
+    <span class="nav-card__cta">{{ link.cta }}</span>
   </a>
   {% endfor %}
 </div>

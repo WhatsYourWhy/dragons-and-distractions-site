@@ -18,6 +18,7 @@ Each monster represents a real executive function challenge—named, described, 
       </div>
     </div>
     <p class="monster-card__description">Cross from blankets to momentum with wake invocations, light cues, and accountability ropes.</p>
+    <span class="monster-card__cta">Wake rituals</span>
     <div class="monster-card__meta">
       <span class="monster-card__badge">Rituals: Wake Invocation, Beacon of Dawn</span>
       <span class="monster-card__badge">Printable bedside card</span>
@@ -33,6 +34,7 @@ Each monster represents a real executive function challenge—named, described, 
       </div>
     </div>
     <p class="monster-card__description">Pick one head to strike, apply the Single-Task Oath, and wield the 3-Item Rule to stop new heads from sprouting.</p>
+    <span class="monster-card__cta">Focus oath</span>
     <div class="monster-card__meta">
       <span class="monster-card__badge">Rituals: Single-Task Oath, 3-Item Rule</span>
       <span class="monster-card__badge">Printable focus card</span>
@@ -48,6 +50,7 @@ Each monster represents a real executive function challenge—named, described, 
       </div>
     </div>
     <p class="monster-card__description">Contain novelty cravings with reward binding, goblin jars, and clear boundaries around the work you choose.</p>
+    <span class="monster-card__cta">Boundaries guide</span>
     <div class="monster-card__meta">
       <span class="monster-card__badge">Rituals: Goblin Jar, Reward Binding</span>
       <span class="monster-card__badge">Tactical environmental tweaks</span>
@@ -63,6 +66,7 @@ Each monster represents a real executive function challenge—named, described, 
       </div>
     </div>
     <p class="monster-card__description">Make time visible with Tide Marks, Buddy Buoys, and first bites before the fin is at your feet.</p>
+    <span class="monster-card__cta">Time spells</span>
     <div class="monster-card__meta">
       <span class="monster-card__badge">Rituals: Tide Marks, Buddy Buoy</span>
       <span class="monster-card__badge">Printable calendar prompts</span>
@@ -78,6 +82,7 @@ Each monster represents a real executive function challenge—named, described, 
       </div>
     </div>
     <p class="monster-card__description">Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave.</p>
+    <span class="monster-card__cta">Gentle start</span>
     <div class="monster-card__meta">
       <span class="monster-card__badge">Rituals: Threshold, Rope of Returning</span>
       <span class="monster-card__badge">Gentle activation routines</span>
