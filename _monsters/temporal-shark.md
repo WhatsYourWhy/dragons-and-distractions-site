@@ -1,6 +1,13 @@
 ---
-id: temporal-shark
-title: "🦈 The Temporal Shark"
+name: "The Temporal Shark"
+emoji: "🦈"
+tagline: "Deadlines you can feel"
+description: "Make time visible with Tide Marks, Buddy Buoys, and first bites before the fin is at your feet."
+cta: "Time spells"
+badges:
+  - "Rituals: Tide Marks, Buddy Buoy"
+  - "Printable calendar prompts"
+order: 4
 tags:
   - adhd
   - dragons-and-distractions
@@ -10,13 +17,12 @@ tags:
 ---
 
 # 🦈 The Temporal Shark
-{% include breadcrumbs.html %}
 
 <div class="monster-hero">
-  <img src="../TheTemporalShark.png" alt="Illustration of the Temporal Shark circling with a clock-themed fin">
+  <img src="{{ "/TheTemporalShark.png" | relative_url }}" alt="Illustration of the Temporal Shark circling with a clock-themed fin">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Temporal Shark Portrait</span>
-    <span class="monster-hero__links">Download the art file: <a href="../TheTemporalShark.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/TheTemporalShark.png" | relative_url }}">PNG</a> · <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
   </div>
 </div>
 
@@ -25,7 +31,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Time blindness, hidden prep steps, deadlines that only feel real at the last minute.</li>
     <li><strong>First counter-move:</strong> Place a Tide Mark start time with T-60 and T-15 alarms.</li>
-    <li><strong>Printable:</strong> <a href="../site/printables/pdf/tide-mark-calendar-card-ink.pdf">Tide Mark calendar card (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/tide-mark-calendar-card-ink.pdf" | relative_url }}">Tide Mark calendar card (ink PDF)</a></li>
   </ul>
 </div>
 
@@ -144,9 +150,9 @@ tags:
 
 🔗 Quick Navigation
 
-- 🗺️ Back to the [Monster Index](index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
+- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
+- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
+- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
 
 > “The shark is real. So is the clock. Make time visible, and you decide when to dive.”

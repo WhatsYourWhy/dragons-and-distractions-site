@@ -1,6 +1,13 @@
 ---
-id: task-hydra
-title: "🐉 The Task Hydra"
+name: "The Task Hydra"
+emoji: "🐲"
+tagline: "Too many heads, not enough focus"
+description: "Pick one head to strike, apply the Single-Task Oath, and wield the 3-Item Rule to stop new heads from sprouting."
+cta: "Focus oath"
+badges:
+  - "Rituals: Single-Task Oath, 3-Item Rule"
+  - "Printable focus card"
+order: 2
 tags:
   - adhd
   - dragons-and-distractions
@@ -9,14 +16,13 @@ tags:
   - obsidian
 ---
 
-# 🐉 The Task Hydra
-{% include breadcrumbs.html %}
+# 🐲 The Task Hydra
 
 <div class="monster-hero">
-  <img src="../TaskHydra.png" alt="Illustration of the Task Hydra with many heads symbolizing overwhelming tasks">
+  <img src="{{ "/TaskHydra.png" | relative_url }}" alt="Illustration of the Task Hydra with many heads symbolizing overwhelming tasks">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Task Hydra Portrait</span>
-    <span class="monster-hero__links">Download the art file: <a href="../TaskHydra.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/TaskHydra.png" | relative_url }}">PNG</a> · <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
   </div>
 </div>
 
@@ -25,7 +31,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Endless to-do lists, new heads sprouting mid-task, panic from scattered priorities.</li>
     <li><strong>First counter-move:</strong> Choose one head, light the focus torch, and swear the Single-Task Oath.</li>
-    <li><strong>Printable:</strong> <a href="../site/printables/pdf/single-task-oath-card-ink.pdf">Single-Task Oath card (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }}">Single-Task Oath card (ink PDF)</a></li>
   </ul>
 </div>
 
@@ -164,9 +170,9 @@ tags:
 
 🔗 Quick Navigation
 
-- 🗺️ Back to the [Monster Index](index.md)
-- 🧭 Return to the [Welcome Page](../index.md)
-- 🧰 Explore the [Armory & Spellbook](../spellbook/index.md)
-- 📜 Visit [Site Tools & Templates](../site/index.md)
+- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
+- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
+- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
+- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
 
 > “The Hydra cannot be slain in one swing. But one head at a time? That’s how heroes win.”
