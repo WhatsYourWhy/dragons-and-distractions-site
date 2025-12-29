@@ -20,7 +20,7 @@ show_breadcrumbs: true
     </div>
     <p class="monster-card__description">{{ monster.description }}</p>
     {% if monster.cta %}
-    <span class="monster-card__cta">{{ monster.cta }}</span>
+    <span class="monster-card__cta cta-link">{{ monster.cta }}</span>
     {% endif %}
     {% if monster.badges %}
     <div class="monster-card__meta">
