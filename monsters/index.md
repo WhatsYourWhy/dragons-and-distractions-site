@@ -1,17 +1,10 @@
 ---
-layout: page
+layout: hub
 title: "Monster Index"
+hero_title: "🗺️ Monster Index"
+hero_intro: "Each monster represents a real executive function challenge—named, described, and disarmed with humor, science, and ritual. Choose your foe to jump straight to its lore and counter-spells."
+show_breadcrumbs: true
 ---
-
-# 🗺️ Monster Index
-
-{% include breadcrumbs.html %}
-
-Welcome to the Bestiary.
-
-Each monster represents a real executive function challenge—named, described, and disarmed with humor, science, and ritual. Choose your foe to jump straight to its lore and counter-spells.
-
-{% include quick-actions.html %}
 
 {% assign monsters = site.monsters | sort: "order" %}
 
@@ -41,17 +34,3 @@ Each monster represents a real executive function challenge—named, described, 
 </div>
 
 More monsters await...
-
----
-
-🔗 Quick Navigation
-
-<div class="section-callout">
-Need a different tool or want to jump back to the guild hall? Choose a shortcut below.
-</div>
-
-{% for monster in monsters %}
-- {{ monster.emoji }} [{{ monster.name }}]({{ monster.url | relative_url }})
-{% endfor %}
-
-{% include nav-cards.html %}

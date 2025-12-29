@@ -105,6 +105,7 @@ body.theme-low-stim * {
 .skip-to-content {
   position: absolute;
   left: 50%;
+  top: 0.75rem;
   transform: translate(-50%, -120%);
   background: var(--color-skip-bg);
   color: var(--color-text-contrast);
@@ -135,6 +136,10 @@ body.theme-low-stim * {
 
 .site-banner {
   padding: 0.75rem 0;
+}
+
+.site-banner--minimal {
+  padding: 0.5rem 0;
 }
 
 .site-banner__inner {
@@ -256,6 +261,20 @@ body.theme-low-stim * {
 .theme-toggle__status {
   font-size: 0.82rem;
   color: var(--color-text-muted);
+}
+
+.page-hero {
+  margin: 0.25rem 0 1rem;
+}
+
+.page-hero__title {
+  margin: 0 0 0.25rem;
+}
+
+.page-hero__intro {
+  margin: 0 0 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
 }
 
 @media (max-width: 720px) {
@@ -803,6 +822,7 @@ h2[id] {
   font-weight: 750;
   box-shadow: var(--shadow-lift);
   opacity: 0.82;
+  font-size: 0.95rem;
   transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   z-index: 15;
 }

@@ -1,14 +1,14 @@
-# ⚔️ Armory & Spellbook
-
-{% include breadcrumbs.html %}
-
-Welcome to the working shelf of rituals, tools, and templates. This space gathers the counter-spells mentioned in each monster page so you can grab a ritual without rereading the whole bestiary.
+---
+layout: hub
+title: "Spellbook"
+hero_title: "⚔️ Armory & Spellbook"
+hero_intro: "Welcome to the working shelf of rituals, tools, and templates. This space gathers the counter-spells mentioned in each monster page so you can grab a ritual without rereading the whole bestiary."
+show_breadcrumbs: true
+---
 
 <div class="section-callout">
   Want the printable versions fast? Jump to the <a href="../site/">Site Tools</a> cabinet or use the links in each ritual block below to download PDFs.
 </div>
-
-{% include quick-actions.html %}
 
 ## 🧪 Rituals at a Glance
 
@@ -120,13 +120,5 @@ Welcome to the working shelf of rituals, tools, and templates. This space gather
 [Cut a deal with the Goblin.](../monsters/dopamine-goblin/)
 
 ---
-
-🔗 Quick Navigation
-
-<div class="section-callout">
-Prefer a different path? These shortcuts take you straight to the other guild halls.
-</div>
-
-{% include nav-cards.html %}
 
 > “Every hero needs a spellbook. Yours can start with one good ritual.”
