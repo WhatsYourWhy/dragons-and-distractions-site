@@ -9,12 +9,32 @@ tags:
   - obsidian
 ---
 
+# 🐲 The Slumber Troll
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../SlumberTroll.png" alt="Illustration of the Slumber Troll, a sleepy giant emerging from blankets">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Slumber Troll Portrait</span>
     <span class="monster-hero__links">Download the art file: <a href="../SlumberTroll.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
   </div>
+</div>
+
+<div class="battle-card">
+  <div class="battle-card__eyebrow">Battle Card</div>
+  <ul class="battle-card__list">
+    <li><strong>Triggers:</strong> Snooze spirals, warm darkness, “just five more minutes” bargaining.</li>
+    <li><strong>First counter-move:</strong> 3-2-1 Go, flip on light, and send the “I’m vertical” text.</li>
+    <li><strong>Printable:</strong> <a href="../site/printables/pdf/wake-invocation-checklist-ink.pdf">Wake Invocation checklist (ink PDF)</a></li>
+  </ul>
+</div>
+
+<div class="monster-mini-toc" aria-label="On this page">
+  <span class="monster-mini-toc__label">Jump to</span>
+  <a href="#lore">Lore</a>
+  <a href="#weaknesses">Weaknesses</a>
+  <a href="#rituals">Rituals</a>
+  <a href="#tools">Tools</a>
 </div>
 
 🏰 I. Bestiary Entry
@@ -29,7 +49,7 @@ tags:
 >
 > Facing the Slumber Troll is the first quest in any hero’s day. Without crossing this bridge, no other monster can be fought.
 
-🔎 II. Monster Ecology (Lore and Sources)
+## 🔎 Monster Ecology (Lore and Sources) {#lore}
 
 ✅ Trolls in European folklore guard boundaries: caves, bridges, roads.
 ✅ ADHDers face “Initiation Impairment” (Russell Barkley, 2010) → struggle to cross from intention to action.
@@ -53,7 +73,7 @@ tags:
 - Cancelling early plans to stay cocooned.
 - Avoiding showers, clothes, or daylight because it feels like “too much.”
 
-🗝️ V. The Slumber Troll’s Weaknesses
+## 🗝️ The Slumber Troll’s Weaknesses {#weaknesses}
 
 ✅ Fire (salience) → light, scent, sound cues that break the fog.
 ✅ Body-first activation → move before you negotiate.
@@ -61,7 +81,7 @@ tags:
 ✅ Social rope → someone outside the cave holding tension.
 ✅ Reward as fuel → coffee, memes, sunlight earned by movement.
 
-🪄 VI. Rituals and Counter-Spells
+## 🪄 Rituals and Counter-Spells {#rituals}
 
 ⭐ **Invocation:** “Arise, motherfucker.” (Speak aloud as personal spell.)
 
@@ -81,7 +101,7 @@ tags:
 - If you return to rest, set a timer (20–90 minutes).
 - Name the wake-up action before you lie down.
 
-🛠️ VII. Artifacts and Weapons
+## 🛠️ Artifacts and Weapons {#tools}
 
 - **Cloak of Readiness** → Clothes laid out the night before.
 - **Sword of 3-2-1 Go** → Irrefutable countdown.

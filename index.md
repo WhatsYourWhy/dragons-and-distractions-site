@@ -20,6 +20,8 @@ Pick your quest below. Each path holds a different way to tame distractions and 
 
 {% include nav-cards.html %}
 
+{% include quick-actions.html %}
+
 ---
 
 ## 🔥 What is This?

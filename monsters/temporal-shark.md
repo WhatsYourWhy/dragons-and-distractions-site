@@ -9,12 +9,32 @@ tags:
   - obsidian
 ---
 
+# 🦈 The Temporal Shark
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../TheTemporalShark.png" alt="Illustration of the Temporal Shark circling with a clock-themed fin">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Temporal Shark Portrait</span>
     <span class="monster-hero__links">Download the art file: <a href="../TheTemporalShark.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
   </div>
+</div>
+
+<div class="battle-card">
+  <div class="battle-card__eyebrow">Battle Card</div>
+  <ul class="battle-card__list">
+    <li><strong>Triggers:</strong> Time blindness, hidden prep steps, deadlines that only feel real at the last minute.</li>
+    <li><strong>First counter-move:</strong> Place a Tide Mark start time with T-60 and T-15 alarms.</li>
+    <li><strong>Printable:</strong> <a href="../site/printables/pdf/tide-mark-calendar-card-ink.pdf">Tide Mark calendar card (ink PDF)</a></li>
+  </ul>
+</div>
+
+<div class="monster-mini-toc" aria-label="On this page">
+  <span class="monster-mini-toc__label">Jump to</span>
+  <a href="#lore">Lore</a>
+  <a href="#weaknesses">Weaknesses</a>
+  <a href="#rituals">Rituals</a>
+  <a href="#tools">Tools</a>
 </div>
 
 🏰 I. Bestiary Entry
@@ -27,7 +47,7 @@ tags:
 > It loves the taste of panic productivity and will starve you of preparation so the frenzy feels delicious.
 > But you can tag it, track it, and swim with allies.
 
-🔎 II. Monster Ecology (Lore and Sources)
+## 🔎 Monster Ecology (Lore and Sources) {#lore}
 
 ✅ Shark myths → sensing blood = sensing urgency.
 ✅ ADHD time blindness → difficulty sensing future cost until immediate.
@@ -51,7 +71,7 @@ tags:
 - Assuming a 2-hour task fits into a 45-minute window.
 - Feeling weirdly calm until the shark fin appears.
 
-🗝️ V. The Temporal Shark’s Weaknesses
+## 🗝️ The Temporal Shark’s Weaknesses {#weaknesses}
 
 ✅ Time beacons → visible, audible reminders before danger.
 ✅ Pre-decision → decide start times while calm.
@@ -69,7 +89,7 @@ tags:
 ⭐ Buddy Buoy
 - Share the start time with a friend; ask for a ping at T-10.
 
-🪄 VI. Rituals and Counter-Spells
+## 🪄 Rituals and Counter-Spells {#rituals}
 
 ⭐ **Name the Feeding Window:**
 > “I swim at 2:00. I’m in the water by 1:50.”
@@ -84,7 +104,7 @@ tags:
 - After urgent work, walk for 5 minutes and log start/end times.
 - Teach the brain what 45 minutes *feels* like.
 
-🛠️ VII. Artifacts and Weapons
+## 🛠️ Artifacts and Weapons {#tools}
 
 - Fin Tracker → wall clock, time timer, or Pomodoro app.
 - Beacon Stones → calendar alerts with verbs (“Open slides,” “Email draft”).

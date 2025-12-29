@@ -9,12 +9,32 @@ tags:
   - obsidian
 ---
 
+# 🧝‍♂️ The Dopamine Goblin
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../DopamineGoblin.png" alt="Illustration of the Dopamine Goblin clutching shiny objects">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Dopamine Goblin Portrait</span>
     <span class="monster-hero__links">Download the art file: <a href="../DopamineGoblin.png">PNG</a> · <a href="../art/index.md">Gallery</a></span>
   </div>
+</div>
+
+<div class="battle-card">
+  <div class="battle-card__eyebrow">Battle Card</div>
+  <ul class="battle-card__list">
+    <li><strong>Triggers:</strong> Shiny tabs, phone pings, novelty cravings when tasks feel dull.</li>
+    <li><strong>First counter-move:</strong> Make a 20-minute Goblin deal with a pre-picked reward.</li>
+    <li><strong>Printable:</strong> <a href="../site/printables/pdf/single-task-oath-card-ink.pdf">Single-Task Oath card (ink PDF)</a></li>
+  </ul>
+</div>
+
+<div class="monster-mini-toc" aria-label="On this page">
+  <span class="monster-mini-toc__label">Jump to</span>
+  <a href="#lore">Lore</a>
+  <a href="#weaknesses">Weaknesses</a>
+  <a href="#rituals">Rituals</a>
+  <a href="#tools">Tools</a>
 </div>
 
 🏰 I. Bestiary Entry
@@ -30,7 +50,7 @@ tags:
 >
 > You cannot kill the Goblin. But you can bargain with it. You can trap it. You can bribe it to work for you.
 
-🔎 II. Monster Ecology (Lore and Sources)
+## 🔎 Monster Ecology (Lore and Sources) {#lore}
 
 - Goblins in folklore → clever, greedy, can’t resist shiny things.
 - ADHD brains = novelty-seeking, reward-driven, boredom-averse. (Barkley, 2015)
@@ -55,7 +75,7 @@ tags:
 - Having 20 open tabs of new ideas.
 - Switching hobbies instead of finishing.
 
-🗝️ V. The Dopamine Goblin’s Weaknesses
+## 🗝️ The Dopamine Goblin’s Weaknesses {#weaknesses}
 
 - Pre-negotiated rewards.
 - Clear time boundaries.
@@ -64,7 +84,7 @@ tags:
 - Novelty channeled into useful places.
 - Humor → trick the Goblin to help.
 
-🪄 VI. Rituals and Counter-Spells
+## 🪄 Rituals and Counter-Spells {#rituals}
 
 ⭐ **Invocation: “Goblin, make a deal.”**
 - Negotiate: “If I do X for 20 min, I get Y.”
@@ -85,7 +105,7 @@ tags:
 - Rotate music, workspace, tools intentionally.
 - Controlled novelty to satisfy its itch.
 
-🛠️ VII. Artifacts and Weapons
+## 🛠️ Artifacts and Weapons {#tools}
 
 - **Goblin Jar** → Physical place for postponed ideas.
 - **Contract Scroll** → Written deal with yourself.

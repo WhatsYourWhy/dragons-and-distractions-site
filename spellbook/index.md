@@ -1,5 +1,7 @@
 # ⚔️ Armory & Spellbook
 
+{% include breadcrumbs.html %}
+
 Welcome to the working shelf of rituals, tools, and templates. This space gathers the counter-spells mentioned in each monster page so you can grab a ritual without rereading the whole bestiary.
 
 <div class="section-callout">
