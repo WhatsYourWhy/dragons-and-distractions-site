@@ -1,0 +1,58 @@
+{% assign printable_groups = site.data.printables %}
+{% if include.slugs %}
+  {% assign slug_list = include.slugs | replace: " ", "" | split: "," %}
+  {% assign printable_groups = site.data.printables | where_exp: "group", "slug_list contains group.slug" %}
+{% endif %}
+
+<div class="printable-group-list">
+  {% for group in printable_groups %}
+  <div class="printable-group" aria-labelledby="printable-group-{{ group.slug }}">
+    <h3 id="{{ group.slug }}">
+      <a id="printable-group-{{ group.slug }}" href="#{{ group.slug }}">{{ group.title }}</a>
+    </h3>
+    {% if group.when_to_use %}
+    <p class="printable-group__blurb">{{ group.when_to_use }}</p>
+    {% endif %}
+    {% if group.printables and group.printables.size > 0 %}
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Printable</th>
+          <th scope="col">Markdown</th>
+          <th scope="col">Ink PDF</th>
+          <th scope="col">Art PDF</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in group.printables %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>
+            {% if item.markdown %}
+            <a href="{{ item.markdown | relative_url }}">{{ item.markdown_label | default: "View" }}</a>
+            {% else %}
+            —
+            {% endif %}
+          </td>
+          <td>
+            {% if item.ink_pdf %}
+            <a href="{{ item.ink_pdf | relative_url }}">{{ item.ink_pdf_label | default: "Ink PDF" }}</a>
+            {% else %}
+            —
+            {% endif %}
+          </td>
+          <td>
+            {% if item.art_pdf %}
+            <a href="{{ item.art_pdf | relative_url }}">{{ item.art_pdf_label | default: "Art PDF" }}</a>
+            {% else %}
+            —
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
