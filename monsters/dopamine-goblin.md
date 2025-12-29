@@ -9,6 +9,9 @@ tags:
   - obsidian
 ---
 
+# 🧝‍♂️ The Dopamine Goblin
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../DopamineGoblin.png" alt="Illustration of the Dopamine Goblin clutching shiny objects">
   <div class="monster-hero__caption">

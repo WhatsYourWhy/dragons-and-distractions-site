@@ -1,5 +1,7 @@
 # 🐉 Single-Task Oath & 3-Item Rule
 
+{% include breadcrumbs.html %}
+
 A printable pledge to keep the Hydra from sprouting new heads. Use it as a desk tent, sticky note, or phone lock-screen during deep work.
 
 **Download:** [Print-friendly Single-Task Oath card](../site/printables/single-task-oath-card.md) (PDF-ready layout)

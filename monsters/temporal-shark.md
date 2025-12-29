@@ -9,6 +9,9 @@ tags:
   - obsidian
 ---
 
+# 🦈 The Temporal Shark
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../TheTemporalShark.png" alt="Illustration of the Temporal Shark circling with a clock-themed fin">
   <div class="monster-hero__caption">

@@ -9,6 +9,9 @@ tags:
   - obsidian
 ---
 
+# 🐲 The Slumber Troll
+{% include breadcrumbs.html %}
+
 <div class="monster-hero">
   <img src="../SlumberTroll.png" alt="Illustration of the Slumber Troll, a sleepy giant emerging from blankets">
   <div class="monster-hero__caption">

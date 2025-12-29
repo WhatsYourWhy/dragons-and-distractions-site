@@ -1,5 +1,7 @@
 # 🐲 Wake Invocation Checklist
 
+{% include breadcrumbs.html %}
+
 A printable morning bridge to move past the Slumber Troll. Keep it on your nightstand, door, or phone lock-screen.
 
 **Download:** [Print-friendly Wake Invocation checklist](../site/printables/wake-invocation-checklist.md) (PDF-ready, bedside format)
