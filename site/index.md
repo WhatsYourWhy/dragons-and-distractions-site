@@ -1,8 +1,10 @@
-# 🧰 Site Tools & Templates
-
-This folder holds printable aids, onboarding scrolls, and any shared checklists that pair with the monsters and spells.
-
-{% include quick-actions.html %}
+---
+layout: hub
+title: "Site Tools"
+hero_title: "🧰 Site Tools & Templates"
+hero_intro: "This folder holds printable aids, onboarding scrolls, and any shared checklists that pair with the monsters and spells."
+show_breadcrumbs: true
+---
 
 ## 📎 Current contents
 
@@ -43,13 +45,5 @@ When to use: Deploy the Slumber Troll wake kit when mornings are sluggish and yo
 | Wake Invocation bedside card | [View card](./printables/wake-invocation-checklist.md) | [Download ink PDF](./printables/pdf/wake-invocation-checklist-ink.pdf) | [Download art PDF](./printables/pdf/wake-invocation-checklist-art.pdf) |
 
 More tools and printables will be added as the Guild forges them.
-
-🔗 Quick Navigation
-
-<div class="section-callout">
-Ready to swap zones? Use the shortcuts below to move around the guild.
-</div>
-
-{% include nav-cards.html %}
 
 > “A good tool is a spell you can hold.”

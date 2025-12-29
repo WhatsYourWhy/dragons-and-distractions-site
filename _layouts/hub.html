@@ -1,0 +1,31 @@
+---
+layout: default
+header_include: header-nav.html
+---
+{%- assign show_breadcrumbs = page.show_breadcrumbs | default: false -%}
+{%- assign show_quick_actions = page.show_quick_actions | default: true -%}
+{%- assign show_nav_cards = page.show_nav_cards | default: true -%}
+{%- assign hero_title = page.hero_title | default: page.title | default: site.title -%}
+{%- assign hero_intro = page.hero_intro | default: nil -%}
+
+{%- if show_breadcrumbs -%}
+  {%- include breadcrumbs.html -%}
+{%- endif -%}
+
+<header class="page-hero">
+  <h1 class="page-hero__title">{{ hero_title }}</h1>
+  {%- if hero_intro -%}
+    <p class="page-hero__intro">{{ hero_intro }}</p>
+  {%- endif -%}
+</header>
+
+{%- if show_quick_actions -%}
+  {%- include quick-actions.html -%}
+{%- endif -%}
+
+{{ content }}
+
+{%- if show_nav_cards -%}
+  <hr />
+  {%- include nav-cards.html -%}
+{%- endif -%}

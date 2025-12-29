@@ -1,12 +1,10 @@
-# 🗺️ Monster Index
-
-{% include breadcrumbs.html %}
-
-Welcome to the Bestiary.
-
-Each monster represents a real executive function challenge—named, described, and disarmed with humor, science, and ritual. Choose your foe to jump straight to its lore and counter-spells.
-
-{% include quick-actions.html %}
+---
+layout: hub
+title: "Monster Index"
+hero_title: "🗺️ Monster Index"
+hero_intro: "Each monster represents a real executive function challenge—named, described, and disarmed with humor, science, and ritual. Choose your foe to jump straight to its lore and counter-spells."
+show_breadcrumbs: true
+---
 
 <div class="monster-grid">
   <a class="monster-card" href="./slumber-troll/">
@@ -91,19 +89,3 @@ Each monster represents a real executive function challenge—named, described, 
 </div>
 
 More monsters await...
-
----
-
-🔗 Quick Navigation
-
-<div class="section-callout">
-Need a different tool or want to jump back to the guild hall? Choose a shortcut below.
-</div>
-
-- 🌙 [The Slumber Troll](slumber-troll/)
-- 🐲 [The Task Hydra](task-hydra/)
-- 🧝‍♂️ [The Dopamine Goblin](dopamine-goblin/)
-- 🦈 [The Temporal Shark](temporal-shark/)
-- 🐻 [The Cave Bear](cave-bear/)
-
-{% include nav-cards.html %}

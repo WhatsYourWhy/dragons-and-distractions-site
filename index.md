@@ -1,26 +1,13 @@
 ---
-layout: home
+layout: hub
 title: "Dragons & Distractions"
+hero_title: "🐉 Welcome, Adventurer"
+hero_intro: "Pick your quest below. Each path holds a different way to tame distractions and gather the tools you need."
+show_breadcrumbs: false
 ---
-
-# 🐉 Welcome, Adventurer
 
 **This is Dragons & Distractions.**  
 Where executive dysfunction becomes epic adventure.
-
----
-
-## 🧭 Start Here
-
-<div class="section-callout">
-Pick your quest below. Each path holds a different way to tame distractions and gather the tools you need.
-</div>
-
-{% include quick-actions.html %}
-
-{% include nav-cards.html %}
-
-{% include quick-actions.html %}
 
 ---
 

@@ -1,0 +1,27 @@
+<div class="site-banner site-banner--minimal">
+  <div class="wrapper site-banner__inner">
+    <a class="site-banner__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-banner__nav" aria-label="Primary">
+      <ul class="site-banner__links">
+        {% assign nav_links = site.data.nav_links %}
+        {% for link in nav_links %}
+        <li class="site-banner__item">
+          <a class="site-banner__link" href="{{ link.url | relative_url }}">
+            <span class="site-banner__emoji">{{ link.emoji }}</span>
+            <span class="site-banner__text">{{ link.label }}</span>
+          </a>
+        </li>
+        {% endfor %}
+        <li class="site-banner__item">
+          <button class="theme-toggle js-theme-toggle" type="button" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">🧘</span>
+            <span class="theme-toggle__label">
+              <span class="theme-toggle__text">Low-stim off</span>
+              <span class="theme-toggle__status">Brighten colors</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
