@@ -2,6 +2,79 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   {%- include head.html -%}
   <body>
+    <script>
+      (function () {
+        const storageKey = "dd-theme";
+        const className = "theme-low-stim";
+        const root = document.documentElement;
+
+        const getStoredPreference = () => {
+          try {
+            return localStorage.getItem(storageKey);
+          } catch (error) {
+            return null;
+          }
+        };
+
+        const setStoredPreference = (theme) => {
+          try {
+            localStorage.setItem(storageKey, theme);
+          } catch (error) {
+            /* ignore write errors */
+          }
+        };
+
+        const getPreferredTheme = () => {
+          const stored = getStoredPreference();
+          if (stored === "low-stim" || stored === "default") {
+            return stored;
+          }
+          const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          return prefersDark ? "low-stim" : "default";
+        };
+
+        const applyTheme = (theme) => {
+          const isLowStim = theme === "low-stim";
+          document.body.classList.toggle(className, isLowStim);
+          document.body.dataset.theme = theme;
+          root.dataset.theme = theme;
+          document.querySelectorAll(".js-theme-toggle").forEach((button) => {
+            button.setAttribute("aria-pressed", String(isLowStim));
+            const text = button.querySelector(".theme-toggle__text");
+            const status = button.querySelector(".theme-toggle__status");
+            if (text) {
+              text.textContent = isLowStim ? "Low-stim on" : "Low-stim off";
+            }
+            if (status) {
+              status.textContent = isLowStim ? "Reduced color & motion" : "Brighten colors";
+            }
+          });
+        };
+
+        const initialTheme = getPreferredTheme();
+        applyTheme(initialTheme);
+
+        const mediaQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+        if (mediaQuery && !getStoredPreference()) {
+          mediaQuery.addEventListener("change", (event) => {
+            const nextTheme = event.matches ? "low-stim" : "default";
+            applyTheme(nextTheme);
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          applyTheme(document.body.classList.contains(className) ? "low-stim" : "default");
+          document.querySelectorAll(".js-theme-toggle").forEach((button) => {
+            button.addEventListener("click", () => {
+              const isLowStim = document.body.classList.toggle(className);
+              const theme = isLowStim ? "low-stim" : "default";
+              applyTheme(theme);
+              setStoredPreference(theme);
+            });
+          });
+        });
+      })();
+    </script>
     <a class="skip-to-content" href="#main-content">Skip to content</a>
     {%- assign header_include = page.header_include | default: site.header_include -%}
     <header class="site-header" role="banner">
