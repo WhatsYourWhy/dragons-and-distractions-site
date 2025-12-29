@@ -14,10 +14,21 @@ titles_from_headings:
 optional_front_matter:
   remove_originals: true
 
+collections:
+  monsters:
+    output: true
+    permalink: /monsters/:name/
+
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       layout: page
+      header_include: site-header.html
+  - scope:
+      path: ""
+      type: "monsters"
+    values:
+      layout: monster
       header_include: site-header.html
