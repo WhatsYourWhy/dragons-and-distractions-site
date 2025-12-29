@@ -1,0 +1,44 @@
+- slug: task-hydra
+  title: "Task Hydra Printables"
+  when_to_use: "Summon the Task Hydra set when you need to tackle a sprawling to-do list one head at a time—especially if you’re tempted to multitask instead of focusing."
+  printables:
+    - name: "Single-Task Oath card"
+      markdown_label: "View card"
+      markdown: /site/printables/single-task-oath-card.md
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/single-task-oath-card-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/single-task-oath-card-art.pdf
+- slug: temporal-shark
+  title: "Temporal Shark Printables"
+  when_to_use: "Reach for the Temporal Shark kit when you need to visualize time-boxed sprints or tide marks that keep long sessions from drifting into the deep."
+  printables:
+    - name: "Tide Mark calendar card"
+      markdown_label: "View card"
+      markdown: /site/printables/tide-mark-calendar-card.md
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/tide-mark-calendar-card-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/tide-mark-calendar-card-art.pdf
+- slug: buddy-support
+  title: "Buddy Support (Tide Marks)"
+  when_to_use: "Share the buddy ping template whenever you and a partner need quick, repeatable check-ins to keep each other aligned on commitments."
+  printables:
+    - name: "Buddy Ping template"
+      markdown_label: "View template"
+      markdown: /site/printables/tide-marks-buddy-ping.md
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/tide-marks-buddy-ping-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/tide-marks-buddy-ping-art.pdf
+- slug: slumber-troll
+  title: "Slumber Troll Printables"
+  when_to_use: "Deploy the Slumber Troll wake kit when mornings are sluggish and you need a bedside ritual to rout the troll before it steals the day."
+  printables:
+    - name: "Wake Invocation bedside card"
+      markdown_label: "View card"
+      markdown: /site/printables/wake-invocation-checklist.md
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/wake-invocation-checklist-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/wake-invocation-checklist-art.pdf

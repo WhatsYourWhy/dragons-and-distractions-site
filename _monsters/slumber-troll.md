@@ -116,6 +116,10 @@ tags:
 - **Horn of Dawn** → Alarm that can’t be silenced without standing.
 - **Candle of Resolve** → Light as ritual signifier.
 
+## 🧰 Printables to Equip
+
+{% include printable-groups.html slugs:"slumber-troll" %}
+
 ⚡️ VIII. Command Phrases
 
 “Arise, motherfucker.”

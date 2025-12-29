@@ -10,6 +10,10 @@ show_breadcrumbs: true
   Want the printable versions fast? Jump to the <a href="../site/">Site Tools</a> cabinet or use the links in each ritual block below to download PDFs.
 </div>
 
+## 🧰 Printables Cabinet
+
+{% include printable-groups.html %}
+
 ## 🧪 Rituals at a Glance
 
 - [Single-Task Oath & 3-Item Rule](#task-hydra-rituals) — choose the head, limit the list.

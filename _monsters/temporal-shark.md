@@ -118,6 +118,10 @@ tags:
 - Buoy Buddy → coworking room, stream-with-me link, or friend ping.
 - Breadcrumb Trail → checklist of steps taped to monitor.
 
+## 🧰 Printables to Equip
+
+{% include printable-groups.html slugs:"temporal-shark,buddy-support" %}
+
 ⚡️ VIII. Command Phrases
 
 “Tag the shark before it bites.”

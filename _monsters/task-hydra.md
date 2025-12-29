@@ -129,6 +129,10 @@ tags:
 - Shield of Limits → Timer or alarm for work sessions.
 - Bag of Holding → Inbox or bucket to catch new tasks without acting immediately.
 
+## 🧰 Printables to Equip
+
+{% include printable-groups.html slugs:"task-hydra" %}
+
 ⚡️ VIII. Command Phrases
 
 “Choose the head.”

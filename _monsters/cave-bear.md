@@ -121,6 +121,10 @@ tags:
 - Trail of Pebbles → sticky notes leading from bed to desk/door.
 - Shield of Noise → playlist that marks “out of cave” mode.
 
+## 🧰 Printables to Equip
+
+{% include printable-groups.html slugs:"buddy-support" %}
+
 ⚡️ VIII. Command Phrases
 
 “Cave time ends at the bell.”
