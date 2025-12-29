@@ -16,6 +16,8 @@ Where executive dysfunction becomes epic adventure.
 Pick your quest below. Each path holds a different way to tame distractions and gather the tools you need.
 </div>
 
+{% include quick-actions.html %}
+
 {% include nav-cards.html %}
 
 ---

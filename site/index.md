@@ -2,6 +2,8 @@
 
 This folder holds printable aids, onboarding scrolls, and any shared checklists that pair with the monsters and spells.
 
+{% include quick-actions.html %}
+
 ## 📎 Current contents
 
 - `_sidebar.md` — local navigation used for site builds (will expand as pages arrive)
@@ -12,8 +14,6 @@ This folder holds printable aids, onboarding scrolls, and any shared checklists 
 - Full ritual write-ups live in the [Spellbook](../spellbook/) if you want the lore alongside the printable files.
 
 More tools and printables will be added as the Guild forges them.
-
----
 
 🔗 Quick Navigation
 
