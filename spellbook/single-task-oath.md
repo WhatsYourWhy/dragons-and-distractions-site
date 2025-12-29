@@ -35,5 +35,5 @@ Signed: ____________  Date: ____________
 ## 🔗 Quick Navigation
 
 - 🧭 Return to the [Armory & Spellbook](./index.md)
-- 🐉 Learn the [Task Hydra lore](../monsters/task-hydra.md)
+- 🐉 Learn the [Task Hydra lore](../monsters/task-hydra/)
 - 🧰 Browse [Site Tools & Templates](../site/index.md)
