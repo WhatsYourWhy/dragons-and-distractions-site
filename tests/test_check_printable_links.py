@@ -164,3 +164,34 @@ def test_check_broken_pdf_links_reports_missing_monster_pdf(monkeypatch, tmp_pat
         "_monsters/missing.md:",
         "  • site/printables/pdf/missing.pdf",
     ]
+
+
+def test_check_broken_pdf_links_parses_html_files(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    html_file = root / "_includes" / "cta.html"
+    html_file.parent.mkdir(parents=True, exist_ok=True)
+    html_file.write_text(
+        '<a href="{{ "/site/printables/pdf/missing.pdf" | relative_url }}">Download</a>',
+        encoding="utf-8",
+    )
+
+    errors = checks.check_broken_pdf_links([html_file])
+
+    assert errors == [
+        "_includes/cta.html:",
+        "  • site/printables/pdf/missing.pdf",
+    ]
+
+
+def test_check_broken_pdf_links_flags_monster_missing_printable(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    monster_md = root / "_monsters" / "missing-anchor.md"
+    monster_md.parent.mkdir(parents=True, exist_ok=True)
+    monster_md.write_text("No printable here.", encoding="utf-8")
+
+    errors = checks.check_broken_pdf_links([monster_md])
+
+    assert errors == [
+        "_monsters/missing-anchor.md:",
+        "  • missing printable PDF link for monster entry",
+    ]
