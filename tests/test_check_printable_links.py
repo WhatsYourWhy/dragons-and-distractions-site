@@ -35,6 +35,42 @@ def test_find_pdf_links_resolves_relative_pdf_directory(monkeypatch, tmp_path):
     assert links == [target_pdf]
 
 
+def test_find_pdf_links_detects_html_anchor_with_relative_url(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    pdf_dir = root / "site" / "printables" / "pdf"
+    pdf_dir.mkdir(parents=True)
+    target_pdf = pdf_dir / "html.pdf"
+    target_pdf.touch()
+
+    md_file = root / "_monsters" / "html-link.md"
+    md_file.parent.mkdir(parents=True, exist_ok=True)
+    md_file.write_text(
+        '<a href="{{ "/site/printables/pdf/html.pdf" | relative_url }}">Download</a>',
+        encoding="utf-8",
+    )
+
+    links = checks.find_pdf_links(md_file)
+
+    assert links == [target_pdf]
+
+
+def test_find_pdf_links_resolves_site_root_links_to_repo_root(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    pdf_dir = root / "site" / "printables" / "pdf"
+    pdf_dir.mkdir(parents=True)
+    target_pdf = pdf_dir / "absolute.pdf"
+    target_pdf.touch()
+
+    md_file = root / "site" / "printables" / "absolute.md"
+    md_file.write_text(
+        "[printable](/site/printables/pdf/absolute.pdf)", encoding="utf-8"
+    )
+
+    links = checks.find_pdf_links(md_file)
+
+    assert links == [target_pdf]
+
+
 def test_check_required_links_passes_with_all_expected_links(monkeypatch, tmp_path):
     root = configure_temp_repo(monkeypatch, tmp_path)
     template = checks.CHECKS[0]
@@ -110,4 +146,21 @@ def test_check_broken_pdf_links_flags_links_outside_repo(monkeypatch, tmp_path):
         "site/printables/nested/deep/external.md:",
         f"  • {absolute_pdf} (outside repo)",
         f"  • {parent_traversing_pdf} (outside repo)",
+    ]
+
+
+def test_check_broken_pdf_links_reports_missing_monster_pdf(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    monster_md = root / "_monsters" / "missing.md"
+    monster_md.parent.mkdir(parents=True, exist_ok=True)
+    monster_md.write_text(
+        '<a href="{{ "/site/printables/pdf/missing.pdf" | relative_url }}">Missing PDF</a>',
+        encoding="utf-8",
+    )
+
+    errors = checks.check_broken_pdf_links([monster_md])
+
+    assert errors == [
+        "_monsters/missing.md:",
+        "  • site/printables/pdf/missing.pdf",
     ]

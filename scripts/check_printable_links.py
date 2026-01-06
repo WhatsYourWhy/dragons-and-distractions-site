@@ -18,6 +18,9 @@ PDF_DIR = ROOT / "site" / "printables" / "pdf"
 PRINTABLE_PDF_PARTS = ("site", "printables", "pdf")
 YAML_PDF_PREFIX = "/site/printables/pdf/"
 SITE_INDEX_RELATIVE_PREFIX = "./printables/pdf/"
+LIQUID_RELATIVE_URL_PATTERN = re.compile(
+    r"""\{\{\s*["'](?P<path>[^"']+)["']\s*(\|\s*relative_url\s*)?\}\}"""
+)
 
 
 @dataclass
@@ -74,11 +77,12 @@ CHECKS: list[LinkCheck] = [
 def find_pdf_links(path: Path) -> list[Path]:
     links: list[Path] = []
     text = path.read_text(encoding="utf-8", errors="ignore")
-    for link in find_md_links(text):
-        if not link.lower().endswith(".pdf"):
+    for link in find_link_targets(text):
+        normalized = normalize_link_target(link)
+        if not normalized.lower().endswith(".pdf"):
             continue
 
-        target = (path.parent / link).resolve()
+        target = resolve_link_target(normalized, path)
         try:
             rel_target = target.relative_to(ROOT)
         except ValueError:
@@ -95,6 +99,39 @@ def find_md_links(markdown: str) -> Iterable[str]:
     link_pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
     for match in link_pattern.finditer(markdown):
         yield match.group(1)
+
+
+def find_html_links(html: str) -> Iterable[str]:
+    anchor_pattern = re.compile(
+        r"""href\s*=\s*(?P<quote>["'])?(?P<href>\{\{.*?\}\}|[^"' >]+)(?P=quote)?""",
+        re.IGNORECASE,
+    )
+    for match in anchor_pattern.finditer(html):
+        yield match.group("href")
+
+
+def find_link_targets(text: str) -> Iterable[str]:
+    yield from find_md_links(text)
+    yield from find_html_links(text)
+
+
+def normalize_link_target(raw_link: str) -> str:
+    stripped = raw_link.strip()
+    liquid_match = LIQUID_RELATIVE_URL_PATTERN.fullmatch(stripped)
+    if liquid_match:
+        return liquid_match.group("path")
+    return stripped
+
+
+def resolve_link_target(link: str, source: Path) -> Path:
+    if link.startswith("/site/"):
+        return (ROOT / link.lstrip("/")).resolve()
+
+    target = Path(link)
+    if target.is_absolute():
+        return target.resolve()
+
+    return (source.parent / target).resolve()
 
 
 def extract_yaml_pdf_links(yaml_path: Path) -> list[str]:
