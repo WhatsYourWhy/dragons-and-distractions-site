@@ -10,7 +10,8 @@ This checker scans Markdown and HTML files for PDF links expressed as:
 It resolves those links relative to the source file, verifies that the targets
 live under ``site/printables/pdf/``, and asserts that certain pages carry
 specific ritual links. A small YAML bridge pulls expected printable URLs from
-``_data/printables.yml`` for ``site/index.md``.
+``_data/printables.yml`` for ``site/index.md``. Additional HTML/Liquid template
+parsing can be layered in once implemented.
 """
 
 from dataclasses import dataclass
