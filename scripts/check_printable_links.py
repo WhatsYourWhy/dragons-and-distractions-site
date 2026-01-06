@@ -34,6 +34,7 @@ SITE_INDEX_RELATIVE_PREFIX = "./printables/pdf/"
 LIQUID_RELATIVE_URL_PATTERN = re.compile(
     r"""\{\{\s*["'](?P<path>[^"']+)["']\s*(\|\s*relative_url\s*)?\}\}"""
 )
+URL_SCHEME_PATTERN = re.compile(r"^[a-zA-Z][a-zA-Z0-9+.-]*://")
 
 
 @dataclass
@@ -117,7 +118,7 @@ def find_md_links(markdown: str) -> Iterable[str]:
 def find_html_links(html: str) -> Iterable[str]:
     anchor_pattern = re.compile(
         r"""href\s*=\s*(?P<quote>["'])?(?P<href>\{\{.*?\}\}|[^"' >]+)(?P=quote)?""",
-        re.IGNORECASE,
+        re.IGNORECASE | re.DOTALL,
     )
     for match in anchor_pattern.finditer(html):
         yield match.group("href")
@@ -137,6 +138,9 @@ def normalize_link_target(raw_link: str) -> str:
 
 
 def resolve_link_target(link: str, source: Path) -> Path:
+    if URL_SCHEME_PATTERN.match(link) or link.startswith("//"):
+        return Path(link)
+
     if link.startswith("/site/"):
         return (ROOT / link.lstrip("/")).resolve()
 

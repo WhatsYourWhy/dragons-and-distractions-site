@@ -54,6 +54,25 @@ def test_find_pdf_links_detects_html_anchor_with_relative_url(monkeypatch, tmp_p
     assert links == [target_pdf]
 
 
+def test_find_pdf_links_detects_html_anchor_site_root_path(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    pdf_dir = root / "site" / "printables" / "pdf"
+    pdf_dir.mkdir(parents=True)
+    target_pdf = pdf_dir / "plain.html.pdf"
+    target_pdf.touch()
+
+    html_file = root / "site" / "printables" / "html-plain.html"
+    html_file.parent.mkdir(parents=True, exist_ok=True)
+    html_file.write_text(
+        '<a href="/site/printables/pdf/plain.html.pdf">Plain PDF</a>',
+        encoding="utf-8",
+    )
+
+    links = checks.find_pdf_links(html_file)
+
+    assert links == [target_pdf]
+
+
 def test_find_pdf_links_resolves_site_root_links_to_repo_root(monkeypatch, tmp_path):
     root = configure_temp_repo(monkeypatch, tmp_path)
     pdf_dir = root / "site" / "printables" / "pdf"
@@ -175,6 +194,23 @@ def test_check_broken_pdf_links_flags_links_outside_repo(monkeypatch, tmp_path):
         "site/printables/nested/deep/external.md:",
         f"  • {absolute_pdf} (outside repo)",
         f"  • {parent_traversing_pdf} (outside repo)",
+    ]
+
+
+def test_check_broken_pdf_links_flags_external_html_pdf(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    html_file = root / "site" / "printables" / "external.html"
+    html_file.parent.mkdir(parents=True, exist_ok=True)
+    html_file.write_text(
+        '<a href="https://example.com/printable.pdf">External</a>',
+        encoding="utf-8",
+    )
+
+    errors = checks.check_broken_pdf_links([html_file])
+
+    assert errors == [
+        "site/printables/external.html:",
+        "  • https:/example.com/printable.pdf (outside repo)",
     ]
 
 
