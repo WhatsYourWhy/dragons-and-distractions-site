@@ -68,7 +68,7 @@ This repo ships with a ready-to-go GitHub Actions workflow that builds the site 
 
 ### Local preview
 
-Preview with Jekyll (Ruby + Bundler + Jekyll required):
+Run Jekyll locally (Ruby + Bundler + Jekyll required):
 
 ```bash
 python scripts/generate_printable_pdfs.py
