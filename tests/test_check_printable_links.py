@@ -84,6 +84,35 @@ def test_check_required_links_passes_with_all_expected_links(monkeypatch, tmp_pa
     assert checks.check_required_links(link_check) == []
 
 
+def test_check_required_links_accepts_yaml_links(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    template = checks.CHECKS[0]
+    link_check = replace(template, path=template.path)
+    (root / link_check.path).parent.mkdir(parents=True, exist_ok=True)
+    (root / link_check.path).write_text("Welcome to the site", encoding="utf-8")
+
+    data_dir = root / "_data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    data_dir.joinpath("printables.yml").write_text(
+        "\n".join(
+            [
+                "- printables:",
+                "    - ink_pdf: /site/printables/pdf/single-task-oath-card-ink.pdf",
+                "      art_pdf: /site/printables/pdf/single-task-oath-card-art.pdf",
+                "    - ink_pdf: /site/printables/pdf/tide-mark-calendar-card-ink.pdf",
+                "      art_pdf: /site/printables/pdf/tide-mark-calendar-card-art.pdf",
+                "    - ink_pdf: /site/printables/pdf/tide-marks-buddy-ping-ink.pdf",
+                "      art_pdf: /site/printables/pdf/tide-marks-buddy-ping-art.pdf",
+                "    - ink_pdf: /site/printables/pdf/wake-invocation-checklist-ink.pdf",
+                "      art_pdf: /site/printables/pdf/wake-invocation-checklist-art.pdf",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    assert checks.check_required_links(link_check) == []
+
+
 def test_check_required_links_reports_missing_entry(monkeypatch, tmp_path):
     root = configure_temp_repo(monkeypatch, tmp_path)
     template = checks.CHECKS[0]
