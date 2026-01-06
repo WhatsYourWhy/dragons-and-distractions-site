@@ -2,16 +2,15 @@ from __future__ import annotations
 
 """Validate printable links point at generated PDF artifacts.
 
-This checker currently scans Markdown files for PDF links expressed as:
+This checker scans Markdown and HTML files for PDF links expressed as:
 - Standard Markdown links (e.g., ``[text](./printables/pdf/file.pdf)``)
-- Inline HTML anchors (``<a href="...">``), including simple Liquid
-  ``relative_url`` filters wrapped in ``{{ }}``
+- Inline HTML anchors (``<a href="...">``), including Liquid ``relative_url``
+  filters wrapped in ``{{ }}``
 
-It resolves those links relative to the Markdown source, verifies that the
-targets live under ``site/printables/pdf/``, and asserts that certain pages
-carry specific ritual links. A small YAML bridge pulls expected printable URLs
-from ``_data/printables.yml`` for ``site/index.md``. Broader template parsing
-for HTML, Liquid, or other data files is not implemented yet.
+It resolves those links relative to the source file, verifies that the targets
+live under ``site/printables/pdf/``, and asserts that certain pages carry
+specific ritual links. A small YAML bridge pulls expected printable URLs from
+``_data/printables.yml`` for ``site/index.md``.
 """
 
 from dataclasses import dataclass
@@ -28,6 +27,7 @@ except ModuleNotFoundError:
 ROOT = Path(__file__).resolve().parent.parent
 PDF_DIR = ROOT / "site" / "printables" / "pdf"
 PRINTABLE_PDF_PARTS = ("site", "printables", "pdf")
+MONSTER_DIR = "_monsters"
 YAML_PDF_PREFIX = "/site/printables/pdf/"
 SITE_INDEX_RELATIVE_PREFIX = "./printables/pdf/"
 LIQUID_RELATIVE_URL_PATTERN = re.compile(
@@ -86,7 +86,7 @@ CHECKS: list[LinkCheck] = [
 ]
 
 
-def find_pdf_links(path: Path) -> list[Path]:
+def find_pdf_links(path: Path, *, include_non_printables: bool = False) -> list[Path]:
     links: list[Path] = []
     text = path.read_text(encoding="utf-8", errors="ignore")
     for link in find_link_targets(text):
@@ -102,7 +102,7 @@ def find_pdf_links(path: Path) -> list[Path]:
             links.append(target)
             continue
 
-        if rel_target.parts[:3] == PRINTABLE_PDF_PARTS:
+        if include_non_printables or rel_target.parts[:3] == PRINTABLE_PDF_PARTS:
             links.append(target)
     return links
 
@@ -207,20 +207,29 @@ def check_required_links(check: LinkCheck) -> list[str]:
     return errors
 
 
-def check_broken_pdf_links(markdown_files: list[Path]) -> list[str]:
+def check_broken_pdf_links(content_files: list[Path]) -> list[str]:
     missing: dict[Path, list[str]] = {}
 
-    for md_file in markdown_files:
-        pdf_links = find_pdf_links(md_file)
+    for md_file in content_files:
+        pdf_links = find_pdf_links(md_file, include_non_printables=True)
         broken = []
         for target in pdf_links:
             try:
-                target.relative_to(ROOT)
+                rel_target = target.relative_to(ROOT)
             except ValueError:
                 broken.append(f"{target} (outside repo)")
                 continue
+
+            if rel_target.parts[:3] != PRINTABLE_PDF_PARTS:
+                broken.append(f"{rel_target} (unexpected location)")
+                continue
+
             if not target.exists():
-                broken.append(str(target.relative_to(ROOT)))
+                broken.append(str(rel_target))
+
+        if MONSTER_DIR in md_file.relative_to(ROOT).parts and not pdf_links:
+            broken.append("missing printable PDF link for monster entry")
+
         if broken:
             missing[md_file.relative_to(ROOT)] = broken
 
@@ -236,17 +245,17 @@ def check_broken_pdf_links(markdown_files: list[Path]) -> list[str]:
 def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
     orphaned = [path.relative_to(ROOT) for path in pdf_dir.glob("*.pdf") if path.relative_to(ROOT) not in referenced]
     if orphaned:
-        print("Orphaned PDFs (not linked in markdown):")
+        print("Orphaned PDFs (not linked in content files):")
         for pdf in sorted(orphaned):
             print(f"- {pdf}")
 
 
 def main() -> int:
-    markdown_files = list(ROOT.glob("**/*.md"))
+    content_files = sorted(ROOT.glob("**/*.md")) + sorted(ROOT.glob("**/*.html"))
     errors: list[str] = []
 
     errors.extend(ensure_pdf_directory_exists(PDF_DIR))
-    errors.extend(check_broken_pdf_links(markdown_files))
+    errors.extend(check_broken_pdf_links(content_files))
 
     for check in CHECKS:
         errors.extend(check_required_links(check))
@@ -261,7 +270,13 @@ def main() -> int:
         )
         return 1
 
-    referenced = {link.relative_to(ROOT) for md in markdown_files for link in find_pdf_links(md)}
+    referenced: set[Path] = set()
+    for md in content_files:
+        for link in find_pdf_links(md):
+            try:
+                referenced.add(link.relative_to(ROOT))
+            except ValueError:
+                continue
     print("All referenced PDF links exist.")
     if referenced:
         report_orphaned_pdfs(PDF_DIR, referenced)
