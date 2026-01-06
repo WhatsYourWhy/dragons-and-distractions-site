@@ -1,6 +1,18 @@
 from __future__ import annotations
 
-"""Validate printable links point at generated PDF artifacts."""
+"""Validate printable links point at generated PDF artifacts.
+
+This checker currently scans Markdown files for PDF links expressed as:
+- Standard Markdown links (e.g., ``[text](./printables/pdf/file.pdf)``)
+- Inline HTML anchors (``<a href="...">``), including simple Liquid
+  ``relative_url`` filters wrapped in ``{{ }}``
+
+It resolves those links relative to the Markdown source, verifies that the
+targets live under ``site/printables/pdf/``, and asserts that certain pages
+carry specific ritual links. A small YAML bridge pulls expected printable URLs
+from ``_data/printables.yml`` for ``site/index.md``. Broader template parsing
+for HTML, Liquid, or other data files is not implemented yet.
+"""
 
 from dataclasses import dataclass
 from pathlib import Path
