@@ -4,8 +4,8 @@ from __future__ import annotations
 
 This checker scans Markdown and HTML files for PDF links expressed as:
 - Standard Markdown links (e.g., ``[text](./printables/pdf/file.pdf)``)
-- Inline HTML anchors (``<a href="...">``), including Liquid ``relative_url``
-  filters wrapped in ``{{ }}``
+- Inline HTML anchors (``<a href="...">``) that appear in Markdown/HTML
+  sources, including Liquid ``relative_url`` filters wrapped in ``{{ }}``
 
 It resolves those links relative to the source file, verifies that the targets
 live under ``site/printables/pdf/``, and asserts that certain pages carry
