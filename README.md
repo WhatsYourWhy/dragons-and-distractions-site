@@ -51,7 +51,7 @@ If you update any ritual text, keep the downloadable PDFs in sync:
 3. The files land in `site/printables/pdf/` and are linked from the Spellbook and Site Tools index.
    - The PDFs are **gitignored** to keep the repo text-only. Regenerate them locally (or in CI before publishing) so the links stay live on your built site.
 
-Tip: run `python scripts/check_printable_links.py` after generating to verify every referenced PDF exists before pushing to Pages. The checker currently validates ritual PDF links inside Markdown files and inline HTML `<a>` tags (including simple Liquid `relative_url` filters) and folds in `_data/printables.yml` entries when checking `site/index.md`; it already enforces a handful of required ritual links. Broader HTML/Liquid template parsing can be added once implemented.
+Tip: run `python scripts/check_printable_links.py` after generating to verify every referenced PDF exists before pushing to Pages. The checker currently validates ritual PDF links inside Markdown files, inline HTML `<a>` tags in Markdown/HTML sources (including simple Liquid `relative_url` filters), and `_data/printables.yml` additions when checking `site/index.md`; it already enforces a handful of required ritual links. Broader HTML/Liquid template parsing can be added once implemented.
 
 ## 🚀 Publishing to GitHub Pages
 
