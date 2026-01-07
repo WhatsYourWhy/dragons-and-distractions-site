@@ -132,6 +132,40 @@ def test_check_required_links_accepts_yaml_links(monkeypatch, tmp_path):
     assert checks.check_required_links(link_check) == []
 
 
+def test_check_required_links_accepts_normalized_yaml_links(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    template = checks.CHECKS[0]
+    link_check = replace(template, path=template.path)
+    (root / link_check.path).parent.mkdir(parents=True, exist_ok=True)
+    (root / link_check.path).write_text("Printable links live in YAML.", encoding="utf-8")
+
+    yaml_links = [
+        link.replace("./printables/pdf/", "/site/printables/pdf/")
+        for link in template.required_links
+    ]
+    entries = [
+        {"ink_pdf": yaml_links[index], "art_pdf": yaml_links[index + 1]}
+        for index in range(0, len(yaml_links), 2)
+    ]
+    data_dir = root / "_data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    data_dir.joinpath("printables.yml").write_text(
+        "\n".join(
+            [
+                "- printables:",
+                *[
+                    f"    - ink_pdf: {entry['ink_pdf']}\n"
+                    f"      art_pdf: {entry['art_pdf']}"
+                    for entry in entries
+                ],
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    assert checks.check_required_links(link_check) == []
+
+
 def test_check_required_links_reports_missing_entry(monkeypatch, tmp_path):
     root = configure_temp_repo(monkeypatch, tmp_path)
     template = checks.CHECKS[0]
