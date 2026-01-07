@@ -66,7 +66,7 @@ This repo ships with a ready-to-go GitHub Actions workflow that builds the site 
    - Upload `_site/` as the static site artifact
 3. The `deploy` job publishes that artifact to the `github-pages` environment. Once it completes, the job output lists your live URL.
 
-### Local preview
+### Local development
 
 Run Jekyll locally:
 Ruby + Bundler + Jekyll required.
