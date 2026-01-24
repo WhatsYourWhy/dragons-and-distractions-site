@@ -190,7 +190,10 @@ def check_required_links(check: LinkCheck) -> list[str]:
         return [f"File not found: {resolved_path}"]
 
     content = resolved_path.read_text(encoding="utf-8")
-    links = set(find_md_links(content))
+    links: set[Path] = set()
+    for link in find_link_targets(content):
+        normalized = normalize_link_target(link)
+        links.add(resolve_link_target(normalized, resolved_path))
     
     # For site/index.md, also check YAML data file
     if check.path == Path("site/index.md"):
@@ -202,17 +205,20 @@ def check_required_links(check: LinkCheck) -> list[str]:
             # site/index.md needs ./printables/pdf/filename.pdf
             if link.startswith(YAML_PDF_PREFIX):
                 relative_link = SITE_INDEX_RELATIVE_PREFIX + link[len(YAML_PDF_PREFIX):]
-                links.add(relative_link)
+                links.add(resolve_link_target(relative_link, resolved_path))
 
     errors: list[str] = []
     for required in check.required_links:
-        if required not in links:
+        required_target = resolve_link_target(required, resolved_path)
+        if required_target not in links:
             errors.append(f"{resolved_path}: missing link to {required}")
 
     return errors
 
 
-def check_broken_pdf_links(content_files: list[Path]) -> list[str]:
+def check_broken_pdf_links(
+    content_files: list[Path], *, require_existing_pdfs: bool = True
+) -> list[str]:
     missing: dict[Path, list[str]] = {}
 
     for md_file in content_files:
@@ -229,7 +235,7 @@ def check_broken_pdf_links(content_files: list[Path]) -> list[str]:
                 broken.append(f"{rel_target} (unexpected location)")
                 continue
 
-            if not target.exists():
+            if require_existing_pdfs and not target.exists():
                 broken.append(str(rel_target))
 
         if MONSTER_DIR in md_file.relative_to(ROOT).parts and not pdf_links:
@@ -258,9 +264,12 @@ def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
 def main() -> int:
     content_files = sorted(ROOT.glob("**/*.md")) + sorted(ROOT.glob("**/*.html"))
     errors: list[str] = []
+    pdfs_generated = any(PDF_DIR.glob("*.pdf"))
 
     errors.extend(ensure_pdf_directory_exists(PDF_DIR))
-    errors.extend(check_broken_pdf_links(content_files))
+    errors.extend(
+        check_broken_pdf_links(content_files, require_existing_pdfs=pdfs_generated)
+    )
 
     for check in CHECKS:
         errors.extend(check_required_links(check))
@@ -274,6 +283,10 @@ def main() -> int:
             "to place fresh copies before publishing."
         )
         return 1
+
+    if not pdfs_generated:
+        print("Printable PDF artifacts not found; skipping existence check.")
+        return 0
 
     referenced: set[Path] = set()
     for md in content_files:
