@@ -4,8 +4,8 @@
 
 A printable pledge to keep the Hydra from sprouting new heads. Use it as a desk tent, sticky note, or phone lock-screen during deep work.
 
-**Download:** [Print-friendly Single-Task Oath card](../site/printables/single-task-oath-card.md) (PDF-ready layout)
-**Download:** [Print-friendly Single-Task Oath card (ink)](../site/printables/pdf/single-task-oath-card-ink.pdf) or [Single-Task Oath with art](../site/printables/pdf/single-task-oath-card-art.pdf)
+**Download:** [Print-friendly Single-Task Oath card]({{ "/site/printables/single-task-oath-card.html" | relative_url }}) (PDF-ready layout)
+**Download:** [Print-friendly Single-Task Oath card (ink)]({{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }}) or [Single-Task Oath with art]({{ "/site/printables/pdf/single-task-oath-card-art.pdf" | relative_url }})
 
 ## ✍️ Oath Text (copy or print)
 
@@ -34,6 +34,6 @@ Signed: ____________  Date: ____________
 
 ## 🔗 Quick Navigation
 
-- 🧭 Return to the [Armory & Spellbook](./index.md)
+- 🧭 Return to the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
 - 🐉 Learn the [Task Hydra lore](../monsters/task-hydra/)
-- 🧰 Browse [Site Tools & Templates](../site/index.md)
+- 🧰 Browse [Site Tools & Templates]({{ "/site/" | relative_url }})

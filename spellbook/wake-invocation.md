@@ -4,8 +4,8 @@
 
 A printable morning bridge to move past the Slumber Troll. Keep it on your nightstand, door, or phone lock-screen.
 
-**Download:** [Print-friendly Wake Invocation checklist](../site/printables/wake-invocation-checklist.md) (PDF-ready, bedside format)
-**Download:** [Print-friendly Wake Invocation checklist (ink)](../site/printables/pdf/wake-invocation-checklist-ink.pdf) or [Wake Invocation with art](../site/printables/pdf/wake-invocation-checklist-art.pdf)
+**Download:** [Print-friendly Wake Invocation checklist]({{ "/site/printables/wake-invocation-checklist.html" | relative_url }}) (PDF-ready, bedside format)
+**Download:** [Print-friendly Wake Invocation checklist (ink)]({{ "/site/printables/pdf/wake-invocation-checklist-ink.pdf" | relative_url }}) or [Wake Invocation with art]({{ "/site/printables/pdf/wake-invocation-checklist-art.pdf" | relative_url }})
 
 ## 🚪 Checklist
 
@@ -27,6 +27,6 @@ A printable morning bridge to move past the Slumber Troll. Keep it on your night
 
 ## 🔗 Quick Navigation
 
-- 🧭 Return to the [Armory & Spellbook](./index.md)
+- 🧭 Return to the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
 - 🐲 Review the [Slumber Troll rituals](../monsters/slumber-troll/)
-- 🧰 Browse [Site Tools & Templates](../site/index.md)
+- 🧰 Browse [Site Tools & Templates]({{ "/site/" | relative_url }})

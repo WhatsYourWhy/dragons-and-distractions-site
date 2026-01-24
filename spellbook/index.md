@@ -7,7 +7,7 @@ show_breadcrumbs: true
 ---
 
 <div class="section-callout">
-  Want the printable versions fast? Jump to the <a href="../site/">Site Tools</a> cabinet or use the links in each ritual block below to download PDFs.
+  Want the printable versions fast? Jump to the <a href="{{ "/site/" | relative_url }}">Site Tools</a> cabinet or use the links in each ritual block below to download PDFs.
 </div>
 
 ## 🧰 Printables Cabinet
@@ -31,13 +31,13 @@ show_breadcrumbs: true
 - Light a candle or lamp as your *Torch Ritual* to mark focus.
 - Pick **one** task, put all other tools away, and work until the first stump is cauterized.
 
-[View the spell write-up.](./single-task-oath.md) · [Printable card](../site/printables/single-task-oath-card.md) · [Ink-friendly PDF](../site/printables/pdf/single-task-oath-card-ink.pdf) · [Art header PDF](../site/printables/pdf/single-task-oath-card-art.pdf)
+[View the spell write-up.]({{ "/spellbook/single-task-oath.html" | relative_url }}) · [Printable card]({{ "/site/printables/single-task-oath-card.html" | relative_url }}) · [Ink-friendly PDF]({{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }}) · [Art header PDF]({{ "/site/printables/pdf/single-task-oath-card-art.pdf" | relative_url }})
 
 **3-Item Rule**  
 - Write only three critical quests for today.  
 - Start at the top, finish, then proceed. New ideas go to a parking lot, not the active list.
 
-[Learn the Hydra’s full lore.](../monsters/task-hydra/)
+[Learn the Hydra’s full lore.]({{ "/monsters/task-hydra/" | relative_url }})
 
 ---
 
@@ -48,13 +48,13 @@ show_breadcrumbs: true
 - Set two alarms (T-60, T-15) labeled with verbs: “Open slides,” “Email draft.”
 - Lay out the first action so it’s waiting when the alarm rings.
 
-[Use the Tide Mark calendar prompt.](./tide-mark-calendar.md) · [Ink-friendly PDF](../site/printables/pdf/tide-mark-calendar-card-ink.pdf) · [Art header PDF](../site/printables/pdf/tide-mark-calendar-card-art.pdf) · [Markdown card](../site/printables/tide-mark-calendar-card.md)
+[Use the Tide Mark calendar prompt.]({{ "/spellbook/tide-mark-calendar.html" | relative_url }}) · [Ink-friendly PDF]({{ "/site/printables/pdf/tide-mark-calendar-card-ink.pdf" | relative_url }}) · [Art header PDF]({{ "/site/printables/pdf/tide-mark-calendar-card-art.pdf" | relative_url }}) · [Markdown card]({{ "/site/printables/tide-mark-calendar-card.html" | relative_url }})
 
 **Buddy Buoy Template**
 - Pre-written DM/email script for start-time pings.
 - Print it or copy/paste to an ally for T-10 accountability.
 
-[Download the Buddy Ping template.](../site/printables/tide-marks-buddy-ping.md) · [Ink-friendly PDF](../site/printables/pdf/tide-marks-buddy-ping-ink.pdf) · [Art header PDF](../site/printables/pdf/tide-marks-buddy-ping-art.pdf)
+[Download the Buddy Ping template.]({{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }}) · [Ink-friendly PDF]({{ "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf" | relative_url }}) · [Art header PDF]({{ "/site/printables/pdf/tide-marks-buddy-ping-art.pdf" | relative_url }})
 
 **Sandbar Sprint**  
 - Do a 10-minute “first bite” the day before: open the doc, title it, jot bullets.  
@@ -64,7 +64,7 @@ show_breadcrumbs: true
 - Tell a friend your start time and ask for a ping at T-10.  
 - Send a post-battle note with start/end times to teach your body what duration feels like.
 
-[Swim with allies against the Shark.](../monsters/temporal-shark/)
+[Swim with allies against the Shark.]({{ "/monsters/temporal-shark/" | relative_url }})
 
 ---
 
@@ -75,7 +75,7 @@ show_breadcrumbs: true
 - Count 3-2-1 and move before your brain negotiates.
 - Keep the alarm away from bed so standing is mandatory.
 
-[Grab the Wake Invocation checklist.](./wake-invocation.md) · [Ink-friendly PDF](../site/printables/pdf/wake-invocation-checklist-ink.pdf) · [Art header PDF](../site/printables/pdf/wake-invocation-checklist-art.pdf)
+[Grab the Wake Invocation checklist.]({{ "/spellbook/wake-invocation.html" | relative_url }}) · [Ink-friendly PDF]({{ "/site/printables/pdf/wake-invocation-checklist-ink.pdf" | relative_url }}) · [Art header PDF]({{ "/site/printables/pdf/wake-invocation-checklist-art.pdf" | relative_url }})
 
 **Beacon of Dawn**  
 - Light on, curtains open, play one hype song.  
@@ -85,7 +85,7 @@ show_breadcrumbs: true
 - Text “I’m vertical” to a friend or coworking chat.  
 - Send a photo outside the blankets at the agreed time.
 
-[Cross the bridge past the Troll.](../monsters/slumber-troll/)
+[Cross the bridge past the Troll.]({{ "/monsters/slumber-troll/" | relative_url }})
 
 ---
 
@@ -103,7 +103,7 @@ show_breadcrumbs: true
 - If you rest, set a 20–90 minute timer.  
 - Name your wake-up action before lying down (e.g., “When it rings, I open blinds and drink water.”).
 
-[Leave the cave with gentle activation.](../monsters/cave-bear/)
+[Leave the cave with gentle activation.]({{ "/monsters/cave-bear/" | relative_url }})
 
 ---
 
@@ -121,7 +121,7 @@ show_breadcrumbs: true
 - Add friction: phone off-desk, blockers on, timer running.  
 - Redirect novelty on purpose—new playlist, new pen, or a different chair *after* a work block.
 
-[Cut a deal with the Goblin.](../monsters/dopamine-goblin/)
+[Cut a deal with the Goblin.]({{ "/monsters/dopamine-goblin/" | relative_url }})
 
 ---
 
