@@ -90,6 +90,20 @@ def test_find_pdf_links_resolves_site_root_links_to_repo_root(monkeypatch, tmp_p
     assert links == [target_pdf]
 
 
+def test_find_printable_page_links_detects_site_printable_pages(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    html_file = root / "_monsters" / "page-link.md"
+    html_file.parent.mkdir(parents=True, exist_ok=True)
+    html_file.write_text(
+        '[tool](/site/printables/single-task-oath-card.html)',
+        encoding="utf-8",
+    )
+
+    links = checks.find_printable_page_links(html_file)
+
+    assert links == [root / "site" / "printables" / "single-task-oath-card.html"]
+
+
 def test_check_required_links_passes_with_all_expected_links(monkeypatch, tmp_path):
     root = configure_temp_repo(monkeypatch, tmp_path)
     template = checks.CHECKS[0]
@@ -287,8 +301,23 @@ def test_check_broken_pdf_links_flags_monster_missing_printable(monkeypatch, tmp
 
     assert errors == [
         "_monsters/missing-anchor.md:",
-        "  • missing printable PDF link for monster entry",
+        "  • missing printable link for monster entry",
     ]
+
+
+
+def test_check_broken_pdf_links_accepts_monster_printable_page_link(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    monster_md = root / "_monsters" / "page-link.md"
+    monster_md.parent.mkdir(parents=True, exist_ok=True)
+    monster_md.write_text(
+        '<a href="{{ "/site/printables/single-task-oath-card.html" | relative_url }}">Tool</a>',
+        encoding="utf-8",
+    )
+
+    errors = checks.check_broken_pdf_links([monster_md])
+
+    assert errors == []
 
 
 def test_check_yaml_pdf_links_reads_nested_data_file_values(monkeypatch, tmp_path):
