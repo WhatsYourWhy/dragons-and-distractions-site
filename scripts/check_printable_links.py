@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 """Validate printable links point at generated PDF artifacts.
 
@@ -9,9 +9,8 @@ This checker scans Markdown and HTML files for PDF links expressed as:
 
 It resolves those links relative to the source file, verifies that the targets
 live under ``site/printables/pdf/``, and asserts that certain pages carry
-specific ritual links. A small YAML bridge pulls expected printable URLs from
-``_data/printables.yml`` for ``site/index.md``. Additional HTML/Liquid template
-parsing can be layered in once implemented.
+specific ritual links. YAML data files are also scanned so data-driven printables
+stay covered by the link checker.
 """
 
 from dataclasses import dataclass
@@ -100,7 +99,6 @@ def find_pdf_links(path: Path, *, include_non_printables: bool = False) -> list[
         try:
             rel_target = target.relative_to(ROOT)
         except ValueError:
-            # Outside the repository; it will be flagged later as broken.
             links.append(target)
             continue
 
@@ -152,27 +150,32 @@ def resolve_link_target(link: str, source: Path) -> Path:
 
 
 def extract_yaml_pdf_links(yaml_path: Path) -> list[str]:
-    """Extract PDF links from a YAML data file (e.g., _data/printables.yml)."""
+    """Extract PDF links from nested YAML structures."""
     if not yaml:
         return []
-    
+
     if not yaml_path.exists():
         return []
-    
+
+    def walk(node) -> list[str]:
+        if isinstance(node, dict):
+            links: list[str] = []
+            for value in node.values():
+                links.extend(walk(value))
+            return links
+        if isinstance(node, list):
+            links: list[str] = []
+            for item in node:
+                links.extend(walk(item))
+            return links
+        if isinstance(node, str) and node.lower().endswith(".pdf"):
+            return [node]
+        return []
+
     try:
         with open(yaml_path, encoding="utf-8") as f:
             data = yaml.safe_load(f)
-        
-        links = []
-        if isinstance(data, list):
-            for group in data:
-                if isinstance(group, dict) and "printables" in group:
-                    for item in group["printables"]:
-                        if isinstance(item, dict):
-                            for key in ["ink_pdf", "art_pdf"]:
-                                if key in item and item[key]:
-                                    links.append(item[key])
-        return links
+        return walk(data)
     except (yaml.YAMLError, FileNotFoundError, UnicodeDecodeError):
         return []
 
@@ -194,15 +197,11 @@ def check_required_links(check: LinkCheck) -> list[str]:
     for link in find_link_targets(content):
         normalized = normalize_link_target(link)
         links.add(resolve_link_target(normalized, resolved_path))
-    
-    # For site/index.md, also check YAML data file
+
     if check.path == Path("site/index.md"):
         yaml_path = ROOT / "_data" / "printables.yml"
         yaml_links = extract_yaml_pdf_links(yaml_path)
-        # Convert absolute paths from YAML to relative paths from site/index.md
         for link in yaml_links:
-            # YAML links are like /site/printables/pdf/filename.pdf
-            # site/index.md needs ./printables/pdf/filename.pdf
             if link.startswith(YAML_PDF_PREFIX):
                 relative_link = SITE_INDEX_RELATIVE_PREFIX + link[len(YAML_PDF_PREFIX):]
                 links.add(resolve_link_target(relative_link, resolved_path))
@@ -214,7 +213,6 @@ def check_required_links(check: LinkCheck) -> list[str]:
             errors.append(f"{resolved_path}: missing link to {required}")
 
     return errors
-
 
 def check_broken_pdf_links(
     content_files: list[Path], *, require_existing_pdfs: bool = True
@@ -253,8 +251,50 @@ def check_broken_pdf_links(
     return errors
 
 
+def check_yaml_pdf_links(
+    yaml_files: list[Path], *, require_existing_pdfs: bool = True
+) -> list[str]:
+    missing: dict[Path, list[str]] = {}
+
+    for yaml_file in yaml_files:
+        pdf_links = extract_yaml_pdf_links(yaml_file)
+        if not pdf_links:
+            continue
+
+        broken = []
+        for link in pdf_links:
+            target = resolve_link_target(link, yaml_file)
+            try:
+                rel_target = target.relative_to(ROOT)
+            except ValueError:
+                broken.append(f"{target} (outside repo)")
+                continue
+
+            if rel_target.parts[:3] != PRINTABLE_PDF_PARTS:
+                broken.append(f"{rel_target} (unexpected location)")
+                continue
+
+            if require_existing_pdfs and not target.exists():
+                broken.append(str(rel_target))
+
+        if broken:
+            missing[yaml_file.relative_to(ROOT)] = broken
+
+    errors: list[str] = []
+    for yaml_path, issues in missing.items():
+        errors.append(f"{yaml_path}:")
+        for issue in issues:
+            errors.append(f"  • {issue}")
+
+    return errors
+
+
 def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
-    orphaned = [path.relative_to(ROOT) for path in pdf_dir.glob("*.pdf") if path.relative_to(ROOT) not in referenced]
+    orphaned = [
+        path.relative_to(ROOT)
+        for path in pdf_dir.glob("*.pdf")
+        if path.relative_to(ROOT) not in referenced
+    ]
     if orphaned:
         print("Orphaned PDFs (not linked in content files):")
         for pdf in sorted(orphaned):
@@ -263,12 +303,16 @@ def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
 
 def main() -> int:
     content_files = sorted(ROOT.glob("**/*.md")) + sorted(ROOT.glob("**/*.html"))
+    data_files = sorted(ROOT.glob("_data/*.yml"))
     errors: list[str] = []
     pdfs_generated = any(PDF_DIR.glob("*.pdf"))
 
     errors.extend(ensure_pdf_directory_exists(PDF_DIR))
     errors.extend(
         check_broken_pdf_links(content_files, require_existing_pdfs=pdfs_generated)
+    )
+    errors.extend(
+        check_yaml_pdf_links(data_files, require_existing_pdfs=pdfs_generated)
     )
 
     for check in CHECKS:
@@ -295,6 +339,13 @@ def main() -> int:
                 referenced.add(link.relative_to(ROOT))
             except ValueError:
                 continue
+    for data_file in data_files:
+        for link in extract_yaml_pdf_links(data_file):
+            try:
+                referenced.add(resolve_link_target(link, data_file).relative_to(ROOT))
+            except ValueError:
+                continue
+
     print("All referenced PDF links exist.")
     if referenced:
         report_orphaned_pdfs(PDF_DIR, referenced)

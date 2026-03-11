@@ -1,0 +1,38 @@
+﻿<section class="monster-start" aria-labelledby="monster-start-title">
+  <div class="monster-start__intro">
+    <p class="monster-start__eyebrow">Start here</p>
+    <p id="monster-start-title" class="monster-start__headline">Practical help before the lore</p>
+    <p class="monster-start__summary">{{ page.challenge_summary }}</p>
+  </div>
+
+  <div class="monster-start__grid">
+    <section class="monster-start__panel" aria-labelledby="monster-signs-title">
+      <p id="monster-signs-title" class="monster-start__label">You might be here if...</p>
+      <ul class="signal-list">
+        {% for sign in page.you_might_be_here_if %}
+        <li>{{ sign }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="monster-start__panel" aria-labelledby="monster-ritual-title">
+      <p id="monster-ritual-title" class="monster-start__label">Best first ritual</p>
+      <p class="monster-start__action-title">
+        <a href="{{ page.start_here_ritual.url | relative_url }}">{{ page.start_here_ritual.label }}</a>
+      </p>
+      <p>{{ page.start_here_ritual.description }}</p>
+    </section>
+
+    <section class="monster-start__panel" aria-labelledby="monster-printable-title">
+      <p id="monster-printable-title" class="monster-start__label">Fastest tool</p>
+      <p class="monster-start__action-title">
+        <a href="{{ page.featured_printable.url | relative_url }}">{{ page.featured_printable.label }}</a>
+      </p>
+      <p>{{ page.featured_printable.description }}</p>
+    </section>
+  </div>
+
+  <div class="monster-start__boundary">
+    <strong>Grounding note:</strong> {{ page.support_boundary }}
+  </div>
+</section>

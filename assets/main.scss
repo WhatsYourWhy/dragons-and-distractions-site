@@ -1,4 +1,4 @@
----
+﻿---
 ---
 @import "minima";
 
@@ -287,7 +287,7 @@ body.is-low-stim * {
 }
 
 .cta-link::after {
-  content: "›";
+  content: "â€º";
   font-size: 0.95rem;
   transform: translateY(1px);
 }
@@ -756,7 +756,7 @@ body.is-low-stim * {
 }
 
 .battle-card__eyebrow::before {
-  content: "⚔️";
+  content: "âš”ï¸";
   font-size: 1rem;
 }
 
@@ -848,7 +848,7 @@ h2[id] {
 }
 
 .breadcrumbs__item + .breadcrumbs__item::before {
-  content: "›";
+  content: "â€º";
   color: var(--color-text-muted);
   font-weight: 700;
 }
@@ -922,3 +922,190 @@ h2[id] {
     bottom: 0.9rem;
   }
 }
+
+.landing-section {
+  margin: 1.5rem 0 2rem;
+}
+
+.landing-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.landing-lead {
+  font-size: 1.02rem;
+  color: var(--color-text-base);
+  max-width: 60rem;
+}
+
+.landing-grid,
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 0;
+}
+
+.landing-card,
+.trust-card {
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-muted);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-plate);
+}
+
+.landing-card h3,
+.trust-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.path-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-3xl);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-strong);
+  background: var(--gradient-nav-card);
+  box-shadow: var(--shadow-card);
+}
+
+.path-card__eyebrow,
+.monster-start__eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-muted);
+  color: var(--color-text-strong);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.path-card__title {
+  margin: 0;
+  color: var(--color-text-strong);
+  font-size: 1.15rem;
+}
+
+.path-card__summary,
+.path-card__monster {
+  margin: 0;
+}
+
+.path-card__monster a {
+  font-weight: var(--font-weight-bold);
+}
+
+.signal-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--color-text-base);
+}
+
+.path-card__actions,
+.monster-start__grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.path-card__action {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-muted);
+  background: var(--color-surface);
+  color: var(--color-text-strong);
+  text-decoration: none;
+  box-shadow: var(--shadow-plate);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.path-card__action:hover,
+.path-card__action:focus,
+.path-card__action:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-tile-hover);
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.path-card__action strong,
+.monster-start__action-title {
+  color: var(--color-text-strong);
+  margin: 0;
+}
+
+.path-card__action span {
+  color: var(--color-text-base);
+}
+
+.monster-start {
+  margin: 0.5rem 0 1.5rem;
+  padding: 1.1rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--gradient-battle);
+  box-shadow: var(--shadow-card);
+}
+
+.monster-start__headline {
+  margin: 0.45rem 0 0.35rem;
+}
+
+.monster-start__summary {
+  margin: 0 0 0.8rem;
+  color: var(--color-text-base);
+}
+
+.monster-start__panel {
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-muted);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-plate);
+}
+
+.monster-start__label {
+  margin-top: 0;
+}
+
+.monster-start__boundary {
+  margin-top: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border-muted);
+  color: var(--color-text-base);
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+@media (min-width: 760px) {
+  .path-card__actions,
+  .monster-start__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+

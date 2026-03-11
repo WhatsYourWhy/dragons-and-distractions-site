@@ -1,8 +1,8 @@
----
+﻿---
 layout: hub
 title: "Monster Index"
-hero_title: "🗺️ Monster Index"
-hero_intro: "Each monster represents a real executive function challenge—named, described, and disarmed with humor, science, and ritual. Choose your foe to jump straight to its lore and counter-spells."
+hero_title: "ðŸ—ºï¸ Monster Index"
+hero_intro: "Start with the monster that matches your current stuck point, or use the guided chooser if you want plain-language routing first."
 show_breadcrumbs: true
 ---
 
@@ -19,7 +19,7 @@ show_breadcrumbs: true
           <p class="monster-card__tagline">{{ monster.tagline }}</p>
         </div>
       </div>
-      <p class="monster-card__description">{{ monster.description }}</p>
+      <p class="monster-card__description">{{ monster.challenge_summary | default: monster.description }}</p>
       {% if monster.cta %}
       <span class="monster-card__cta cta-link">{{ monster.cta }}</span>
       {% endif %}
@@ -53,3 +53,5 @@ show_breadcrumbs: true
 </div>
 
 More monsters await...
+
+<div class="section-callout">Need the fastest path? <a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a> routes you to one ritual and one tool without the full lore pass.</div>

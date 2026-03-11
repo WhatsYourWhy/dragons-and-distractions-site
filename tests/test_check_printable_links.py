@@ -294,3 +294,26 @@ def test_check_broken_pdf_links_flags_monster_missing_printable(monkeypatch, tmp
         "_monsters/missing-anchor.md:",
         "  • missing printable PDF link for monster entry",
     ]
+
+
+def test_check_yaml_pdf_links_reads_nested_data_file_values(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    pdf_dir = root / "site" / "printables" / "pdf"
+    pdf_dir.mkdir(parents=True)
+    target_pdf = pdf_dir / "chooser.pdf"
+    target_pdf.touch()
+
+    data_file = root / "_data" / "chooser_paths.yml"
+    data_file.parent.mkdir(parents=True, exist_ok=True)
+    data_file.write_text(
+        "\n".join(
+            [
+                "- printable_url: /site/printables/pdf/chooser.pdf",
+                "  nested:",
+                "    fallback_pdf: /site/printables/pdf/chooser.pdf",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    assert checks.check_yaml_pdf_links([data_file]) == []

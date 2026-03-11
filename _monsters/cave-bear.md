@@ -1,8 +1,23 @@
----
+﻿---
 name: "The Cave Bear"
-emoji: "🐻"
+emoji: "ðŸ»"
 tagline: "Avoidance & hibernation holes"
 description: "Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave."
+plain_name: "shutdown, retreat, and hiding in the cave"
+challenge_summary: "Cave Bear takes over when retreat starts to feel safer than re-entering the world, even when you do not want to stay hidden."
+you_might_be_here_if:
+  - "Rest keeps turning into retreat or isolation."
+  - "Replying, leaving the room, or starting the errand feels too big to touch."
+  - "A doorway step or a text to another person helps more than building a bigger plan."
+start_here_ritual:
+  label: "Threshold Spell"
+  url: "/spellbook/#cave-bear-rituals"
+  description: "Move to the doorway, take one body-first step, and use a social rope if you need outside help getting started."
+featured_printable:
+  label: "Buddy Ping template"
+  url: "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf"
+  description: "A low-friction script for asking someone to help pull you out of the cave."
+support_boundary: "This page is for gentle activation and reconnection, not for forcing yourself through burnout, depression, or a real need for rest. If retreat feels dangerous or total, reach for additional support."
 cta: "Gentle start"
 badges:
   - "Rituals: Threshold, Rope of Returning"
@@ -10,16 +25,16 @@ badges:
 quick_links:
   - label: "Lore"
     url: "#lore"
-    emoji: "📜"
+    emoji: "ðŸ“œ"
   - label: "Weaknesses"
     url: "#weaknesses"
-    emoji: "🛡️"
+    emoji: "ðŸ›¡ï¸"
   - label: "Rituals"
     url: "#rituals"
-    emoji: "🪄"
+    emoji: "ðŸª„"
   - label: "Tools"
     url: "#tools"
-    emoji: "🧰"
+    emoji: "ðŸ§°"
 order: 5
 tags:
   - adhd
@@ -29,20 +44,20 @@ tags:
   - obsidian
 ---
 
-# 🐻 The Cave Bear
+# ðŸ» The Cave Bear
 
 <div class="monster-hero">
   <img src="{{ "/CaveBear.png" | relative_url }}" alt="Illustration of the Cave Bear emerging from a cave entrance">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Cave Bear Portrait</span>
-    <span class="monster-hero__links">Download the art file: <a href="{{ "/CaveBear.png" | relative_url }}">PNG</a> · <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/CaveBear.png" | relative_url }}">PNG</a> Â· <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
   </div>
 </div>
 
 <div class="battle-card">
   <div class="battle-card__eyebrow">Battle Card</div>
   <ul class="battle-card__list">
-    <li><strong>Triggers:</strong> Doomscrolling dens, “I’ll get up later” loops, comfort that turns into isolation.</li>
+    <li><strong>Triggers:</strong> Doomscrolling dens, â€œIâ€™ll get up laterâ€ loops, comfort that turns into isolation.</li>
     <li><strong>First counter-move:</strong> Light on, feet on floor, and a single text to your rope-holder.</li>
     <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf" | relative_url }}">Buddy Ping template (ink PDF)</a></li>
   </ul>
@@ -56,123 +71,124 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+ðŸ° I. Bestiary Entry
 
 > The Cave Bear is the ancient beast of isolation and retreat.
 > It drags you back into the cave with promises of rest, doomscrolling, or hiding until it all blows over.
-> It is heavy, warm, and persuasive; it smells like blankets, dark rooms, and endless “later.”
+> It is heavy, warm, and persuasive; it smells like blankets, dark rooms, and endless â€œlater.â€
 >
 > In myth, bears hibernate to survive the winter. In life, the Cave Bear convinces you every season is winter.
 > It hoards your energy for a threat that never comes, until your world shrinks to the glow of a screen.
-> Heroes are not made in caves—but they are forged by leaving them.
+> Heroes are not made in cavesâ€”but they are forged by leaving them.
 
-## 🔎 Monster Ecology (Lore and Sources) {#lore}
+## ðŸ”Ž Monster Ecology (Lore and Sources) {#lore}
 
-✅ Folklore bears = strength + hibernation → here, strength turned inward.
-✅ ADHD inertia → difficulty re-engaging after rest; comfort becomes trap.
-✅ Social withdrawal and avoidance → anxiety feeds isolation.
-✅ Dopamine loop of scrolling → false safety, real depletion.
-✅ Sensory seeking/avoiding → the cave is predictable, outside is noisy.
+âœ… Folklore bears = strength + hibernation â†’ here, strength turned inward.
+âœ… ADHD inertia â†’ difficulty re-engaging after rest; comfort becomes trap.
+âœ… Social withdrawal and avoidance â†’ anxiety feeds isolation.
+âœ… Dopamine loop of scrolling â†’ false safety, real depletion.
+âœ… Sensory seeking/avoiding â†’ the cave is predictable, outside is noisy.
 
-🧠 III. Clinical / Psychological Explanation
+ðŸ§  III. Clinical / Psychological Explanation
 
-✅ Executive dysfunction → “starting” is harder than “staying hidden.”
-✅ Rejection sensitivity → cave shields from perceived judgment.
-✅ Low arousal → body seeks warmth/darkness to conserve effort.
-✅ Depression overlap → stillness masquerades as self-care.
-✅ Solution = gentle activation, social tethering, light cues.
+âœ… Executive dysfunction â†’ â€œstartingâ€ is harder than â€œstaying hidden.â€
+âœ… Rejection sensitivity â†’ cave shields from perceived judgment.
+âœ… Low arousal â†’ body seeks warmth/darkness to conserve effort.
+âœ… Depression overlap â†’ stillness masquerades as self-care.
+âœ… Solution = gentle activation, social tethering, light cues.
 
-🔍 IV. Real-World Examples
+ðŸ” IV. Real-World Examples
 
 - Ghosting messages because replying feels like facing a blizzard.
-- Lying in bed, scrolling, telling yourself you’ll rise at the next video.
+- Lying in bed, scrolling, telling yourself youâ€™ll rise at the next video.
 - Avoiding errands until everything becomes urgent.
 - Cancelling plans even when you miss people.
-- Wearing the same “cave clothes” for days.
+- Wearing the same â€œcave clothesâ€ for days.
 
-## 🗝️ The Cave Bear’s Weaknesses {#weaknesses}
+## ðŸ—ï¸ The Cave Bearâ€™s Weaknesses {#weaknesses}
 
-✅ Light & sound → crack the cave’s darkness.
-✅ Body-first activation → move before you plan.
-✅ Micro-quests → tiny exits from the cave.
-✅ Social rope → someone outside holding tension.
-✅ Time-boxed hibernation → rest on purpose, not forever.
+âœ… Light & sound â†’ crack the caveâ€™s darkness.
+âœ… Body-first activation â†’ move before you plan.
+âœ… Micro-quests â†’ tiny exits from the cave.
+âœ… Social rope â†’ someone outside holding tension.
+âœ… Time-boxed hibernation â†’ rest on purpose, not forever.
 
-⭐ Beacon Ritual
+â­ Beacon Ritual
 - Open curtains or turn on your brightest lamp.
-- Play a single song as your “sunrise.”
+- Play a single song as your â€œsunrise.â€
 
-⭐ Pawstep Quest
+â­ Pawstep Quest
 - Sit up. Put feet on floor. Drink water. (Count each as a win.)
 
-⭐ Rope of Returning
-- Text a friend: “Pull me out in 10?”
+â­ Rope of Returning
+- Text a friend: â€œPull me out in 10?â€
 - Set a timer; when it rings, reply with a selfie outside the blankets.
 
-## 🪄 Rituals and Counter-Spells {#rituals}
+## ðŸª„ Rituals and Counter-Spells {#rituals}
 
-⭐ **Threshold Spell:**
-> “Step to the mouth of the cave.”
+â­ **Threshold Spell:**
+> â€œStep to the mouth of the cave.â€
 - Stand in a doorway. Breathe. Feel fresh air or light.
 
-⭐ **Three Breaths, Three Moves:**
+â­ **Three Breaths, Three Moves:**
 - Inhale: sit up.
 - Exhale: feet down.
 - Inhale: stand.
 - Exhale: walk to sink.
 - Inhale: splash water.
 
-⭐ **Hibernation with a Clock:**
-- If you rest, set a timer (20–90 minutes).
+â­ **Hibernation with a Clock:**
+- If you rest, set a timer (20â€“90 minutes).
 - Name the wake-up action before you lie down.
 
-## 🛠️ Artifacts and Weapons {#tools}
+## ðŸ› ï¸ Artifacts and Weapons {#tools}
 
-- Lantern of Dawn → sunrise alarm, bright lamp, open blinds.
-- Warm Cloak of Action → hoodie you only wear once you’re up.
-- Rope of Returning → friend text, accountability buddy, coworking link.
-- Trail of Pebbles → sticky notes leading from bed to desk/door.
-- Shield of Noise → playlist that marks “out of cave” mode.
+- Lantern of Dawn â†’ sunrise alarm, bright lamp, open blinds.
+- Warm Cloak of Action â†’ hoodie you only wear once youâ€™re up.
+- Rope of Returning â†’ friend text, accountability buddy, coworking link.
+- Trail of Pebbles â†’ sticky notes leading from bed to desk/door.
+- Shield of Noise â†’ playlist that marks â€œout of caveâ€ mode.
 
-## 🧰 Printables to Equip
+## ðŸ§° Printables to Equip
 
 {% include printable-groups.html slugs="buddy-support" %}
 
-⚡️ VIII. Command Phrases
+âš¡ï¸ VIII. Command Phrases
 
-“Cave time ends at the bell.”
-“Lantern on, bear moves.”
-“Feet on floor is victory.”
-“Rope pulled—I’m coming out.”
-“One pawstep, then another.”
+â€œCave time ends at the bell.â€
+â€œLantern on, bear moves.â€
+â€œFeet on floor is victory.â€
+â€œRope pulledâ€”Iâ€™m coming out.â€
+â€œOne pawstep, then another.â€
 
-🧪 IX. Science and Reason
+ðŸ§ª IX. Science and Reason
 
-✅ Behavioral activation → small movements improve mood and momentum.
-✅ Light exposure anchors circadian rhythm; bright light reduces sleep inertia.
-✅ Social accountability increases follow-through.
-✅ Implementation intentions (“When X, I will Y”) boost action.
-✅ Somatic cues (water, movement) shift state faster than willpower alone.
+âœ… Behavioral activation â†’ small movements improve mood and momentum.
+âœ… Light exposure anchors circadian rhythm; bright light reduces sleep inertia.
+âœ… Social accountability increases follow-through.
+âœ… Implementation intentions (â€œWhen X, I will Yâ€) boost action.
+âœ… Somatic cues (water, movement) shift state faster than willpower alone.
 
-🛡️ X. Challenge for the Reader
+ðŸ›¡ï¸ X. Challenge for the Reader
 
 - Name your Cave Bear. What scent keeps it docile?
 - Choose your Lantern of Dawn.
 - Write your Rope of Returning message now; save it as a template.
-- Test a 10-minute “cave leave” and record how you feel.
+- Test a 10-minute â€œcave leaveâ€ and record how you feel.
 - Share your cave exit ritual with another adventurer.
 
-🏷️ Tags
+ðŸ·ï¸ Tags
 
 #adhd #dragons-and-distractions #cave-bear #monster-page #obsidian
 
 ---
 
-🔗 Quick Navigation
+ðŸ”— Quick Navigation
 
-- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
-- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
+- ðŸ—ºï¸ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
+- ðŸ§­ Return to the [Welcome Page]({{ "/" | relative_url }})
+- ðŸ§° Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
+- ðŸ“œ Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
 
-> “The cave kept you safe once. Now it keeps you small. Step out—the world is waiting.”
+> â€œThe cave kept you safe once. Now it keeps you small. Step outâ€”the world is waiting.â€
+
