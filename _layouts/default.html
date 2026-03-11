@@ -39,8 +39,7 @@
           if (stored === "low-stim" || stored === "default") {
             return stored;
           }
-          const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-          return prefersDark ? "low-stim" : "default";
+          return "default";
         };
 
         const applyTheme = (theme) => {
@@ -63,14 +62,6 @@
 
         const initialTheme = getPreferredTheme();
         applyTheme(initialTheme);
-
-        const mediaQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-        if (mediaQuery && !getStoredPreference()) {
-          mediaQuery.addEventListener("change", (event) => {
-            const nextTheme = event.matches ? "low-stim" : "default";
-            applyTheme(nextTheme);
-          });
-        }
 
         document.addEventListener("DOMContentLoaded", () => {
           applyTheme(document.body.classList.contains(className) ? "low-stim" : "default");
