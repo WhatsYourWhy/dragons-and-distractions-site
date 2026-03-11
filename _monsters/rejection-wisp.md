@@ -1,6 +1,7 @@
 ---
 name: "The Rejection Wisp"
 emoji: "👻"
+sigil: "/assets/generated/rejection-wisp-sigil.png"
 tagline: "One hard interaction that fogs the whole inbox"
 description: "Reduce message dread with reply scaffolds, acknowledgement scripts, and gentler re-entry after a social sting."
 plain_name: "rejection sensitivity, unread messages, and social avoidance"

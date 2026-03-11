@@ -1,6 +1,7 @@
 ---
 name: "The Perfection Wyrm"
 emoji: "🐉"
+sigil: "/assets/generated/perfection-wyrm-sigil.png"
 tagline: "Polish loops that keep the work from ever leaving the cave"
 description: "Break revision spirals with an ugly first pass, a visible ship line, and permission to stop when the work is already useful."
 plain_name: "perfectionism, over-editing, and fear of shipping"
