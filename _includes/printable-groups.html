@@ -31,21 +31,21 @@
             {% if item.markdown %}
             <a href="{{ item.markdown | relative_url }}">{{ item.markdown_label | default: "View" }}</a>
             {% else %}
-            —
+            -
             {% endif %}
           </td>
           <td>
             {% if item.ink_pdf %}
             <a href="{{ item.ink_pdf | relative_url }}">{{ item.ink_pdf_label | default: "Ink PDF" }}</a>
             {% else %}
-            —
+            -
             {% endif %}
           </td>
           <td>
             {% if item.art_pdf %}
             <a href="{{ item.art_pdf | relative_url }}">{{ item.art_pdf_label | default: "Art PDF" }}</a>
             {% else %}
-            —
+            -
             {% endif %}
           </td>
         </tr>
