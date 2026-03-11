@@ -1,32 +1,33 @@
-# 🐲 Wake Invocation Checklist
+---
+title: "Wake Invocation"
+hero_intro: "A bedside ritual for hard starts. Use it when mornings become negotiations before your feet hit the floor."
+---
 
-{% include breadcrumbs.html %}
+Use this when Slumber Troll is strongest in the doorway between sleep and motion. The point is not to feel ready. The point is to move before the argument gets louder.
 
-A printable morning bridge to move past the Slumber Troll. Keep it on your nightstand, door, or phone lock-screen.
+Open the tool page: [Wake Invocation checklist]({{ "/site/printables/wake-invocation-checklist.html" | relative_url }})  
+Need paper? [Download the ink-friendly PDF]({{ "/site/printables/pdf/wake-invocation-checklist-ink.pdf" | relative_url }})
 
-**Download:** [Print-friendly Wake Invocation checklist]({{ "/site/printables/wake-invocation-checklist.html" | relative_url }}) (PDF-ready, bedside format)
-**Download:** [Print-friendly Wake Invocation checklist (ink)]({{ "/site/printables/pdf/wake-invocation-checklist-ink.pdf" | relative_url }}) or [Wake Invocation with art]({{ "/site/printables/pdf/wake-invocation-checklist-art.pdf" | relative_url }})
+## The ritual
 
-## 🚪 Checklist
+1. Place the alarm far enough away that your body has to stand.
+2. Prepare one command phrase the night before.
+3. Turn on light, water, and one body cue immediately.
+4. Send one accountability signal before you sit back down.
+5. Name the first action of the day before your brain opens side quests.
 
-- ⏰ Alarm out of reach? **Yes / Move it now**
-- 📜 Command phrase ready? Write it here: __________________________
-- 🔆 Lights + curtains open? **On**
-- 💧 Water within reach? **Placed**
-- 🎵 Hype song cued? **Play**
-- 🧊 Cold splash or object ready? **Yes**
-- 🧑‍🤝‍🧑 Accountability rope set? **Text buddy time:** __________
-- 🚶 First steps mapped? **3-2-1 move** to: ______________________
+## Why it helps
 
-## 🧠 Usage Notes
+- It reduces morning decision load.
+- It uses body cues instead of waiting for motivation.
+- It makes the first movement feel smaller and more scripted.
 
-1. Set the checklist the night before; place the alarm away from bed.  
-2. When the alarm rings, speak your command phrase and stand.  
-3. Move through the checklist in order; send the “I’m vertical” text before leaving the room.  
-4. Snap a quick photo outside the blankets if you’re using proof-based accountability.
+## Minimal prompt
 
-## 🔗 Quick Navigation
-
-- 🧭 Return to the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 🐲 Review the [Slumber Troll rituals](../monsters/slumber-troll/)
-- 🧰 Browse [Site Tools & Templates]({{ "/site/" | relative_url }})
+```text
+Command phrase: ___________________________
+Feet on floor in three seconds: yes / no
+Water, light, body cue: ___________________________
+I am vertical text sent to: ___________________________
+First action: ___________________________
+```

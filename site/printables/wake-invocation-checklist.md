@@ -1,40 +1,41 @@
-# 🌅 Wake Invocation — Bedside Checklist
+---
+title: "Wake Invocation Checklist"
+hero_intro: "A bedside checklist for hard starts. Use it when mornings turn into negotiations before your feet hit the floor."
+ink_pdf: "/site/printables/pdf/wake-invocation-checklist-ink.pdf"
+related_ritual:
+  label: "Open Slumber Troll Ritual"
+  url: "/spellbook/wake-invocation.html"
+---
 
-One-page checklist to outrun the Slumber Troll. Built for black-and-white printing or quick PDF save on your phone.
+Use this when getting vertical is the whole battle. The point is not a perfect routine. The point is to move before the negotiation gets louder.
 
-**Downloads:** [Ink-friendly PDF](./pdf/wake-invocation-checklist-ink.pdf) · [Art header PDF](./pdf/wake-invocation-checklist-art.pdf)
+## How to use it
 
-**How to use**
-- Place beside the alarm/phone; check items with a pen or tap when using PDF.
-- Read the command phrase first, then move before your brain negotiates.
-- Use daily until the sequence is automatic.
+- Put it beside the alarm or phone.
+- Read the command phrase first.
+- Move before you decide whether you feel like moving.
 
 ---
 
-## Command & Move
-- Command phrase ready?  ☐ Yes — “____________________________”
-- 3-2-1 move: feet on floor within 3 seconds.  ☐ Done
-- Alarm distance forces a stand?  ☐ Yes
+## Command and move
 
-## Light & Body
-- Lights on / curtains open  ☐
-- Water sip  ☐   Cold splash or cool object touch  ☐
-- Play hype song (title: ___________________________)
+- Command phrase: ___________________________
+- Feet on floor within three seconds: ___________________________
+- Alarm placed far enough away to force a stand: ___________________________
 
-## Accountability Rope
-- Text “I’m vertical” sent to: _____________________  Time: ____:____  ☐
-- Proof sent? (selfie/emoji)  ☐ Yes
+## Light and body
 
-## Exit the Cave
+- Lights on or curtains open: ___________________________
+- Water sip: ___________________________
+- Cold splash or cool object: ___________________________
+- Hype song: ___________________________
+
+## Accountability rope
+
+- "I am vertical" sent to: ___________________________
+- Proof sent: ___________________________
+
+## Exit the cave
+
 - First action named: ___________________________
-- Timer set for next step (20–90 min)  ☐ Yes
-
-**Print Tips:** Portrait, 100% scale. Add a clipboard or tape near your lamp for easy reach.
-
----
-
-🔗 Quick Navigation
-
-- 🧭 Return to the [Spellbook]({{ "/spellbook/" | relative_url }})
-- 🗺️ Browse the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧰 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
+- Timer set for next step: ___________________________

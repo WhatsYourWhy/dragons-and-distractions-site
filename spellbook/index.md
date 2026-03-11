@@ -1,4 +1,4 @@
-﻿---
+---
 layout: hub
 title: "Spellbook"
 hero_title: "Rituals You Can Use Right Away"
@@ -42,7 +42,7 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - Light a candle or lamp as your Torch Ritual to mark focus.
 - Pick **one** task, put all other tools away, and work until the first stump is cauterized.
 
-[View the spell write-up.]({{ '/spellbook/single-task-oath.html' | relative_url }}) | [Printable card]({{ '/site/printables/single-task-oath-card.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/single-task-oath-card-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/single-task-oath-card-art.pdf' | relative_url }})
+[View the spell write-up.]({{ '/spellbook/single-task-oath.html' | relative_url }}) | [Printable card]({{ '/site/printables/single-task-oath-card.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/single-task-oath-card-ink.pdf' | relative_url }})
 
 **3-Item Rule**
 - Write only three critical quests for today.
@@ -59,13 +59,13 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - Set two alarms (T-60, T-15) labeled with verbs: "Open slides," "Email draft."
 - Lay out the first action so it's waiting when the alarm rings.
 
-[Use the Tide Mark calendar prompt.]({{ '/spellbook/tide-mark-calendar.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/tide-mark-calendar-card-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/tide-mark-calendar-card-art.pdf' | relative_url }}) | [Markdown card]({{ '/site/printables/tide-mark-calendar-card.html' | relative_url }})
+[Use the Tide Mark calendar prompt.]({{ '/spellbook/tide-mark-calendar.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/tide-mark-calendar-card-ink.pdf' | relative_url }}) | [Markdown card]({{ '/site/printables/tide-mark-calendar-card.html' | relative_url }})
 
 **Buddy Buoy Template**
 - Pre-written DM/email script for start-time pings.
 - Print it or copy/paste to an ally for T-10 accountability.
 
-[Download the Buddy Ping template.]({{ '/site/printables/tide-marks-buddy-ping.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/tide-marks-buddy-ping-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/tide-marks-buddy-ping-art.pdf' | relative_url }})
+[Download the Buddy Ping template.]({{ '/site/printables/tide-marks-buddy-ping.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/tide-marks-buddy-ping-ink.pdf' | relative_url }})
 
 **Sandbar Sprint**
 - Do a 10-minute "first bite" the day before: open the doc, title it, jot bullets.
@@ -86,7 +86,7 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - Count 3-2-1 and move before your brain negotiates.
 - Keep the alarm away from bed so standing is mandatory.
 
-[Grab the Wake Invocation checklist.]({{ '/spellbook/wake-invocation.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/wake-invocation-checklist-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/wake-invocation-checklist-art.pdf' | relative_url }})
+[Grab the Wake Invocation checklist.]({{ '/spellbook/wake-invocation.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/wake-invocation-checklist-ink.pdf' | relative_url }})
 
 **Beacon of Dawn**
 - Light on, curtains open, play one hype song.
@@ -149,7 +149,7 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 **One-Pass Close**
 - Set one final timer, make one final pass, and send before reopening the file.
 
-[Use the Done Is Better worksheet.]({{ '/site/printables/perfection-wyrm-done-is-better.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/perfection-wyrm-done-is-better-art.pdf' | relative_url }})
+[Use the Done Is Better worksheet.]({{ '/site/printables/perfection-wyrm-done-is-better.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf' | relative_url }})
 
 [Face the Wyrm in the full bestiary.]({{ '/monsters/perfection-wyrm/' | relative_url }})
 
@@ -168,7 +168,7 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 **Borrowed Words**
 - Keep two or three scripts nearby for "I saw this," "I need more time," and "I cannot do that."
 
-[Use the Reply Scaffold card.]({{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/rejection-wisp-reply-scaffold-art.pdf' | relative_url }})
+[Use the Reply Scaffold card.]({{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf' | relative_url }})
 
 [Follow the Wisp into the full bestiary.]({{ '/monsters/rejection-wisp/' | relative_url }})
 
@@ -187,7 +187,7 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - Move to the smallest workable environment.
 - Bring only the next tiny task into shelter if you still need to do something.
 
-[Use the Sensory Reset card.]({{ '/site/printables/sensory-storm-reset-card.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/sensory-storm-reset-card-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/sensory-storm-reset-card-art.pdf' | relative_url }})
+[Use the Sensory Reset card.]({{ '/site/printables/sensory-storm-reset-card.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/sensory-storm-reset-card-ink.pdf' | relative_url }})
 
 [Find cover from the Storm in the full bestiary.]({{ '/monsters/sensory-storm/' | relative_url }})
 
@@ -207,7 +207,7 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - Stop planning from fantasy fuel.
 - Check each commitment against today's actual reserves.
 
-[Use the Minimum Viable Day sheet.]({{ '/site/printables/burnout-dragon-minimum-viable-day.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/burnout-dragon-minimum-viable-day-art.pdf' | relative_url }})
+[Use the Minimum Viable Day sheet.]({{ '/site/printables/burnout-dragon-minimum-viable-day.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf' | relative_url }})
 
 [Face the Dragon in the full bestiary.]({{ '/monsters/burnout-dragon/' | relative_url }})
 

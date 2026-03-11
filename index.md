@@ -11,17 +11,24 @@ hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a p
 ---
 
 <section class="landing-section">
-  <p class="landing-lead"><strong>Dragons & Distractions</strong> is an ADHD-led, neurodivergent-friendly toolkit that turns overwhelm, time blindness, shutdown, and distraction into monsters you can recognize and fight. The point is not to romanticize the struggle. The point is to make it easier to see, name, and interrupt.</p>
+  <div class="section-heading section-heading--hero">
+    <p class="section-heading__eyebrow">Start here</p>
+    <h2>Recognize the pattern, pick one monster, and get one workable next step</h2>
+    <p class="landing-lead"><strong>Dragons & Distractions</strong> is an ADHD-led, neurodivergent-friendly toolkit that turns overwhelm, time blindness, shutdown, sensory overload, and distraction into patterns you can recognize quickly. The site is meant to lower friction, not send you on a scavenger hunt.</p>
+  </div>
   <div class="section-actions">
-    <a class="cta-button" href="{{ '/choose-your-monster/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧭</span><span>Choose Your Monster</span></a>
-    <a class="cta-button" href="{{ '/spellbook/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">⚔️</span><span>Start With a Ritual</span></a>
-    <a class="cta-button" href="{{ '/site/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧰</span><span>Grab a Printable</span></a>
+    <a class="cta-button cta-button--primary" href="{{ '/choose-your-monster/' | relative_url }}"><span>Choose Your Monster</span></a>
+    <a class="cta-button" href="{{ '/site/' | relative_url }}"><span>Open a Tool</span></a>
+    <a class="cta-button" href="{{ '/spellbook/' | relative_url }}"><span>Read the Rituals</span></a>
   </div>
 </section>
 
 <section class="landing-section">
-  <h2>What this is</h2>
-  <div class="landing-grid">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">How it works</p>
+    <h2>Three promises</h2>
+  </div>
+  <div class="landing-grid landing-grid--compact">
     <article class="landing-card">
       <h3>Practical first</h3>
       <p>Every major path points you toward one ritual and one tool before asking you to read the full lore.</p>
@@ -38,8 +45,11 @@ hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a p
 </section>
 
 <section class="landing-section">
-  <h2>Who it helps</h2>
-  <p>This project is rooted in ADHD and executive dysfunction, but the tools can also help people dealing with shutdown, burnout, transition friction, or other neurodivergent overlap. Use what helps. Ignore what does not.</p>
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Grounding</p>
+    <h2>Built for neurodivergent overlap, not just one label</h2>
+    <p>This project is rooted in ADHD and executive dysfunction, but the tools can also help with shutdown, burnout, transition friction, rejection sensitivity, or sensory overload. Use what helps. Ignore what does not.</p>
+  </div>
   <div class="trust-grid">
     <article class="trust-card">
       <h3>Warm, not clinical</h3>
@@ -57,47 +67,27 @@ hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a p
 </section>
 
 <section class="landing-section">
-  <h2>Choose your monster</h2>
-  <p>Start with the feeling you have right now. Each path below is designed to get you from recognition to action in a few clicks.</p>
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Choose by feeling</p>
+    <h2>Skip the taxonomy and go straight to the match</h2>
+    <p>Each card below gives you signs, one ritual, and one fast tool. Start with the thing making today harder.</p>
+  </div>
   {% include chooser-grid.html %}
 </section>
 
 <section class="landing-section">
-  <h2>New in the bestiary</h2>
-  <div class="landing-grid">
-    <article class="landing-card">
-      <h3>Perfection Wyrm</h3>
-      <p>For the days when the draft is already useful but your brain keeps insisting one more pass will finally make it safe.</p>
-      <p><a href="{{ '/monsters/perfection-wyrm/' | relative_url }}">Meet the Wyrm</a> or jump straight to the <a href="{{ '/site/printables/perfection-wyrm-done-is-better.html' | relative_url }}">Done Is Better worksheet</a>.</p>
-    </article>
-    <article class="landing-card">
-      <h3>Rejection Wisp</h3>
-      <p>For the inbox dread, unread replies, and social-static days when one hard interaction poisons the whole channel.</p>
-      <p><a href="{{ '/monsters/rejection-wisp/' | relative_url }}">Meet the Wisp</a> or use the <a href="{{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}">Reply Scaffold</a>.</p>
-    </article>
-    <article class="landing-card">
-      <h3>Sensory Storm</h3>
-      <p>For the days when light, sound, texture, or social input are turning your whole nervous system into weather.</p>
-      <p><a href="{{ '/monsters/sensory-storm/' | relative_url }}">Meet the Storm</a> or open the <a href="{{ '/site/printables/sensory-storm-reset-card.html' | relative_url }}">Sensory Reset card</a>.</p>
-    </article>
-    <article class="landing-card">
-      <h3>Burnout Dragon</h3>
-      <p>For the deep-depletion days when the honest answer is a smaller day, fewer demands, and more protection for what is left.</p>
-      <p><a href="{{ '/monsters/burnout-dragon/' | relative_url }}">Meet the Dragon</a> or use the <a href="{{ '/site/printables/burnout-dragon-minimum-viable-day.html' | relative_url }}">Minimum Viable Day sheet</a>.</p>
-    </article>
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">What to do next</p>
+    <h2>Pick the depth that fits your energy</h2>
   </div>
-</section>
-
-<section class="landing-section">
-  <h2>Start now</h2>
-  <div class="landing-grid">
+  <div class="landing-grid landing-grid--compact">
     <article class="landing-card">
-      <h3>Need a two-minute win?</h3>
-      <p>Open the <a href="{{ '/site/' | relative_url }}">printables cabinet</a> and pick one card you can use without reading anything else.</p>
+      <h3>Need the fastest possible support?</h3>
+      <p>Open the <a href="{{ '/site/' | relative_url }}">tool cabinet</a> and use one page without printing anything yet.</p>
     </article>
     <article class="landing-card">
-      <h3>Need the full context?</h3>
-      <p>Visit the <a href="{{ '/monsters/' | relative_url }}">Monster Index</a> for deeper lore, examples, and matching counter-spells.</p>
+      <h3>Need context and examples?</h3>
+      <p>Use the <a href="{{ '/monsters/' | relative_url }}">Monster Index</a> if you want to browse the full bestiary more slowly.</p>
     </article>
     <article class="landing-card">
       <h3>Need the grounding promises?</h3>

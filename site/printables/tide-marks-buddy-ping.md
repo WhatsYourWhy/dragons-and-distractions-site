@@ -1,50 +1,48 @@
-# 📨 Tide Marks Buddy Ping — Message Template
+---
+title: "Buddy Ping Template"
+hero_intro: "A ready-to-send script for accountability help. Use it when another person can make the plan feel more real."
+ink_pdf: "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf"
+related_ritual:
+  label: "Open Temporal Shark Ritual"
+  url: "/spellbook/tide-mark-calendar.html"
+---
 
-A ready-to-send script for accountability pings. Copy/paste into DM/email or print and keep at your desk to handwrite.
+Use this when you need a person-shaped reminder to help a start time become real. The goal is not to explain everything. The goal is to set a tiny accountability loop.
 
-**Downloads:** [Ink-friendly PDF](./pdf/tide-marks-buddy-ping-ink.pdf) · [Art header PDF](./pdf/tide-marks-buddy-ping-art.pdf)
+## How to use it
 
-**How to use**
-- Send the **Pre-Start** message when you set your start time.
-- Ask for a **T-10 ping** (or T-15) and promise a short **Post-Battle** note.
-- If printing, keep this card near your calendar and check boxes as you go.
+- Send the pre-start message when you choose your time.
+- Ask for one check-in, not a full rescue mission.
+- Send a short finish note so the loop closes.
 
 ---
 
-## Pre-Start Message
+## Pre-start message
+
+```text
+Hey [Name], I'm starting [Task] at [Start Time].
+Could you ping me at T-10? I'll send a quick finish note.
 ```
-Hey [Name], I’m starting **[Task]** at **[Start Time]**.
-Could you ping me at **T-10**? I’ll send a quick finish note.
-```
+
 - Task: ___________________________
-- Start time: ____:____ (date __________)
+- Start time: ____:____ on __________
 - Ping time requested: ____:____
 
----
+## T-10 ping
 
-## T-10 Ping (for your ally)
+```text
+Time check: T-10 for [Task]. Open the doc and take the first bite.
 ```
-Time check: T-10 for **[Task]**. Open the doc + take first bite.
-```
-- Ping sent?  ☐ Yes  Time: ____:____
 
----
+- Ping sent? ___________________________
 
-## Post-Battle Note
-```
-I started at **[Start Time]** and stopped at **[End Time]**.
+## Post-battle note
+
+```text
+I started at [Start Time] and stopped at [End Time].
 Did: ___________________________
 Next tiny bite: ___________________________
 ```
+
 - End time: ____:____
-- Note sent?  ☐ Yes
-
-**Print Tips:** Choose *Portrait* and narrow margins. Works well as a half-sheet if you print two-up.
-
----
-
-🔗 Quick Navigation
-
-- 🧭 Return to the [Spellbook]({{ "/spellbook/" | relative_url }})
-- 🗺️ Browse the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧰 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
+- Note sent? ___________________________

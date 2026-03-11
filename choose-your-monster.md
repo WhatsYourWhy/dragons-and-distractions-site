@@ -4,7 +4,7 @@ title: "Choose Your Monster"
 permalink: "/choose-your-monster/"
 hero_title: "Choose Your Monster"
 hero_intro: "Start with the stuck feeling you recognize. Each path gives you plain-language signs, one first ritual, and one fast tool."
-show_breadcrumbs: true
+show_breadcrumbs: false
 show_quick_actions: false
 show_nav_cards: false
 hero_image: "/assets/generated/choose-your-monster-banner.png"
@@ -15,38 +15,32 @@ hero_image_alt: "Branching tabletop map with glowing paths toward different mons
   This is a support toolkit, not a diagnosis. If more than one monster fits, pick the one causing the most trouble today and start there.
 </div>
 
-{% include chooser-grid.html %}
+<section class="landing-section">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Pick one lane</p>
+    <h2>Choose the stuck feeling, not the lore category</h2>
+    <p>Each card below takes you to one monster, one first ritual, and one tool. You do not need to compare every option before starting.</p>
+  </div>
+  {% include chooser-grid.html %}
+</section>
 
 <section class="landing-section">
-  <h2>Still not sure?</h2>
-  <div class="landing-grid">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">If several fit</p>
+    <h2>Use the fastest tie-breaker</h2>
+  </div>
+  <div class="landing-grid landing-grid--compact">
     <article class="landing-card">
-      <h3>Everything feels urgent</h3>
-      <p>Start with <a href="{{ '/monsters/task-hydra/' | relative_url }}">Task Hydra</a>.</p>
+      <h3>Everything feels loud or urgent</h3>
+      <p>Pick the monster that is making action harder right now, not the one that best describes you in general.</p>
     </article>
     <article class="landing-card">
-      <h3>Nothing feels real until the last second</h3>
-      <p>Start with <a href="{{ '/monsters/temporal-shark/' | relative_url }}">Temporal Shark</a>.</p>
+      <h3>You are too depleted to compare</h3>
+      <p>Start with <a href="{{ '/monsters/burnout-dragon/' | relative_url }}">Burnout Dragon</a> or <a href="{{ '/monsters/sensory-storm/' | relative_url }}">Sensory Storm</a>. Those pages bias toward protection first.</p>
     </article>
     <article class="landing-card">
-      <h3>Your body will not cross the threshold</h3>
-      <p>Start with <a href="{{ '/monsters/slumber-troll/' | relative_url }}">Slumber Troll</a> or <a href="{{ '/monsters/cave-bear/' | relative_url }}">Cave Bear</a>, depending on whether the problem is wake-up inertia or full retreat.</p>
-    </article>
-    <article class="landing-card">
-      <h3>You keep polishing instead of finishing</h3>
-      <p>Start with <a href="{{ '/monsters/perfection-wyrm/' | relative_url }}">Perfection Wyrm</a>.</p>
-    </article>
-    <article class="landing-card">
-      <h3>One hard message makes the whole inbox feel dangerous</h3>
-      <p>Start with <a href="{{ '/monsters/rejection-wisp/' | relative_url }}">Rejection Wisp</a>.</p>
-    </article>
-    <article class="landing-card">
-      <h3>The room itself feels like too much</h3>
-      <p>Start with <a href="{{ '/monsters/sensory-storm/' | relative_url }}">Sensory Storm</a>.</p>
-    </article>
-    <article class="landing-card">
-      <h3>You do not need motivation, you need less fire</h3>
-      <p>Start with <a href="{{ '/monsters/burnout-dragon/' | relative_url }}">Burnout Dragon</a>.</p>
+      <h3>You just want the fastest support</h3>
+      <p>Skip straight to the <a href="{{ '/site/' | relative_url }}">printables cabinet</a> and use the on-page print button on the first tool that looks doable.</p>
     </article>
   </div>
 </section>

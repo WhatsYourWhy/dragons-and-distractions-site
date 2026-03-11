@@ -117,13 +117,13 @@ def test_check_required_links_accepts_yaml_links(monkeypatch, tmp_path):
             [
                 "- printables:",
                 "    - ink_pdf: /site/printables/pdf/single-task-oath-card-ink.pdf",
-                "      art_pdf: /site/printables/pdf/single-task-oath-card-art.pdf",
                 "    - ink_pdf: /site/printables/pdf/tide-mark-calendar-card-ink.pdf",
-                "      art_pdf: /site/printables/pdf/tide-mark-calendar-card-art.pdf",
                 "    - ink_pdf: /site/printables/pdf/tide-marks-buddy-ping-ink.pdf",
-                "      art_pdf: /site/printables/pdf/tide-marks-buddy-ping-art.pdf",
                 "    - ink_pdf: /site/printables/pdf/wake-invocation-checklist-ink.pdf",
-                "      art_pdf: /site/printables/pdf/wake-invocation-checklist-art.pdf",
+                "    - ink_pdf: /site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf",
+                "    - ink_pdf: /site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf",
+                "    - ink_pdf: /site/printables/pdf/sensory-storm-reset-card-ink.pdf",
+                "    - ink_pdf: /site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf",
             ]
         ),
         encoding="utf-8",
@@ -143,10 +143,6 @@ def test_check_required_links_accepts_normalized_yaml_links(monkeypatch, tmp_pat
         link.replace("./printables/pdf/", "/site/printables/pdf/")
         for link in template.required_links
     ]
-    entries = [
-        {"ink_pdf": yaml_links[index], "art_pdf": yaml_links[index + 1]}
-        for index in range(0, len(yaml_links), 2)
-    ]
     data_dir = root / "_data"
     data_dir.mkdir(parents=True, exist_ok=True)
     data_dir.joinpath("printables.yml").write_text(
@@ -154,9 +150,8 @@ def test_check_required_links_accepts_normalized_yaml_links(monkeypatch, tmp_pat
             [
                 "- printables:",
                 *[
-                    f"    - ink_pdf: {entry['ink_pdf']}\n"
-                    f"      art_pdf: {entry['art_pdf']}"
-                    for entry in entries
+                    f"    - ink_pdf: {link}"
+                    for link in yaml_links
                 ],
             ]
         ),

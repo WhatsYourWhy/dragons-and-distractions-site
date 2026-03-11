@@ -96,5 +96,4 @@ Find the practical write-up in the [Spellbook]({{ "/spellbook/#rejection-wisp-ri
 
 - [Reply Scaffold card]({{ "/site/printables/rejection-wisp-reply-scaffold.html" | relative_url }})
 - [Ink-friendly PDF]({{ "/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf" | relative_url }})
-- [Art header PDF]({{ "/site/printables/pdf/rejection-wisp-reply-scaffold-art.pdf" | relative_url }})
 - If you need another human to help the thread feel survivable, use the [Buddy Ping template]({{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }}).

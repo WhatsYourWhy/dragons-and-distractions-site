@@ -1,0 +1,25 @@
+---
+layout: default
+header_include: header-nav.html
+---
+<article class="printable-page">
+  <header class="printable-page__hero">
+    <p class="printable-page__eyebrow">Printable Tool</p>
+    <h1 class="printable-page__title">{{ page.title | default: "Printable Tool" }}</h1>
+    <p class="printable-page__intro">{{ page.hero_intro | default: "Use the page print button for the cleanest version. The ink-friendly PDF is a fallback, not the primary experience." }}</p>
+    <div class="printable-page__actions">
+      <button class="cta-button printable-page__print-button" type="button" onclick="window.print()">Print This Page</button>
+      {% if page.ink_pdf %}
+      <a class="cta-button" href="{{ page.ink_pdf | relative_url }}">Download Ink PDF</a>
+      {% endif %}
+      {% if page.related_ritual and page.related_ritual.url %}
+      <a class="cta-button" href="{{ page.related_ritual.url | relative_url }}">{{ page.related_ritual.label | default: "Open Related Page" }}</a>
+      {% endif %}
+      <a class="cta-button" href="{{ '/site/' | relative_url }}">More Tools</a>
+    </div>
+  </header>
+
+  <div class="printable-page__body">
+    {{ content }}
+  </div>
+</article>

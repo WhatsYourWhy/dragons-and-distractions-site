@@ -10,65 +10,79 @@ PRINTABLES = [
         "title": "Single-Task Oath",
         "source": ROOT / "site/printables/single-task-oath-card.md",
         "base": "single-task-oath-card",
-        "image": ROOT / "TaskHydra.png",
     },
     {
         "title": "Tide Mark Calendar",
         "source": ROOT / "site/printables/tide-mark-calendar-card.md",
         "base": "tide-mark-calendar-card",
-        "image": ROOT / "TheTemporalShark.png",
     },
     {
         "title": "Tide Marks Buddy Ping",
         "source": ROOT / "site/printables/tide-marks-buddy-ping.md",
         "base": "tide-marks-buddy-ping",
-        "image": ROOT / "CaveBear.png",
     },
     {
         "title": "Wake Invocation Checklist",
         "source": ROOT / "site/printables/wake-invocation-checklist.md",
         "base": "wake-invocation-checklist",
-        "image": ROOT / "SlumberTroll.png",
     },
     {
         "title": "Perfection Wyrm - Done Is Better",
         "source": ROOT / "site/printables/perfection-wyrm-done-is-better.md",
         "base": "perfection-wyrm-done-is-better",
-        "image": None,
     },
     {
         "title": "Rejection Wisp - Reply Scaffold",
         "source": ROOT / "site/printables/rejection-wisp-reply-scaffold.md",
         "base": "rejection-wisp-reply-scaffold",
-        "image": None,
     },
     {
         "title": "Sensory Storm - Sensory Reset Card",
         "source": ROOT / "site/printables/sensory-storm-reset-card.md",
         "base": "sensory-storm-reset-card",
-        "image": None,
     },
     {
         "title": "Burnout Dragon - Minimum Viable Day",
         "source": ROOT / "site/printables/burnout-dragon-minimum-viable-day.md",
         "base": "burnout-dragon-minimum-viable-day",
-        "image": None,
     },
 ]
 
-NAV_MARKER = "🔗 Quick Navigation"
+NAV_MARKERS = ("Quick Navigation",)
+SKIP_LINE_FRAGMENTS = ("Downloads:",)
 
 
 def cleaned_lines(path: Path) -> Iterable[str]:
     nav_seen = False
-    for raw in path.read_text(encoding="utf-8").splitlines():
+    in_front_matter = False
+    front_matter_finished = False
+
+    for index, raw in enumerate(path.read_text(encoding="utf-8").splitlines()):
         stripped = raw.strip()
+
+        if index == 0 and stripped == "---":
+            in_front_matter = True
+            continue
+        if in_front_matter:
+            if stripped == "---":
+                in_front_matter = False
+                front_matter_finished = True
+            continue
+        if front_matter_finished and not stripped:
+            front_matter_finished = False
+            continue
+
         nav_heading = stripped.lstrip("#").strip()
-        if stripped.startswith(NAV_MARKER) or nav_heading.startswith(NAV_MARKER):
+        if any(fragment in stripped for fragment in SKIP_LINE_FRAGMENTS):
+            continue
+        if any(marker in stripped for marker in NAV_MARKERS) or any(
+            marker in nav_heading for marker in NAV_MARKERS
+        ):
             nav_seen = True
             continue
         if nav_seen:
             continue
+
         line = stripped
         if not line:
             yield ""
@@ -116,21 +130,14 @@ def add_body(pdf: Any, lines: Iterable[str]):
     pdf.ln(2)
 
 
-def build_pdf(title: str, lines: Iterable[str], output: Path, image: Path | None):
+def build_pdf(title: str, lines: Iterable[str], output: Path):
     FPDF, XPos, YPos = get_fpdf_dependencies()
     pdf = FPDF()
     pdf.set_auto_page_break(True, margin=15)
     pdf.set_left_margin(10)
     pdf.set_right_margin(10)
     pdf.add_page()
-    top_margin = 10
-
-    if image and image.exists():
-        page_width = pdf.w - 20
-        pdf.image(str(image), x=10, y=10, w=page_width)
-        top_margin = 75
-
-    pdf.set_y(top_margin)
+    pdf.set_y(12)
     pdf.set_font("Helvetica", "B", 16)
     pdf.cell(0, 10, title, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
     pdf.ln(4)
@@ -143,13 +150,9 @@ def main():
     output_dir = ROOT / "site/printables/pdf"
     for printable in PRINTABLES:
         lines = list(cleaned_lines(printable["source"]))
-        base = printable["base"]
-        ink_output = output_dir / f"{base}-ink.pdf"
-        art_output = output_dir / f"{base}-art.pdf"
-
-        build_pdf(printable["title"] + " (Ink-Friendly)", lines, ink_output, None)
-        build_pdf(printable["title"] + " (With Art)", lines, art_output, printable.get("image"))
-        print(f"Generated {ink_output.name} and {art_output.name}")
+        ink_output = output_dir / f"{printable['base']}-ink.pdf"
+        build_pdf(printable["title"] + " (Ink-Friendly)", lines, ink_output)
+        print(f"Generated {ink_output.name}")
 
 
 if __name__ == "__main__":

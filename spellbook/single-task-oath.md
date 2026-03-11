@@ -1,39 +1,36 @@
-# 🐉 Single-Task Oath & 3-Item Rule
+---
+title: "Single-Task Oath"
+hero_intro: "A short ritual for overwhelm spirals. Use it when the list keeps multiplying and you need one visible task instead of ten competing ones."
+---
 
-{% include breadcrumbs.html %}
+Use this ritual when Task Hydra has turned one job into a field of active heads. The point is not to become perfectly focused. The point is to create one honest lane and stay in it.
 
-A printable pledge to keep the Hydra from sprouting new heads. Use it as a desk tent, sticky note, or phone lock-screen during deep work.
+Open the tool page: [Single-Task Oath card]({{ "/site/printables/single-task-oath-card.html" | relative_url }})  
+Need paper? [Download the ink-friendly PDF]({{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }})
 
-**Download:** [Print-friendly Single-Task Oath card]({{ "/site/printables/single-task-oath-card.html" | relative_url }}) (PDF-ready layout)
-**Download:** [Print-friendly Single-Task Oath card (ink)]({{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }}) or [Single-Task Oath with art]({{ "/site/printables/pdf/single-task-oath-card-art.pdf" | relative_url }})
+## The oath
 
-## ✍️ Oath Text (copy or print)
+> I choose one head. I do not grow new ones.
+> Today's three quests are visible. The rest can wait.
 
-> **Single-Task Oath**  
-> I choose one head. I do not grow new ones.  
-> Today’s three quests: ____, ____, ____.
+## How to use it
 
-- Optional mantra: “One torch, one tunnel.”
-- Sign and date if you like ritual weight.
+1. Name one task, not an entire project category.
+2. Gather only the tools that belong to that task.
+3. Put every new idea in a parking lot instead of promoting it into the current battle.
+4. Finish, stop, and choose again.
 
-## 🛠️ How to Use
+## Why it helps
 
-1. Before starting work, fill the three blank quests for the day.  
-2. Place the card where you can see it; light your *Torch Ritual* or lamp to mark focus.  
-3. When a new idea appears, park it on a separate page instead of your oath.  
-4. Cross off each quest as you cauterize it; if unfinished, migrate no more than one item to tomorrow.
+- It reduces switching costs.
+- It creates an external rule before overwhelm starts negotiating.
+- It keeps new ideas from hijacking the current lane.
 
-## 🧾 Printable Prompt (minimal)
+## Minimal prompt
 
-```
+```text
 Single-Task Oath
 I choose one head. I do not grow new ones.
 Today's three quests: [   ] [   ] [   ]
-Signed: ____________  Date: ____________
+Parking lot: ___________________________
 ```
-
-## 🔗 Quick Navigation
-
-- 🧭 Return to the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 🐉 Learn the [Task Hydra lore](../monsters/task-hydra/)
-- 🧰 Browse [Site Tools & Templates]({{ "/site/" | relative_url }})

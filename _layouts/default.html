@@ -56,7 +56,7 @@
               text.textContent = isLowStim ? "Low-stim on" : "Low-stim off";
             }
             if (status) {
-              status.textContent = isLowStim ? "Reduced color & motion" : "Brighten colors";
+              status.textContent = isLowStim ? "Reduced color & motion" : "Standard mode";
             }
           });
         };
@@ -98,8 +98,6 @@
         {{ content }}
       </div>
     </main>
-
-    <a class="back-to-top" href="#main-content" aria-label="Back to top">↑ Back to top</a>
 
     {%- include footer.html -%}
   </body>

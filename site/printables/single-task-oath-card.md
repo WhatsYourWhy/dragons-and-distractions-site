@@ -1,44 +1,41 @@
-# 🐉 Single-Task Oath — Printable Card
+---
+title: "Single-Task Oath"
+hero_intro: "A one-card tool for overwhelm spirals. Use it when the list keeps multiplying and you need one visible task."
+ink_pdf: "/site/printables/pdf/single-task-oath-card-ink.pdf"
+related_ritual:
+  label: "Open Task Hydra Ritual"
+  url: "/spellbook/single-task-oath.html"
+---
 
-Simple, high-contrast layout for printing or saving as PDF. Keep it beside your desk to resist Hydra head-growth.
+Use this when the list keeps sprouting new heads and every new idea feels equally urgent. The point is not to do everything. The point is to keep one task alive long enough to finish it.
 
-**Downloads:** [Ink-friendly PDF](./pdf/single-task-oath-card-ink.pdf) · [Art header PDF](./pdf/single-task-oath-card-art.pdf)
+## How to use it
 
-**How to use**
-- Print one per page or two per page for wallet size. 
-- Fold or trim at the line, then place it where you start work.
-- When overwhelmed, touch the card and read the oath aloud.
+- Name one task, not a category.
+- Gather only the tools for that task.
+- Park every new idea instead of promoting it into the current fight.
 
 ---
 
-## Front — The Oath
+## The oath
 
-> **“I do not grow new heads.”**  
-> I choose **one** task, gather only the tools for that task, and work until the stump is cauterized.
+> "I do not grow new heads."
+>
+> I choose one task, gather only the tools for that task, and work until the stump is cauterized.
 
-- ⚔️ Task in focus: ___________________________
-- 🕯️ Torch lit? (lamp/candle):  ☐ Yes
-- 📵 Distractions exiled: phone off desk, blockers on
+## Front of card
 
----
+- Task in focus: ___________________________
+- Torch lit? ___________________________
+- Distractions exiled: ___________________________
 
-## Back — 3-Item Rule
+## Back of card
 
-- Today’s three quests: 
-  1. ___________________________
-  2. ___________________________
-  3. ___________________________
-- Parking lot for new heads (ideas to park, not to chase):
-  - ___________________________
-  - ___________________________
-  - ___________________________
-
-**Print Tips:** Use “Save to PDF” and choose *Portrait*, with margins set to *Default* or *Narrow*.
-
----
-
-🔗 Quick Navigation
-
-- 🧭 Return to the [Spellbook]({{ "/spellbook/" | relative_url }})
-- 🗺️ Browse the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧰 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
+1. Today's three quests:
+   - ___________________________
+   - ___________________________
+   - ___________________________
+2. Parking lot for new heads:
+   - ___________________________
+   - ___________________________
+   - ___________________________

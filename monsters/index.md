@@ -3,7 +3,7 @@ layout: hub
 title: "Monster Index"
 hero_title: "Map the Monsters"
 hero_intro: "Start with the monster that matches your current stuck point, or use the guided chooser if you want plain-language routing first."
-show_breadcrumbs: true
+show_breadcrumbs: false
 ---
 
 {% assign monsters = site.monsters | sort: "order" %}
@@ -36,23 +36,6 @@ show_breadcrumbs: true
       </div>
       {% endif %}
     </a>
-    {% if monster.quick_links %}
-    <div class="monster-card__quick-links" aria-label="Quick links for {{ monster.name }}">
-      {% for link in monster.quick_links %}
-      {% assign link_href = link.url %}
-      {% assign first_char = link_href | slice: 0, 1 %}
-      {% if first_char == "#" %}
-      {% assign link_href = monster.url | append: link_href %}
-      {% endif %}
-      <a class="monster-card__quick-link quick-actions__item" href="{{ link_href | relative_url }}">
-        {% if link.emoji %}
-        <span class="quick-actions__emoji" aria-hidden="true">{{ link.emoji }}</span>
-        {% endif %}
-        <span class="quick-actions__text">{{ link.label }}</span>
-      </a>
-      {% endfor %}
-    </div>
-    {% endif %}
   </article>
   {% endfor %}
 </div>
