@@ -3,7 +3,14 @@ layout: default
 ---
 
 <article class="monster-page">
+  {% assign banner_src = page.banner | default: page.banner_image %}
   {% include breadcrumbs.html %}
+  {% if banner_src %}
+  <section class="monster-masthead" aria-label="{{ page.name }} banner">
+    <img src="{{ banner_src | relative_url }}" alt="{{ page.banner_image_alt | default: page.name }}">
+    <h1 class="monster-masthead-title">{{ page.name }}</h1>
+  </section>
+  {% endif %}
   {% include monster-masthead.html %}
   {% include monster-start-here.html %}
   {{ content }}
