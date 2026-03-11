@@ -622,6 +622,16 @@ body.is-low-stim * {
   text-decoration: none;
 }
 
+.monster-card__body::after {
+  content: "";
+  display: block;
+  margin-top: 0.9rem;
+  width: 3.5rem;
+  height: 0.3rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(47, 81, 198, 0.95), rgba(255, 191, 0, 0.75));
+}
+
 .monster-card__header {
   display: flex;
   align-items: center;
@@ -974,7 +984,9 @@ h2[id] {
   padding: var(--space-3xl);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border-strong);
-  background: var(--gradient-nav-card);
+  background:
+    radial-gradient(circle at top right, rgba(255, 191, 0, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(241, 244, 255, 0.98));
   box-shadow: var(--shadow-card);
 }
 
@@ -1146,13 +1158,15 @@ h2[id] {
   display: grid;
   place-items: center;
   overflow: hidden;
+  align-self: flex-start;
+  padding: 0.35rem;
 }
 
 .path-card__sigil img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .monster-card__sigil-frame {
@@ -1162,13 +1176,14 @@ h2[id] {
   border: 1px solid var(--color-border-muted);
   background: rgba(255, 255, 255, 0.72);
   box-shadow: var(--shadow-plate);
+  padding: 0.35rem;
 }
 
 .monster-card__sigil {
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media (min-width: 880px) {
@@ -1193,6 +1208,28 @@ h2[id] {
   box-shadow: var(--shadow-hero);
 }
 
+.monster-masthead__media {
+  position: relative;
+  min-height: 220px;
+}
+
+.monster-masthead__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.28)),
+    linear-gradient(180deg, transparent 45%, rgba(255, 255, 255, 0.96) 100%);
+  pointer-events: none;
+}
+
+.monster-masthead__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
 .monster-masthead::after {
   content: "";
   position: absolute;
@@ -1208,6 +1245,15 @@ h2[id] {
   display: grid;
   gap: 0.95rem;
   padding: 1.2rem;
+}
+
+.monster-masthead--illustrated .monster-masthead__body {
+  margin: -3rem 1rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(223, 229, 245, 0.95);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
+  backdrop-filter: blur(8px);
 }
 
 .monster-masthead__eyebrow {
@@ -1355,5 +1401,9 @@ h2[id] {
 
   .monster-masthead__actions .cta-button {
     width: 100%;
+  }
+
+  .monster-masthead--illustrated .monster-masthead__body {
+    margin: -1.8rem 0.75rem 0.75rem;
   }
 }
