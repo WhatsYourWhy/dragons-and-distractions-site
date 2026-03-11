@@ -40,5 +40,13 @@ hero_image_alt: "Branching tabletop map with glowing paths toward different mons
       <h3>One hard message makes the whole inbox feel dangerous</h3>
       <p>Start with <a href="{{ '/monsters/rejection-wisp/' | relative_url }}">Rejection Wisp</a>.</p>
     </article>
+    <article class="landing-card">
+      <h3>The room itself feels like too much</h3>
+      <p>Start with <a href="{{ '/monsters/sensory-storm/' | relative_url }}">Sensory Storm</a>.</p>
+    </article>
+    <article class="landing-card">
+      <h3>You do not need motivation, you need less fire</h3>
+      <p>Start with <a href="{{ '/monsters/burnout-dragon/' | relative_url }}">Burnout Dragon</a>.</p>
+    </article>
   </div>
 </section>

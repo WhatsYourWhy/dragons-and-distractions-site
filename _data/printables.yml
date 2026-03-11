@@ -64,3 +64,25 @@
       ink_pdf: /site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf
       art_pdf_label: "Download art PDF"
       art_pdf: /site/printables/pdf/rejection-wisp-reply-scaffold-art.pdf
+- slug: sensory-storm
+  title: "Sensory Storm Printables"
+  when_to_use: "Use this when overload is spiking and the first job is reducing inputs before you try to keep functioning."
+  printables:
+    - name: "Sensory Reset card"
+      markdown_label: "View card"
+      markdown: /site/printables/sensory-storm-reset-card.html
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/sensory-storm-reset-card-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/sensory-storm-reset-card-art.pdf
+- slug: burnout-dragon
+  title: "Burnout Dragon Printables"
+  when_to_use: "Reach for this when the real need is a smaller day, fewer demands, and a more honest energy budget."
+  printables:
+    - name: "Minimum Viable Day sheet"
+      markdown_label: "View sheet"
+      markdown: /site/printables/burnout-dragon-minimum-viable-day.html
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/burnout-dragon-minimum-viable-day-art.pdf

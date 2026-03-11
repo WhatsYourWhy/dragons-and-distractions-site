@@ -42,6 +42,18 @@ PRINTABLES = [
         "base": "rejection-wisp-reply-scaffold",
         "image": None,
     },
+    {
+        "title": "Sensory Storm - Sensory Reset Card",
+        "source": ROOT / "site/printables/sensory-storm-reset-card.md",
+        "base": "sensory-storm-reset-card",
+        "image": None,
+    },
+    {
+        "title": "Burnout Dragon - Minimum Viable Day",
+        "source": ROOT / "site/printables/burnout-dragon-minimum-viable-day.md",
+        "base": "burnout-dragon-minimum-viable-day",
+        "image": None,
+    },
 ]
 
 NAV_MARKER = "🔗 Quick Navigation"
