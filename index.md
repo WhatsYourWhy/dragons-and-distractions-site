@@ -75,6 +75,16 @@ hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a p
       <p>For the inbox dread, unread replies, and social-static days when one hard interaction poisons the whole channel.</p>
       <p><a href="{{ '/monsters/rejection-wisp/' | relative_url }}">Meet the Wisp</a> or use the <a href="{{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}">Reply Scaffold</a>.</p>
     </article>
+    <article class="landing-card">
+      <h3>Sensory Storm</h3>
+      <p>For the days when light, sound, texture, or social input are turning your whole nervous system into weather.</p>
+      <p><a href="{{ '/monsters/sensory-storm/' | relative_url }}">Meet the Storm</a> or open the <a href="{{ '/site/printables/sensory-storm-reset-card.html' | relative_url }}">Sensory Reset card</a>.</p>
+    </article>
+    <article class="landing-card">
+      <h3>Burnout Dragon</h3>
+      <p>For the deep-depletion days when the honest answer is a smaller day, fewer demands, and more protection for what is left.</p>
+      <p><a href="{{ '/monsters/burnout-dragon/' | relative_url }}">Meet the Dragon</a> or use the <a href="{{ '/site/printables/burnout-dragon-minimum-viable-day.html' | relative_url }}">Minimum Viable Day sheet</a>.</p>
+    </article>
   </div>
 </section>
 

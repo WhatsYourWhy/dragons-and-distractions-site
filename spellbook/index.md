@@ -30,6 +30,8 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - [Goblin Bargains](#dopamine-goblin-rituals) - contain impulses and trade work for rewards.
 - [Perfection Wyrm Rituals](#perfection-wyrm-rituals) - stop polishing once the work is already useful.
 - [Rejection Wisp Rituals](#rejection-wisp-rituals) - reopen hard threads with safer reply shapes.
+- [Sensory Storm Rituals](#sensory-storm-rituals) - reduce overload before asking your brain for more.
+- [Burnout Dragon Rituals](#burnout-dragon-rituals) - build a smaller, more honest day.
 
 ---
 
@@ -169,6 +171,45 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 [Use the Reply Scaffold card.]({{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/rejection-wisp-reply-scaffold-art.pdf' | relative_url }})
 
 [Follow the Wisp into the full bestiary.]({{ '/monsters/rejection-wisp/' | relative_url }})
+
+---
+
+## Sensory Storm Rituals {#sensory-storm-rituals}
+
+**Reduce Inputs First**
+- Pick the loudest, brightest, scratchiest, or most socially demanding input.
+- Lower that one before you try to keep working.
+
+**One-Sense Anchor**
+- Give your body one steady thing to orient to: cold water, pressure, one sound, one dimmer light.
+
+**Shelter Build**
+- Move to the smallest workable environment.
+- Bring only the next tiny task into shelter if you still need to do something.
+
+[Use the Sensory Reset card.]({{ '/site/printables/sensory-storm-reset-card.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/sensory-storm-reset-card-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/sensory-storm-reset-card-art.pdf' | relative_url }})
+
+[Find cover from the Storm in the full bestiary.]({{ '/monsters/sensory-storm/' | relative_url }})
+
+---
+
+## Burnout Dragon Rituals {#burnout-dragon-rituals}
+
+**Minimum Viable Day**
+- List only the real essentials.
+- Default everything else to optional until proven otherwise.
+
+**Ember Check**
+- Ask what you still have enough energy to protect.
+- Choose one recovery action before adding another task.
+
+**Capacity Gates**
+- Stop planning from fantasy fuel.
+- Check each commitment against today's actual reserves.
+
+[Use the Minimum Viable Day sheet.]({{ '/site/printables/burnout-dragon-minimum-viable-day.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/burnout-dragon-minimum-viable-day-art.pdf' | relative_url }})
+
+[Face the Dragon in the full bestiary.]({{ '/monsters/burnout-dragon/' | relative_url }})
 
 ---
 
