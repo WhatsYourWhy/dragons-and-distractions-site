@@ -27,6 +27,7 @@ except ModuleNotFoundError:
 ROOT = Path(__file__).resolve().parent.parent
 PDF_DIR = ROOT / "site" / "printables" / "pdf"
 PRINTABLE_PDF_PARTS = ("site", "printables", "pdf")
+PRINTABLE_PAGE_PARTS = ("site", "printables")
 MONSTER_DIR = "_monsters"
 YAML_PDF_PREFIX = "/site/printables/pdf/"
 SITE_INDEX_RELATIVE_PREFIX = "./printables/pdf/"
@@ -104,6 +105,31 @@ def find_pdf_links(path: Path, *, include_non_printables: bool = False) -> list[
 
         if include_non_printables or rel_target.parts[:3] == PRINTABLE_PDF_PARTS:
             links.append(target)
+    return links
+
+
+def find_printable_page_links(path: Path) -> list[Path]:
+    links: list[Path] = []
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    for link in find_link_targets(text):
+        normalized = normalize_link_target(link)
+        if normalized.lower().endswith(".pdf"):
+            continue
+
+        target = resolve_link_target(normalized, path)
+        try:
+            rel_target = target.relative_to(ROOT)
+        except ValueError:
+            continue
+
+        if rel_target.parts[:2] != PRINTABLE_PAGE_PARTS:
+            continue
+        if len(rel_target.parts) < 3 or rel_target.parts[2] == "pdf":
+            continue
+        if target.suffix.lower() != ".html":
+            continue
+
+        links.append(target)
     return links
 
 
@@ -221,6 +247,7 @@ def check_broken_pdf_links(
 
     for md_file in content_files:
         pdf_links = find_pdf_links(md_file, include_non_printables=True)
+        printable_page_links = find_printable_page_links(md_file)
         broken = []
         for target in pdf_links:
             try:
@@ -236,8 +263,12 @@ def check_broken_pdf_links(
             if require_existing_pdfs and not target.exists():
                 broken.append(str(rel_target))
 
-        if MONSTER_DIR in md_file.relative_to(ROOT).parts and not pdf_links:
-            broken.append("missing printable PDF link for monster entry")
+        if (
+            MONSTER_DIR in md_file.relative_to(ROOT).parts
+            and not pdf_links
+            and not printable_page_links
+        ):
+            broken.append("missing printable link for monster entry")
 
         if broken:
             missing[md_file.relative_to(ROOT)] = broken

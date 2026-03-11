@@ -18,7 +18,7 @@ start_here_ritual:
   description: "Put the true start time on your calendar and add action-labeled alarms before the fin shows up."
 featured_printable:
   label: "Tide Mark calendar card"
-  url: "/site/printables/pdf/tide-mark-calendar-card-ink.pdf"
+  url: "/site/printables/tide-mark-calendar-card.html"
   description: "A quick prompt card for making time visible before urgency takes over."
 support_boundary: "This page can help with time awareness and task setup, but it is not a substitute for accommodations, calendar support, or clinical care if deadlines are harming your health or livelihood."
 cta: "Time spells"
@@ -61,7 +61,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Time blindness, hidden prep steps, deadlines that only feel real at the last minute.</li>
     <li><strong>First counter-move:</strong> Place a Tide Mark start time with T-60 and T-15 alarms.</li>
-    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/tide-mark-calendar-card-ink.pdf" | relative_url }}">Tide Mark calendar card (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/tide-mark-calendar-card.html" | relative_url }}">Tide Mark calendar card</a></li>
   </ul>
 </div>
 
@@ -176,19 +176,6 @@ tags:
 - Ask one ally to be today’s Buoy Buddy.
 - After your next deadline, log how long each step actually took.
 
-🏷️ Tags
 
-#adhd #dragons-and-distractions #temporal-shark #monster-page #obsidian
-
----
-
-🔗 Quick Navigation
-
-- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
-- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
-
-> “The shark is real. So is the clock. Make time visible, and you decide when to dive.”
-
+> "The shark is real. So is the clock. Make time visible, and you decide when to dive."
 

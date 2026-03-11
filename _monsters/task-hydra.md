@@ -18,7 +18,7 @@ start_here_ritual:
   description: "Pick one task, hide the rest, and say no to new heads until you finish the first cut."
 featured_printable:
   label: "Single-Task Oath card"
-  url: "/site/printables/pdf/single-task-oath-card-ink.pdf"
+  url: "/site/printables/single-task-oath-card.html"
   description: "A quick focus card for naming the one head you are striking right now."
 support_boundary: "Use this page as a practical naming tool, not as proof that you should power through exhaustion without support. If the overwhelm is tied to burnout, panic, or unsafe pressure, scale down and seek real-world help."
 cta: "Focus oath"
@@ -61,7 +61,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Endless to-do lists, new heads sprouting mid-task, panic from scattered priorities.</li>
     <li><strong>First counter-move:</strong> Choose one head, light the focus torch, and swear the Single-Task Oath.</li>
-    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }}">Single-Task Oath card (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/single-task-oath-card.html" | relative_url }}">Single-Task Oath card</a></li>
   </ul>
 </div>
 
@@ -196,19 +196,6 @@ tags:
 - Track it for 7 days.
 - Share your victories with the Guild.
 
-🏷️ Tags
 
-#adhd #dragons-and-distractions #task-hydra #monster-page #obsidian
-
----
-
-🔗 Quick Navigation
-
-- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
-- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
-
-> “The Hydra cannot be slain in one swing. But one head at a time? That’s how heroes win.”
-
+> "The Hydra cannot be slain in one swing. But one head at a time? That's how heroes win."
 

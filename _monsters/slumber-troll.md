@@ -18,7 +18,7 @@ start_here_ritual:
   description: "Count down, move before negotiating, and stack a simple light cue with accountability."
 featured_printable:
   label: "Wake Invocation checklist"
-  url: "/site/printables/pdf/wake-invocation-checklist-ink.pdf"
+  url: "/site/printables/wake-invocation-checklist.html"
   description: "A bedside checklist for getting from blankets to motion with less decision-making."
 support_boundary: "If sleep, exhaustion, depression, or medication changes are driving the problem, treat this page as a companion tool rather than the whole answer."
 cta: "Wake rituals"
@@ -61,7 +61,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Snooze spirals, warm darkness, “just five more minutes” bargaining.</li>
     <li><strong>First counter-move:</strong> 3-2-1 Go, flip on light, and send the “I’m vertical” text.</li>
-    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/wake-invocation-checklist-ink.pdf" | relative_url }}">Wake Invocation checklist (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/wake-invocation-checklist.html" | relative_url }}">Wake Invocation checklist</a></li>
   </ul>
 </div>
 
@@ -176,19 +176,6 @@ tags:
 - Track it for 7 days.
 - Share your victory (or battle scars) with the Guild.
 
-🏷️ Tags
 
-#adhd #dragons-and-distractions #slumber-troll #monster-page #obsidian
-
----
-
-🔗 Quick Navigation
-
-- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
-- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
-
-> “The Troll is strongest before dawn. Slay it once, and the rest of the day is yours.”
-
+> "The Troll is strongest before dawn. Slay it once, and the rest of the day is yours."
 

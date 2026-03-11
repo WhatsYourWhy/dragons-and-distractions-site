@@ -18,7 +18,7 @@ start_here_ritual:
   description: "Move to the doorway, take one body-first step, and use a social rope if you need outside help getting started."
 featured_printable:
   label: "Buddy Ping template"
-  url: "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf"
+  url: "/site/printables/tide-marks-buddy-ping.html"
   description: "A low-friction script for asking someone to help pull you out of the cave."
 support_boundary: "This page is for gentle activation and reconnection, not for forcing yourself through burnout, depression, or a real need for rest. If retreat feels dangerous or total, reach for additional support."
 cta: "Gentle start"
@@ -61,7 +61,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Doomscrolling dens, “I’ll get up later” loops, comfort that turns into isolation.</li>
     <li><strong>First counter-move:</strong> Light on, feet on floor, and a single text to your rope-holder.</li>
-    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf" | relative_url }}">Buddy Ping template (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }}">Buddy Ping template</a></li>
   </ul>
 </div>
 
@@ -179,18 +179,6 @@ tags:
 - Test a 10-minute “cave leave” and record how you feel.
 - Share your cave exit ritual with another adventurer.
 
-🏷️ Tags
 
-#adhd #dragons-and-distractions #cave-bear #monster-page #obsidian
-
----
-
-🔗 Quick Navigation
-
-- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
-- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
-
-> “The cave kept you safe once. Now it keeps you small. Step out—the world is waiting.”
+> "The cave kept you safe once. Now it keeps you small. Step out. The world is waiting."
 

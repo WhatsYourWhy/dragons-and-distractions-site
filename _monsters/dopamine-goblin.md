@@ -18,7 +18,7 @@ start_here_ritual:
   description: "Make a short work contract, pre-select the reward, and let the goblin earn its shiny."
 featured_printable:
   label: "Single-Task Oath card"
-  url: "/site/printables/pdf/single-task-oath-card-ink.pdf"
+  url: "/site/printables/single-task-oath-card.html"
   description: "A visible one-task contract that pairs well with reward binding and distraction blocking."
 support_boundary: "Use these tools to add friction and structure, not to punish yourself for needing novelty. If compulsive use or self-control struggles are severe, bring in additional support."
 cta: "Boundaries guide"
@@ -61,7 +61,7 @@ tags:
   <ul class="battle-card__list">
     <li><strong>Triggers:</strong> Shiny tabs, phone pings, novelty cravings when tasks feel dull.</li>
     <li><strong>First counter-move:</strong> Make a 20-minute Goblin deal with a pre-picked reward.</li>
-    <li><strong>Printable:</strong> <a href="{{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }}">Single-Task Oath card (ink PDF)</a></li>
+    <li><strong>Printable:</strong> <a href="{{ "/site/printables/single-task-oath-card.html" | relative_url }}">Single-Task Oath card</a></li>
   </ul>
 </div>
 
@@ -177,18 +177,6 @@ tags:
 - Test it for 7 days.
 - Share your contract with the Guild.
 
-🏷️ Tags
 
-#adhd #dragons-and-distractions #dopamine-goblin #monster-page #obsidian
-
----
-
-🔗 Quick Navigation
-
-- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
-- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
-
-> “The Goblin is clever. Be cleverer.”
+> "The Goblin is clever. Be cleverer."
 
