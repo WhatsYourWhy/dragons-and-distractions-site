@@ -28,6 +28,8 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - [Wake and Exit Rituals](#slumber-troll-rituals) - cross the bridge from blankets to momentum.
 - [Cave-Exit Spells](#cave-bear-rituals) - step into light with micro-movements and a social rope.
 - [Goblin Bargains](#dopamine-goblin-rituals) - contain impulses and trade work for rewards.
+- [Perfection Wyrm Rituals](#perfection-wyrm-rituals) - stop polishing once the work is already useful.
+- [Rejection Wisp Rituals](#rejection-wisp-rituals) - reopen hard threads with safer reply shapes.
 
 ---
 
@@ -129,6 +131,44 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 - Redirect novelty on purpose - new playlist, new pen, or a different chair after a work block.
 
 [Cut a deal with the Goblin.]({{ '/monsters/dopamine-goblin/' | relative_url }})
+
+---
+
+## Perfection Wyrm Rituals {#perfection-wyrm-rituals}
+
+**Ugly First Pass**
+- Make the whole shape before polishing any sentence.
+- Your first job is existence, not elegance.
+
+**Send at 80%**
+- Ask whether the next edit improves clarity, correctness, safety, or accessibility.
+- If it only reduces anxiety, it does not earn another round.
+
+**One-Pass Close**
+- Set one final timer, make one final pass, and send before reopening the file.
+
+[Use the Done Is Better worksheet.]({{ '/site/printables/perfection-wyrm-done-is-better.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/perfection-wyrm-done-is-better-art.pdf' | relative_url }})
+
+[Face the Wyrm in the full bestiary.]({{ '/monsters/perfection-wyrm/' | relative_url }})
+
+---
+
+## Rejection Wisp Rituals {#rejection-wisp-rituals}
+
+**Reply Scaffold**
+- Choose the reply shape first: acknowledge, yes, no, or clarify.
+- Fill the slots and send the smallest safe version.
+
+**Gentle Re-entry**
+- Open one thread only.
+- Name the actual task in the message before your brain starts narrating the whole relationship.
+
+**Borrowed Words**
+- Keep two or three scripts nearby for "I saw this," "I need more time," and "I cannot do that."
+
+[Use the Reply Scaffold card.]({{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}) | [Ink-friendly PDF]({{ '/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf' | relative_url }}) | [Art header PDF]({{ '/site/printables/pdf/rejection-wisp-reply-scaffold-art.pdf' | relative_url }})
+
+[Follow the Wisp into the full bestiary.]({{ '/monsters/rejection-wisp/' | relative_url }})
 
 ---
 

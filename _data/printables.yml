@@ -1,44 +1,66 @@
 - slug: task-hydra
   title: "Task Hydra Printables"
-  when_to_use: "Summon the Task Hydra set when you need to tackle a sprawling to-do list one head at a time—especially if you’re tempted to multitask instead of focusing."
+  when_to_use: "Use the Task Hydra set when the list is multiplying and you need to choose one head instead of reorganizing all of them."
   printables:
     - name: "Single-Task Oath card"
       markdown_label: "View card"
-      markdown: /site/printables/single-task-oath-card.md
+      markdown: /site/printables/single-task-oath-card.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/single-task-oath-card-ink.pdf
       art_pdf_label: "Download art PDF"
       art_pdf: /site/printables/pdf/single-task-oath-card-art.pdf
 - slug: temporal-shark
   title: "Temporal Shark Printables"
-  when_to_use: "Reach for the Temporal Shark kit when you need to visualize time-boxed sprints or tide marks that keep long sessions from drifting into the deep."
+  when_to_use: "Reach for the Temporal Shark kit when time is getting slippery and you need start times, alarms, and visible prep cues."
   printables:
     - name: "Tide Mark calendar card"
       markdown_label: "View card"
-      markdown: /site/printables/tide-mark-calendar-card.md
+      markdown: /site/printables/tide-mark-calendar-card.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/tide-mark-calendar-card-ink.pdf
       art_pdf_label: "Download art PDF"
       art_pdf: /site/printables/pdf/tide-mark-calendar-card-art.pdf
 - slug: buddy-support
-  title: "Buddy Support (Tide Marks)"
-  when_to_use: "Share the buddy ping template whenever you and a partner need quick, repeatable check-ins to keep each other aligned on commitments."
+  title: "Buddy Support"
+  when_to_use: "Use the buddy ping template when another person can help make a plan feel real, especially for starts, deadlines, and cave exits."
   printables:
     - name: "Buddy Ping template"
       markdown_label: "View template"
-      markdown: /site/printables/tide-marks-buddy-ping.md
+      markdown: /site/printables/tide-marks-buddy-ping.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/tide-marks-buddy-ping-ink.pdf
       art_pdf_label: "Download art PDF"
       art_pdf: /site/printables/pdf/tide-marks-buddy-ping-art.pdf
 - slug: slumber-troll
   title: "Slumber Troll Printables"
-  when_to_use: "Deploy the Slumber Troll wake kit when mornings are sluggish and you need a bedside ritual to rout the troll before it steals the day."
+  when_to_use: "Deploy the Slumber Troll wake kit when mornings are sticky and you need a bedside ritual to get vertical before negotiations begin."
   printables:
-    - name: "Wake Invocation bedside card"
+    - name: "Wake Invocation checklist"
       markdown_label: "View card"
-      markdown: /site/printables/wake-invocation-checklist.md
+      markdown: /site/printables/wake-invocation-checklist.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/wake-invocation-checklist-ink.pdf
       art_pdf_label: "Download art PDF"
       art_pdf: /site/printables/pdf/wake-invocation-checklist-art.pdf
+- slug: perfection-wyrm
+  title: "Perfection Wyrm Printables"
+  when_to_use: "Open this when polishing has turned into stalling and you need a visible line between good enough and never done."
+  printables:
+    - name: "Done Is Better worksheet"
+      markdown_label: "View worksheet"
+      markdown: /site/printables/perfection-wyrm-done-is-better.html
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/perfection-wyrm-done-is-better-art.pdf
+- slug: rejection-wisp
+  title: "Rejection Wisp Printables"
+  when_to_use: "Use this when one hard message, vague silence, or social dread has frozen your inbox and you need a gentler way back in."
+  printables:
+    - name: "Reply Scaffold card"
+      markdown_label: "View worksheet"
+      markdown: /site/printables/rejection-wisp-reply-scaffold.html
+      ink_pdf_label: "Download ink PDF"
+      ink_pdf: /site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf
+      art_pdf_label: "Download art PDF"
+      art_pdf: /site/printables/pdf/rejection-wisp-reply-scaffold-art.pdf

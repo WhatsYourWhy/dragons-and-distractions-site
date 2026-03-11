@@ -63,6 +63,22 @@ hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a p
 </section>
 
 <section class="landing-section">
+  <h2>New in the bestiary</h2>
+  <div class="landing-grid">
+    <article class="landing-card">
+      <h3>Perfection Wyrm</h3>
+      <p>For the days when the draft is already useful but your brain keeps insisting one more pass will finally make it safe.</p>
+      <p><a href="{{ '/monsters/perfection-wyrm/' | relative_url }}">Meet the Wyrm</a> or jump straight to the <a href="{{ '/site/printables/perfection-wyrm-done-is-better.html' | relative_url }}">Done Is Better worksheet</a>.</p>
+    </article>
+    <article class="landing-card">
+      <h3>Rejection Wisp</h3>
+      <p>For the inbox dread, unread replies, and social-static days when one hard interaction poisons the whole channel.</p>
+      <p><a href="{{ '/monsters/rejection-wisp/' | relative_url }}">Meet the Wisp</a> or use the <a href="{{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}">Reply Scaffold</a>.</p>
+    </article>
+  </div>
+</section>
+
+<section class="landing-section">
   <h2>Start now</h2>
   <div class="landing-grid">
     <article class="landing-card">

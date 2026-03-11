@@ -30,6 +30,18 @@ PRINTABLES = [
         "base": "wake-invocation-checklist",
         "image": ROOT / "SlumberTroll.png",
     },
+    {
+        "title": "Perfection Wyrm - Done Is Better",
+        "source": ROOT / "site/printables/perfection-wyrm-done-is-better.md",
+        "base": "perfection-wyrm-done-is-better",
+        "image": None,
+    },
+    {
+        "title": "Rejection Wisp - Reply Scaffold",
+        "source": ROOT / "site/printables/rejection-wisp-reply-scaffold.md",
+        "base": "rejection-wisp-reply-scaffold",
+        "image": None,
+    },
 ]
 
 NAV_MARKER = "🔗 Quick Navigation"

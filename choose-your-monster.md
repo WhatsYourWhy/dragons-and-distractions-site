@@ -32,5 +32,13 @@ hero_image_alt: "Branching tabletop map with glowing paths toward different mons
       <h3>Your body will not cross the threshold</h3>
       <p>Start with <a href="{{ '/monsters/slumber-troll/' | relative_url }}">Slumber Troll</a> or <a href="{{ '/monsters/cave-bear/' | relative_url }}">Cave Bear</a>, depending on whether the problem is wake-up inertia or full retreat.</p>
     </article>
+    <article class="landing-card">
+      <h3>You keep polishing instead of finishing</h3>
+      <p>Start with <a href="{{ '/monsters/perfection-wyrm/' | relative_url }}">Perfection Wyrm</a>.</p>
+    </article>
+    <article class="landing-card">
+      <h3>One hard message makes the whole inbox feel dangerous</h3>
+      <p>Start with <a href="{{ '/monsters/rejection-wisp/' | relative_url }}">Rejection Wisp</a>.</p>
+    </article>
   </div>
 </section>
