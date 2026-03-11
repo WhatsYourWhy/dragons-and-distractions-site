@@ -8,6 +8,7 @@ tagline: "When everything costs too much"
 description: "Scale down to a minimum viable day, protect your remaining energy, and stop treating depletion like a motivation problem."
 plain_name: "burnout, deep depletion, and task collapse"
 challenge_summary: "Burnout Dragon appears when your reserves are so low that ordinary tasks feel expensive, recovery keeps getting deferred, and even useful plans start to feel like demands."
+accent_color: "#8b3a1a"
 you_might_be_here_if:
   - "Everything feels heavier than it used to, even simple things."
   - "Rest does not seem to refill you because the pressure never really stops."

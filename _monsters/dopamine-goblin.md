@@ -8,6 +8,7 @@ tagline: "Shiny distractions & impulse trades"
 description: "Contain novelty cravings with reward binding, goblin jars, and clear boundaries around the work you choose."
 plain_name: "shiny distractions and impulse trades"
 challenge_summary: "Dopamine Goblin shows up when the stimulating thing keeps winning even though you still care about the boring thing."
+accent_color: "#d4721a"
 you_might_be_here_if:
   - "You start the task and drift to tabs, pings, or side quests within minutes."
   - "A reward helps, but only if you decide it before the distraction hits."

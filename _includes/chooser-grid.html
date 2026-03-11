@@ -6,7 +6,7 @@
   {% endif %}
   {% for path in chooser_paths %}
   {% assign matched_monster = site.monsters | where_exp: "monster", "monster.url contains path.slug" | first %}
-  <article class="path-card" aria-labelledby="path-{{ path.slug }}">
+  <article class="path-card" aria-labelledby="path-{{ path.slug }}" style="--monster-accent: {{ matched_monster.accent_color | default: '#c8900a' }};">
     {% if matched_monster and matched_monster.sigil %}
     <figure class="path-card__sigil">
       <img src="{{ matched_monster.sigil | relative_url }}" alt="{{ path.monster_name }} sigil">

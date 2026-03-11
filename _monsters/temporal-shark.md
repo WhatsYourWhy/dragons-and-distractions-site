@@ -8,6 +8,7 @@ tagline: "Deadlines you can feel"
 description: "Make time visible with Tide Marks, Buddy Buoys, and first bites before the fin is at your feet."
 plain_name: "time blindness and deadline panic"
 challenge_summary: "Temporal Shark appears when time stays abstract until panic finally makes it feel real."
+accent_color: "#1a7a7a"
 you_might_be_here_if:
   - "You only feel the deadline once it is already urgent."
   - "Prep steps vanish until the last possible moment."

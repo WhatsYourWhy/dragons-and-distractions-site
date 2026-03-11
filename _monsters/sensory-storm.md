@@ -8,6 +8,7 @@ tagline: "Too much input, not enough shelter"
 description: "Reduce overload with input triage, one-sense anchors, and a reset plan that protects your nervous system before asking for performance."
 plain_name: "sensory overload, saturation, and shutdown risk"
 challenge_summary: "Sensory Storm appears when sound, light, texture, motion, or social input pile up until your body starts protecting itself by scattering, freezing, or shutting down."
+accent_color: "#7a5aa0"
 you_might_be_here_if:
   - "Noise, brightness, touch, or too many people are making it hard to think."
   - "You are getting snappier, foggier, or more fragile by the minute."

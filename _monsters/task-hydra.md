@@ -8,6 +8,7 @@ tagline: "Too many heads, not enough focus"
 description: "Pick one head to strike, apply the Single-Task Oath, and wield the 3-Item Rule to stop new heads from sprouting."
 plain_name: "overwhelm from too many tasks"
 challenge_summary: "Task Hydra shows up when too many open loops are screaming at once and choosing the first task feels harder than doing it."
+accent_color: "#6b5ae0"
 you_might_be_here_if:
   - "You keep reorganizing the list instead of starting."
   - "Every task feels urgent, so your brain treats them all like a threat cloud."

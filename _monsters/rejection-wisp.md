@@ -8,6 +8,7 @@ tagline: "One hard interaction that fogs the whole inbox"
 description: "Reduce message dread with reply scaffolds, acknowledgement scripts, and gentler re-entry after a social sting."
 plain_name: "rejection sensitivity, unread messages, and social avoidance"
 challenge_summary: "Rejection Wisp appears when one ambiguous message, criticism, or silence expands into a whole-body warning signal and replying starts to feel unsafe."
+accent_color: "#4cc8c8"
 you_might_be_here_if:
   - "You can handle the task itself, but not the feeling around the reply."
   - "One awkward thread makes every unopened message feel charged."

@@ -1,10 +1,10 @@
 <div class="site-banner">
   <div class="wrapper site-banner__inner">
-    <a class="site-banner__brand" href="{{ '/' | relative_url }}">
+    <a class="site-banner__brand site-title" href="{{ '/' | relative_url }}">
       <span class="site-banner__brand-title">{{ site.title }}</span>
       <span class="site-banner__brand-subtitle">Practical tools before the lore</span>
     </a>
-    <nav class="site-banner__nav" aria-label="Primary">
+    <nav class="site-banner__nav site-nav" aria-label="Primary">
       <ul class="site-banner__links">
         {% assign nav_links = site.data.nav_links %}
         {% for link in nav_links %}

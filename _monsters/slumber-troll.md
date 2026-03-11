@@ -8,6 +8,7 @@ tagline: "Sleep inertia & morning bridges"
 description: "Cross from blankets to momentum with wake invocations, light cues, and accountability ropes."
 plain_name: "morning inertia and transition friction"
 challenge_summary: "Slumber Troll blocks the bridge between rest and motion, especially when your body has not caught up with your intentions yet."
+accent_color: "#2d6b3a"
 you_might_be_here_if:
   - "You keep bargaining for a few more minutes until the morning disappears."
   - "Standing up feels harder than the task waiting for you."

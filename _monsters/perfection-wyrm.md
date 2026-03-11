@@ -8,6 +8,7 @@ tagline: "Polish loops that keep the work from ever leaving the cave"
 description: "Break revision spirals with an ugly first pass, a visible ship line, and permission to stop when the work is already useful."
 plain_name: "perfectionism, over-editing, and fear of shipping"
 challenge_summary: "Perfection Wyrm appears when finishing starts to feel riskier than endless improving, so the draft stays safe but never gets used."
+accent_color: "#a08020"
 you_might_be_here_if:
   - "You keep editing after the useful changes are already done."
   - "Starting feels okay, but finishing and sending feel strangely dangerous."

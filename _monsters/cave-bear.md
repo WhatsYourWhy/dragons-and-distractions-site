@@ -8,6 +8,7 @@ tagline: "Avoidance & hibernation holes"
 description: "Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave."
 plain_name: "shutdown, retreat, and hiding in the cave"
 challenge_summary: "Cave Bear takes over when retreat starts to feel safer than re-entering the world, even when you do not want to stay hidden."
+accent_color: "#8b2a2a"
 you_might_be_here_if:
   - "Rest keeps turning into retreat or isolation."
   - "Replying, leaving the room, or starting the errand feels too big to touch."

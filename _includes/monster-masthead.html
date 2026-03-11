@@ -1,4 +1,4 @@
-<section class="monster-masthead{% if page.banner_image %} monster-masthead--illustrated{% endif %}" aria-labelledby="monster-masthead-name">
+<section class="monster-masthead{% if page.banner_image %} monster-masthead--illustrated{% endif %}" aria-labelledby="monster-masthead-name" style="--monster-accent: {{ page.accent_color | default: '#c8900a' }};">
   {% if page.banner_image %}
   <div class="monster-masthead__media">
     <img src="{{ page.banner_image | relative_url }}" alt="{{ page.banner_image_alt | default: page.name }}">
