@@ -96,5 +96,4 @@ Find the practical write-up in the [Spellbook]({{ "/spellbook/#burnout-dragon-ri
 
 - [Minimum Viable Day sheet]({{ "/site/printables/burnout-dragon-minimum-viable-day.html" | relative_url }})
 - [Ink-friendly PDF]({{ "/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf" | relative_url }})
-- [Art header PDF]({{ "/site/printables/pdf/burnout-dragon-minimum-viable-day-art.pdf" | relative_url }})
 - If your burnout is mixed with sensory overload, pair this with [Sensory Storm]({{ "/monsters/sensory-storm/" | relative_url }}).

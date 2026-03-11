@@ -1,43 +1,38 @@
-# 🦈 Tide Mark Calendar — Printable Setup
+---
+title: "Tide Mark Calendar"
+hero_intro: "A one-page planning card for time blindness. Use it to make a start time real before the deadline feels real."
+ink_pdf: "/site/printables/pdf/tide-mark-calendar-card-ink.pdf"
+related_ritual:
+  label: "Open Temporal Shark Ritual"
+  url: "/spellbook/tide-mark-calendar.html"
+---
 
-Minimal, ink-friendly worksheet to schedule start times before the Shark circles. Print and fill by hand or save as a one-page PDF.
+Use this when time is slippery and the work will not feel real until the last second. The goal is to create a visible start, not just a due date.
 
-**Downloads:** [Ink-friendly PDF](./pdf/tide-mark-calendar-card-ink.pdf) · [Art header PDF](./pdf/tide-mark-calendar-card-art.pdf)
+## How to use it
 
-**How to use**
-- Print one for each project or week.
-- Post it near your screen; set alarms as you write the times.
-- Pair with the Buddy Ping template if you want a social buoy.
+- Pick one project, event, or deadline.
+- Lock a start time before you decide how motivated you feel.
+- Set alarms while you fill in the card so the plan exists outside your head.
 
 ---
 
-## Tide Marks
+## Tide marks
 
-- Project / Quest: ___________________________
-- Start time locked: ____:____ (date __________)
-- T-60 alarm verb: __________________ (example: “Open slides”)
-- T-15 alarm verb: __________________ (example: “Email draft”)
-- First bite laid out?  ☐ Doc open  ☐ Tabs ready  ☐ Notes visible
+- Project or quest: ___________________________
+- Start time locked: ____:____ on __________
+- T-minus 60 alarm action: ___________________________
+- T-minus 15 alarm action: ___________________________
 
----
+## Sandbar sprint
 
-## Sandbar Sprint (pre-start check)
-- 10-minute preview done?  ☐ Yes ☐ No
+- Ten-minute preview done? ___________________________
 - What I touched: ___________________________
-- What’s next when the alarm rings: ___________________________
+- What happens when the alarm rings: ___________________________
 
----
+## Buddy buoy
 
-## Buddy Buoy — quick log
-- Ally ping time: __________  Ally name: __________________
-- Start note sent?  ☐ Yes  End note sent?  ☐ Yes
-
-**Print Tips:** Select *Portrait*, scale 100%, regular margins. Use thicker paper if you want to reuse with pencil.
-
----
-
-🔗 Quick Navigation
-
-- 🧭 Return to the [Spellbook]({{ "/spellbook/" | relative_url }})
-- 🗺️ Browse the [Monster Index]({{ "/monsters/" | relative_url }})
-- 🧰 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
+- Ally ping time: __________
+- Ally name: ___________________________
+- Start note sent? ___________________________
+- End note sent? ___________________________

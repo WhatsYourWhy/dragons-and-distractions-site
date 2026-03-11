@@ -18,9 +18,8 @@
       <thead>
         <tr>
           <th scope="col">Printable</th>
-          <th scope="col">Markdown</th>
+          <th scope="col">Page</th>
           <th scope="col">Ink PDF</th>
-          <th scope="col">Art PDF</th>
         </tr>
       </thead>
       <tbody>
@@ -37,13 +36,6 @@
           <td>
             {% if item.ink_pdf %}
             <a href="{{ item.ink_pdf | relative_url }}">{{ item.ink_pdf_label | default: "Ink PDF" }}</a>
-            {% else %}
-            -
-            {% endif %}
-          </td>
-          <td>
-            {% if item.art_pdf %}
-            <a href="{{ item.art_pdf | relative_url }}">{{ item.art_pdf_label | default: "Art PDF" }}</a>
             {% else %}
             -
             {% endif %}

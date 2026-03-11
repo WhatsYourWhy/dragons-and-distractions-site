@@ -97,5 +97,4 @@ Find the practical write-up in the [Spellbook]({{ "/spellbook/#perfection-wyrm-r
 
 - [Done Is Better worksheet]({{ "/site/printables/perfection-wyrm-done-is-better.html" | relative_url }})
 - [Ink-friendly PDF]({{ "/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf" | relative_url }})
-- [Art header PDF]({{ "/site/printables/pdf/perfection-wyrm-done-is-better-art.pdf" | relative_url }})
 - If the Wyrm is mixed with overwhelm, pair this with the [Single-Task Oath]({{ "/spellbook/single-task-oath.html" | relative_url }}).

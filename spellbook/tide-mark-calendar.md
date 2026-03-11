@@ -1,34 +1,34 @@
-# 🦈 Tide Mark Calendar Setup
+---
+title: "Tide Mark Calendar"
+hero_intro: "A pre-commitment ritual for time blindness. Use it when deadlines feel imaginary until they are suddenly on top of you."
+---
 
-{% include breadcrumbs.html %}
+Use this when Temporal Shark keeps making the start line disappear. The point is not to predict the whole future. The point is to make the next start real enough to meet.
 
-A compact guide and printable prompt to make start times real before the Temporal Shark circles.
+Open the tools: [Tide Mark Calendar card]({{ "/site/printables/tide-mark-calendar-card.html" | relative_url }}) and [Buddy Ping template]({{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }})  
+Need paper? [Download the card PDF]({{ "/site/printables/pdf/tide-mark-calendar-card-ink.pdf" | relative_url }}) or [Buddy Ping PDF]({{ "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf" | relative_url }})
 
-Download the Tide Mark calendar card and Buddy Ping template in Markdown or PDF-ready versions: [card]({{ "/site/printables/tide-mark-calendar-card.html" | relative_url }}), [buddy ping]({{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }}), [card (ink) PDF]({{ "/site/printables/pdf/tide-mark-calendar-card-ink.pdf" | relative_url }}), [card (art) PDF]({{ "/site/printables/pdf/tide-mark-calendar-card-art.pdf" | relative_url }}), [buddy ping (ink) PDF]({{ "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf" | relative_url }}).
+## Setup steps
 
-## 🗺️ Setup Steps
+1. Pick a real start time, not just a due date.
+2. Add a T-minus 60 alarm for setup and a T-minus 15 alarm for opening the first bite.
+3. Stage the first bite before you walk away.
+4. Put the start time somewhere visible.
+5. If needed, tell a real person when the start happens.
 
-1. Choose tomorrow’s three start times and create **calendar events** named with verbs (e.g., “Open slides,” “Draft email”).
-2. Add two alarms to each event: **T-60** (“Lay out materials”) and **T-15** (“Open the doc”).
-3. Stage the first bite: open the file, title it, and drop three bullet starters.
-4. Place a visible **Tide Mark** near your desk (sticky note or whiteboard) listing the first start time.
-5. Tell a buddy your first start time and ask for a T-10 ping.
+## Why it helps
 
-## 🧾 Printable Prompt (minimal)
+- It turns intention into a visible commitment.
+- It reduces the gap between "I should" and "I am starting now."
+- It gives the brain something concrete before panic takes over.
 
-```
+## Minimal prompt
+
+```text
 Tide Marks
-[ ] Tomorrow's Start 1: __________  Alarms: T-60 / T-15 set
-[ ] Tomorrow's Start 2: __________  Alarms: T-60 / T-15 set
-[ ] Tomorrow's Start 3: __________  Alarms: T-60 / T-15 set
-Staged first bites? __________
-Buddy buoy ping time? __________
+Start time: __________
+T-60 action: __________
+T-15 action: __________
+First bite waiting: __________
+Buddy ping time: __________
 ```
-
-Print, fold, or copy into your planner. Check the boxes as you set your tide marks.
-
-## 🔗 Quick Navigation
-
-- 🧭 Return to the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- 🦈 Review the [Temporal Shark rituals](../monsters/temporal-shark/)
-- 🧰 Browse [Site Tools & Templates]({{ "/site/" | relative_url }})

@@ -3,8 +3,8 @@ layout: default
 header_include: header-nav.html
 ---
 {%- assign show_breadcrumbs = page.show_breadcrumbs | default: false -%}
-{%- assign show_quick_actions = page.show_quick_actions | default: true -%}
-{%- assign show_nav_cards = page.show_nav_cards | default: true -%}
+{%- assign show_quick_actions = page.show_quick_actions | default: false -%}
+{%- assign show_nav_cards = page.show_nav_cards | default: false -%}
 {%- assign hero_title = page.hero_title | default: page.title | default: site.title -%}
 {%- assign hero_intro = page.hero_intro | default: nil -%}
 {%- assign hero_image = page.hero_image | default: nil -%}

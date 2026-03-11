@@ -7,8 +7,6 @@
       markdown: /site/printables/single-task-oath-card.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/single-task-oath-card-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/single-task-oath-card-art.pdf
 - slug: temporal-shark
   title: "Temporal Shark Printables"
   when_to_use: "Reach for the Temporal Shark kit when time is getting slippery and you need start times, alarms, and visible prep cues."
@@ -18,8 +16,6 @@
       markdown: /site/printables/tide-mark-calendar-card.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/tide-mark-calendar-card-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/tide-mark-calendar-card-art.pdf
 - slug: buddy-support
   title: "Buddy Support"
   when_to_use: "Use the buddy ping template when another person can help make a plan feel real, especially for starts, deadlines, and cave exits."
@@ -29,8 +25,6 @@
       markdown: /site/printables/tide-marks-buddy-ping.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/tide-marks-buddy-ping-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/tide-marks-buddy-ping-art.pdf
 - slug: slumber-troll
   title: "Slumber Troll Printables"
   when_to_use: "Deploy the Slumber Troll wake kit when mornings are sticky and you need a bedside ritual to get vertical before negotiations begin."
@@ -40,8 +34,6 @@
       markdown: /site/printables/wake-invocation-checklist.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/wake-invocation-checklist-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/wake-invocation-checklist-art.pdf
 - slug: perfection-wyrm
   title: "Perfection Wyrm Printables"
   when_to_use: "Open this when polishing has turned into stalling and you need a visible line between good enough and never done."
@@ -51,8 +43,6 @@
       markdown: /site/printables/perfection-wyrm-done-is-better.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/perfection-wyrm-done-is-better-art.pdf
 - slug: rejection-wisp
   title: "Rejection Wisp Printables"
   when_to_use: "Use this when one hard message, vague silence, or social dread has frozen your inbox and you need a gentler way back in."
@@ -62,8 +52,6 @@
       markdown: /site/printables/rejection-wisp-reply-scaffold.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/rejection-wisp-reply-scaffold-art.pdf
 - slug: sensory-storm
   title: "Sensory Storm Printables"
   when_to_use: "Use this when overload is spiking and the first job is reducing inputs before you try to keep functioning."
@@ -73,8 +61,6 @@
       markdown: /site/printables/sensory-storm-reset-card.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/sensory-storm-reset-card-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/sensory-storm-reset-card-art.pdf
 - slug: burnout-dragon
   title: "Burnout Dragon Printables"
   when_to_use: "Reach for this when the real need is a smaller day, fewer demands, and a more honest energy budget."
@@ -84,5 +70,3 @@
       markdown: /site/printables/burnout-dragon-minimum-viable-day.html
       ink_pdf_label: "Download ink PDF"
       ink_pdf: /site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf
-      art_pdf_label: "Download art PDF"
-      art_pdf: /site/printables/pdf/burnout-dragon-minimum-viable-day-art.pdf

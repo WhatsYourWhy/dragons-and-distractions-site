@@ -1,0 +1,25 @@
+---
+layout: default
+header_include: header-nav.html
+---
+{%- assign show_breadcrumbs = page.show_breadcrumbs | default: false -%}
+{%- assign hero_title = page.hero_title | default: page.title | default: site.title -%}
+{%- assign hero_intro = page.hero_intro | default: nil -%}
+
+{%- if show_breadcrumbs -%}
+  {%- include breadcrumbs.html -%}
+{%- endif -%}
+
+<article class="content-page">
+  <header class="content-page__hero">
+    <p class="content-page__eyebrow">Field Notes</p>
+    <h1 class="content-page__title">{{ hero_title }}</h1>
+    {%- if hero_intro -%}
+      <p class="content-page__intro">{{ hero_intro }}</p>
+    {%- endif -%}
+  </header>
+
+  <div class="content-page__body">
+    {{ content }}
+  </div>
+</article>

@@ -96,5 +96,4 @@ Find the practical write-up in the [Spellbook]({{ "/spellbook/#sensory-storm-rit
 
 - [Sensory Reset card]({{ "/site/printables/sensory-storm-reset-card.html" | relative_url }})
 - [Ink-friendly PDF]({{ "/site/printables/pdf/sensory-storm-reset-card-ink.pdf" | relative_url }})
-- [Art header PDF]({{ "/site/printables/pdf/sensory-storm-reset-card-art.pdf" | relative_url }})
 - If the Storm is followed by retreat or exhaustion, pair this with [Cave Bear]({{ "/monsters/cave-bear/" | relative_url }}) or [Burnout Dragon]({{ "/monsters/burnout-dragon/" | relative_url }}).

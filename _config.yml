@@ -29,6 +29,13 @@ defaults:
       layout: page
       header_include: site-header.html
   - scope:
+      path: "site/printables"
+      type: "pages"
+    values:
+      layout: printable
+      header_include: header-nav.html
+      show_breadcrumbs: false
+  - scope:
       path: ""
       type: "monsters"
     values:

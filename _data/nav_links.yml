@@ -1,30 +1,16 @@
-﻿- label: Start Here
-  emoji: "🧭"
+- label: Start Here
   url: "/choose-your-monster/"
   description: "Match the stuck feeling to a monster, then jump straight to one ritual and one tool."
   cta: "Choose a Path"
-- label: Monster Index
-  emoji: "🗺️"
+- label: Monsters
   url: "/monsters/"
   description: "Browse the full bestiary if you already know which foe you are facing."
   cta: "Browse Monsters"
-- label: Spellbook
-  emoji: "⚔️"
+- label: Rituals
   url: "/spellbook/"
   description: "Go straight to rituals, scripts, and plain-language counter-moves."
   cta: "Open Rituals"
 - label: Printables
-  emoji: "🧰"
   url: "/site/"
   description: "Grab the fastest cards, checklists, and templates for getting unstuck."
   cta: "Grab Tools"
-- label: Codex
-  emoji: "📜"
-  url: "/codex/"
-  description: "Read the guiding promises, support boundaries, and how to use the metaphors."
-  cta: "Read the Guide"
-- label: Art & Visuals
-  emoji: "🎨"
-  url: "/art/"
-  description: "Explore the creature art and visual world behind the toolkit."
-  cta: "View Art"

@@ -1,10 +1,16 @@
-# Burnout Dragon - Minimum Viable Day Sheet
+---
+title: "Minimum Viable Day"
+hero_intro: "A planning sheet for depleted days. Use it when the honest plan needs to be smaller, kinder, and more survivable."
+ink_pdf: "/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf"
+related_ritual:
+  label: "Meet Burnout Dragon"
+  url: "/monsters/burnout-dragon/"
+---
 
 Use this when the normal plan is fantasy and everything costs more than it should. The goal is not a productive day. The goal is a survivable, honest day.
 
-**Downloads:** [Ink-friendly PDF](./pdf/burnout-dragon-minimum-viable-day-ink.pdf) | [Art header PDF](./pdf/burnout-dragon-minimum-viable-day-art.pdf)
+## How to use it
 
-**How to use**
 - Fill this out before making a full list.
 - Protect one recovery action before adding optional work.
 - If a task does not fit today's fuel, it moves.
@@ -16,8 +22,6 @@ Use this when the normal plan is fantasy and everything costs more than it shoul
 - Low
 - Very low
 - Bare minimum only
-
-Circle one.
 
 ## Must happen
 
@@ -47,11 +51,3 @@ Choose one and schedule it: ___________________________
 
 Today is not a test of character.
 Today I am building the smallest day that does not burn me further.
-
----
-
-🔗 Quick Navigation
-
-- Return to the [Spellbook]({{ "/spellbook/" | relative_url }})
-- Browse the [Monster Index]({{ "/monsters/" | relative_url }})
-- Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
