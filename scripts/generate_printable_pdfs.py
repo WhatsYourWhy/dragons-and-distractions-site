@@ -1,15 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Iterable
-try:
-    from fpdf import FPDF
-    from fpdf.enums import XPos, YPos
-except ModuleNotFoundError as exc:
-    raise SystemExit(
-        "Missing dependency 'fpdf2'. Install with `pip install -r requirements.txt` before generating PDFs."
-    ) from exc
 import re
+from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parent.parent
 PRINTABLES = [
@@ -73,7 +66,19 @@ def cleaned_lines(path: Path) -> Iterable[str]:
         yield line
 
 
-def add_body(pdf: FPDF, lines: Iterable[str]):
+def get_fpdf_dependencies() -> tuple[Any, Any, Any]:
+    try:
+        from fpdf import FPDF
+        from fpdf.enums import XPos, YPos
+    except ModuleNotFoundError as exc:
+        raise SystemExit(
+            "Missing dependency 'fpdf2'. Install with `pip install -r requirements.txt` before generating PDFs."
+        ) from exc
+
+    return FPDF, XPos, YPos
+
+
+def add_body(pdf: Any, lines: Iterable[str]):
     pdf.set_font("Helvetica", size=11)
     width = pdf.w - pdf.l_margin - pdf.r_margin
     for line in lines:
@@ -88,6 +93,7 @@ def add_body(pdf: FPDF, lines: Iterable[str]):
 
 
 def build_pdf(title: str, lines: Iterable[str], output: Path, image: Path | None):
+    FPDF, XPos, YPos = get_fpdf_dependencies()
     pdf = FPDF()
     pdf.set_auto_page_break(True, margin=15)
     pdf.set_left_margin(10)

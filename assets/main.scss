@@ -287,7 +287,7 @@ body.is-low-stim * {
 }
 
 .cta-link::after {
-  content: "â€º";
+  content: ">";
   font-size: 0.95rem;
   transform: translateY(1px);
 }
@@ -756,7 +756,7 @@ body.is-low-stim * {
 }
 
 .battle-card__eyebrow::before {
-  content: "âš”ï¸";
+  content: "*";
   font-size: 1rem;
 }
 
@@ -848,7 +848,7 @@ h2[id] {
 }
 
 .breadcrumbs__item + .breadcrumbs__item::before {
-  content: "â€º";
+  content: ">";
   color: var(--color-text-muted);
   font-weight: 700;
 }
