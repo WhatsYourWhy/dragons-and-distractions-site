@@ -5,7 +5,13 @@
     {% assign chooser_paths = site.data.chooser_paths | where_exp: "path", "slug_list contains path.slug" %}
   {% endif %}
   {% for path in chooser_paths %}
+  {% assign matched_monster = site.monsters | where_exp: "monster", "monster.url contains path.slug" | first %}
   <article class="path-card" aria-labelledby="path-{{ path.slug }}">
+    {% if matched_monster and matched_monster.sigil %}
+    <figure class="path-card__sigil">
+      <img src="{{ matched_monster.sigil | relative_url }}" alt="{{ path.monster_name }} sigil">
+    </figure>
+    {% endif %}
     <div class="path-card__eyebrow">Start with the stuck point</div>
     <h3 id="path-{{ path.slug }}" class="path-card__title">{{ path.struggle }}</h3>
     <p class="path-card__summary">{{ path.summary }}</p>

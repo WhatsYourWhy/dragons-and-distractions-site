@@ -1,6 +1,7 @@
 ﻿---
 name: "The Task Hydra"
 emoji: "ðŸ²"
+sigil: "/assets/generated/task-hydra-sigil.png"
 tagline: "Too many heads, not enough focus"
 description: "Pick one head to strike, apply the Single-Task Oath, and wield the 3-Item Rule to stop new heads from sprouting."
 plain_name: "overwhelm from too many tasks"

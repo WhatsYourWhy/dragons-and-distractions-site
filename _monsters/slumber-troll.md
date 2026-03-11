@@ -1,6 +1,7 @@
 ﻿---
 name: "The Slumber Troll"
 emoji: "ðŸŒ™"
+sigil: "/assets/generated/slumber-troll-sigil.png"
 tagline: "Sleep inertia & morning bridges"
 description: "Cross from blankets to momentum with wake invocations, light cues, and accountability ropes."
 plain_name: "morning inertia and transition friction"

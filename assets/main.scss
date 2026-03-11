@@ -1109,3 +1109,70 @@ h2[id] {
   }
 }
 
+
+.page-hero--split {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.page-hero__content {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.page-hero__media {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-hero);
+  background: var(--color-surface);
+}
+
+.page-hero__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.path-card__sigil {
+  margin: 0;
+  width: 92px;
+  height: 92px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border-muted);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-plate);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.path-card__sigil img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.monster-card__sigil-frame {
+  margin: 0 0 0.6rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-muted);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-plate);
+}
+
+.monster-card__sigil {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@media (min-width: 880px) {
+  .page-hero--split {
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  }
+}

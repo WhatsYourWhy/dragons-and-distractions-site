@@ -1,7 +1,7 @@
 ﻿---
 layout: hub
 title: "Monster Index"
-hero_title: "ðŸ—ºï¸ Monster Index"
+hero_title: "Map the Monsters"
 hero_intro: "Start with the monster that matches your current stuck point, or use the guided chooser if you want plain-language routing first."
 show_breadcrumbs: true
 ---
@@ -12,6 +12,11 @@ show_breadcrumbs: true
   {% for monster in monsters %}
   <article class="monster-card">
     <a class="monster-card__body" href="{{ monster.url | relative_url }}">
+      {% if monster.sigil %}
+      <figure class="monster-card__sigil-frame">
+        <img class="monster-card__sigil" src="{{ monster.sigil | relative_url }}" alt="{{ monster.name }} sigil">
+      </figure>
+      {% endif %}
       <div class="monster-card__header">
         <span class="monster-card__emoji">{{ monster.emoji }}</span>
         <div>
@@ -51,7 +56,5 @@ show_breadcrumbs: true
   </article>
   {% endfor %}
 </div>
-
-More monsters await...
 
 <div class="section-callout">Need the fastest path? <a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a> routes you to one ritual and one tool without the full lore pass.</div>

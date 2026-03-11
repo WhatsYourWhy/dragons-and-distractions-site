@@ -1,6 +1,7 @@
 ﻿---
 name: "The Dopamine Goblin"
 emoji: "ðŸ§â€â™‚ï¸"
+sigil: "/assets/generated/dopamine-goblin-sigil.png"
 tagline: "Shiny distractions & impulse trades"
 description: "Contain novelty cravings with reward binding, goblin jars, and clear boundaries around the work you choose."
 plain_name: "shiny distractions and impulse trades"

@@ -6,6 +6,8 @@ hero_intro: "Name the stuck feeling, choose the monster, and take one practical 
 show_breadcrumbs: false
 show_quick_actions: false
 show_nav_cards: false
+hero_image: "/assets/generated/homepage-hero-web.png"
+hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
 ---
 
 <section class="landing-section">
@@ -77,4 +79,3 @@ show_nav_cards: false
     </article>
   </div>
 </section>
-

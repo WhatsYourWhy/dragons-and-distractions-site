@@ -1,6 +1,7 @@
 ﻿---
 name: "The Cave Bear"
 emoji: "ðŸ»"
+sigil: "/assets/generated/cave-bear-sigil.png"
 tagline: "Avoidance & hibernation holes"
 description: "Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave."
 plain_name: "shutdown, retreat, and hiding in the cave"
