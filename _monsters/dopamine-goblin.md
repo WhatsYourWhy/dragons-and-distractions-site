@@ -45,7 +45,6 @@ tags:
   - obsidian
 ---
 
-# ðŸ§â€â™‚ï¸ The Dopamine Goblin
 
 <div class="monster-hero">
   <img src="{{ "/DopamineGoblin.png" | relative_url }}" alt="Illustration of the Dopamine Goblin clutching shiny objects">

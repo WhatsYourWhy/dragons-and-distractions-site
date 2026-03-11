@@ -1,0 +1,50 @@
+﻿<section class="monster-masthead" aria-labelledby="monster-masthead-name">
+  <div class="monster-masthead__body">
+    <p class="monster-masthead__eyebrow">Field Guide Match: {{ page.plain_name }}</p>
+    <div class="monster-masthead__title-row">
+      {% if page.sigil %}
+      <figure class="monster-masthead__sigil">
+        <img src="{{ page.sigil | relative_url }}" alt="{{ page.name }} sigil">
+      </figure>
+      {% endif %}
+      <div class="monster-masthead__heading">
+        <p id="monster-masthead-name" class="monster-masthead__name">{{ page.name }}</p>
+        <p class="monster-masthead__tagline">{{ page.tagline }}</p>
+      </div>
+    </div>
+
+    <p class="monster-masthead__summary">{{ page.challenge_summary }}</p>
+
+    {% if page.badges %}
+    <div class="monster-masthead__badges" aria-label="{{ page.name }} highlights">
+      {% for badge in page.badges %}
+      <span class="monster-card__badge">{{ badge }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="monster-masthead__actions">
+      <a class="cta-button" href="{{ page.start_here_ritual.url | relative_url }}">
+        <span class="cta-button__emoji" aria-hidden="true">⚔️</span>
+        <span>{{ page.start_here_ritual.label }}</span>
+      </a>
+      <a class="cta-button" href="{{ page.featured_printable.url | relative_url }}">
+        <span class="cta-button__emoji" aria-hidden="true">🧰</span>
+        <span>{{ page.featured_printable.label }}</span>
+      </a>
+    </div>
+
+    {% if page.quick_links %}
+    <div class="monster-masthead__jump-links" aria-label="Quick jumps for {{ page.name }}">
+      {% for link in page.quick_links %}
+      {% assign link_href = link.url %}
+      {% assign first_char = link_href | slice: 0, 1 %}
+      {% if first_char == "#" %}
+      {% assign link_href = page.url | append: link_href %}
+      {% endif %}
+      <a href="{{ link_href | relative_url }}">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>

@@ -45,7 +45,6 @@ tags:
   - obsidian
 ---
 
-# ðŸ² The Task Hydra
 
 <div class="monster-hero">
   <img src="{{ "/TaskHydra.png" | relative_url }}" alt="Illustration of the Task Hydra with many heads symbolizing overwhelming tasks">

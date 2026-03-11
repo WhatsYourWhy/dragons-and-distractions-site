@@ -45,7 +45,6 @@ tags:
   - obsidian
 ---
 
-# ðŸ¦ˆ The Temporal Shark
 
 <div class="monster-hero">
   <img src="{{ "/TheTemporalShark.png" | relative_url }}" alt="Illustration of the Temporal Shark circling with a clock-themed fin">

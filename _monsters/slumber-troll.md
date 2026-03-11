@@ -45,7 +45,6 @@ tags:
   - obsidian
 ---
 
-# ðŸŒ™ The Slumber Troll
 
 <div class="monster-hero">
   <img src="{{ "/SlumberTroll.png" | relative_url }}" alt="Illustration of the Slumber Troll, a sleepy giant emerging from blankets">

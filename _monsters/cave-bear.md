@@ -45,7 +45,6 @@ tags:
   - obsidian
 ---
 
-# ðŸ» The Cave Bear
 
 <div class="monster-hero">
   <img src="{{ "/CaveBear.png" | relative_url }}" alt="Illustration of the Cave Bear emerging from a cave entrance">
