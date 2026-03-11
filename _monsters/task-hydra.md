@@ -1,6 +1,6 @@
-﻿---
+---
 name: "The Task Hydra"
-emoji: "ðŸ²"
+emoji: "🐲"
 sigil: "/assets/generated/task-hydra-sigil.png"
 tagline: "Too many heads, not enough focus"
 description: "Pick one head to strike, apply the Single-Task Oath, and wield the 3-Item Rule to stop new heads from sprouting."
@@ -26,16 +26,16 @@ badges:
 quick_links:
   - label: "Lore"
     url: "#lore"
-    emoji: "ðŸ“œ"
+    emoji: "📜"
   - label: "Weaknesses"
     url: "#weaknesses"
-    emoji: "ðŸ›¡ï¸"
+    emoji: "🛡️"
   - label: "Rituals"
     url: "#rituals"
-    emoji: "ðŸª„"
+    emoji: "🪄"
   - label: "Tools"
     url: "#tools"
-    emoji: "ðŸ§°"
+    emoji: "🧰"
 order: 2
 tags:
   - adhd
@@ -50,7 +50,7 @@ tags:
   <img src="{{ "/TaskHydra.png" | relative_url }}" alt="Illustration of the Task Hydra with many heads symbolizing overwhelming tasks">
   <div class="monster-hero__caption">
     <span class="monster-hero__label">Task Hydra Portrait</span>
-    <span class="monster-hero__links">Download the art file: <a href="{{ "/TaskHydra.png" | relative_url }}">PNG</a> Â· <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/TaskHydra.png" | relative_url }}">PNG</a> · <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
   </div>
 </div>
 
@@ -71,118 +71,118 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-ðŸ° I. Bestiary Entry
+🏰 I. Bestiary Entry
 
 > The Task Hydra is the many-headed beast of overwhelm.
 > For every task you complete, two more seem to sprout.
 > It lives in endless lists, scattered priorities, open tabs, overflowing inboxes, the kitchen junk drawer of your mind.
 >
-> It doesnâ€™t roarâ€”it hisses:
-> â€œYouâ€™ll never finish.â€ â€œYou donâ€™t even know where to start.â€ â€œWhy bother at all?â€
+> It doesn’t roar—it hisses:
+> “You’ll never finish.” “You don’t even know where to start.” “Why bother at all?”
 >
 > In ancient myth, the Hydra was nearly invincible because cut heads regrew. Heroes needed strategy, fire, and persistence.
-> The Task Hydra is no different. You canâ€™t kill it all at onceâ€”you must choose which head to strike, cauterize the stump, and call on allies to hold the torch while you swing.
+> The Task Hydra is no different. You can’t kill it all at once—you must choose which head to strike, cauterize the stump, and call on allies to hold the torch while you swing.
 
-## ðŸ”Ž Monster Ecology (Lore and Sources) {#lore}
+## 🔎 Monster Ecology (Lore and Sources) {#lore}
 
-âœ… The Lernaean Hydra â†’ Greek myth.
-âœ… Heads regrow unless burned shut = metaphor for unclosed tasks multiplying.
-âœ… ADHD = Executive dysfunction in prioritization and task-switching. (Barkley, 2015)
-âœ… Overwhelm = task paralysis â†’ avoidance, anxiety.
-âœ… Zeigarnik Effect â†’ open loops stick in working memory, creating cognitive load. (Zeigarnik, 1927)
-âœ… Context switching penalty â†’ reduced efficiency. (Monsell, 2003)
+✅ The Lernaean Hydra → Greek myth.
+✅ Heads regrow unless burned shut = metaphor for unclosed tasks multiplying.
+✅ ADHD = Executive dysfunction in prioritization and task-switching. (Barkley, 2015)
+✅ Overwhelm = task paralysis → avoidance, anxiety.
+✅ Zeigarnik Effect → open loops stick in working memory, creating cognitive load. (Zeigarnik, 1927)
+✅ Context switching penalty → reduced efficiency. (Monsell, 2003)
 
-ðŸ§  III. Clinical / Psychological Explanation
+🧠 III. Clinical / Psychological Explanation
 
-âœ… Problem: ADHDers struggle to prioritize and sequence.
-âœ… Weak working memory â†’ holding too many tasks at once fails.
-âœ… Task initiation impaired â†’ starting feels harder when overwhelmed.
-âœ… Emotional dysregulation â†’ panic and avoidance.
-âœ… Brain seeks salience â†’ ignores boring but important tasks.
-âœ… Solution = externalization, chunking, prioritization, closure.
+✅ Problem: ADHDers struggle to prioritize and sequence.
+✅ Weak working memory → holding too many tasks at once fails.
+✅ Task initiation impaired → starting feels harder when overwhelmed.
+✅ Emotional dysregulation → panic and avoidance.
+✅ Brain seeks salience → ignores boring but important tasks.
+✅ Solution = externalization, chunking, prioritization, closure.
 
-ðŸ” IV. Real-World Examples
+🔍 IV. Real-World Examples
 
 - Staring at a giant to-do list and doing nothing.
 - Starting five chores at once, finishing none.
 - Making a new list instead of acting.
-- Endless â€œplanningâ€ without execution.
+- Endless “planning” without execution.
 - Feeling defeated before even beginning.
-- Procrastinating because you canâ€™t pick where to start.
+- Procrastinating because you can’t pick where to start.
 
-## ðŸ—ï¸ The Task Hydraâ€™s Weaknesses {#weaknesses}
+## 🗝️ The Task Hydra’s Weaknesses {#weaknesses}
 
-âœ… Prioritization Rituals â†’ Limit decision fatigue.
-âœ… Chunking â†’ Break tasks into small, defined steps.
-âœ… Single-Tasking â†’ Refuse to grow new heads mid-swing.
-âœ… Externalized Lists â†’ Offload working memory.
-âœ… Time Blocking â†’ Precommit to focus.
-âœ… Closure Rituals â†’ â€œBurn the stumpâ€ so the head doesnâ€™t regrow.
-âœ… Humor & Story â†’ Turn tasks into quests.
+✅ Prioritization Rituals → Limit decision fatigue.
+✅ Chunking → Break tasks into small, defined steps.
+✅ Single-Tasking → Refuse to grow new heads mid-swing.
+✅ Externalized Lists → Offload working memory.
+✅ Time Blocking → Precommit to focus.
+✅ Closure Rituals → “Burn the stump” so the head doesn’t regrow.
+✅ Humor & Story → Turn tasks into quests.
 
-â­ Externalization
-- Whiteboard, Post-its, Kanban â†’ â€œGet the Hydra out of my head.â€
+⭐ Externalization
+- Whiteboard, Post-its, Kanban → “Get the Hydra out of my head.”
 
-â­ Closure Phrase
-- â€œCauterize the stump.â€ (Ritual statement for completion)
+⭐ Closure Phrase
+- “Cauterize the stump.” (Ritual statement for completion)
 
-â­ Accountability Spell
-- Text or tell someone what youâ€™ll do â†’ Social contract.
+⭐ Accountability Spell
+- Text or tell someone what you’ll do → Social contract.
 
-## ðŸª„ Rituals and Counter-Spells {#rituals}
+## 🪄 Rituals and Counter-Spells {#rituals}
 
-â­ **Invocation:**
-> â€œChoose the head.â€
-- Ask: â€œWhich task is THE priority?â€
+⭐ **Invocation:**
+> “Choose the head.”
+- Ask: “Which task is THE priority?”
 - Name it.
 
-â­ **Torch Ritual:**
-- Light a candle or lamp â†’ physical cue of focus.
-- â€œThis is my hunting torch.â€
+⭐ **Torch Ritual:**
+- Light a candle or lamp → physical cue of focus.
+- “This is my hunting torch.”
 
-â­ **Single-Task Oath:**
-- â€œI do not grow new heads.â€
+⭐ **Single-Task Oath:**
+- “I do not grow new heads.”
 - No switching mid-battle.
 
-â­ **3-Item Rule:**
+⭐ **3-Item Rule:**
 - Daily list limited to **3** critical tasks.
 - Research-backed prioritization.
 
-## ðŸ› ï¸ Artifacts and Weapons {#tools}
+## 🛠️ Artifacts and Weapons {#tools}
 
-- Torch of Focus â†’ Candle or lamp to mark work time.
-- Blade of Choice â†’ A physical object (pen, knife) to point at todayâ€™s single task.
-- Scroll of Tasks â†’ Externalized list.
-- Seal of Completion â†’ Strike-through, checkmark, physical closure.
-- Shield of Limits â†’ Timer or alarm for work sessions.
-- Bag of Holding â†’ Inbox or bucket to catch new tasks without acting immediately.
+- Torch of Focus → Candle or lamp to mark work time.
+- Blade of Choice → A physical object (pen, knife) to point at today’s single task.
+- Scroll of Tasks → Externalized list.
+- Seal of Completion → Strike-through, checkmark, physical closure.
+- Shield of Limits → Timer or alarm for work sessions.
+- Bag of Holding → Inbox or bucket to catch new tasks without acting immediately.
 
-## ðŸ§° Printables to Equip
+## 🧰 Printables to Equip
 
 {% include printable-groups.html slugs="task-hydra" %}
 
-âš¡ï¸ VIII. Command Phrases
+⚡️ VIII. Command Phrases
 
-â€œChoose the head.â€
-â€œNo new heads today.â€
-â€œCauterize the stump.â€
-â€œOne quest at a time.â€
-â€œTorch lit, Hydra dies.â€
-â€œList outside, brain clear.â€
-â€œI am the hero of this battle.â€
+“Choose the head.”
+“No new heads today.”
+“Cauterize the stump.”
+“One quest at a time.”
+“Torch lit, Hydra dies.”
+“List outside, brain clear.”
+“I am the hero of this battle.”
 
-ðŸ§ª IX. Science and Reason
+🧪 IX. Science and Reason
 
-âœ… Zeigarnik Effect â†’ Open tasks occupy working memory.
-âœ… Externalization reduces cognitive load.
-âœ… Chunking â†’ Proven strategy for memory and execution.
-âœ… Prioritization reduces decision fatigue.
-âœ… Single-tasking improves efficiency. (Monsell, 2003)
-âœ… Behavioral Activation â†’ Ritual cues drive action.
+✅ Zeigarnik Effect → Open tasks occupy working memory.
+✅ Externalization reduces cognitive load.
+✅ Chunking → Proven strategy for memory and execution.
+✅ Prioritization reduces decision fatigue.
+✅ Single-tasking improves efficiency. (Monsell, 2003)
+✅ Behavioral Activation → Ritual cues drive action.
 
 *(Sources: Zeigarnik, 1927; Barkley, 2015; Monsell, 2003)*
 
-ðŸ›¡ï¸ X. Challenge for the Reader
+🛡️ X. Challenge for the Reader
 
 - Name **YOUR** Task Hydra.
 - Define its favorite lie.
@@ -190,23 +190,23 @@ tags:
 - Build your hunting ritual.
 - Externalize your list.
 - Limit it to 3 heads.
-- â€œBurnâ€ each stump as you finish.
+- “Burn” each stump as you finish.
 - Track it for 7 days.
 - Share your victories with the Guild.
 
-ðŸ·ï¸ Tags
+🏷️ Tags
 
 #adhd #dragons-and-distractions #task-hydra #monster-page #obsidian
 
 ---
 
-ðŸ”— Quick Navigation
+🔗 Quick Navigation
 
-- ðŸ—ºï¸ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
-- ðŸ§­ Return to the [Welcome Page]({{ "/" | relative_url }})
-- ðŸ§° Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
-- ðŸ“œ Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
+- 🗺️ Back to the [Monster Index]({{ "/monsters/" | relative_url }})
+- 🧭 Return to the [Welcome Page]({{ "/" | relative_url }})
+- 🧰 Explore the [Armory & Spellbook]({{ "/spellbook/" | relative_url }})
+- 📜 Visit [Site Tools & Templates]({{ "/site/" | relative_url }})
 
-> â€œThe Hydra cannot be slain in one swing. But one head at a time? Thatâ€™s how heroes win.â€
+> “The Hydra cannot be slain in one swing. But one head at a time? That’s how heroes win.”
 
 

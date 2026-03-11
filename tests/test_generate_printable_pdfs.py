@@ -2,7 +2,11 @@ from pathlib import Path
 
 import pytest
 
-from scripts.generate_printable_pdfs import NAV_MARKER, cleaned_lines
+import scripts.generate_printable_pdfs as printable_pdfs
+
+
+NAV_MARKER = printable_pdfs.NAV_MARKER
+cleaned_lines = printable_pdfs.cleaned_lines
 
 
 @pytest.mark.parametrize("nav_line", [NAV_MARKER, f"## {NAV_MARKER}"])
@@ -25,3 +29,17 @@ def test_cleaned_lines_ignores_quick_navigation_sections(nav_line: str, tmp_path
     lines = list(cleaned_lines(markdown))
 
     assert lines == ["Title", "Lead-in sentence."]
+
+
+def test_get_fpdf_dependencies_raises_helpful_error_when_missing(monkeypatch):
+    real_import = __import__
+
+    def fake_import(name, globals=None, locals=None, fromlist=(), level=0):
+        if name == "fpdf" or name.startswith("fpdf."):
+            raise ModuleNotFoundError("No module named 'fpdf'")
+        return real_import(name, globals, locals, fromlist, level)
+
+    monkeypatch.setattr("builtins.__import__", fake_import)
+
+    with pytest.raises(SystemExit, match="Missing dependency 'fpdf2'"):
+        printable_pdfs.get_fpdf_dependencies()

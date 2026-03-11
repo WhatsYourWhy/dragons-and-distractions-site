@@ -34,15 +34,24 @@ REQUIRED_LINK_GROUPS = {
 
 
 def extract_front_matter(path: Path) -> dict[str, Any]:
-    text = path.read_text(encoding="utf-8")
-    if not text.startswith(f"{FRONT_MATTER_DELIMITER}\n"):
+    text = path.read_text(encoding="utf-8-sig")
+    if not text.startswith(FRONT_MATTER_DELIMITER):
         raise ValueError("missing opening front matter delimiter")
 
-    try:
-        _, raw_front_matter, _ = text.split(FRONT_MATTER_DELIMITER, 2)
-    except ValueError as exc:
-        raise ValueError("front matter is not properly delimited") from exc
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != FRONT_MATTER_DELIMITER:
+        raise ValueError("missing opening front matter delimiter")
 
+    closing_index = None
+    for index, line in enumerate(lines[1:], start=1):
+        if line.strip() == FRONT_MATTER_DELIMITER:
+            closing_index = index
+            break
+
+    if closing_index is None:
+        raise ValueError("front matter is not properly delimited")
+
+    raw_front_matter = "\n".join(lines[1:closing_index])
     data = yaml.safe_load(raw_front_matter.strip())
     if not isinstance(data, dict):
         raise ValueError("front matter must parse to a mapping")
