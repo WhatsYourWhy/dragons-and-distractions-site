@@ -4,6 +4,8 @@ title: "Spellbook"
 hero_title: "Rituals You Can Use Right Away"
 hero_intro: "Come here when you want the counter-spells without rereading the full bestiary. Pick the stuck point, then take the smallest useful action."
 show_breadcrumbs: true
+hero_image: "/assets/generated/spellbook-banner.png"
+hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spell tools"
 ---
 
 <div class="section-callout">
@@ -131,3 +133,4 @@ show_breadcrumbs: true
 ---
 
 > "Every hero needs a spellbook. Yours can start with one good ritual."
+

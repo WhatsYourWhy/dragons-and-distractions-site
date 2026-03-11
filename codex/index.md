@@ -5,6 +5,8 @@ hero_title: "How This Toolkit Works"
 hero_intro: "The mythic language is here to lower shame and increase recognition. The practical support is what matters."
 show_breadcrumbs: true
 show_nav_cards: false
+hero_image: "/assets/generated/codex-banner.png"
+hero_image_alt: "Guild charter desk with illuminated manuscript pages, lantern, and quiet study tools"
 ---
 
 <section class="landing-section">
@@ -77,4 +79,5 @@ show_nav_cards: false
   <a class="cta-button" href="{{ '/spellbook/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">⚔️</span><span>Open the Spellbook</span></a>
   <a class="cta-button" href="{{ '/site/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧰</span><span>Grab a Tool</span></a>
 </div>
+
 

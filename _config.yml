@@ -1,5 +1,7 @@
-title: "Dragons & Distractions"
+﻿title: "Dragons & Distractions"
 description: "ADHD-friendly rituals, monsters, and tools"
+url: "https://whatsyourwhy.github.io"
+baseurl: "/dragons-and-distractions-site"
 markdown: kramdown
 theme: minima
 header_include: site-header.html

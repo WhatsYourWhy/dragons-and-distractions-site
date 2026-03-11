@@ -4,6 +4,8 @@ title: "Printables"
 hero_title: "Fast Tools, Cards, and Templates"
 hero_intro: "Use this cabinet when you want the lowest-friction version of the support: a card to print, a checklist to keep nearby, or a script to send."
 show_breadcrumbs: true
+hero_image: "/assets/generated/printables-banner.png"
+hero_image_alt: "Organized tabletop with printable cards, checklists, folders, and practical support tools"
 ---
 
 <div class="section-callout">
@@ -26,3 +28,4 @@ Full ritual write-ups live in the [Spellbook](../spellbook/) if you want the lor
 More tools and printables will be added as the Guild forges them.
 
 > "A good tool is a spell you can hold."
+

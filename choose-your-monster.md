@@ -7,6 +7,8 @@ hero_intro: "Start with the stuck feeling you recognize. Each path gives you pla
 show_breadcrumbs: true
 show_quick_actions: false
 show_nav_cards: false
+hero_image: "/assets/generated/choose-your-monster-banner.png"
+hero_image_alt: "Branching tabletop map with glowing paths toward different monster routes"
 ---
 
 <div class="section-callout">
