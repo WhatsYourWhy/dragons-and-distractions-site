@@ -1,4 +1,4 @@
-# Dragons & Distractions
+﻿# Dragons & Distractions
 
 Jekyll site + content repo for monster-themed ADHD support pages and printable ritual cards.
 
@@ -8,7 +8,9 @@ Jekyll site + content repo for monster-themed ADHD support pages and printable r
 - Printable markdown sources in `site/printables/*.md`.
 - PDF tooling:
   - `scripts/generate_printable_pdfs.py` generates `*-ink.pdf` and `*-art.pdf` into `site/printables/pdf/`.
-  - `scripts/check_printable_links.py` validates PDF links referenced in markdown/html.
+  - `scripts/check_printable_links.py` validates PDF links referenced in markdown/html and YAML data.
+- Monster metadata tooling:
+  - `scripts/check_monster_metadata.py` validates required front matter fields and duplicate monster identity/order values.
 
 ## Local usage
 ### 1) Install dependencies
@@ -27,7 +29,12 @@ python scripts/generate_printable_pdfs.py
 python scripts/check_printable_links.py
 ```
 
-### 4) Run the site locally
+### 4) Validate monster metadata
+```bash
+python scripts/check_monster_metadata.py
+```
+
+### 5) Run the site locally
 ```bash
 bundle exec jekyll serve --livereload --trace
 ```
@@ -38,12 +45,14 @@ Open `http://localhost:4000`.
 1. Install Python deps from `requirements.txt`.
 2. Regenerate printable PDFs.
 3. Run printable link checks.
-4. Build Jekyll site to `_site/`.
-5. Deploy to GitHub Pages.
+4. Run monster metadata checks.
+5. Build Jekyll site to `_site/`.
+6. Deploy to GitHub Pages.
 
 ## Notes
 - `site/printables/pdf/*.pdf` artifacts are gitignored and are expected to be generated during local work or CI.
-- The link checker scans markdown + html files for `.pdf` links (including inline anchors and simple Liquid `relative_url` patterns).
+- The link checker scans markdown + html files for `.pdf` links, including inline anchors, simple Liquid `relative_url` patterns, and YAML-driven printable references.
+- The monster metadata checker protects the practical-first content model used by the guided landing flow.
 
 ## License
 See `LICENSE`.

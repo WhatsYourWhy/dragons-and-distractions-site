@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages
+﻿name: Deploy Jekyll site to Pages
 
 on:
   push:
@@ -37,6 +37,9 @@ jobs:
       - name: Check printable links
         run: python scripts/check_printable_links.py
 
+      - name: Check monster metadata
+        run: python scripts/check_monster_metadata.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
@@ -64,3 +67,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
