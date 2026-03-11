@@ -10,7 +10,7 @@ show_breadcrumbs: false
 
 <div class="monster-grid">
   {% for monster in monsters %}
-  <article class="monster-card">
+  <article class="monster-card" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
     <a class="monster-card__body" href="{{ monster.url | relative_url }}">
       {% if monster.sigil %}
       <figure class="monster-card__sigil-frame">
