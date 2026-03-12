@@ -16,10 +16,14 @@ hero_image_alt: "Branching tabletop map with glowing paths toward different mons
 </div>
 
 <section class="landing-section">
+  {% include oracle.html %}
+</section>
+
+<section class="landing-section">
   <div class="section-heading">
-    <p class="section-heading__eyebrow">Pick one lane</p>
-    <h2>Choose the stuck feeling, not the lore category</h2>
-    <p>Each card below takes you to one monster, one first ritual, and one tool. You do not need to compare every option before starting.</p>
+    <p class="section-heading__eyebrow">Or compare all paths</p>
+    <h2>Browse the full chooser when you want to scan everything</h2>
+    <p>Each card below takes you to one monster, one first ritual, and one tool. You do not need to compare every option before starting, but the full map is here if it helps.</p>
   </div>
   {% include chooser-grid.html %}
 </section>

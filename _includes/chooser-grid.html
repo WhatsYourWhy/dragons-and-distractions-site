@@ -6,31 +6,7 @@
   {% endif %}
   {% for path in chooser_paths %}
   {% assign matched_monster = site.monsters | where_exp: "monster", "monster.url contains path.slug" | first %}
-  <article class="path-card" aria-labelledby="path-{{ path.slug }}" style="--monster-accent: {{ matched_monster.accent_color | default: '#c8900a' }};">
-    {% if matched_monster and matched_monster.sigil %}
-    <figure class="path-card__sigil">
-      <img src="{{ matched_monster.sigil | relative_url }}" alt="{{ path.monster_name }} sigil">
-    </figure>
-    {% endif %}
-    <div class="path-card__eyebrow">Start with the stuck point</div>
-    <h3 id="path-{{ path.slug }}" class="path-card__title">{{ path.struggle }}</h3>
-    <p class="path-card__summary">{{ path.summary }}</p>
-    <p class="path-card__monster">Best match: <a href="{{ path.monster_url | relative_url }}">{{ path.monster_name }}</a></p>
-    <ul class="signal-list">
-      {% for sign in path.signs %}
-      <li>{{ sign }}</li>
-      {% endfor %}
-    </ul>
-    <div class="path-card__actions">
-      <a class="path-card__action" href="{{ path.ritual_url | relative_url }}">
-        <strong>{{ path.ritual_label }}</strong>
-        <span>{{ path.ritual_summary }}</span>
-      </a>
-      <a class="path-card__action" href="{{ path.printable_url | relative_url }}">
-        <strong>{{ path.printable_label }}</strong>
-        <span>{{ path.printable_summary }}</span>
-      </a>
-    </div>
-  </article>
+  {% assign heading_id = "path-" | append: path.slug %}
+  {% include path-card.html path=path matched_monster=matched_monster heading_id=heading_id %}
   {% endfor %}
 </div>

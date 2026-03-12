@@ -774,6 +774,103 @@ body.theme-low-stim .printable-group td a:focus {
   box-shadow: 0 0 0 3px rgba(45, 74, 124, 0.12);
 }
 
+.oracle {
+  display: none;
+}
+
+.has-oracle-js .oracle {
+  display: grid;
+  gap: 1rem;
+}
+
+.oracle__layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.oracle__choices {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.oracle__choice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  width: 100%;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(200, 144, 10, 0.1), transparent 36%),
+    linear-gradient(135deg, var(--color-surface-alt), var(--color-surface));
+  box-shadow: var(--shadow-card);
+  color: var(--color-text-strong);
+  text-align: left;
+  cursor: pointer;
+}
+
+.oracle__choice:hover,
+.oracle__choice:focus,
+.oracle__choice.is-active {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.oracle__choice-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  min-height: 2.25rem;
+  border: 1px solid var(--color-border-muted);
+  border-radius: 999px;
+  background: rgba(10, 8, 4, 0.4);
+  color: var(--color-accent-light);
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.oracle__choice-text {
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.oracle__results {
+  display: grid;
+}
+
+.oracle__result {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.oracle__result-label {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.path-card--oracle {
+  min-height: 100%;
+}
+
+body.theme-low-stim .oracle__choice {
+  background:
+    radial-gradient(circle at top right, rgba(45, 74, 124, 0.05), transparent 40%),
+    linear-gradient(135deg, var(--color-surface), var(--color-surface-alt));
+}
+
+body.theme-low-stim .oracle__choice-index {
+  background: rgba(45, 74, 124, 0.06);
+  color: var(--color-accent);
+}
+
 .ritual-glance,
 .ritual-cluster__entries {
   display: grid;
@@ -1199,6 +1296,11 @@ body.theme-low-stim .monster-card__action--primary {
 }
 
 @media (min-width: 760px) {
+  .oracle__layout {
+    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+    align-items: start;
+  }
+
   .path-card__actions {
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   }

@@ -1,0 +1,78 @@
+<script>
+  document.documentElement.classList.add("has-oracle-js");
+</script>
+
+{% assign chooser_paths = site.data.chooser_paths %}
+
+<section class="oracle js-oracle" aria-labelledby="oracle-title">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Ask the Oracle</p>
+    <h2 id="oracle-title">What does right now feel like?</h2>
+    <p>Pick the one that fits. The matching ritual and printable will appear right away.</p>
+  </div>
+
+  <div class="oracle__layout">
+    <div class="oracle__choices" role="list">
+      {% for path in chooser_paths %}
+      <button class="oracle__choice{% if forloop.first %} is-active{% endif %}" type="button" data-oracle-choice="{{ path.slug }}" aria-controls="oracle-panel-{{ path.slug }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+        <span class="oracle__choice-index">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
+        <span class="oracle__choice-text">{{ path.struggle }}</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="oracle__results">
+      {% for path in chooser_paths %}
+      {% assign matched_monster = site.monsters | where_exp: "monster", "monster.url contains path.slug" | first %}
+      {% assign heading_id = "oracle-path-" | append: path.slug %}
+      <div class="oracle__result{% if forloop.first %} is-active{% endif %}" id="oracle-panel-{{ path.slug }}" data-oracle-panel="{{ path.slug }}"{% unless forloop.first %} hidden{% endunless %}>
+        <p class="oracle__result-label">Best match right now</p>
+        {% include path-card.html path=path matched_monster=matched_monster heading_id=heading_id extra_class="path-card--oracle" %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const root = document.currentScript.closest(".js-oracle");
+      if (!root) return;
+
+      const choices = Array.from(root.querySelectorAll("[data-oracle-choice]"));
+      const panels = Array.from(root.querySelectorAll("[data-oracle-panel]"));
+      const validSlugs = new Set(choices.map((choice) => choice.dataset.oracleChoice));
+
+      const activate = (slug) => {
+        choices.forEach((choice) => {
+          const isActive = choice.dataset.oracleChoice === slug;
+          choice.classList.toggle("is-active", isActive);
+          choice.setAttribute("aria-pressed", String(isActive));
+        });
+
+        panels.forEach((panel) => {
+          const isActive = panel.dataset.oraclePanel === slug;
+          panel.classList.toggle("is-active", isActive);
+          panel.hidden = !isActive;
+        });
+      };
+
+      const initialSlug = validSlugs.has(window.location.hash.replace("#", ""))
+        ? window.location.hash.replace("#", "")
+        : choices[0]?.dataset.oracleChoice;
+
+      if (initialSlug) {
+        activate(initialSlug);
+      }
+
+      choices.forEach((choice) => {
+        choice.addEventListener("click", () => {
+          const slug = choice.dataset.oracleChoice;
+          activate(slug);
+          if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, "", "#" + slug);
+          }
+        });
+      });
+    })();
+  </script>
+</section>
