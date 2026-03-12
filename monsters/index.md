@@ -8,36 +8,81 @@ show_breadcrumbs: false
 
 {% assign monsters = site.monsters | sort: "order" %}
 
-<div class="monster-grid">
-  {% for monster in monsters %}
-  <article class="monster-card" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
-    <a class="monster-card__body" href="{{ monster.url | relative_url }}">
+<div class="section-callout">
+  Need the fastest path? <a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a> routes you to one ritual and one tool without the full lore pass.
+</div>
+
+<section class="landing-section">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Use the map, not the whole dungeon</p>
+    <h2>How to use the bestiary without getting lost in it</h2>
+    <p>These monster pages are here to help you recognize the pattern, grab one useful move, and stop before browsing turns into another avoidance side quest.</p>
+  </div>
+  <div class="landing-grid landing-grid--compact">
+    <article class="landing-card">
+      <h3>Want plain-language routing first?</h3>
+      <p>Start with <a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a> if you know the feeling but not the creature name yet.</p>
+    </article>
+    <article class="landing-card">
+      <h3>Want the shortest practical version?</h3>
+      <p>Go to the <a href="{{ '/spellbook/' | relative_url }}">Spellbook</a> or the <a href="{{ '/site/' | relative_url }}">tool cabinet</a> if you need action before lore.</p>
+    </article>
+    <article class="landing-card">
+      <h3>Want the full pattern and examples?</h3>
+      <p>Use the cards below when you want the whole write-up, matching rituals, and a better sense of what is actually happening today.</p>
+    </article>
+  </div>
+</section>
+
+<section class="landing-section">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Browse the full bestiary</p>
+    <h2>Pick the monster that feels most true right now</h2>
+    <p>Each card gives you the pattern, two common signs, one first ritual, and one fast tool so you can choose without opening every page.</p>
+  </div>
+  <div class="monster-grid monster-grid--index">
+    {% for monster in monsters %}
+    <article class="monster-card monster-card--index" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
       {% if monster.sigil %}
       <figure class="monster-card__sigil-frame">
         <img class="monster-card__sigil" src="{{ monster.sigil | relative_url }}" alt="{{ monster.name }} sigil">
       </figure>
       {% endif %}
-      <div class="monster-card__header">
-        <span class="monster-card__emoji">{{ monster.emoji }}</span>
-        <div>
-          <p class="monster-card__name">{{ monster.name }}</p>
-          <p class="monster-card__tagline">{{ monster.tagline }}</p>
+      <div class="monster-card__body">
+        <p class="monster-card__eyebrow">{{ monster.plain_name | default: monster.tagline }}</p>
+        <div class="monster-card__header">
+          <span class="monster-card__emoji">{{ monster.emoji }}</span>
+          <div>
+            <p class="monster-card__name"><a href="{{ monster.url | relative_url }}">{{ monster.name }}</a></p>
+            <p class="monster-card__tagline">{{ monster.tagline }}</p>
+          </div>
+        </div>
+        <p class="monster-card__description">{{ monster.challenge_summary | default: monster.description }}</p>
+        {% if monster.you_might_be_here_if %}
+        <ul class="monster-card__signals">
+          {% for sign in monster.you_might_be_here_if limit: 2 %}
+          <li>{{ sign }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if monster.badges %}
+        <div class="monster-card__meta">
+          {% for badge in monster.badges %}
+          <span class="monster-card__badge">{{ badge }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <div class="monster-card__actions">
+          <a class="monster-card__action monster-card__action--primary" href="{{ monster.url | relative_url }}">Open monster page</a>
+          {% if monster.start_here_ritual %}
+          <a class="monster-card__action" href="{{ monster.start_here_ritual.url | relative_url }}">{{ monster.start_here_ritual.label }}</a>
+          {% endif %}
+          {% if monster.featured_printable %}
+          <a class="monster-card__action" href="{{ monster.featured_printable.url | relative_url }}">{{ monster.featured_printable.label }}</a>
+          {% endif %}
         </div>
       </div>
-      <p class="monster-card__description">{{ monster.challenge_summary | default: monster.description }}</p>
-      {% if monster.cta %}
-      <span class="monster-card__cta cta-link">{{ monster.cta }}</span>
-      {% endif %}
-      {% if monster.badges %}
-      <div class="monster-card__meta">
-        {% for badge in monster.badges %}
-        <span class="monster-card__badge">{{ badge }}</span>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </a>
-  </article>
-  {% endfor %}
-</div>
-
-<div class="section-callout">Need the fastest path? <a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a> routes you to one ritual and one tool without the full lore pass.</div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

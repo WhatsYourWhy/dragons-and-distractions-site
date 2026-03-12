@@ -926,6 +926,108 @@ body.theme-low-stim .ritual-cluster {
     linear-gradient(135deg, var(--color-surface), var(--color-surface-alt));
 }
 
+.monster-grid--index {
+  margin-top: 0.25rem;
+}
+
+.monster-card--index {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+
+.monster-card--index .monster-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.1rem 1.15rem 1.15rem;
+}
+
+.monster-card--index .monster-card__body::after {
+  display: none;
+}
+
+.monster-card__eyebrow {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: "Cinzel", serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.monster-card--index .monster-card__name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.monster-card--index .monster-card__name a {
+  color: var(--color-text-strong);
+  text-decoration: none;
+}
+
+.monster-card--index .monster-card__name a:hover,
+.monster-card--index .monster-card__name a:focus {
+  color: var(--color-accent-light);
+}
+
+.monster-card__signals {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--color-text-base);
+}
+
+.monster-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: auto;
+}
+
+.monster-card__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--color-border-muted);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text-strong);
+  text-decoration: none;
+  box-shadow: var(--shadow-plate);
+}
+
+.monster-card__action:hover,
+.monster-card__action:focus {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+  text-decoration: none;
+}
+
+.monster-card__action--primary {
+  background: linear-gradient(135deg, rgba(245, 200, 66, 0.2), rgba(200, 144, 10, 0.2));
+  border-color: var(--color-accent);
+}
+
+body.theme-low-stim .monster-card__action {
+  background: var(--color-surface);
+}
+
+body.theme-low-stim .monster-card__action--primary {
+  background: rgba(45, 74, 124, 0.08);
+}
+
+@media (max-width: 640px) {
+  .monster-card__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 .site-footer {
   margin-top: 4rem;
   padding: 30px 0;
