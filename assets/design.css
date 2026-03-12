@@ -788,6 +788,10 @@ body.theme-low-stim .printable-group td a:focus {
   gap: 1rem;
 }
 
+.oracle__layout > * {
+  min-width: 0;
+}
+
 .oracle__choices {
   display: grid;
   gap: 0.75rem;
@@ -808,6 +812,7 @@ body.theme-low-stim .printable-group td a:focus {
   box-shadow: var(--shadow-card);
   color: var(--color-text-strong);
   text-align: left;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -840,6 +845,7 @@ body.theme-low-stim .printable-group td a:focus {
 
 .oracle__results {
   display: grid;
+  min-width: 0;
 }
 
 .oracle__result {
@@ -858,6 +864,10 @@ body.theme-low-stim .printable-group td a:focus {
 
 .path-card--oracle {
   min-height: 100%;
+}
+
+.path-card--oracle .path-card__actions {
+  grid-template-columns: 1fr;
 }
 
 body.theme-low-stim .oracle__choice {
