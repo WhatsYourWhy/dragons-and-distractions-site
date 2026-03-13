@@ -870,6 +870,110 @@ body.theme-low-stim .printable-group td a:focus {
   grid-template-columns: 1fr;
 }
 
+.monster-page__content {
+  max-width: 72rem;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(200, 144, 10, 0.1), transparent 34%),
+    linear-gradient(135deg, var(--color-surface-alt), var(--color-surface));
+  box-shadow: var(--shadow-card);
+  display: grid;
+  gap: 1rem;
+}
+
+.monster-page__content > :first-child {
+  margin-top: 0;
+}
+
+.monster-page__content > :last-child {
+  margin-bottom: 0;
+}
+
+.monster-page__content > h2,
+.monster-page__content > h3,
+.monster-page__content > h4,
+.monster-page__content > p,
+.monster-page__content > ul,
+.monster-page__content > ol,
+.monster-page__content > blockquote,
+.monster-page__content > hr,
+.monster-page__content > .monster-hero,
+.monster-page__content > .battle-card,
+.monster-page__content > .monster-mini-toc,
+.monster-page__content > .printable-group-list {
+  max-width: 68rem;
+  margin: 0;
+}
+
+.monster-page__content > h2 {
+  margin-top: 0.35rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-muted);
+  font-size: clamp(1.55rem, 2vw, 2rem);
+}
+
+.monster-page__content > h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.monster-page__content > h3,
+.monster-page__content > h4 {
+  color: var(--color-text-strong);
+}
+
+.monster-page__content > p,
+.monster-page__content > li,
+.monster-page__content > ul,
+.monster-page__content > ol {
+  color: var(--color-text-base);
+}
+
+.monster-page__content > ul,
+.monster-page__content > ol {
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.monster-page__content > blockquote {
+  padding: 1rem 1.05rem;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 18px;
+  background: rgba(10, 8, 4, 0.32);
+  box-shadow: var(--shadow-plate);
+}
+
+.monster-page__content > pre {
+  margin: 0;
+  max-width: 68rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--color-border-muted);
+  border-radius: 18px;
+  background: rgba(10, 8, 4, 0.36);
+  overflow-x: auto;
+}
+
+.monster-page__content .monster-hero,
+.monster-page__content .battle-card,
+.monster-page__content .monster-mini-toc {
+  width: 100%;
+}
+
+body.theme-low-stim .monster-page__content {
+  background:
+    radial-gradient(circle at top right, rgba(45, 74, 124, 0.05), transparent 40%),
+    linear-gradient(135deg, var(--color-surface), var(--color-surface-alt));
+}
+
+body.theme-low-stim .monster-page__content > blockquote,
+body.theme-low-stim .monster-page__content > pre {
+  background: rgba(45, 74, 124, 0.05);
+}
+
 body.theme-low-stim .oracle__choice {
   background:
     radial-gradient(circle at top right, rgba(45, 74, 124, 0.05), transparent 40%),
