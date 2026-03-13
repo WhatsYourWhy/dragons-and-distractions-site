@@ -1,15 +1,17 @@
-<section class="monster-masthead{% if page.banner_image %} monster-masthead--illustrated{% endif %}" aria-labelledby="monster-masthead-name" style="--monster-accent: {{ page.accent_color | default: '#c8900a' }};">
-  {% if page.banner_image %}
+{% assign masthead_media = page.banner_image | default: page.card_art %}
+{% assign masthead_title_media = page.card_art | default: page.sigil %}
+<section class="monster-masthead{% if masthead_media %} monster-masthead--illustrated{% endif %}{% unless page.banner_image %}{% if page.card_art %} monster-masthead--card-hero{% endif %}{% endunless %}" aria-labelledby="monster-masthead-name" style="--monster-accent: {{ page.accent_color | default: '#c8900a' }};">
+  {% if masthead_media %}
   <div class="monster-masthead__media">
-    <img src="{{ page.banner_image | relative_url }}" alt="{{ page.banner_image_alt | default: page.name }}">
+    <img src="{{ masthead_media | relative_url }}" alt="{% if page.banner_image %}{{ page.banner_image_alt | default: page.name }}{% endif %}"{% unless page.banner_image %} width="512" height="768"{% endunless %}>
   </div>
   {% endif %}
   <div class="monster-masthead__body">
     <p class="monster-masthead__eyebrow">Field Guide Match: {{ page.plain_name }}</p>
     <div class="monster-masthead__title-row">
-      {% if page.sigil %}
-      <figure class="monster-masthead__sigil">
-        <img src="{{ page.sigil | relative_url }}" alt="{{ page.name }} sigil">
+      {% if masthead_title_media %}
+      <figure class="monster-masthead__sigil{% if page.card_art %} monster-masthead__sigil--card{% endif %}">
+        <img src="{{ masthead_title_media | relative_url }}" alt=""{% if page.card_art %} width="512" height="768" loading="lazy" decoding="async"{% endif %}>
       </figure>
       {% endif %}
       <div class="monster-masthead__heading">

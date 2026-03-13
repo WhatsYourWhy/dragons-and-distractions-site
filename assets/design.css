@@ -571,6 +571,26 @@ body.theme-low-stim .cta-button--primary {
   object-fit: cover;
 }
 
+.monster-masthead--card-hero .monster-masthead__media {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem 1.25rem 0;
+  min-height: 0;
+}
+
+.monster-masthead--card-hero .monster-masthead__media::after {
+  display: none;
+}
+
+.monster-masthead--card-hero .monster-masthead__media img {
+  width: min(100%, 16rem);
+  aspect-ratio: 2 / 3;
+  border-radius: 24px;
+  border: 1px solid rgba(212, 201, 176, 0.3);
+  box-shadow: var(--shadow-hero);
+  object-fit: cover;
+}
+
 .monster-masthead__body {
   position: relative;
   z-index: 1;
@@ -614,6 +634,21 @@ body.theme-low-stim .cta-button--primary {
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 8px 14px rgba(10, 8, 4, 0.45)) contrast(1.06) saturate(1.05);
+}
+
+.monster-masthead__sigil--card {
+  width: 88px;
+  height: auto;
+  padding: 0;
+  aspect-ratio: 2 / 3;
+  border-radius: 18px;
+  background: rgba(10, 8, 4, 0.9);
+}
+
+.monster-masthead__sigil--card img {
+  border-radius: inherit;
+  object-fit: cover;
+  filter: none;
 }
 
 .monster-masthead__name {
