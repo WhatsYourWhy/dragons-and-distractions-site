@@ -129,6 +129,55 @@ def test_validate_monster_file_requires_expected_url_prefixes(monkeypatch, tmp_p
     )
 
 
+def test_validate_monster_file_accepts_existing_optional_card_art(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    asset = root / "assets" / "generated" / "cards" / "test-card.webp"
+    asset.parent.mkdir(parents=True, exist_ok=True)
+    asset.write_bytes(b"card art")
+    monster = root / "_monsters" / "card-art.md"
+    monster.write_text(
+        monster_front_matter(card_art="/assets/generated/cards/test-card.webp"),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_monster_file(monster)
+
+    assert errors == []
+
+
+def test_validate_monster_file_rejects_card_art_outside_expected_directory(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    monster = root / "_monsters" / "wrong-card-art.md"
+    monster.write_text(
+        monster_front_matter(card_art="/assets/generated/task-hydra-sigil.png"),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_monster_file(monster)
+
+    assert (
+        f"_monsters{os.sep}wrong-card-art.md: 'card_art' must point into /assets/generated/cards/"
+        in errors
+    )
+
+
+def test_validate_monster_file_rejects_missing_card_art_target(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    monster = root / "_monsters" / "missing-card-art.md"
+    monster.write_text(
+        monster_front_matter(card_art="/assets/generated/cards/missing-card.webp"),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_monster_file(monster)
+
+    assert (
+        f"_monsters{os.sep}missing-card-art.md: 'card_art' target does not exist: "
+        "/assets/generated/cards/missing-card.webp"
+        in errors
+    )
+
+
 def test_validate_monster_collection_reports_duplicate_identity_fields(monkeypatch, tmp_path):
     root = configure_temp_repo(monkeypatch, tmp_path)
     first = root / '_monsters' / 'first.md'

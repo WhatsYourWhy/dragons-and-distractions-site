@@ -2,7 +2,7 @@
 name: "The Task Hydra"
 emoji: "🐲"
 sigil: "/assets/generated/task-hydra-sigil.png"
-card_art: "/assets/generated/cards/monster-task-hydra-card-front-web.png"
+card_art: "/assets/generated/cards/monster-task-hydra-card-front-web.webp"
 banner_image: "/assets/generated/task-hydra-banner.png"
 banner_image_alt: "Many-headed hydra rising from scattered task lists, notes, and desk clutter"
 tagline: "Too many heads, not enough focus"

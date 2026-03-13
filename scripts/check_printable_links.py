@@ -168,11 +168,24 @@ def resolve_link_target(link: str, source: Path) -> Path:
     if link.startswith("/site/"):
         return (ROOT / link.lstrip("/")).resolve()
 
+    if link.startswith(("/", "\\")):
+        return Path(link)
+
     target = Path(link)
     if target.is_absolute():
         return target.resolve()
 
     return (source.parent / target).resolve()
+
+
+def display_path(path: Path) -> str:
+    return path.as_posix()
+
+
+def display_outside_repo_target(path: Path) -> str:
+    if path.parts and str(path.parts[0]).endswith(":"):
+        return path.as_posix()
+    return str(path)
 
 
 def extract_yaml_pdf_links(yaml_path: Path) -> list[str]:
@@ -253,15 +266,15 @@ def check_broken_pdf_links(
             try:
                 rel_target = target.relative_to(ROOT)
             except ValueError:
-                broken.append(f"{target} (outside repo)")
+                broken.append(f"{display_outside_repo_target(target)} (outside repo)")
                 continue
 
             if rel_target.parts[:3] != PRINTABLE_PDF_PARTS:
-                broken.append(f"{rel_target} (unexpected location)")
+                broken.append(f"{display_path(rel_target)} (unexpected location)")
                 continue
 
             if require_existing_pdfs and not target.exists():
-                broken.append(str(rel_target))
+                broken.append(display_path(rel_target))
 
         if (
             MONSTER_DIR in md_file.relative_to(ROOT).parts
@@ -275,7 +288,7 @@ def check_broken_pdf_links(
 
     errors: list[str] = []
     for md_path, issues in missing.items():
-        errors.append(f"{md_path}:")
+        errors.append(f"{display_path(md_path)}:")
         for issue in issues:
             errors.append(f"  • {issue}")
 
@@ -298,22 +311,22 @@ def check_yaml_pdf_links(
             try:
                 rel_target = target.relative_to(ROOT)
             except ValueError:
-                broken.append(f"{target} (outside repo)")
+                broken.append(f"{display_outside_repo_target(target)} (outside repo)")
                 continue
 
             if rel_target.parts[:3] != PRINTABLE_PDF_PARTS:
-                broken.append(f"{rel_target} (unexpected location)")
+                broken.append(f"{display_path(rel_target)} (unexpected location)")
                 continue
 
             if require_existing_pdfs and not target.exists():
-                broken.append(str(rel_target))
+                broken.append(display_path(rel_target))
 
         if broken:
             missing[yaml_file.relative_to(ROOT)] = broken
 
     errors: list[str] = []
     for yaml_path, issues in missing.items():
-        errors.append(f"{yaml_path}:")
+        errors.append(f"{display_path(yaml_path)}:")
         for issue in issues:
             errors.append(f"  • {issue}")
 
@@ -329,7 +342,7 @@ def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
     if orphaned:
         print("Orphaned PDFs (not linked in content files):")
         for pdf in sorted(orphaned):
-            print(f"- {pdf}")
+            print(f"- {display_path(pdf)}")
 
 
 def main() -> int:

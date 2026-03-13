@@ -46,7 +46,7 @@ show_breadcrumbs: false
       {% assign monster_media = monster.card_art | default: monster.sigil %}
       {% if monster_media %}
       <figure class="monster-card__media{% if monster.card_art %} monster-card__media--card{% else %} monster-card__media--sigil{% endif %}">
-        <img class="monster-card__media-image{% unless monster.card_art %} monster-card__media-image--sigil{% endunless %}" src="{{ monster_media | relative_url }}" alt="{{ monster.name }}{% if monster.card_art %} card art{% else %} sigil{% endif %}">
+        <img class="monster-card__media-image{% unless monster.card_art %} monster-card__media-image--sigil{% endunless %}" src="{{ monster_media | relative_url }}" alt="" loading="lazy" decoding="async"{% if monster.card_art %} width="512" height="768"{% endif %}>
       </figure>
       {% endif %}
       <div class="monster-card__body">

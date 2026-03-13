@@ -31,6 +31,9 @@ REQUIRED_LINK_GROUPS = {
     "start_here_ritual": ("label", "url", "description"),
     "featured_printable": ("label", "url", "description"),
 }
+OPTIONAL_ASSET_PATH_FIELDS = {
+    "card_art": "/assets/generated/cards/",
+}
 
 
 def extract_front_matter(path: Path) -> dict[str, Any]:
@@ -123,6 +126,20 @@ def validate_monster_file(path: Path) -> list[str]:
                     errors.append(f"{rel_path}: 'quick_links[{index}].label' is required")
                 if not _is_non_empty_string(link.get("url")):
                     errors.append(f"{rel_path}: 'quick_links[{index}].url' is required")
+
+    for field, prefix in OPTIONAL_ASSET_PATH_FIELDS.items():
+        value = data.get(field)
+        if value is None:
+            continue
+        if not _is_non_empty_string(value):
+            errors.append(f"{rel_path}: '{field}' must be a non-empty string when present")
+            continue
+        if not str(value).startswith(prefix):
+            errors.append(f"{rel_path}: '{field}' must point into {prefix}")
+            continue
+        asset_path = ROOT / str(value).lstrip("/")
+        if not asset_path.exists():
+            errors.append(f"{rel_path}: '{field}' target does not exist: {value}")
 
     return errors
 

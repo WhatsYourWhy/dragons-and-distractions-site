@@ -2,7 +2,7 @@
 name: "The Dopamine Goblin"
 emoji: "🧝‍♂️"
 sigil: "/assets/generated/dopamine-goblin-sigil.png"
-card_art: "/assets/generated/cards/monster-dopamine-goblin-card-front-web.png"
+card_art: "/assets/generated/cards/monster-dopamine-goblin-card-front-web.webp"
 banner_image: "/assets/generated/dopamine-goblin-banner.png"
 banner_image_alt: "Treasure-like desk of shiny distractions circling a tempting empty work space"
 tagline: "Shiny distractions & impulse trades"
