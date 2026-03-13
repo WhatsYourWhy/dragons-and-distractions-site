@@ -2,6 +2,7 @@
 name: "The Burnout Dragon"
 emoji: "🔥"
 sigil: "/assets/generated/burnout-dragon-sigil.png"
+card_art: "/assets/generated/cards/monster-burnout-dragon-card-front-web.png"
 banner_image: "/assets/generated/burnout-dragon-banner.png"
 banner_image_alt: "Resting dragon curled around a small ember in a quiet cavern"
 tagline: "When everything costs too much"

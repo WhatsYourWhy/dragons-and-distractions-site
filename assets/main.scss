@@ -1129,6 +1129,24 @@ h2[id] {
 }
 
 @media (min-width: 760px) {
+  .path-card--with-card-art {
+    display: grid;
+    grid-template-columns: minmax(8.75rem, 9.75rem) minmax(0, 1fr);
+    align-items: start;
+    column-gap: 1rem;
+  }
+
+  .path-card--with-card-art > :not(.path-card__media) {
+    grid-column: 2;
+  }
+
+  .path-card--with-card-art .path-card__media {
+    grid-column: 1;
+    grid-row: 1 / span 6;
+    width: 100%;
+    align-self: start;
+  }
+
   .path-card__actions,
   .monster-start__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1161,8 +1179,34 @@ h2[id] {
   height: auto;
 }
 
-.path-card__sigil {
+.path-card__media,
+.monster-card__media {
   margin: 0;
+}
+
+.path-card__media img,
+.monster-card__media-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.path-card__media {
+  align-self: center;
+}
+
+.path-card__media--card {
+  width: min(11rem, 56%);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  background:
+    radial-gradient(circle at top, rgba(240, 232, 213, 0.12), transparent 48%),
+    rgba(15, 11, 6, 0.94);
+  box-shadow: var(--shadow-hero);
+}
+
+.path-card__media--sigil {
   width: 92px;
   height: 92px;
   border-radius: 20px;
@@ -1172,18 +1216,29 @@ h2[id] {
   display: grid;
   place-items: center;
   overflow: hidden;
-  align-self: flex-start;
   padding: 0.35rem;
 }
 
-.path-card__sigil img {
-  display: block;
-  width: 100%;
+.path-card__media--sigil img {
   height: 100%;
   object-fit: contain;
 }
 
-.monster-card__sigil-frame {
+.monster-card__media--card {
+  padding: 1rem 1rem 0;
+  background: linear-gradient(180deg, rgba(19, 15, 9, 0.96), rgba(19, 15, 9, 0));
+}
+
+.monster-card__media--card .monster-card__media-image {
+  max-width: 15rem;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 201, 176, 0.3);
+  box-shadow: var(--shadow-hero);
+}
+
+.monster-card__media--sigil {
   margin: 0 0 0.6rem;
   border-radius: 16px;
   overflow: hidden;
@@ -1193,9 +1248,7 @@ h2[id] {
   padding: 0.35rem;
 }
 
-.monster-card__sigil {
-  display: block;
-  width: 100%;
+.monster-card__media-image--sigil {
   aspect-ratio: 1 / 1;
   object-fit: contain;
 }
@@ -1933,15 +1986,6 @@ nav a {
   margin-top: 1rem;
   width: 4.25rem;
   height: 0.24rem;
-}
-
-.monster-card__sigil-frame {
-  margin: 0;
-  border-radius: 0;
-  padding: 1rem 1rem 0;
-  border: 0;
-  background: linear-gradient(180deg, rgba(19, 15, 9, 0.96), rgba(19, 15, 9, 0));
-  box-shadow: none;
 }
 
 .monster-masthead__actions .cta-button,

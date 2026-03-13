@@ -2,6 +2,7 @@
 name: "The Cave Bear"
 emoji: "🐻"
 sigil: "/assets/generated/cave-bear-sigil.png"
+card_art: "/assets/generated/cards/monster-cave-bear-card-front-web.png"
 banner_image: "/assets/generated/cave-bear-banner.png"
 banner_image_alt: "Warm cave opening toward daylight with a gentle bear presence and a path back outside"
 tagline: "Avoidance & hibernation holes"

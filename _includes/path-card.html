@@ -1,15 +1,16 @@
 {% assign path = include.path %}
 {% assign matched_monster = include.matched_monster %}
+{% assign card_media = matched_monster.card_art | default: matched_monster.sigil %}
 {% if include.heading_id %}
   {% assign heading_id = include.heading_id %}
 {% else %}
   {% assign heading_id = "path-" | append: path.slug %}
 {% endif %}
 
-<article class="path-card{% if include.extra_class %} {{ include.extra_class }}{% endif %}"{% if include.card_id %} id="{{ include.card_id }}"{% endif %} aria-labelledby="{{ heading_id }}" style="--monster-accent: {{ matched_monster.accent_color | default: '#c8900a' }};">
-  {% if matched_monster and matched_monster.sigil %}
-  <figure class="path-card__sigil">
-    <img src="{{ matched_monster.sigil | relative_url }}" alt="{{ path.monster_name }} sigil">
+<article class="path-card{% if card_media %} path-card--with-media{% endif %}{% if matched_monster.card_art %} path-card--with-card-art{% endif %}{% if include.extra_class %} {{ include.extra_class }}{% endif %}"{% if include.card_id %} id="{{ include.card_id }}"{% endif %} aria-labelledby="{{ heading_id }}" style="--monster-accent: {{ matched_monster.accent_color | default: '#c8900a' }};">
+  {% if matched_monster and card_media %}
+  <figure class="path-card__media{% if matched_monster.card_art %} path-card__media--card{% else %} path-card__media--sigil{% endif %}">
+    <img src="{{ card_media | relative_url }}" alt="{{ path.monster_name }}{% if matched_monster.card_art %} card art{% else %} sigil{% endif %}">
   </figure>
   {% endif %}
   <div class="path-card__eyebrow">Start with the stuck point</div>

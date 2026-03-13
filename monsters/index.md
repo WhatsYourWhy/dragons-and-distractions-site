@@ -43,9 +43,10 @@ show_breadcrumbs: false
   <div class="monster-grid monster-grid--index">
     {% for monster in monsters %}
     <article class="monster-card monster-card--index" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
-      {% if monster.sigil %}
-      <figure class="monster-card__sigil-frame">
-        <img class="monster-card__sigil" src="{{ monster.sigil | relative_url }}" alt="{{ monster.name }} sigil">
+      {% assign monster_media = monster.card_art | default: monster.sigil %}
+      {% if monster_media %}
+      <figure class="monster-card__media{% if monster.card_art %} monster-card__media--card{% else %} monster-card__media--sigil{% endif %}">
+        <img class="monster-card__media-image{% unless monster.card_art %} monster-card__media-image--sigil{% endunless %}" src="{{ monster_media | relative_url }}" alt="{{ monster.name }}{% if monster.card_art %} card art{% else %} sigil{% endif %}">
       </figure>
       {% endif %}
       <div class="monster-card__body">

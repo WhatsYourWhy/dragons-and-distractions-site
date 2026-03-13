@@ -2,6 +2,7 @@
 name: "The Slumber Troll"
 emoji: "🌙"
 sigil: "/assets/generated/slumber-troll-sigil.png"
+card_art: "/assets/generated/cards/monster-slumber-troll-card-front-web.png"
 banner_image: "/assets/generated/slumber-troll-banner.png"
 banner_image_alt: "Sleepy dawn bridge from blankets to morning light with a quiet river crossing"
 tagline: "Sleep inertia & morning bridges"

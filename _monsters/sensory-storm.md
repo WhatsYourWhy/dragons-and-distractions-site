@@ -2,6 +2,7 @@
 name: "The Sensory Storm"
 emoji: "⛈️"
 sigil: "/assets/generated/sensory-storm-sigil.png"
+card_art: "/assets/generated/cards/monster-sensory-storm-card-front-web.png"
 banner_image: "/assets/generated/sensory-storm-banner.png"
 banner_image_alt: "Sheltered refuge beneath swirling storm patterns, lantern light, and a calm center"
 tagline: "Too much input, not enough shelter"

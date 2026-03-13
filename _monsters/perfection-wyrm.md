@@ -2,6 +2,7 @@
 name: "The Perfection Wyrm"
 emoji: "🐉"
 sigil: "/assets/generated/perfection-wyrm-sigil.png"
+card_art: "/assets/generated/cards/monster-perfection-wyrm-card-front-web.png"
 banner_image: "/assets/generated/perfection-wyrm-banner.png"
 banner_image_alt: "Paper-scaled wyrm coiled around unfinished pages, ink, wax seal, and candlelight"
 tagline: "Polish loops that keep the work from ever leaving the cave"

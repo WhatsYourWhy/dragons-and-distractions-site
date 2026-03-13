@@ -2,6 +2,7 @@
 name: "The Rejection Wisp"
 emoji: "👻"
 sigil: "/assets/generated/rejection-wisp-sigil.png"
+card_art: "/assets/generated/cards/monster-rejection-wisp-card-front-web.png"
 banner_image: "/assets/generated/rejection-wisp-banner.png"
 banner_image_alt: "Lantern-lit desk with a sealed letter, soft ghostly ring, and open doorway at dusk"
 tagline: "One hard interaction that fogs the whole inbox"
