@@ -13,23 +13,25 @@
     <img src="{{ card_media | relative_url }}" alt="" loading="lazy" decoding="async"{% if matched_monster.card_art %} width="512" height="768"{% endif %}>
   </figure>
   {% endif %}
-  <div class="path-card__eyebrow">Start with the stuck point</div>
-  <h3 id="{{ heading_id }}" class="path-card__title">{{ path.struggle }}</h3>
-  <p class="path-card__summary">{{ path.summary }}</p>
-  <p class="path-card__monster">Best match: <a href="{{ path.monster_url | relative_url }}">{{ path.monster_name }}</a></p>
-  <ul class="signal-list">
-    {% for sign in path.signs %}
-    <li>{{ sign }}</li>
-    {% endfor %}
-  </ul>
-  <div class="path-card__actions">
-    <a class="path-card__action" href="{{ path.ritual_url | relative_url }}">
-      <strong>{{ path.ritual_label }}</strong>
-      <span>{{ path.ritual_summary }}</span>
-    </a>
-    <a class="path-card__action" href="{{ path.printable_url | relative_url }}">
-      <strong>{{ path.printable_label }}</strong>
-      <span>{{ path.printable_summary }}</span>
-    </a>
+  <div class="path-card__body">
+    <div class="path-card__eyebrow">Start with the stuck point</div>
+    <h3 id="{{ heading_id }}" class="path-card__title">{{ path.struggle }}</h3>
+    <p class="path-card__summary">{{ path.summary }}</p>
+    <p class="path-card__monster">Best match: <a href="{{ path.monster_url | relative_url }}">{{ path.monster_name }}</a></p>
+    <ul class="signal-list">
+      {% for sign in path.signs %}
+      <li>{{ sign }}</li>
+      {% endfor %}
+    </ul>
+    <div class="path-card__actions">
+      <a class="path-card__action" href="{{ path.ritual_url | relative_url }}">
+        <strong>{{ path.ritual_label }}</strong>
+        <span>{{ path.ritual_summary }}</span>
+      </a>
+      <a class="path-card__action" href="{{ path.printable_url | relative_url }}">
+        <strong>{{ path.printable_label }}</strong>
+        <span>{{ path.printable_summary }}</span>
+      </a>
+    </div>
   </div>
 </article>
