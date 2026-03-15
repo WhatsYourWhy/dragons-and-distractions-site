@@ -334,6 +334,7 @@ nav a {
 
 .path-grid {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  align-items: start;
 }
 
 .landing-card,
@@ -432,6 +433,7 @@ body.theme-low-stim a.cta-button--primary:visited {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  height: 100%;
   padding: 1.2rem;
   border-left: 4px solid var(--monster-accent, var(--color-accent));
 }
@@ -930,6 +932,7 @@ body.theme-low-stim .printable-group td a:focus {
 .oracle__choices {
   display: grid;
   gap: 0.75rem;
+  align-content: start;
 }
 
 .oracle__choice {
@@ -981,11 +984,13 @@ body.theme-low-stim .printable-group td a:focus {
 .oracle__results {
   display: grid;
   min-width: 0;
+  align-content: start;
 }
 
 .oracle__result {
   display: grid;
   gap: 0.7rem;
+  align-content: start;
 }
 
 .oracle__result-label {
@@ -998,11 +1003,16 @@ body.theme-low-stim .printable-group td a:focus {
 }
 
 .path-card--oracle {
-  min-height: 100%;
+  min-height: 0;
+  align-self: start;
 }
 
 .path-card--oracle .path-card__actions {
   grid-template-columns: 1fr;
+}
+
+.path-card--oracle .path-card__body {
+  justify-content: start;
 }
 
 .monster-page__content {
@@ -1586,8 +1596,18 @@ body.theme-low-stim .monster-card__action--primary {
 
 @media (min-width: 760px) {
   .oracle__layout {
-    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+    grid-template-columns: minmax(18.5rem, 0.86fr) minmax(0, 1.14fr);
     align-items: start;
+  }
+
+  .path-card--oracle.path-card--with-card-art {
+    grid-template-columns: minmax(9rem, 10.25rem) minmax(0, 1fr);
+    column-gap: 1.15rem;
+  }
+
+  .path-card--oracle .path-card__media--card {
+    width: 100%;
+    max-width: 10.25rem;
   }
 
   .path-card__actions {
