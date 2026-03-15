@@ -49,6 +49,14 @@ tags:
   - obsidian
 ---
 
+<div class="monster-hero">
+  <img src="{{ "/Sensory-Storm.png" | relative_url }}" alt="Illustration of the Sensory Storm swirling around a sheltered calm center">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Sensory Storm Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/Sensory-Storm.png" | relative_url }}">PNG</a> | <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+  </div>
+</div>
+
 <div class="battle-card">
   <div class="battle-card__eyebrow">Battle Card</div>
   <ul class="battle-card__list">

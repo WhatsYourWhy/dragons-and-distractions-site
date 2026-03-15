@@ -49,6 +49,14 @@ tags:
   - obsidian
 ---
 
+<div class="monster-hero">
+  <img src="{{ "/burnout-dragon.png" | relative_url }}" alt="Illustration of the Burnout Dragon curled around a dim ember in a cavern">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Burnout Dragon Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/burnout-dragon.png" | relative_url }}">PNG</a> | <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+  </div>
+</div>
+
 <div class="battle-card">
   <div class="battle-card__eyebrow">Battle Card</div>
   <ul class="battle-card__list">

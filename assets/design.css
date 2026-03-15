@@ -1343,7 +1343,11 @@ body.theme-low-stim .next-steps-panel {
 }
 
 .field-guide__prompt code {
+  display: block;
   font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  background: transparent;
+  border: 0;
+  color: inherit;
 }
 
 .field-guide__card--wide {
@@ -1357,7 +1361,14 @@ body.theme-low-stim .field-guide__card {
 }
 
 body.theme-low-stim .field-guide__prompt {
-  background: rgba(45, 74, 124, 0.05);
+  border-color: var(--color-accent-soft);
+  background: #f2f4f8;
+  color: var(--color-text-strong);
+}
+
+body.theme-low-stim .field-guide__prompt code {
+  background: transparent;
+  color: inherit;
 }
 
 .monster-grid--index {
