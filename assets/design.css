@@ -364,6 +364,11 @@ nav a {
   box-shadow: var(--shadow-plate);
 }
 
+a.cta-button,
+a.cta-button:visited {
+  color: var(--color-text-strong);
+}
+
 .cta-button:hover,
 .cta-button:focus {
   border-color: var(--color-accent);
@@ -374,6 +379,11 @@ nav a {
 .cta-button--primary {
   border-color: var(--color-accent);
   background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+  color: var(--color-text-contrast);
+}
+
+a.cta-button--primary,
+a.cta-button--primary:visited {
   color: var(--color-text-contrast);
 }
 
@@ -405,6 +415,16 @@ body.theme-low-stim .monster-start {
 
 body.theme-low-stim .cta-button--primary {
   background: var(--color-accent);
+  color: var(--color-text-contrast);
+}
+
+body.theme-low-stim a.cta-button,
+body.theme-low-stim a.cta-button:visited {
+  color: var(--color-text-base);
+}
+
+body.theme-low-stim a.cta-button--primary,
+body.theme-low-stim a.cta-button--primary:visited {
   color: var(--color-text-contrast);
 }
 
