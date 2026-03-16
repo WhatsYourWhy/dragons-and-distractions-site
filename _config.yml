@@ -12,8 +12,6 @@ social:
 twitter:
   username: WhatsYourWhy
   card: summary_large_image
-google_adsense:
-  client: "ca-pub-9310837374819126"
 markdown: kramdown
 theme: minima
 header_include: site-header.html
