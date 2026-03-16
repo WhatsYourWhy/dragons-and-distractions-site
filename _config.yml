@@ -2,6 +2,16 @@
 description: "ADHD-friendly rituals, monsters, and tools"
 url: "https://whatsyourwhy.github.io"
 baseurl: "/dragons-and-distractions-site"
+
+# Social sharing / Open Graph
+logo: "/dragons-and-distractions-site/assets/generated/homepage-hero-web.webp"
+social:
+  name: "Dragons & Distractions"
+  links: []
+
+twitter:
+  username: WhatsYourWhy
+  card: summary_large_image
 markdown: kramdown
 theme: minima
 header_include: site-header.html

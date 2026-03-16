@@ -8,7 +8,7 @@ hero_variant: cover
 show_breadcrumbs: false
 show_quick_actions: false
 show_nav_cards: false
-hero_image: "/assets/generated/homepage-hero-web.png"
+hero_image: "/assets/generated/homepage-hero-web.webp"
 hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
 hero_actions:
   - label: "Choose Your Monster"
