@@ -20,8 +20,8 @@ start_here_ritual:
   description: "Cut the day down to essentials, protect one recovery action, and stop pretending you have capacity you do not have."
 featured_printable:
   label: "Minimum Viable Day sheet"
-  url: "/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf"
-  description: "A grounding sheet for naming today's real capacity, minimum needs, and what gets deferred."
+  url: "/site/printables/burnout-dragon-minimum-viable-day.html"
+  description: "A readable worksheet page for naming today's real capacity, minimum needs, and what gets deferred before you print."
 support_boundary: "This page is for naming depletion and reducing demands, not for pushing through dangerous exhaustion. If burnout is affecting your safety, health, or ability to function, seek medical, workplace, or community support alongside rest."
 cta: "Scale it down"
 badges:

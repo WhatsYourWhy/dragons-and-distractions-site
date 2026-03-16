@@ -10,10 +10,12 @@ def test_chooser_template_prefers_card_art_with_sigil_fallback():
     assert "{% assign card_media = matched_monster.card_art | default: matched_monster.sigil %}" in template
 
 
-def test_monster_index_prefers_card_art_with_sigil_fallback():
+def test_monster_index_uses_monster_sigil_and_first_hook_line():
     template = (ROOT / "monsters" / "index.md").read_text(encoding="utf-8")
 
-    assert "{% assign monster_media = monster.card_art | default: monster.sigil %}" in template
+    assert "{% assign monster_hook = monster.you_might_be_here_if | first %}" in template
+    assert "{{ monster.sigil | relative_url }}" in template
+    assert 'class="monster-card__hook"' in template
 
 
 def test_monster_masthead_prefers_card_art_and_has_hero_fallback():

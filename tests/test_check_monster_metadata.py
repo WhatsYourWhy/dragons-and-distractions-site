@@ -7,6 +7,16 @@ import scripts.check_monster_metadata as checks
 def configure_temp_repo(monkeypatch, tmp_path: Path) -> Path:
     monster_dir = tmp_path / '_monsters'
     monster_dir.mkdir(parents=True, exist_ok=True)
+    spellbook_dir = tmp_path / "spellbook"
+    spellbook_dir.mkdir(parents=True, exist_ok=True)
+    spellbook_dir.joinpath("test-ritual.md").write_text(
+        "# Test Ritual\n",
+        encoding="utf-8",
+    )
+    spellbook_dir.joinpath("index.md").write_text(
+        '<section id="test-rituals"></section>',
+        encoding="utf-8",
+    )
     monkeypatch.setattr(checks, 'ROOT', tmp_path)
     monkeypatch.setattr(checks, 'MONSTER_DIR', monster_dir)
     return tmp_path
@@ -125,6 +135,87 @@ def test_validate_monster_file_requires_expected_url_prefixes(monkeypatch, tmp_p
     )
     assert (
         f"_monsters{os.sep}wrong-links.md: 'featured_printable.url' must point into /site/printables/"
+        in errors
+    )
+
+
+def test_validate_monster_file_accepts_spellbook_index_anchor(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    spellbook_dir = root / "spellbook"
+    spellbook_dir.mkdir(parents=True, exist_ok=True)
+    spellbook_dir.joinpath("index.md").write_text(
+        '<section id="cave-bear-rituals"></section>',
+        encoding="utf-8",
+    )
+
+    monster = root / "_monsters" / "anchor-ok.md"
+    monster.write_text(
+        monster_front_matter(
+            start_here_ritual={
+                "label": "Threshold Spell",
+                "url": "/spellbook/#cave-bear-rituals",
+                "description": "Use the anchor.",
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_monster_file(monster)
+
+    assert errors == []
+
+
+def test_validate_monster_file_rejects_missing_spellbook_anchor(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    spellbook_dir = root / "spellbook"
+    spellbook_dir.mkdir(parents=True, exist_ok=True)
+    spellbook_dir.joinpath("index.md").write_text(
+        '<section id="task-hydra-rituals"></section>',
+        encoding="utf-8",
+    )
+
+    monster = root / "_monsters" / "anchor-missing.md"
+    monster.write_text(
+        monster_front_matter(
+            start_here_ritual={
+                "label": "Threshold Spell",
+                "url": "/spellbook/#cave-bear-rituals",
+                "description": "Broken anchor.",
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_monster_file(monster)
+
+    assert (
+        f"_monsters{os.sep}anchor-missing.md: 'start_here_ritual.url' anchor 'cave-bear-rituals' not found for /spellbook/#cave-bear-rituals"
+        in errors
+    )
+
+
+def test_validate_monster_file_rejects_missing_spellbook_page(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    spellbook_dir = root / "spellbook"
+    spellbook_dir.mkdir(parents=True, exist_ok=True)
+    spellbook_dir.joinpath("index.md").write_text("", encoding="utf-8")
+
+    monster = root / "_monsters" / "page-missing.md"
+    monster.write_text(
+        monster_front_matter(
+            start_here_ritual={
+                "label": "Missing Spell",
+                "url": "/spellbook/missing-spell.html",
+                "description": "Broken page.",
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_monster_file(monster)
+
+    assert (
+        f"_monsters{os.sep}page-missing.md: 'start_here_ritual.url' target does not exist: /spellbook/missing-spell.html"
         in errors
     )
 

@@ -9,19 +9,49 @@ header_include: header-nav.html
 {%- assign hero_intro = page.hero_intro | default: nil -%}
 {%- assign hero_image = page.hero_image | default: nil -%}
 {%- assign hero_image_alt = page.hero_image_alt | default: hero_title -%}
+{%- assign hero_eyebrow = page.hero_eyebrow | default: nil -%}
+{%- assign hero_variant = page.hero_variant | default: nil -%}
+{%- assign hero_is_cover = false -%}
+{%- if hero_variant == "cover" and hero_image -%}
+  {%- assign hero_is_cover = true -%}
+{%- endif -%}
 
 {%- if show_breadcrumbs -%}
   {%- include breadcrumbs.html -%}
 {%- endif -%}
 
-<header class="page-hero{% if hero_image %} page-hero--split{% endif %}">
+<header class="page-hero{% if hero_image and hero_is_cover != true %} page-hero--split{% endif %}{% if hero_is_cover %} page-hero--cover{% endif %}">
+  {%- if hero_is_cover -%}
+    <div class="page-hero__media page-hero__media--cover">
+      <img src="{{ hero_image | relative_url }}" alt="{{ hero_image_alt }}">
+    </div>
+    <div class="page-hero__overlay"></div>
+  {%- endif -%}
   <div class="page-hero__content">
+    {%- if hero_eyebrow -%}
+      <p class="page-hero__eyebrow">{{ hero_eyebrow }}</p>
+    {%- endif -%}
     <h1 class="page-hero__title">{{ hero_title }}</h1>
     {%- if hero_intro -%}
       <p class="page-hero__intro">{{ hero_intro }}</p>
     {%- endif -%}
+    {%- if page.hero_actions -%}
+      <div class="page-hero__actions">
+        {%- for action in page.hero_actions -%}
+          {%- assign action_classes = "cta-button" -%}
+          {%- if action.style == "primary" -%}
+            {%- assign action_classes = action_classes | append: " cta-button--primary" -%}
+          {%- elsif action.style == "secondary" -%}
+            {%- assign action_classes = action_classes | append: " cta-button--secondary" -%}
+          {%- endif -%}
+          <a class="{{ action_classes }}" href="{{ action.url | relative_url }}">
+            <span>{{ action.label }}</span>
+          </a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
   </div>
-  {%- if hero_image -%}
+  {%- if hero_image and hero_is_cover != true -%}
     <div class="page-hero__media">
       <img src="{{ hero_image | relative_url }}" alt="{{ hero_image_alt }}">
     </div>

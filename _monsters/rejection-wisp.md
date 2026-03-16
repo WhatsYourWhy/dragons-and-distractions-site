@@ -20,8 +20,8 @@ start_here_ritual:
   description: "Choose the smallest reply shape that moves the thread forward instead of waiting for the perfect emotional state."
 featured_printable:
   label: "Reply Scaffold card"
-  url: "/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf"
-  description: "A low-stakes response guide for acknowledging, buying time, clarifying, or saying no."
+  url: "/site/printables/rejection-wisp-reply-scaffold.html"
+  description: "A readable response guide for acknowledging, buying time, clarifying, or saying no before you print."
 support_boundary: "This page is for reducing social dread and reply paralysis, not for pushing yourself through abusive dynamics or unsafe contact. If a conversation feels harmful, prioritize boundaries and support over responsiveness."
 cta: "Reopen the thread"
 badges:

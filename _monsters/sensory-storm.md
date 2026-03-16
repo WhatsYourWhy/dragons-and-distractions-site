@@ -20,8 +20,8 @@ start_here_ritual:
   description: "Lower one major input, add one sensory anchor, and give your body a smaller environment before asking it to function."
 featured_printable:
   label: "Sensory Reset card"
-  url: "/site/printables/pdf/sensory-storm-reset-card-ink.pdf"
-  description: "A fast triage card for naming the input, reducing it, and choosing the next smallest safe move."
+  url: "/site/printables/sensory-storm-reset-card.html"
+  description: "A readable reset page for naming the input, reducing it, and choosing the next smallest safe move."
 support_boundary: "This page is for sensory regulation and load reduction, not for forcing yourself through environments that are actively harming you. If you need to leave, cancel, or use accommodations, that is real support, not failure."
 cta: "Find shelter"
 badges:

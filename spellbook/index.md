@@ -19,27 +19,99 @@ hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spel
 
 <section class="landing-section">
   <div class="section-heading">
-    <h2>Printables Cabinet</h2>
+    <h2>Core Ritual Directory</h2>
+    <p>Nine practical starting rituals, one for each monster. Open the spell if it exists, or jump to the matching anchor when the ritual still lives inside the field guide page.</p>
   </div>
-  {% include printable-groups.html %}
+  <div class="ritual-library">
+    <article class="ritual-library__card" data-ritual-key="task-hydra">
+      <p class="ritual-library__tag">Task Hydra</p>
+      <h3>Single-Task Oath</h3>
+      <p class="ritual-library__preview">First step: name one task, not an entire project category.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="{{ '/spellbook/single-task-oath.html' | relative_url }}">Open ritual</a>
+        <a class="ritual-chip" href="{{ '/site/printables/single-task-oath-card.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="temporal-shark">
+      <p class="ritual-library__tag">Temporal Shark</p>
+      <h3>Tide Mark Calendar</h3>
+      <p class="ritual-library__preview">First step: pick a real start time, not just a due date.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="{{ '/spellbook/tide-mark-calendar.html' | relative_url }}">Open ritual</a>
+        <a class="ritual-chip" href="{{ '/site/printables/tide-mark-calendar-card.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="slumber-troll">
+      <p class="ritual-library__tag">Slumber Troll</p>
+      <h3>Wake Invocation</h3>
+      <p class="ritual-library__preview">First step: place the alarm far enough away that your body has to stand.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="{{ '/spellbook/wake-invocation.html' | relative_url }}">Open ritual</a>
+        <a class="ritual-chip" href="{{ '/site/printables/wake-invocation-checklist.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="cave-bear">
+      <p class="ritual-library__tag">Cave Bear</p>
+      <h3>Threshold Spell</h3>
+      <p class="ritual-library__preview">First step: stand in the doorway, breathe, and face the light.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="#cave-bear-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/site/printables/tide-marks-buddy-ping.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="dopamine-goblin">
+      <p class="ritual-library__tag">Dopamine Goblin</p>
+      <h3>Goblin Deal</h3>
+      <p class="ritual-library__preview">First step: pre-select the reward before the distraction hits.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="#dopamine-goblin-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/site/printables/single-task-oath-card.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="perfection-wyrm">
+      <p class="ritual-library__tag">Perfection Wyrm</p>
+      <h3>Ugly First Pass</h3>
+      <p class="ritual-library__preview">First step: make the whole shape before polishing any sentence.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="#perfection-wyrm-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/site/printables/perfection-wyrm-done-is-better.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="rejection-wisp">
+      <p class="ritual-library__tag">Rejection Wisp</p>
+      <h3>Reply Scaffold</h3>
+      <p class="ritual-library__preview">First step: choose the reply shape before you write the message.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="#rejection-wisp-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="sensory-storm">
+      <p class="ritual-library__tag">Sensory Storm</p>
+      <h3>Reduce Inputs First</h3>
+      <p class="ritual-library__preview">First step: lower the loudest, brightest, or scratchiest input first.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="#sensory-storm-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/site/printables/sensory-storm-reset-card.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+    <article class="ritual-library__card" data-ritual-key="burnout-dragon">
+      <p class="ritual-library__tag">Burnout Dragon</p>
+      <h3>Minimum Viable Day</h3>
+      <p class="ritual-library__preview">First step: list only the true essentials before you plan anything else.</p>
+      <div class="ritual-entry__actions">
+        <a class="ritual-chip" href="#burnout-dragon-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/site/printables/burnout-dragon-minimum-viable-day.html' | relative_url }}">Tool page</a>
+      </div>
+    </article>
+  </div>
 </section>
 
 <section class="landing-section">
   <div class="section-heading">
-    <h2>Rituals at a Glance</h2>
-    <p>Pick the cluster that matches the moment, then choose the smallest useful ritual inside it.</p>
+    <h2>Printables Cabinet</h2>
   </div>
-  <div class="ritual-glance">
-    <a class="ritual-glance__item" href="#task-hydra-rituals"><strong>Single-Task Oath and 3-Item Rule</strong><span>Choose the head, limit the list.</span></a>
-    <a class="ritual-glance__item" href="#temporal-shark-rituals"><strong>Tide Marks and First Bites</strong><span>Make time visible before the fin appears.</span></a>
-    <a class="ritual-glance__item" href="#slumber-troll-rituals"><strong>Wake and Exit Rituals</strong><span>Cross the bridge from blankets to momentum.</span></a>
-    <a class="ritual-glance__item" href="#cave-bear-rituals"><strong>Cave-Exit Spells</strong><span>Step into light with micro-movements and a social rope.</span></a>
-    <a class="ritual-glance__item" href="#dopamine-goblin-rituals"><strong>Goblin Bargains</strong><span>Contain impulses and trade work for rewards.</span></a>
-    <a class="ritual-glance__item" href="#perfection-wyrm-rituals"><strong>Perfection Wyrm Rituals</strong><span>Stop polishing once the work is already useful.</span></a>
-    <a class="ritual-glance__item" href="#rejection-wisp-rituals"><strong>Rejection Wisp Rituals</strong><span>Reopen hard threads with safer reply shapes.</span></a>
-    <a class="ritual-glance__item" href="#sensory-storm-rituals"><strong>Sensory Storm Rituals</strong><span>Reduce overload before asking your brain for more.</span></a>
-    <a class="ritual-glance__item" href="#burnout-dragon-rituals"><strong>Burnout Dragon Rituals</strong><span>Build a smaller, more honest day.</span></a>
-  </div>
+  {% include printable-groups.html %}
 </section>
 
 <div class="ritual-directory">

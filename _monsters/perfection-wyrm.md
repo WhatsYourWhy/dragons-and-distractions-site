@@ -20,8 +20,8 @@ start_here_ritual:
   description: "Make one deliberately imperfect pass, define what 'useful enough' means, and stop when the draft crosses that line."
 featured_printable:
   label: "Done Is Better worksheet"
-  url: "/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf"
-  description: "A stop-rule worksheet for deciding whether the next edit is real improvement or just another loop."
+  url: "/site/printables/perfection-wyrm-done-is-better.html"
+  description: "A readable worksheet page for deciding whether the next edit is real improvement or just another loop."
 support_boundary: "This page is for untangling revision fear and all-or-nothing thinking, not for excusing unsafe work or impossible expectations. If perfection pressure is tied to trauma, punishment, or severe anxiety, use gentler pacing and outside support."
 cta: "Ship the draft"
 badges:

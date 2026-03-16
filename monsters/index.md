@@ -38,33 +38,23 @@ show_breadcrumbs: false
   <div class="section-heading">
     <p class="section-heading__eyebrow">Browse the full bestiary</p>
     <h2>Pick the monster that feels most true right now</h2>
-    <p>Each card gives you the pattern, two common signs, one first ritual, and one fast tool so you can choose without opening every page.</p>
+    <p>Each card gives you the monster, one true hook line, one first ritual, and one fast tool so you can choose without opening every page.</p>
   </div>
   <div class="monster-grid monster-grid--index">
     {% for monster in monsters %}
+    {% assign monster_hook = monster.you_might_be_here_if | first %}
     <article class="monster-card monster-card--index" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
-      {% assign monster_media = monster.card_art | default: monster.sigil %}
-      {% if monster_media %}
-      <figure class="monster-card__media{% if monster.card_art %} monster-card__media--card{% else %} monster-card__media--sigil{% endif %}">
-        <img class="monster-card__media-image{% unless monster.card_art %} monster-card__media-image--sigil{% endunless %}" src="{{ monster_media | relative_url }}" alt="" loading="lazy" decoding="async"{% if monster.card_art %} width="512" height="768"{% endif %}>
+      {% if monster.sigil %}
+      <figure class="monster-card__media monster-card__media--sigil monster-card__media--index">
+        <img class="monster-card__media-image monster-card__media-image--sigil" src="{{ monster.sigil | relative_url }}" alt="" loading="lazy" decoding="async">
       </figure>
       {% endif %}
       <div class="monster-card__body">
         <p class="monster-card__eyebrow">{{ monster.plain_name | default: monster.tagline }}</p>
-        <div class="monster-card__header">
-          <span class="monster-card__emoji">{{ monster.emoji }}</span>
-          <div>
-            <p class="monster-card__name"><a href="{{ monster.url | relative_url }}">{{ monster.name }}</a></p>
-            <p class="monster-card__tagline">{{ monster.tagline }}</p>
-          </div>
-        </div>
-        <p class="monster-card__description">{{ monster.challenge_summary | default: monster.description }}</p>
-        {% if monster.you_might_be_here_if %}
-        <ul class="monster-card__signals">
-          {% for sign in monster.you_might_be_here_if limit: 2 %}
-          <li>{{ sign }}</li>
-          {% endfor %}
-        </ul>
+        <p class="monster-card__name"><a href="{{ monster.url | relative_url }}">{{ monster.name }}</a></p>
+        <p class="monster-card__tagline">{{ monster.tagline }}</p>
+        {% if monster_hook %}
+        <p class="monster-card__hook">{{ monster_hook }}</p>
         {% endif %}
         {% if monster.badges %}
         <div class="monster-card__meta">
