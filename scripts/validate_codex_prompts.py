@@ -25,6 +25,10 @@ EXPECTED_HOMEPAGE_ACTIONS = [
     {"label": "Choose Your Monster", "url": "/choose-your-monster/", "style": "primary"},
     {"label": "Browse the Bestiary", "url": "/monsters/", "style": "secondary"},
 ]
+EXPECTED_HOMEPAGE_HERO_IMAGES = {
+    "/assets/generated/homepage-hero-web.png",
+    "/assets/generated/homepage-hero-web.webp",
+}
 EXPECTED_RITUAL_KEYS = (
     "task-hydra",
     "temporal-shark",
@@ -51,8 +55,10 @@ def validate_homepage_hero(path: Path = HOMEPAGE_PATH) -> list[str]:
 
     if data.get("hero_variant") != "cover":
         errors.append(f"{display_path(path)}: hero_variant must be 'cover'")
-    if data.get("hero_image") != "/assets/generated/homepage-hero-web.png":
-        errors.append(f"{display_path(path)}: hero_image must point to /assets/generated/homepage-hero-web.png")
+    if data.get("hero_image") not in EXPECTED_HOMEPAGE_HERO_IMAGES:
+        errors.append(
+            f"{display_path(path)}: hero_image must point to one of {', '.join(sorted(EXPECTED_HOMEPAGE_HERO_IMAGES))}"
+        )
 
     actions = data.get("hero_actions")
     if actions != EXPECTED_HOMEPAGE_ACTIONS:

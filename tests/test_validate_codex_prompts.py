@@ -10,7 +10,7 @@ def test_validate_homepage_hero_accepts_cover_cta_contract(tmp_path: Path):
             [
                 "---",
                 'hero_variant: cover',
-                'hero_image: "/assets/generated/homepage-hero-web.png"',
+                'hero_image: "/assets/generated/homepage-hero-web.webp"',
                 "hero_actions:",
                 '  - label: "Choose Your Monster"',
                 '    url: "/choose-your-monster/"',
@@ -48,7 +48,7 @@ def test_validate_homepage_hero_rejects_wrong_ctas(tmp_path: Path):
     errors = checks.validate_homepage_hero(homepage)
 
     assert any("hero_variant must be 'cover'" in error for error in errors)
-    assert any("hero_image must point to /assets/generated/homepage-hero-web.png" in error for error in errors)
+    assert any("hero_image must point to one of" in error for error in errors)
     assert any("hero_actions must exactly match the homepage CTA contract" in error for error in errors)
 
 

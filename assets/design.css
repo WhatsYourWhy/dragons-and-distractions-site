@@ -2084,15 +2084,18 @@ body.theme-low-stim .ritual-library__card {
     position: fixed;
     inset: 0;
     z-index: 40;
+    box-sizing: border-box;
+    min-height: 100vh;
     margin: 0;
     padding: 5.75rem 1.5rem 1.5rem;
     background: rgba(10, 8, 4, 0.95);
     backdrop-filter: blur(18px);
+    overflow-y: auto;
   }
 
   body.nav-open .site-banner__nav {
     display: grid;
-    place-items: center;
+    place-content: start center;
   }
 
   .site-banner__nav .site-banner__links {
@@ -2100,6 +2103,8 @@ body.theme-low-stim .ritual-library__card {
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    margin: auto 0;
+    padding-bottom: 2rem;
   }
 
   .site-banner__nav .site-banner__link {

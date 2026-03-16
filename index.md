@@ -1,6 +1,7 @@
 ﻿---
 layout: hub
 title: "Dragons & Distractions"
+description: "A fantasy toolkit for executive-function battles: identify the stuck pattern, choose the monster, and take one practical step."
 hero_title: "A fantasy toolkit for real executive-function battles"
 hero_intro: "Name the stuck feeling, choose the monster, and take one practical step without losing the wonder."
 hero_eyebrow: "Start here"
@@ -10,6 +11,13 @@ show_quick_actions: false
 show_nav_cards: false
 hero_image: "/assets/generated/homepage-hero-web.webp"
 hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
+hero_image_width: 1536
+hero_image_height: 1024
+image:
+  path: "/assets/generated/homepage-hero-web.png"
+  width: 1536
+  height: 1024
+  alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
 hero_actions:
   - label: "Choose Your Monster"
     url: "/choose-your-monster/"

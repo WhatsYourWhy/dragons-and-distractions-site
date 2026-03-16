@@ -8,7 +8,10 @@ header_include: header-nav.html
 {%- assign hero_title = page.hero_title | default: page.title | default: site.title -%}
 {%- assign hero_intro = page.hero_intro | default: nil -%}
 {%- assign hero_image = page.hero_image | default: nil -%}
+{%- assign hero_image_webp = page.hero_image_webp | default: nil -%}
 {%- assign hero_image_alt = page.hero_image_alt | default: hero_title -%}
+{%- assign hero_image_width = page.hero_image_width | default: nil -%}
+{%- assign hero_image_height = page.hero_image_height | default: nil -%}
 {%- assign hero_eyebrow = page.hero_eyebrow | default: nil -%}
 {%- assign hero_variant = page.hero_variant | default: nil -%}
 {%- assign hero_is_cover = false -%}
@@ -23,7 +26,12 @@ header_include: header-nav.html
 <header class="page-hero{% if hero_image and hero_is_cover != true %} page-hero--split{% endif %}{% if hero_is_cover %} page-hero--cover{% endif %}">
   {%- if hero_is_cover -%}
     <div class="page-hero__media page-hero__media--cover">
-      <img src="{{ hero_image | relative_url }}" alt="{{ hero_image_alt }}">
+      <picture>
+        {%- if hero_image_webp -%}
+        <source srcset="{{ hero_image_webp | relative_url }}" type="image/webp">
+        {%- endif -%}
+        <img src="{{ hero_image | relative_url }}" alt="{{ hero_image_alt }}"{% if hero_image_width %} width="{{ hero_image_width }}"{% endif %}{% if hero_image_height %} height="{{ hero_image_height }}"{% endif %} loading="eager" fetchpriority="high">
+      </picture>
     </div>
     <div class="page-hero__overlay"></div>
   {%- endif -%}
@@ -53,7 +61,12 @@ header_include: header-nav.html
   </div>
   {%- if hero_image and hero_is_cover != true -%}
     <div class="page-hero__media">
-      <img src="{{ hero_image | relative_url }}" alt="{{ hero_image_alt }}">
+      <picture>
+        {%- if hero_image_webp -%}
+        <source srcset="{{ hero_image_webp | relative_url }}" type="image/webp">
+        {%- endif -%}
+        <img src="{{ hero_image | relative_url }}" alt="{{ hero_image_alt }}"{% if hero_image_width %} width="{{ hero_image_width }}"{% endif %}{% if hero_image_height %} height="{{ hero_image_height }}"{% endif %} loading="eager" fetchpriority="high">
+      </picture>
     </div>
   {%- endif -%}
 </header>
