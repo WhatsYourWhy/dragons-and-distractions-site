@@ -1,0 +1,51 @@
+{% assign is_minimal = include.minimal | default: false %}
+<div class="site-banner{% if is_minimal %} site-banner--minimal{% endif %}">
+  <div class="wrapper site-banner__inner">
+    <a class="site-banner__brand site-title" href="{{ '/' | relative_url }}">
+      <span class="site-banner__brand-title">{{ site.title }}</span>
+      <span class="site-banner__brand-subtitle">Practical tools before the lore</span>
+    </a>
+
+    <div class="site-banner__controls">
+      <button
+        class="theme-toggle js-theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Low Stim off"
+      >
+        <span class="theme-toggle__icon" aria-hidden="true">&#9680;</span>
+        <span class="theme-toggle__label">
+          <span class="theme-toggle__text">Low Stim</span>
+          <span class="theme-toggle__status">Standard mode</span>
+        </span>
+      </button>
+
+      <button
+        class="site-banner__menu-toggle js-menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        <span class="site-banner__menu-toggle-box" aria-hidden="true">
+          <span class="site-banner__menu-toggle-line"></span>
+          <span class="site-banner__menu-toggle-line"></span>
+          <span class="site-banner__menu-toggle-line"></span>
+        </span>
+        <span class="site-banner__menu-toggle-text">Menu</span>
+      </button>
+    </div>
+
+    <nav id="site-navigation" class="site-banner__nav site-nav js-site-nav" aria-label="Primary">
+      <ul class="site-banner__links">
+        {% assign nav_links = site.data.nav_links %}
+        {% for link in nav_links %}
+        <li class="site-banner__item">
+          <a class="site-banner__link" href="{{ link.url | relative_url }}">
+            <span class="site-banner__text">{{ link.label }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>

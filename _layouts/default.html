@@ -18,6 +18,7 @@
         const storageKey = "dd-theme";
         const className = "theme-low-stim";
         const root = document.documentElement;
+        const navOpenClass = "nav-open";
 
         const getStoredPreference = () => {
           try {
@@ -50,22 +51,30 @@
           root.dataset.theme = theme;
           document.querySelectorAll(".js-theme-toggle").forEach((button) => {
             button.setAttribute("aria-pressed", String(isLowStim));
-            const text = button.querySelector(".theme-toggle__text");
             const status = button.querySelector(".theme-toggle__status");
-            if (text) {
-              text.textContent = isLowStim ? "Low-stim on" : "Low-stim off";
-            }
+            button.setAttribute("aria-label", isLowStim ? "Low Stim on" : "Low Stim off");
             if (status) {
-              status.textContent = isLowStim ? "Reduced color & motion" : "Standard mode";
+              status.textContent = isLowStim ? "On" : "Standard mode";
             }
+          });
+        };
+
+        const applyNavState = (isOpen) => {
+          document.body.classList.toggle(navOpenClass, isOpen);
+          root.dataset.navOpen = isOpen ? "open" : "closed";
+          document.querySelectorAll(".js-menu-toggle").forEach((button) => {
+            button.setAttribute("aria-expanded", String(isOpen));
           });
         };
 
         const initialTheme = getPreferredTheme();
         applyTheme(initialTheme);
+        applyNavState(false);
 
         document.addEventListener("DOMContentLoaded", () => {
           applyTheme(document.body.classList.contains(className) ? "low-stim" : "default");
+          applyNavState(false);
+
           document.querySelectorAll(".js-theme-toggle").forEach((button) => {
             button.addEventListener("click", () => {
               const isLowStim = document.body.classList.toggle(className);
@@ -73,6 +82,31 @@
               applyTheme(theme);
               setStoredPreference(theme);
             });
+          });
+
+          document.querySelectorAll(".js-menu-toggle").forEach((button) => {
+            button.addEventListener("click", () => {
+              const isOpen = !document.body.classList.contains(navOpenClass);
+              applyNavState(isOpen);
+            });
+          });
+
+          document.querySelectorAll(".js-site-nav").forEach((nav) => {
+            nav.addEventListener("click", (event) => {
+              if (event.target === nav) {
+                applyNavState(false);
+              }
+            });
+
+            nav.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => applyNavState(false));
+            });
+          });
+
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+              applyNavState(false);
+            }
           });
         });
       })();
