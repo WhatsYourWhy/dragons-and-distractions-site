@@ -607,8 +607,8 @@ body.theme-low-stim a.cta-button--primary:visited {
 }
 
 .path-card__body {
-  display: grid;
-  grid-template-rows: auto auto auto auto minmax(0, 1fr) auto;
+  display: flex;
+  flex-direction: column;
   gap: 0.85rem;
   min-width: 0;
   height: 100%;
@@ -669,6 +669,9 @@ body.theme-low-stim a.cta-button--primary:visited {
 }
 
 .path-card__actions {
+  margin-top: auto;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  min-height: 16.5rem;
   align-content: start;
 }
 
@@ -677,6 +680,7 @@ body.theme-low-stim a.cta-button--primary:visited {
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.35rem;
+  min-height: 0;
   padding: 0.85rem 0.95rem;
   border: 1px solid var(--color-border-muted);
   border-radius: 18px;
@@ -691,10 +695,6 @@ body.theme-low-stim a.cta-button--primary:visited {
 
 .path-card__action span {
   display: block;
-}
-
-.signal-list {
-  align-content: start;
 }
 
 .path-card__action:hover,
@@ -731,6 +731,12 @@ body.theme-low-stim a.cta-button--primary:visited {
     grid-column: 2;
     grid-row: 1;
     height: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .path-card__actions {
+    min-height: 0;
   }
 }
 
