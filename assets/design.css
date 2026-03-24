@@ -487,7 +487,7 @@ nav a {
 
 .path-grid {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  align-items: start;
+  align-items: stretch;
 }
 
 .landing-card,
@@ -611,6 +611,7 @@ body.theme-low-stim a.cta-button--primary:visited {
   flex-direction: column;
   gap: 0.85rem;
   min-width: 0;
+  height: 100%;
 }
 
 .path-card__media,
@@ -667,10 +668,17 @@ body.theme-low-stim a.cta-button--primary:visited {
   gap: 0.85rem;
 }
 
+.path-card__actions {
+  margin-top: auto;
+  align-content: start;
+}
+
 .path-card__action {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 0.35rem;
+  height: 100%;
   padding: 0.85rem 0.95rem;
   border: 1px solid var(--color-border-muted);
   border-radius: 18px;
@@ -712,6 +720,7 @@ body.theme-low-stim a.cta-button--primary:visited {
   .path-card--with-card-art .path-card__body {
     grid-column: 2;
     grid-row: 1;
+    height: 100%;
   }
 }
 
