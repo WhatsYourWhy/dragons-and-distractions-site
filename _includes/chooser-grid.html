@@ -7,6 +7,6 @@
   {% for path in chooser_paths %}
   {% assign matched_monster = site.monsters | where_exp: "monster", "monster.url contains path.slug" | first %}
   {% assign heading_id = "path-" | append: path.slug %}
-  {% include path-card.html path=path matched_monster=matched_monster heading_id=heading_id %}
+  {% include path-card.html path=path matched_monster=matched_monster heading_id=heading_id extra_class="path-card--chooser" %}
   {% endfor %}
 </div>

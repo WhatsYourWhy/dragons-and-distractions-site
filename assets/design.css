@@ -586,7 +586,6 @@ body.theme-low-stim a.cta-button--primary:visited {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  height: 100%;
   padding: 1.2rem;
   border-left: 4px solid var(--monster-accent, var(--color-accent));
 }
@@ -607,11 +606,14 @@ body.theme-low-stim a.cta-button--primary:visited {
 }
 
 .path-card__body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+  display: grid;
+  gap: 1rem;
   min-width: 0;
-  height: 100%;
+}
+
+.path-card__content {
+  display: grid;
+  gap: 0.85rem;
 }
 
 .path-card__media,
@@ -669,7 +671,8 @@ body.theme-low-stim a.cta-button--primary:visited {
 }
 
 .path-card__actions {
-  margin-top: auto;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--color-border-muted);
   align-content: start;
 }
 
@@ -678,13 +681,32 @@ body.theme-low-stim a.cta-button--primary:visited {
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.35rem;
-  height: 100%;
-  padding: 0.85rem 0.95rem;
+  padding: 0.8rem 0.9rem;
   border: 1px solid var(--color-border-muted);
   border-radius: 18px;
   background: var(--color-surface);
   color: var(--color-text-strong);
   text-decoration: none;
+}
+
+.path-card__action-kind {
+  color: var(--color-text-muted);
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.path-card__action strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.path-card__action-summary {
+  display: block;
+  color: var(--color-text-base);
+  font-size: var(--font-size-sm);
+  line-height: 1.55;
 }
 
 .path-card__action:hover,
@@ -703,25 +725,33 @@ body.theme-low-stim a.cta-button--primary:visited {
 }
 
 @media (min-width: 760px) {
-  .path-card--with-card-art {
+  .path-card--oracle.path-card--with-card-art {
     display: grid;
     grid-template-columns: minmax(8.75rem, 9.75rem) minmax(0, 1fr);
     align-items: start;
     column-gap: 1rem;
   }
 
-  .path-card--with-card-art .path-card__media {
+  .path-card--oracle.path-card--with-card-art .path-card__media {
     grid-column: 1;
     grid-row: 1;
     width: 100%;
     align-self: start;
   }
 
-  .path-card--with-card-art .path-card__body {
+  .path-card--oracle.path-card--with-card-art .path-card__body {
     grid-column: 2;
     grid-row: 1;
-    height: 100%;
   }
+}
+
+.path-card--chooser .path-card__media--card {
+  width: min(9rem, 100%);
+  margin: 0 auto;
+}
+
+.path-card--chooser .path-card__body {
+  gap: 0.95rem;
 }
 
 .battle-card {
@@ -1357,7 +1387,7 @@ body.theme-low-stim .printable-group td a:focus {
 }
 
 .path-card--oracle .path-card__body {
-  justify-content: start;
+  align-content: start;
 }
 
 .monster-page__content {
