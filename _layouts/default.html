@@ -64,6 +64,11 @@
           root.dataset.navOpen = isOpen ? "open" : "closed";
           document.querySelectorAll(".js-menu-toggle").forEach((button) => {
             button.setAttribute("aria-expanded", String(isOpen));
+            button.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+            const label = button.querySelector(".site-banner__menu-toggle-text");
+            if (label) {
+              label.textContent = isOpen ? "Close" : "Menu";
+            }
           });
         };
 
