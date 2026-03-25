@@ -11,21 +11,23 @@
     <p>Pick the one that fits. The matching ritual and printable will appear right away.</p>
   </div>
 
-  <div class="oracle__layout">
-    <div class="oracle__choices" role="list">
+    <div class="oracle__layout">
+      <div class="oracle__choices" role="list">
       {% for path in chooser_paths %}
-      <a class="oracle__choice{% if forloop.first %} is-active{% endif %}" href="#{{ path.slug }}" data-oracle-choice="{{ path.slug }}" aria-controls="{{ path.slug }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+      {% assign choice_id = "oracle-choice-" | append: path.slug %}
+      <button type="button" id="{{ choice_id }}" class="oracle__choice{% if forloop.first %} is-active{% endif %}" data-oracle-choice="{{ path.slug }}" aria-controls="{{ path.slug }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
         <span class="oracle__choice-index">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
         <span class="oracle__choice-text">{{ path.struggle }}</span>
-      </a>
+      </button>
       {% endfor %}
-    </div>
+      </div>
 
     <div class="oracle__results">
       {% for path in chooser_paths %}
       {% assign matched_monster = site.monsters | where_exp: "monster", "monster.url contains path.slug" | first %}
       {% assign heading_id = "oracle-path-" | append: path.slug %}
-      <div class="oracle__result{% if forloop.first %} is-active{% endif %}" id="{{ path.slug }}" data-oracle-panel="{{ path.slug }}"{% unless forloop.first %} hidden{% endunless %}>
+      {% assign choice_id = "oracle-choice-" | append: path.slug %}
+      <div class="oracle__result{% if forloop.first %} is-active{% endif %}" id="{{ path.slug }}" data-oracle-panel="{{ path.slug }}" aria-labelledby="{{ choice_id }}"{% unless forloop.first %} hidden{% endunless %}>
         <p class="oracle__result-label">Best match right now</p>
         {% include path-card.html path=path matched_monster=matched_monster heading_id=heading_id extra_class="path-card--oracle" %}
       </div>
@@ -53,11 +55,14 @@
           const isActive = panel.dataset.oraclePanel === slug;
           panel.classList.toggle("is-active", isActive);
           panel.hidden = !isActive;
+          panel.setAttribute("aria-hidden", String(!isActive));
         });
       };
 
-      const initialSlug = validSlugs.has(window.location.hash.replace("#", ""))
-        ? window.location.hash.replace("#", "")
+      const getHashSlug = () => window.location.hash.replace("#", "");
+
+      const initialSlug = validSlugs.has(getHashSlug())
+        ? getHashSlug()
         : choices[0]?.dataset.oracleChoice;
 
       if (initialSlug) {
@@ -65,14 +70,20 @@
       }
 
       choices.forEach((choice) => {
-        choice.addEventListener("click", (event) => {
-          event.preventDefault();
+        choice.addEventListener("click", () => {
           const slug = choice.dataset.oracleChoice;
           activate(slug);
           if (window.history && window.history.replaceState) {
             window.history.replaceState(null, "", "#" + slug);
           }
         });
+      });
+
+      window.addEventListener("hashchange", () => {
+        const slug = getHashSlug();
+        if (validSlugs.has(slug)) {
+          activate(slug);
+        }
       });
     })();
   </script>
