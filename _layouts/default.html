@@ -19,6 +19,16 @@
         const className = "theme-low-stim";
         const root = document.documentElement;
         const navOpenClass = "nav-open";
+        const mobileOverlayQuery = "(max-width: 760px)";
+        const navFocusableSelector = [
+          "a[href]",
+          "button:not([disabled])",
+          "input:not([disabled]):not([type='hidden'])",
+          "select:not([disabled])",
+          "textarea:not([disabled])",
+          "[tabindex]:not([tabindex='-1'])"
+        ].join(",");
+        let lastMenuToggleButton = null;
 
         const getStoredPreference = () => {
           try {
@@ -59,7 +69,23 @@
           });
         };
 
-        const applyNavState = (isOpen) => {
+        const isMobileOverlayModeActive = () => window.matchMedia(mobileOverlayQuery).matches;
+
+        const getNavFocusableElements = (nav = document.querySelector(".js-site-nav")) => {
+          if (!nav) {
+            return [];
+          }
+
+          return Array.from(nav.querySelectorAll(navFocusableSelector)).filter((element) => {
+            if (element.getAttribute("aria-hidden") === "true") {
+              return false;
+            }
+            return element.getClientRects().length > 0;
+          });
+        };
+
+        const applyNavState = (isOpen, options = {}) => {
+          const shouldRestoreFocus = options.restoreFocus !== false;
           document.body.classList.toggle(navOpenClass, isOpen);
           root.dataset.navOpen = isOpen ? "open" : "closed";
           document.querySelectorAll(".js-menu-toggle").forEach((button) => {
@@ -70,15 +96,29 @@
               label.textContent = isOpen ? "Close" : "Menu";
             }
           });
+
+          if (isOpen && isMobileOverlayModeActive()) {
+            const [firstFocusableItem] = getNavFocusableElements();
+            if (firstFocusableItem) {
+              firstFocusableItem.focus();
+            }
+          }
+
+          if (!isOpen && shouldRestoreFocus && isMobileOverlayModeActive()) {
+            const menuToggleButton = lastMenuToggleButton || document.querySelector(".js-menu-toggle");
+            if (menuToggleButton) {
+              menuToggleButton.focus();
+            }
+          }
         };
 
         const initialTheme = getPreferredTheme();
         applyTheme(initialTheme);
-        applyNavState(false);
+        applyNavState(false, { restoreFocus: false });
 
         document.addEventListener("DOMContentLoaded", () => {
           applyTheme(document.body.classList.contains(className) ? "low-stim" : "default");
-          applyNavState(false);
+          applyNavState(false, { restoreFocus: false });
 
           document.querySelectorAll(".js-theme-toggle").forEach((button) => {
             button.addEventListener("click", () => {
@@ -91,6 +131,7 @@
 
           document.querySelectorAll(".js-menu-toggle").forEach((button) => {
             button.addEventListener("click", () => {
+              lastMenuToggleButton = button;
               const isOpen = !document.body.classList.contains(navOpenClass);
               applyNavState(isOpen);
             });
@@ -109,6 +150,32 @@
           });
 
           document.addEventListener("keydown", (event) => {
+            if (
+              event.key === "Tab" &&
+              document.body.classList.contains(navOpenClass) &&
+              isMobileOverlayModeActive()
+            ) {
+              const nav = document.querySelector(".js-site-nav");
+              const focusableElements = getNavFocusableElements(nav);
+              if (!nav || focusableElements.length === 0) {
+                return;
+              }
+
+              const firstFocusable = focusableElements[0];
+              const lastFocusable = focusableElements[focusableElements.length - 1];
+              const activeElement = document.activeElement;
+
+              if (event.shiftKey) {
+                if (activeElement === firstFocusable || !nav.contains(activeElement)) {
+                  event.preventDefault();
+                  lastFocusable.focus();
+                }
+              } else if (activeElement === lastFocusable || !nav.contains(activeElement)) {
+                event.preventDefault();
+                firstFocusable.focus();
+              }
+            }
+
             if (event.key === "Escape") {
               applyNavState(false);
             }
