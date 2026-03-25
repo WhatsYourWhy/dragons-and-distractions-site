@@ -2231,10 +2231,6 @@ body.theme-low-stim hr::after {
   color: var(--color-accent);
 }
 
-hr::after {
-  content: "\2726";
-}
-
 .site-banner__controls {
   display: inline-flex;
   align-items: center;

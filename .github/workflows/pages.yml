@@ -26,6 +26,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
       - name: Install PDF dependencies
         run: |
           python -m pip install --upgrade pip
@@ -50,10 +55,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: .
-          destination: _site
+        run: bundle exec jekyll build --source . --destination _site
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
@@ -74,4 +76,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
