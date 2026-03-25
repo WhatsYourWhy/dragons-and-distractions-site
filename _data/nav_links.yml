@@ -1,16 +1,25 @@
-- label: Start Here
+- label: Choose Your Monster
   url: "/choose-your-monster/"
   description: "Match the stuck feeling to a monster, then jump straight to one ritual and one tool."
-  cta: "Choose a Path"
+  cta: "Choose Your Monster"
+  style: primary
+- label: Fast printable/tool
+  url: "/site/"
+  description: "Jump to the quickest printable or interactive tool when you need immediate support."
+  cta: "Open Fast Tool"
+  style: secondary
 - label: Monsters
   url: "/monsters/"
-  description: "Browse the full bestiary if you already know which foe you are facing."
+  description: "Browse the full bestiary if you want to explore each pattern in more depth."
   cta: "Browse Monsters"
+  style: tertiary
 - label: Rituals
   url: "/spellbook/"
   description: "Go straight to rituals, scripts, and plain-language counter-moves."
   cta: "Open Rituals"
-- label: Printables
-  url: "/site/"
-  description: "Grab the fastest cards, checklists, and templates for getting unstuck."
-  cta: "Grab Tools"
+  style: tertiary
+- label: Codex
+  url: "/codex/"
+  description: "Read the grounding promises and framework notes behind the toolkit."
+  cta: "Read the Codex"
+  style: tertiary
