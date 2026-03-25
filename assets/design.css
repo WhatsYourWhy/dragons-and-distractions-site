@@ -251,6 +251,20 @@ nav a {
   text-decoration: none;
 }
 
+.site-banner__link.cta-button--primary,
+.site-banner__link.cta-button--primary:visited {
+  color: var(--color-text-contrast);
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
+  border-color: var(--color-accent);
+}
+
+.site-banner__link.cta-button--secondary,
+.site-banner__link.cta-button--secondary:visited {
+  color: var(--color-accent-light);
+  background: transparent;
+  border-color: var(--color-accent);
+}
+
 .theme-toggle {
   cursor: pointer;
 }
@@ -2346,6 +2360,12 @@ body.nav-open .site-banner__menu-toggle-line:nth-child(3) {
   flex-wrap: wrap;
   gap: 0.85rem;
   margin-top: 0.7rem;
+}
+
+.page-hero__microcopy {
+  margin: 0.6rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 .cta-button--secondary {

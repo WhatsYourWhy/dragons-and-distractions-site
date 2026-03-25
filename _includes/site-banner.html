@@ -39,8 +39,14 @@
       <ul class="site-banner__links">
         {% assign nav_links = site.data.nav_links %}
         {% for link in nav_links %}
-        <li class="site-banner__item">
-          <a class="site-banner__link" href="{{ link.url | relative_url }}">
+        <li class="site-banner__item{% if link.style %} site-banner__item--{{ link.style }}{% endif %}">
+          {%- assign link_classes = "site-banner__link" -%}
+          {%- if link.style == "primary" -%}
+            {%- assign link_classes = link_classes | append: " cta-button cta-button--primary" -%}
+          {%- elsif link.style == "secondary" -%}
+            {%- assign link_classes = link_classes | append: " cta-button cta-button--secondary" -%}
+          {%- endif -%}
+          <a class="{{ link_classes }}" href="{{ link.url | relative_url }}">
             <span class="site-banner__text">{{ link.label }}</span>
           </a>
         </li>

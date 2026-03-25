@@ -58,6 +58,9 @@ header_include: header-nav.html
         {%- endfor -%}
       </div>
     {%- endif -%}
+    {%- if page.hero_microcopy -%}
+      <p class="page-hero__microcopy">{{ page.hero_microcopy }}</p>
+    {%- endif -%}
   </div>
   {%- if hero_image and hero_is_cover != true -%}
     <div class="page-hero__media">

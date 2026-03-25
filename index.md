@@ -22,9 +22,10 @@ hero_actions:
   - label: "Choose Your Monster"
     url: "/choose-your-monster/"
     style: "primary"
-  - label: "Browse the Bestiary"
-    url: "/monsters/"
+  - label: "Fast printable/tool"
+    url: "/site/"
     style: "secondary"
+hero_microcopy: "If overwhelmed, start here. One monster match is enough for now."
 ---
 
 <section class="landing-section">
