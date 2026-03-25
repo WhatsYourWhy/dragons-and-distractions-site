@@ -2164,6 +2164,7 @@ body.theme-low-stim {
   --color-surface-soft: #ece5d8;
   --color-surface-muted: #e3dccf;
   --color-surface-strong: #f8f2e9;
+  --color-surface-highlight: #ddd3c0;
   --color-border: #b8aa94;
   --color-border-strong: #a79579;
   --color-border-muted: #cdc1ad;
@@ -2177,6 +2178,8 @@ body.theme-low-stim {
   --color-magic: #5e8d8d;
   --color-focus-ring: #9f7d3b;
   --color-focus-shadow: rgba(159, 125, 59, 0.24);
+  --gradient-nav-card: linear-gradient(145deg, #f3ede2 0%, #ede8dc 62%, #e6dfd1 100%);
+  --gradient-hero: linear-gradient(130deg, rgba(243, 237, 226, 0.94), rgba(237, 232, 220, 0.96));
 }
 
 body::before {
