@@ -1,4 +1,4 @@
-﻿---
+---
 layout: hub
 title: "Dragons & Distractions"
 description: "A fantasy toolkit for executive-function battles: identify the stuck pattern, choose the monster, and take one practical step."
@@ -22,8 +22,8 @@ hero_actions:
   - label: "Choose Your Monster"
     url: "/choose-your-monster/"
     style: "primary"
-  - label: "Fast printable/tool"
-    url: "/site/"
+  - label: "Browse the Bestiary"
+    url: "/monsters/"
     style: "secondary"
 hero_microcopy: "If overwhelmed, start here. One monster match is enough for now."
 ---
