@@ -1,6 +1,7 @@
-﻿---
+---
 layout: hub
 title: "Monster Index"
+description: "Browse every monster in the bestiary with short hooks, first rituals, and fast tools—or filter the list when you know part of the name or feeling."
 hero_title: "Map the Monsters"
 hero_intro: "Start with the monster that matches your current stuck point, or use the guided chooser if you want plain-language routing first."
 show_breadcrumbs: false
@@ -40,10 +41,12 @@ show_breadcrumbs: false
     <h2>Pick the monster that feels most true right now</h2>
     <p>Each card gives you the monster, one true hook line, one first ritual, and one fast tool so you can choose without opening every page.</p>
   </div>
+  {% include monster-index-filter.html %}
   <div class="monster-grid monster-grid--index">
     {% for monster in monsters %}
     {% assign monster_hook = monster.you_might_be_here_if | first %}
-    <article class="monster-card monster-card--index" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
+    {% capture monster_search %}{{ monster.name }} {{ monster.plain_name | default: "" }} {{ monster.tagline }} {{ monster_hook }}{% for badge in monster.badges %} {{ badge }}{% endfor %}{% endcapture %}
+    <article class="monster-card monster-card--index" data-search="{{ monster_search | strip | downcase | escape }}" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
       {% if monster.sigil %}
       <figure class="monster-card__media monster-card__media--sigil monster-card__media--index">
         <img class="monster-card__media-image monster-card__media-image--sigil" src="{{ monster.sigil | relative_url }}" alt="" loading="lazy" decoding="async">

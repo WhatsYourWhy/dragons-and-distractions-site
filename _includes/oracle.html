@@ -43,8 +43,24 @@
       const choices = Array.from(root.querySelectorAll("[data-oracle-choice]"));
       const panels = Array.from(root.querySelectorAll("[data-oracle-panel]"));
       const validSlugs = new Set(choices.map((choice) => choice.dataset.oracleChoice));
+      const narrowOracleQuery = window.matchMedia("(max-width: 759px)");
+      const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-      const activate = (slug) => {
+      const scrollActivePanelIntoView = (slug) => {
+        const panel = panels.find((p) => p.dataset.oraclePanel === slug);
+        if (!panel) {
+          return;
+        }
+        const instant = reducedMotionQuery.matches;
+        const block = narrowOracleQuery.matches ? "start" : "nearest";
+        panel.scrollIntoView({
+          behavior: instant ? "auto" : "smooth",
+          block,
+          inline: "nearest"
+        });
+      };
+
+      const activate = (slug, scrollMode) => {
         choices.forEach((choice) => {
           const isActive = choice.dataset.oracleChoice === slug;
           choice.classList.toggle("is-active", isActive);
@@ -57,22 +73,27 @@
           panel.hidden = !isActive;
           panel.setAttribute("aria-hidden", String(!isActive));
         });
+
+        if (scrollMode === "always") {
+          scrollActivePanelIntoView(slug);
+        }
       };
 
       const getHashSlug = () => window.location.hash.replace("#", "");
 
-      const initialSlug = validSlugs.has(getHashSlug())
-        ? getHashSlug()
+      const hashSlug = getHashSlug();
+      const initialSlug = validSlugs.has(hashSlug)
+        ? hashSlug
         : choices[0]?.dataset.oracleChoice;
 
       if (initialSlug) {
-        activate(initialSlug);
+        activate(initialSlug, validSlugs.has(hashSlug) ? "always" : null);
       }
 
       choices.forEach((choice) => {
         choice.addEventListener("click", () => {
           const slug = choice.dataset.oracleChoice;
-          activate(slug);
+          activate(slug, "always");
           if (window.history && window.history.replaceState) {
             window.history.replaceState(null, "", "#" + slug);
           }
@@ -82,7 +103,7 @@
       window.addEventListener("hashchange", () => {
         const slug = getHashSlug();
         if (validSlugs.has(slug)) {
-          activate(slug);
+          activate(slug, "always");
         }
       });
     })();

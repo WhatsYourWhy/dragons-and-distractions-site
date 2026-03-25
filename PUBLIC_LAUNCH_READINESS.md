@@ -63,6 +63,10 @@ Soft-launch publicly first, then promote more broadly after one focused pass on:
 - Before paid promotion, decide whether you want lightweight analytics in week one.
 - If analytics are added later, update the privacy note at the same time.
 
+## Shipped fixes log
+
+For concrete UX, accessibility, and tooling changes after reviews, see [CHANGELOG.md](CHANGELOG.md).
+
 ## Week-one checks
 
 - Watch which pages people actually enter from.

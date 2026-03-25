@@ -1,5 +1,6 @@
 ---
 title: "Art & Visuals"
+description: "Download room for Dragons & Distractions art assets—sigils, banners, and cover art files used across the site and printables."
 hero_title: "Art & Visuals"
 hero_intro: "Portraits, sigils, and cover art live here as the gallery comes online. For now, this page is the clean download room for the visual assets already in the project."
 show_breadcrumbs: false

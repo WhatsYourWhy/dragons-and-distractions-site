@@ -251,6 +251,11 @@ nav a {
   text-decoration: none;
 }
 
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
 .site-banner__link.cta-button--primary,
 .site-banner__link.cta-button--primary:visited {
   color: var(--color-text-contrast);
@@ -1374,10 +1379,16 @@ body.theme-low-stim .printable-group td a:focus {
 }
 
 .oracle__choice:hover,
-.oracle__choice:focus,
 .oracle__choice.is-active {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-card-hover);
+}
+
+.oracle__choice:focus-visible {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
 }
 
 .oracle__choice-index {
@@ -1603,8 +1614,9 @@ body.theme-low-stim .oracle__choice {
 }
 
 body.theme-low-stim .oracle__choice-index {
-  background: rgba(45, 74, 124, 0.06);
-  color: var(--color-accent);
+  background: rgba(45, 74, 124, 0.08);
+  border-color: var(--color-border-strong);
+  color: var(--color-text-strong);
 }
 
 .ritual-glance,
@@ -1912,6 +1924,54 @@ body.theme-low-stim .field-guide__prompt code {
   color: inherit;
 }
 
+.monster-index-filter {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 28rem;
+  margin: 0 0 1.15rem;
+}
+
+.monster-index-filter__label {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.monster-index-filter__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-text-strong);
+  font-family: "Lora", Georgia, serif;
+  font-size: 1rem;
+}
+
+.monster-index-filter__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.monster-index-filter__input:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.monster-index-filter__status {
+  margin: 0;
+  min-height: 1.25em;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.monster-card--index.is-filter-hidden {
+  display: none;
+}
+
 .monster-grid--index {
   margin-top: 0.25rem;
 }
@@ -2179,19 +2239,20 @@ body.theme-low-stim {
   --color-surface-muted: #e3dccf;
   --color-surface-strong: #f8f2e9;
   --color-surface-highlight: #ddd3c0;
-  --color-border: #b8aa94;
-  --color-border-strong: #a79579;
-  --color-border-muted: #cdc1ad;
-  --color-text-strong: #20170f;
+  --color-border: #9a8b74;
+  --color-border-strong: #8a7a63;
+  --color-border-muted: #c4b69f;
+  --color-text-strong: #1a140e;
   --color-text-base: #2a2015;
-  --color-text-muted: #6f614e;
+  /* Muted small text: >=4.5:1 on surface / surface-soft for WCAG AA */
+  --color-text-muted: #454038;
   --color-text-contrast: #f5f0e8;
-  --color-accent: #9f7d3b;
-  --color-accent-light: #b7985d;
+  --color-accent: #7a5f24;
+  --color-accent-light: #5c4a1e;
   --color-accent-soft: #ddd2bc;
-  --color-magic: #5e8d8d;
-  --color-focus-ring: #9f7d3b;
-  --color-focus-shadow: rgba(159, 125, 59, 0.24);
+  --color-magic: #4a7373;
+  --color-focus-ring: #5c4a1e;
+  --color-focus-shadow: rgba(92, 74, 30, 0.28);
   --gradient-nav-card: linear-gradient(145deg, #f3ede2 0%, #ede8dc 62%, #e6dfd1 100%);
   --gradient-hero: linear-gradient(130deg, rgba(243, 237, 226, 0.94), rgba(237, 232, 220, 0.96));
 }
@@ -2278,6 +2339,46 @@ body.theme-low-stim hr::after {
   transform: translateX(-50%);
   outline: 3px solid var(--color-focus-ring);
   outline-offset: 4px;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-surface-strong);
+  color: var(--color-text-strong);
+  box-shadow: var(--shadow-card);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+body.theme-low-stim .back-to-top {
+  background: var(--color-surface);
+  color: var(--color-text-strong);
+}
+
+body.nav-open .back-to-top {
+  visibility: hidden;
 }
 
 .theme-toggle__text,

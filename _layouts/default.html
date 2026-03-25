@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/design.css?v=20260311" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/design.css?v=20260325" | relative_url }}">
     {%- feed_meta -%}
   </head>
   <body>
@@ -60,7 +60,7 @@
           document.body.dataset.theme = theme;
           root.dataset.theme = theme;
           document.querySelectorAll(".js-theme-toggle").forEach((button) => {
-            button.setAttribute("aria-pressed", String(isLowStim));
+            button.setAttribute("aria-checked", String(isLowStim));
             const status = button.querySelector(".theme-toggle__status");
             button.setAttribute("aria-label", isLowStim ? "Low Stim on" : "Low Stim off");
             if (status) {
@@ -180,6 +180,25 @@
               applyNavState(false);
             }
           });
+
+          const backTop = document.querySelector(".js-back-to-top");
+          if (backTop) {
+            const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+            const toggleBackTop = () => {
+              const y = window.scrollY || document.documentElement.scrollTop;
+              backTop.hidden = y < 420;
+            };
+            toggleBackTop();
+            window.addEventListener("scroll", toggleBackTop, { passive: true });
+            backTop.addEventListener("click", () => {
+              const instant = motionQuery.matches;
+              window.scrollTo({ top: 0, behavior: instant ? "auto" : "smooth" });
+              const mainEl = document.getElementById("main-content");
+              if (mainEl) {
+                mainEl.focus({ preventScroll: true });
+              }
+            });
+          }
         });
       })();
     </script>
@@ -191,11 +210,15 @@
       {%- endif -%}
     </header>
 
-    <main id="main-content" class="page-content" aria-label="Content">
+    <main id="main-content" class="page-content" aria-label="Content" tabindex="-1">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
+
+    <button type="button" class="back-to-top js-back-to-top" hidden aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
 
     {%- include footer.html -%}
   </body>

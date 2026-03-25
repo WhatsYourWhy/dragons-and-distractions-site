@@ -1,0 +1,41 @@
+<div class="monster-index-filter">
+  <label for="monster-index-filter-input" class="monster-index-filter__label">Filter monsters</label>
+  <input
+    id="monster-index-filter-input"
+    class="monster-index-filter__input"
+    type="search"
+    placeholder="Name, feeling, tagline, or badge text"
+    autocomplete="off"
+    spellcheck="false"
+  />
+  <p id="monster-index-filter-status" class="monster-index-filter__status" role="status" aria-live="polite"></p>
+</div>
+<script>
+  (function () {
+    const input = document.getElementById("monster-index-filter-input");
+    const grid = document.querySelector(".monster-grid--index");
+    if (!input || !grid) return;
+
+    const cards = Array.from(grid.querySelectorAll(".monster-card--index"));
+    const status = document.getElementById("monster-index-filter-status");
+    const norm = (s) => (s || "").trim().toLowerCase();
+
+    const applyFilter = () => {
+      const q = norm(input.value);
+      let visible = 0;
+      cards.forEach((card) => {
+        const hay = norm(card.getAttribute("data-search") || "");
+        const match = !q || hay.includes(q);
+        card.classList.toggle("is-filter-hidden", !match);
+        if (match) visible += 1;
+      });
+      if (status) {
+        status.textContent = q
+          ? visible + " matching monster" + (visible === 1 ? "" : "s")
+          : "";
+      }
+    };
+
+    input.addEventListener("input", applyFilter);
+  })();
+</script>

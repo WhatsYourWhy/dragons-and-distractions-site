@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 header_include: header-nav.html
 ---
@@ -27,6 +27,9 @@ header_include: header-nav.html
   {%- if hero_is_cover -%}
     <div class="page-hero__media page-hero__media--cover">
       <picture>
+        {%- if hero_image_avif -%}
+        <source srcset="{{ hero_image_avif | relative_url }}" type="image/avif">
+        {%- endif -%}
         {%- if hero_image_webp -%}
         <source srcset="{{ hero_image_webp | relative_url }}" type="image/webp">
         {%- endif -%}
@@ -65,6 +68,9 @@ header_include: header-nav.html
   {%- if hero_image and hero_is_cover != true -%}
     <div class="page-hero__media">
       <picture>
+        {%- if hero_image_avif -%}
+        <source srcset="{{ hero_image_avif | relative_url }}" type="image/avif">
+        {%- endif -%}
         {%- if hero_image_webp -%}
         <source srcset="{{ hero_image_webp | relative_url }}" type="image/webp">
         {%- endif -%}

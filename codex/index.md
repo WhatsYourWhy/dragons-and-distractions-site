@@ -1,12 +1,15 @@
-﻿---
+---
 layout: hub
 title: "Codex"
+description: "How Dragons & Distractions works: mythic framing for shame-free recognition, plus how to use monsters, rituals, and printables together."
 hero_title: "How This Toolkit Works"
 hero_intro: "The mythic language is here to lower shame and increase recognition. The practical support is what matters."
 show_breadcrumbs: true
 show_nav_cards: false
 hero_image: "/assets/generated/codex-banner.png"
 hero_image_alt: "Guild charter desk with illuminated manuscript pages, lantern, and quiet study tools"
+hero_image_width: 1024
+hero_image_height: 1024
 ---
 
 <section class="landing-section">
