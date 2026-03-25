@@ -1,9 +1,29 @@
 {% assign masthead_media = page.banner_image | default: page.card_art %}
 {% assign masthead_title_media = page.card_art | default: page.sigil %}
+{% assign default_card_art_width = 512 %}
+{% assign default_card_art_height = 768 %}
+{% assign default_sigil_width = 1024 %}
+{% assign default_sigil_height = 1024 %}
+{% assign default_banner_width = 1536 %}
+{% assign default_banner_height = 1024 %}
+{% if page.banner_image %}
+  {% assign masthead_media_width = page.banner_image_width | default: default_banner_width %}
+  {% assign masthead_media_height = page.banner_image_height | default: default_banner_height %}
+{% else %}
+  {% assign masthead_media_width = page.card_art_width | default: default_card_art_width %}
+  {% assign masthead_media_height = page.card_art_height | default: default_card_art_height %}
+{% endif %}
+{% if page.card_art %}
+  {% assign masthead_title_media_width = page.card_art_width | default: default_card_art_width %}
+  {% assign masthead_title_media_height = page.card_art_height | default: default_card_art_height %}
+{% else %}
+  {% assign masthead_title_media_width = page.sigil_width | default: default_sigil_width %}
+  {% assign masthead_title_media_height = page.sigil_height | default: default_sigil_height %}
+{% endif %}
 <section class="monster-masthead{% if masthead_media %} monster-masthead--illustrated{% endif %}{% unless page.banner_image %}{% if page.card_art %} monster-masthead--card-hero{% endif %}{% endunless %}" aria-labelledby="monster-masthead-name" style="--monster-accent: {{ page.accent_color | default: '#c8900a' }};">
   {% if masthead_media %}
   <div class="monster-masthead__media">
-    <img src="{{ masthead_media | relative_url }}" alt="{% if page.banner_image %}{{ page.banner_image_alt | default: page.name }}{% endif %}"{% unless page.banner_image %} width="512" height="768"{% endunless %}>
+    <img src="{{ masthead_media | relative_url }}" alt="{% if page.banner_image %}{{ page.banner_image_alt | default: page.name }}{% endif %}" width="{{ masthead_media_width }}" height="{{ masthead_media_height }}" decoding="async">
   </div>
   {% endif %}
   <div class="monster-masthead__body">
@@ -11,7 +31,7 @@
     <div class="monster-masthead__title-row">
       {% if masthead_title_media %}
       <figure class="monster-masthead__sigil{% if page.card_art %} monster-masthead__sigil--card{% endif %}">
-        <img src="{{ masthead_title_media | relative_url }}" alt=""{% if page.card_art %} width="512" height="768" loading="lazy" decoding="async"{% endif %}>
+        <img src="{{ masthead_title_media | relative_url }}" alt="" width="{{ masthead_title_media_width }}" height="{{ masthead_title_media_height }}" loading="lazy" decoding="async">
       </figure>
       {% endif %}
       <div class="monster-masthead__heading">
