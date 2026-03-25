@@ -35,6 +35,7 @@ LIQUID_RELATIVE_URL_PATTERN = re.compile(
     r"""\{\{\s*["'](?P<path>[^"']+)["']\s*(\|\s*relative_url\s*)?\}\}"""
 )
 URL_SCHEME_PATTERN = re.compile(r"^[a-zA-Z][a-zA-Z0-9+.-]*://")
+IGNORED_CONTENT_ROOTS = {".git", ".pytest_cache", ".venv", "__pycache__", "_site"}
 
 
 @dataclass
@@ -186,6 +187,14 @@ def display_outside_repo_target(path: Path) -> str:
     if path.parts and str(path.parts[0]).endswith(":"):
         return path.as_posix()
     return str(path)
+
+
+def should_scan_path(path: Path) -> bool:
+    try:
+        rel_path = path.relative_to(ROOT)
+    except ValueError:
+        return False
+    return not any(part in IGNORED_CONTENT_ROOTS for part in rel_path.parts)
 
 
 def extract_yaml_pdf_links(yaml_path: Path) -> list[str]:
@@ -346,7 +355,11 @@ def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
 
 
 def main() -> int:
-    content_files = sorted(ROOT.glob("**/*.md")) + sorted(ROOT.glob("**/*.html"))
+    content_files = [
+        path
+        for path in (sorted(ROOT.glob("**/*.md")) + sorted(ROOT.glob("**/*.html")))
+        if should_scan_path(path)
+    ]
     data_files = sorted(ROOT.glob("_data/*.yml"))
     errors: list[str] = []
     pdfs_generated = any(PDF_DIR.glob("*.pdf"))
