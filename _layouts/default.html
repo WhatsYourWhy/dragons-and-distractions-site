@@ -11,7 +11,15 @@
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/design.css?v=20260325" | relative_url }}">
     {%- feed_meta -%}
-  </head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BBWE83NT3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4BBWE83NT3');
+  </script>
+</head>
   <body>
     <script>
       (function () {
