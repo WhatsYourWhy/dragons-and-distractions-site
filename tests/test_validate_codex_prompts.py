@@ -83,6 +83,24 @@ def test_validate_monster_index_template_checks_contract(tmp_path: Path):
     assert checks.validate_monster_index_template(template) == []
 
 
+def test_validate_monster_filter_include_requires_dom_ready_guard(tmp_path: Path):
+    include = tmp_path / "monster-index-filter.html"
+    include.write_text(
+        "\n".join(
+            [
+                'if (document.readyState === "loading") {',
+                '  document.addEventListener("DOMContentLoaded", initMonsterIndexFilter, { once: true });',
+                "} else {",
+                "  initMonsterIndexFilter();",
+                "}",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    assert checks.validate_monster_filter_include(include) == []
+
+
 def test_validate_header_markup_requires_mobile_nav_and_theme_toggle(tmp_path: Path):
     header = tmp_path / "site-banner.html"
     header.write_text(

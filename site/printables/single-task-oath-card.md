@@ -1,5 +1,6 @@
 ---
 title: "Single-Task Oath"
+description: "A one-card tool for overwhelm spirals that keeps one visible task alive long enough to finish it."
 hero_intro: "A one-card tool for overwhelm spirals. Use it when the list keeps multiplying and you need one visible task."
 ink_pdf: "/site/printables/pdf/single-task-oath-card-ink.pdf"
 related_ritual:

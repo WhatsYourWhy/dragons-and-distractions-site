@@ -1,5 +1,6 @@
 ---
 title: "Buddy Ping Template"
+description: "A ready-to-send accountability script that helps another person make your start time feel more real."
 hero_intro: "A ready-to-send script for accountability help. Use it when another person can make the plan feel more real."
 ink_pdf: "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf"
 related_ritual:

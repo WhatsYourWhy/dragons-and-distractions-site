@@ -1,5 +1,6 @@
 ---
 title: "Sensory Reset Card"
+description: "A first-response card for overload that helps you reduce input before asking your brain for more."
 hero_intro: "A first-response card for overload. Use it when the room, the lights, or the social demand suddenly feel too loud."
 ink_pdf: "/site/printables/pdf/sensory-storm-reset-card-ink.pdf"
 related_ritual:

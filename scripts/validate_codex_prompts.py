@@ -16,6 +16,7 @@ from scripts.check_monster_metadata import ROOT, extract_front_matter
 HOMEPAGE_PATH = ROOT / "index.md"
 SPELLBOOK_INDEX = ROOT / "spellbook" / "index.md"
 MONSTER_INDEX = ROOT / "monsters" / "index.md"
+MONSTER_FILTER_INCLUDE = ROOT / "_includes" / "monster-index-filter.html"
 HEADER_INCLUDES = (
     ROOT / "_includes" / "site-header.html",
     ROOT / "_includes" / "header-nav.html",
@@ -104,6 +105,22 @@ def validate_monster_index_template(path: Path = MONSTER_INDEX) -> list[str]:
     return errors
 
 
+def validate_monster_filter_include(path: Path = MONSTER_FILTER_INCLUDE) -> list[str]:
+    text = path.read_text(encoding="utf-8")
+    errors: list[str] = []
+    required_snippets = (
+        'document.readyState === "loading"',
+        'document.addEventListener("DOMContentLoaded", initMonsterIndexFilter, { once: true })',
+        "initMonsterIndexFilter();",
+    )
+
+    for snippet in required_snippets:
+        if snippet not in text:
+            errors.append(f"{display_path(path)}: missing monster filter init guard snippet: {snippet}")
+
+    return errors
+
+
 def validate_header_markup(paths: tuple[Path, ...] = HEADER_INCLUDES) -> list[str]:
     errors: list[str] = []
     required_snippets = (
@@ -132,6 +149,7 @@ def main() -> int:
     errors.extend(validate_homepage_hero())
     errors.extend(validate_spellbook_directory())
     errors.extend(validate_monster_index_template())
+    errors.extend(validate_monster_filter_include())
     errors.extend(validate_header_markup())
 
     if errors:
