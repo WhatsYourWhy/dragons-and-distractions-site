@@ -41,6 +41,28 @@ EXPECTED_RITUAL_KEYS = (
     "sensory-storm",
     "burnout-dragon",
 )
+PAGE_DESCRIPTION_PATHS = (
+    ROOT / "index.md",
+    ROOT / "choose-your-monster.md",
+    ROOT / "feedback.md",
+    ROOT / "404.md",
+    ROOT / "monsters" / "index.md",
+    ROOT / "spellbook" / "index.md",
+    ROOT / "spellbook" / "wake-invocation.md",
+    ROOT / "spellbook" / "tide-mark-calendar.md",
+    ROOT / "spellbook" / "single-task-oath.md",
+    ROOT / "site" / "index.md",
+    ROOT / "site" / "printables" / "wake-invocation-checklist.md",
+    ROOT / "site" / "printables" / "single-task-oath-card.md",
+    ROOT / "site" / "printables" / "sensory-storm-reset-card.md",
+    ROOT / "site" / "printables" / "burnout-dragon-minimum-viable-day.md",
+    ROOT / "site" / "printables" / "rejection-wisp-reply-scaffold.md",
+    ROOT / "site" / "printables" / "tide-mark-calendar-card.md",
+    ROOT / "site" / "printables" / "tide-marks-buddy-ping.md",
+    ROOT / "site" / "printables" / "perfection-wyrm-done-is-better.md",
+    ROOT / "codex" / "index.md",
+    ROOT / "art" / "index.md",
+)
 
 
 def display_path(path: Path) -> str:
@@ -48,6 +70,11 @@ def display_path(path: Path) -> str:
         return str(path.relative_to(ROOT)).replace("\\", "/")
     except ValueError:
         return path.name
+
+
+def _has_non_empty_description(data: dict[str, object]) -> bool:
+    value = data.get("description")
+    return isinstance(value, str) and bool(value.strip())
 
 
 def validate_homepage_hero(path: Path = HOMEPAGE_PATH) -> list[str]:
@@ -121,6 +148,17 @@ def validate_monster_filter_include(path: Path = MONSTER_FILTER_INCLUDE) -> list
     return errors
 
 
+def validate_page_descriptions(paths: tuple[Path, ...] = PAGE_DESCRIPTION_PATHS) -> list[str]:
+    errors: list[str] = []
+
+    for path in paths:
+        data = extract_front_matter(path)
+        if not _has_non_empty_description(data):
+            errors.append(f"{display_path(path)}: missing non-empty top-level description front matter")
+
+    return errors
+
+
 def validate_header_markup(paths: tuple[Path, ...] = HEADER_INCLUDES) -> list[str]:
     errors: list[str] = []
     required_snippets = (
@@ -150,6 +188,7 @@ def main() -> int:
     errors.extend(validate_spellbook_directory())
     errors.extend(validate_monster_index_template())
     errors.extend(validate_monster_filter_include())
+    errors.extend(validate_page_descriptions())
     errors.extend(validate_header_markup())
 
     if errors:

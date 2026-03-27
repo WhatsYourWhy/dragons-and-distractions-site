@@ -583,6 +583,13 @@ a.cta-button:visited {
   text-decoration: none;
 }
 
+.cta-button:focus-visible {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
 .cta-button--primary {
   border-color: var(--color-accent);
   background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
@@ -1951,7 +1958,7 @@ body.theme-low-stim .field-guide__prompt code {
 .monster-index-filter__input {
   width: 100%;
   box-sizing: border-box;
-  padding: 0.65rem 2.9rem 0.65rem 0.85rem;
+  padding: 0.65rem 3.75rem 0.65rem 0.85rem;
   border: 1px solid var(--color-border-strong);
   border-radius: 12px;
   background: var(--color-surface);
@@ -1977,12 +1984,12 @@ body.theme-low-stim .field-guide__prompt code {
 .monster-index-filter__clear {
   position: absolute;
   top: 50%;
-  right: 0.45rem;
+  right: 0.35rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.75rem;
+  height: 2.75rem;
   padding: 0;
   border: 1px solid transparent;
   border-radius: 999px;
@@ -2115,6 +2122,14 @@ body.theme-low-stim .monster-index-filter__clear:focus-visible {
   color: var(--color-accent-light);
 }
 
+.monster-card--index .monster-card__name a:focus-visible {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
 .monster-card__signals {
   margin: 0;
   padding-left: 1.15rem;
@@ -2148,6 +2163,14 @@ body.theme-low-stim .monster-index-filter__clear:focus-visible {
 .monster-card__action:focus {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-card-hover);
+  text-decoration: none;
+}
+
+.monster-card__action:focus-visible {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card-hover);
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
   text-decoration: none;
 }
 
@@ -2486,6 +2509,14 @@ body.nav-open .back-to-top {
   color: var(--color-accent-light);
   border-color: var(--color-accent);
   box-shadow: 0 0 12px rgba(245, 200, 66, 0.25);
+}
+
+.site-banner__menu-toggle:focus-visible {
+  color: var(--color-accent-light);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px rgba(245, 200, 66, 0.25);
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
 }
 
 .site-banner__menu-toggle-box {

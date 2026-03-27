@@ -101,6 +101,36 @@ def test_validate_monster_filter_include_requires_dom_ready_guard(tmp_path: Path
     assert checks.validate_monster_filter_include(include) == []
 
 
+def test_validate_page_descriptions_requires_non_empty_description(tmp_path: Path):
+    described = tmp_path / "described.md"
+    described.write_text(
+        "\n".join(
+            [
+                "---",
+                'description: "Clear page summary."',
+                "---",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    missing = tmp_path / "missing.md"
+    missing.write_text(
+        "\n".join(
+            [
+                "---",
+                'title: "Missing description"',
+                "---",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_page_descriptions((described, missing))
+
+    assert errors == ["missing.md: missing non-empty top-level description front matter"]
+
+
 def test_validate_header_markup_requires_mobile_nav_and_theme_toggle(tmp_path: Path):
     header = tmp_path / "site-banner.html"
     header.write_text(
