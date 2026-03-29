@@ -2848,3 +2848,36 @@ body.theme-low-stim .ritual-library__card {
     display: none !important;
   }
 }
+
+/* ── Mobile nav header fix ─────────────────────────────── */
+@media (max-width: 480px) {
+  .site-banner__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: unset;
+  }
+
+  .site-banner__brand {
+    grid-column: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .site-banner__brand-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .site-banner__controls {
+    grid-column: 2;
+    flex-shrink: 0;
+  }
+
+  .site-banner__nav {
+    grid-column: 1 / -1;
+  }
+}
