@@ -1,5 +1,6 @@
 ---
 title: "Wake Invocation Checklist"
+description: "A bedside checklist for hard starts that helps you move before the morning negotiation gets louder."
 hero_intro: "A bedside checklist for hard starts. Use it when mornings turn into negotiations before your feet hit the floor."
 ink_pdf: "/site/printables/pdf/wake-invocation-checklist-ink.pdf"
 related_ritual:

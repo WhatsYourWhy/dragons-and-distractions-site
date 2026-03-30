@@ -1,4 +1,3 @@
-﻿---
 ---
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 @import "minima";
@@ -2096,7 +2095,5 @@ body.nav-open .site-banner__menu-toggle-line:nth-child(3) {
     grid-template-columns: 1fr;
   }
 
-  .cta-button {
-    width: 100%;
-  }
-}
+/* Base theme styles come from Minima. Custom site visuals live in assets/design.css. */
+@import "minima";

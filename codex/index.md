@@ -1,17 +1,24 @@
-﻿---
+---
 layout: hub
 title: "Codex"
+description: "How Dragons & Distractions works: mythic framing for shame-free recognition, plus how to use monsters, rituals, and printables together."
 hero_title: "How This Toolkit Works"
 hero_intro: "The mythic language is here to lower shame and increase recognition. The practical support is what matters."
 show_breadcrumbs: true
 show_nav_cards: false
 hero_image: "/assets/generated/codex-banner.png"
 hero_image_alt: "Guild charter desk with illuminated manuscript pages, lantern, and quiet study tools"
+hero_image_width: 1024
+hero_image_height: 1024
 ---
 
 <section class="landing-section">
-  <h2>What this is</h2>
-  <div class="landing-grid">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">What this is</p>
+    <h2>A framework for naming the pattern without adding shame</h2>
+    <p>The fantasy layer is there to make the hard thing easier to recognize. The real goal is still practical support, gentler self-understanding, and one workable next move.</p>
+  </div>
+  <div class="landing-grid landing-grid--compact">
     <article class="landing-card">
       <h3>An ADHD-led support toolkit</h3>
       <p>Dragons & Distractions is built around common executive-function pain points: overwhelm, time blindness, transition friction, shutdown, and distraction.</p>
@@ -28,7 +35,11 @@ hero_image_alt: "Guild charter desk with illuminated manuscript pages, lantern, 
 </section>
 
 <section class="landing-section">
-  <h2>What this is not</h2>
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">What this is not</p>
+    <h2>Supportive, not over-claiming</h2>
+    <p>This toolkit is meant to be useful without pretending it can do jobs that belong to care, diagnosis, or a bigger support system.</p>
+  </div>
   <div class="trust-grid">
     <article class="trust-card">
       <h3>Not therapy</h3>
@@ -46,8 +57,12 @@ hero_image_alt: "Guild charter desk with illuminated manuscript pages, lantern, 
 </section>
 
 <section class="landing-section">
-  <h2>How to use the metaphors</h2>
-  <div class="landing-grid">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">How to use it</p>
+    <h2>Use the metaphor as a shortcut, not homework</h2>
+    <p>You do not need to absorb the whole lore system. The intended flow is pattern, first move, then optional depth only if it helps.</p>
+  </div>
+  <div class="landing-grid landing-grid--compact">
     <article class="landing-card">
       <h3>1. Name the monster</h3>
       <p>Pick the pattern that best matches the moment. Use <a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a> if you are not sure.</p>
@@ -64,20 +79,46 @@ hero_image_alt: "Guild charter desk with illuminated manuscript pages, lantern, 
 </section>
 
 <section class="landing-section">
-  <h2>Grounding principles</h2>
-  <ul class="signal-list">
-    <li>Humor can reduce shame.</li>
-    <li>External tools often work better than internal pep talks.</li>
-    <li>Transitions deserve support, not judgment.</li>
-    <li>The smallest useful step is usually the right first step.</li>
-    <li>If a strategy feels punishing, it is probably the wrong one.</li>
-  </ul>
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Grounding principles</p>
+    <h2>What the site keeps trying to come back to</h2>
+  </div>
+  <div class="principles-grid">
+    <article class="principle-card">
+      <h3>Humor can reduce shame</h3>
+      <p>Playfulness is here to make the pattern easier to face, not to make the struggle feel trivial.</p>
+    </article>
+    <article class="principle-card">
+      <h3>External support beats internal pep talks</h3>
+      <p>Cards, alarms, checklists, body doubling, and visible cues often work better than trying harder in your head.</p>
+    </article>
+    <article class="principle-card">
+      <h3>Transitions deserve support</h3>
+      <p>Starting, stopping, waking, leaving, and switching are real tasks that need scaffolding instead of judgment.</p>
+    </article>
+    <article class="principle-card">
+      <h3>Smallest useful step first</h3>
+      <p>The best first move is usually the one that lowers friction enough for the next move to become visible.</p>
+    </article>
+    <article class="principle-card">
+      <h3>Punishing strategies rarely last</h3>
+      <p>If a tactic only works by increasing shame, force, or self-attack, it is probably not the right fit.</p>
+    </article>
+  </div>
 </section>
 
-<div class="section-actions">
-  <a class="cta-button" href="{{ '/choose-your-monster/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧭</span><span>Choose Your Monster</span></a>
-  <a class="cta-button" href="{{ '/spellbook/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">⚔️</span><span>Open the Spellbook</span></a>
-  <a class="cta-button" href="{{ '/site/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧰</span><span>Grab a Tool</span></a>
-</div>
+<section class="landing-section">
+  <div class="next-steps-panel">
+    <div class="section-heading">
+      <p class="section-heading__eyebrow">Where to go next</p>
+      <h2>Pick the shortest useful route from here</h2>
+    </div>
+    <div class="section-actions">
+      <a class="cta-button" href="{{ '/choose-your-monster/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧭</span><span>Choose Your Monster</span></a>
+      <a class="cta-button" href="{{ '/spellbook/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">⚔️</span><span>Open the Spellbook</span></a>
+      <a class="cta-button" href="{{ '/site/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧰</span><span>Grab a Tool</span></a>
+    </div>
+  </div>
+</section>
 
 
