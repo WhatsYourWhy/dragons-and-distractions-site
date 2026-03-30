@@ -2,20 +2,14 @@
 name: "The Dopamine Goblin"
 emoji: "🧝‍♂️"
 sigil: "/assets/generated/dopamine-goblin-sigil.png"
-banner_image: "/assets/generated/dopamine-goblin-banner.png"
-banner_image_srcset:
-  - path: "/assets/generated/dopamine-goblin-banner-640.webp"
-    width: 640
-  - path: "/assets/generated/dopamine-goblin-banner-1024.webp"
-    width: 1024
-  - path: "/assets/generated/dopamine-goblin-banner-1536.webp"
-    width: 1536
-banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
+card_art: "/assets/generated/cards/monster-dopamine-goblin-card-front-web.webp"
+banner_image: "/assets/generated/dopamine-goblin-banner.webp"
 banner_image_alt: "Treasure-like desk of shiny distractions circling a tempting empty work space"
 tagline: "Shiny distractions & impulse trades"
 description: "Contain novelty cravings with reward binding, goblin jars, and clear boundaries around the work you choose."
 plain_name: "shiny distractions and impulse trades"
 challenge_summary: "Dopamine Goblin shows up when the stimulating thing keeps winning even though you still care about the boring thing."
+accent_color: "#d4721a"
 you_might_be_here_if:
   - "You start the task and drift to tabs, pings, or side quests within minutes."
   - "A reward helps, but only if you decide it before the distraction hits."

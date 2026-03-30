@@ -2,6 +2,16 @@
 description: "ADHD-friendly rituals, monsters, and tools"
 url: "https://whatsyourwhy.github.io"
 baseurl: "/dragons-and-distractions-site"
+
+# Social sharing / Open Graph
+logo: "/assets/generated/homepage-hero-web.png"
+social:
+  name: "Dragons & Distractions"
+  links: []
+
+twitter:
+  username: WhatsYourWhy
+  card: summary_large_image
 markdown: kramdown
 theme: minima
 header_include: site-header.html
@@ -28,6 +38,11 @@ defaults:
     values:
       layout: page
       header_include: site-header.html
+      image:
+        path: "/assets/generated/homepage-hero-web.png"
+        width: 1536
+        height: 1024
+        alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
   - scope:
       path: "site/printables"
       type: "pages"
@@ -41,3 +56,8 @@ defaults:
     values:
       layout: monster
       header_include: site-header.html
+      image:
+        path: "/assets/generated/homepage-hero-web.png"
+        width: 1536
+        height: 1024
+        alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"

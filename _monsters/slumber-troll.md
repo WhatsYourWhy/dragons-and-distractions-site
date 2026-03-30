@@ -2,20 +2,14 @@
 name: "The Slumber Troll"
 emoji: "🌙"
 sigil: "/assets/generated/slumber-troll-sigil.png"
-banner_image: "/assets/generated/slumber-troll-banner.png"
-banner_image_srcset:
-  - path: "/assets/generated/slumber-troll-banner-640.webp"
-    width: 640
-  - path: "/assets/generated/slumber-troll-banner-1024.webp"
-    width: 1024
-  - path: "/assets/generated/slumber-troll-banner-1536.webp"
-    width: 1536
-banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
+card_art: "/assets/generated/cards/monster-slumber-troll-card-front-web.webp"
+banner_image: "/assets/generated/slumber-troll-banner.webp"
 banner_image_alt: "Sleepy dawn bridge from blankets to morning light with a quiet river crossing"
 tagline: "Sleep inertia & morning bridges"
 description: "Cross from blankets to momentum with wake invocations, light cues, and accountability ropes."
 plain_name: "morning inertia and transition friction"
 challenge_summary: "Slumber Troll blocks the bridge between rest and motion, especially when your body has not caught up with your intentions yet."
+accent_color: "#2d6b3a"
 you_might_be_here_if:
   - "You keep bargaining for a few more minutes until the morning disappears."
   - "Standing up feels harder than the task waiting for you."

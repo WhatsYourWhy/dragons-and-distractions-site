@@ -2,20 +2,14 @@
 name: "The Burnout Dragon"
 emoji: "🔥"
 sigil: "/assets/generated/burnout-dragon-sigil.png"
-banner_image: "/assets/generated/burnout-dragon-banner.png"
-banner_image_srcset:
-  - path: "/assets/generated/burnout-dragon-banner-640.webp"
-    width: 640
-  - path: "/assets/generated/burnout-dragon-banner-1024.webp"
-    width: 1024
-  - path: "/assets/generated/burnout-dragon-banner-1536.webp"
-    width: 1536
-banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
+card_art: "/assets/generated/cards/monster-burnout-dragon-card-front-web.webp"
+banner_image: "/assets/generated/burnout-dragon-banner.webp"
 banner_image_alt: "Resting dragon curled around a small ember in a quiet cavern"
 tagline: "When everything costs too much"
 description: "Scale down to a minimum viable day, protect your remaining energy, and stop treating depletion like a motivation problem."
 plain_name: "burnout, deep depletion, and task collapse"
 challenge_summary: "Burnout Dragon appears when your reserves are so low that ordinary tasks feel expensive, recovery keeps getting deferred, and even useful plans start to feel like demands."
+accent_color: "#8b3a1a"
 you_might_be_here_if:
   - "Everything feels heavier than it used to, even simple things."
   - "Rest does not seem to refill you because the pressure never really stops."
@@ -26,8 +20,8 @@ start_here_ritual:
   description: "Cut the day down to essentials, protect one recovery action, and stop pretending you have capacity you do not have."
 featured_printable:
   label: "Minimum Viable Day sheet"
-  url: "/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf"
-  description: "A grounding sheet for naming today's real capacity, minimum needs, and what gets deferred."
+  url: "/site/printables/burnout-dragon-minimum-viable-day.html"
+  description: "A readable worksheet page for naming today's real capacity, minimum needs, and what gets deferred before you print."
 support_boundary: "This page is for naming depletion and reducing demands, not for pushing through dangerous exhaustion. If burnout is affecting your safety, health, or ability to function, seek medical, workplace, or community support alongside rest."
 cta: "Scale it down"
 badges:
@@ -54,6 +48,14 @@ tags:
   - monster-page
   - obsidian
 ---
+
+<div class="monster-hero">
+  <img src="{{ "/burnout-dragon.png" | relative_url }}" alt="Illustration of the Burnout Dragon curled around a dim ember in a cavern">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Burnout Dragon Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/burnout-dragon.png" | relative_url }}">PNG</a> | <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+  </div>
+</div>
 
 <div class="battle-card">
   <div class="battle-card__eyebrow">Battle Card</div>

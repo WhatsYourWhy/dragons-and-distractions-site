@@ -1,0 +1,52 @@
+{% assign path = include.path %}
+{% assign matched_monster = include.matched_monster %}
+{% assign card_media = matched_monster.card_art | default: matched_monster.sigil %}
+{% assign default_card_art_width = 512 %}
+{% assign default_card_art_height = 768 %}
+{% assign default_sigil_width = 1024 %}
+{% assign default_sigil_height = 1024 %}
+{% if include.heading_id %}
+  {% assign heading_id = include.heading_id %}
+{% else %}
+  {% assign heading_id = "path-" | append: path.slug %}
+{% endif %}
+{% if matched_monster.card_art %}
+  {% assign card_media_width = matched_monster.card_art_width | default: default_card_art_width %}
+  {% assign card_media_height = matched_monster.card_art_height | default: default_card_art_height %}
+{% else %}
+  {% assign card_media_width = matched_monster.sigil_width | default: default_sigil_width %}
+  {% assign card_media_height = matched_monster.sigil_height | default: default_sigil_height %}
+{% endif %}
+
+<article class="path-card{% if card_media %} path-card--with-media{% endif %}{% if matched_monster.card_art %} path-card--with-card-art{% endif %}{% if include.extra_class %} {{ include.extra_class }}{% endif %}"{% if include.card_id %} id="{{ include.card_id }}"{% endif %} aria-labelledby="{{ heading_id }}" style="--monster-accent: {{ matched_monster.accent_color | default: '#c8900a' }};">
+  {% if matched_monster and card_media %}
+  <figure class="path-card__media{% if matched_monster.card_art %} path-card__media--card{% else %} path-card__media--sigil{% endif %}">
+    <img src="{{ card_media | relative_url }}" alt="" loading="lazy" decoding="async" width="{{ card_media_width }}" height="{{ card_media_height }}">
+  </figure>
+  {% endif %}
+  <div class="path-card__body">
+    <div class="path-card__content">
+      <div class="path-card__eyebrow">Start with the stuck point</div>
+      <h3 id="{{ heading_id }}" class="path-card__title">{{ path.struggle }}</h3>
+      <p class="path-card__summary">{{ path.summary }}</p>
+      <p class="path-card__monster">Best match: <a href="{{ path.monster_url | relative_url }}">{{ path.monster_name }}</a></p>
+      <ul class="signal-list">
+        {% for sign in path.signs %}
+        <li>{{ sign }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="path-card__actions">
+      <a class="path-card__action" href="{{ path.ritual_url | relative_url }}">
+        <span class="path-card__action-kind">Ritual</span>
+        <strong>{{ path.ritual_label }}</strong>
+        <span class="path-card__action-summary">{{ path.ritual_summary }}</span>
+      </a>
+      <a class="path-card__action" href="{{ path.printable_url | relative_url }}">
+        <span class="path-card__action-kind">Printable</span>
+        <strong>{{ path.printable_label }}</strong>
+        <span class="path-card__action-summary">{{ path.printable_summary }}</span>
+      </a>
+    </div>
+  </div>
+</article>
