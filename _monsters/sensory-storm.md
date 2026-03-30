@@ -2,7 +2,15 @@
 name: "The Sensory Storm"
 emoji: "⛈️"
 sigil: "/assets/generated/sensory-storm-sigil.png"
-banner_image: "/assets/generated/sensory-storm-banner.webp"
+banner_image: "/assets/generated/sensory-storm-banner.png"
+banner_image_srcset:
+  - path: "/assets/generated/sensory-storm-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/sensory-storm-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/sensory-storm-banner-1536.webp"
+    width: 1536
+banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
 banner_image_alt: "Sheltered refuge beneath swirling storm patterns, lantern light, and a calm center"
 tagline: "Too much input, not enough shelter"
 description: "Reduce overload with input triage, one-sense anchors, and a reset plan that protects your nervous system before asking for performance."

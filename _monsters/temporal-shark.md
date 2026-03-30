@@ -2,7 +2,15 @@
 name: "The Temporal Shark"
 emoji: "🦈"
 sigil: "/assets/generated/temporal-shark-sigil.png"
-banner_image: "/assets/generated/temporal-shark-banner.webp"
+banner_image: "/assets/generated/temporal-shark-banner.png"
+banner_image_srcset:
+  - path: "/assets/generated/temporal-shark-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/temporal-shark-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/temporal-shark-banner-1536.webp"
+    width: 1536
+banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
 banner_image_alt: "Shark fin cutting through tidal water with clockwork and calendar fragments in the surf"
 tagline: "Deadlines you can feel"
 description: "Make time visible with Tide Marks, Buddy Buoys, and first bites before the fin is at your feet."

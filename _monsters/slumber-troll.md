@@ -2,7 +2,15 @@
 name: "The Slumber Troll"
 emoji: "🌙"
 sigil: "/assets/generated/slumber-troll-sigil.png"
-banner_image: "/assets/generated/slumber-troll-banner.webp"
+banner_image: "/assets/generated/slumber-troll-banner.png"
+banner_image_srcset:
+  - path: "/assets/generated/slumber-troll-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/slumber-troll-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/slumber-troll-banner-1536.webp"
+    width: 1536
+banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
 banner_image_alt: "Sleepy dawn bridge from blankets to morning light with a quiet river crossing"
 tagline: "Sleep inertia & morning bridges"
 description: "Cross from blankets to momentum with wake invocations, light cues, and accountability ropes."

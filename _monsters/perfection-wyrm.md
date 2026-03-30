@@ -2,7 +2,15 @@
 name: "The Perfection Wyrm"
 emoji: "🐉"
 sigil: "/assets/generated/perfection-wyrm-sigil.png"
-banner_image: "/assets/generated/perfection-wyrm-banner.webp"
+banner_image: "/assets/generated/perfection-wyrm-banner.png"
+banner_image_srcset:
+  - path: "/assets/generated/perfection-wyrm-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/perfection-wyrm-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/perfection-wyrm-banner-1536.webp"
+    width: 1536
+banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
 banner_image_alt: "Paper-scaled wyrm coiled around unfinished pages, ink, wax seal, and candlelight"
 tagline: "Polish loops that keep the work from ever leaving the cave"
 description: "Break revision spirals with an ugly first pass, a visible ship line, and permission to stop when the work is already useful."

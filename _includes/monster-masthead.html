@@ -2,10 +2,17 @@
 {% assign default_banner_height = 1024 %}
 {% assign default_sigil_width = 1024 %}
 {% assign default_sigil_height = 1024 %}
+{% assign banner_image_srcset_entries = page.banner_image_srcset | default: nil %}
+{% assign banner_image_sizes = page.banner_image_sizes | default: "(min-width: 1200px) 1180px, 100vw" %}
 <section class="monster-masthead{% if page.banner_image %} monster-masthead--illustrated{% endif %}" aria-labelledby="monster-masthead-name">
   {% if page.banner_image %}
   <div class="monster-masthead__media">
-    <img src="{{ page.banner_image | relative_url }}" alt="{{ page.banner_image_alt | default: page.name }}" width="{{ page.banner_image_width | default: default_banner_width }}" height="{{ page.banner_image_height | default: default_banner_height }}" decoding="async">
+    <picture>
+      {% if banner_image_srcset_entries %}
+      <source srcset="{% for source in banner_image_srcset_entries %}{{ source.path | relative_url }} {{ source.width }}w{% unless forloop.last %}, {% endunless %}{% endfor %}" sizes="{{ banner_image_sizes }}" type="image/webp">
+      {% endif %}
+      <img src="{{ page.banner_image | relative_url }}" alt="{{ page.banner_image_alt | default: page.name }}" width="{{ page.banner_image_width | default: default_banner_width }}" height="{{ page.banner_image_height | default: default_banner_height }}" loading="eager" fetchpriority="high" decoding="async">
+    </picture>
   </div>
   {% endif %}
   <div class="monster-masthead__body">

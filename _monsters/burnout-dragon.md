@@ -2,7 +2,15 @@
 name: "The Burnout Dragon"
 emoji: "🔥"
 sigil: "/assets/generated/burnout-dragon-sigil.png"
-banner_image: "/assets/generated/burnout-dragon-banner.webp"
+banner_image: "/assets/generated/burnout-dragon-banner.png"
+banner_image_srcset:
+  - path: "/assets/generated/burnout-dragon-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/burnout-dragon-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/burnout-dragon-banner-1536.webp"
+    width: 1536
+banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
 banner_image_alt: "Resting dragon curled around a small ember in a quiet cavern"
 tagline: "When everything costs too much"
 description: "Scale down to a minimum viable day, protect your remaining energy, and stop treating depletion like a motivation problem."

@@ -10,6 +10,12 @@ show_quick_actions: false
 show_nav_cards: false
 hero_image: "/assets/generated/choose-your-monster-banner.png"
 hero_image_webp: "/assets/generated/choose-your-monster-banner.webp"
+hero_image_srcset:
+  - path: "/assets/generated/choose-your-monster-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/choose-your-monster-banner-1024.webp"
+    width: 1024
+hero_image_sizes: "(min-width: 880px) 42vw, 100vw"
 hero_image_alt: "Branching tabletop map with glowing paths toward different monster routes"
 hero_image_width: 1024
 hero_image_height: 1024

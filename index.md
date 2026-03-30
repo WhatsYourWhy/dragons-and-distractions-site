@@ -9,6 +9,14 @@ show_quick_actions: false
 show_nav_cards: false
 hero_image: "/assets/generated/homepage-hero-web.png"
 hero_image_webp: "/assets/generated/homepage-hero-web.webp"
+hero_image_srcset:
+  - path: "/assets/generated/homepage-hero-web-640.webp"
+    width: 640
+  - path: "/assets/generated/homepage-hero-web-1024.webp"
+    width: 1024
+  - path: "/assets/generated/homepage-hero-web-1536.webp"
+    width: 1536
+hero_image_sizes: "(min-width: 880px) 42vw, 100vw"
 hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
 hero_image_width: 1536
 hero_image_height: 1024

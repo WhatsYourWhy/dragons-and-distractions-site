@@ -9,7 +9,7 @@
   <article class="path-card" aria-labelledby="path-{{ path.slug }}">
     {% if matched_monster and matched_monster.sigil %}
     <figure class="path-card__sigil">
-      <img src="{{ matched_monster.sigil | relative_url }}" alt="{{ path.monster_name }} sigil">
+      <img src="{{ matched_monster.sigil | relative_url }}" alt="">
     </figure>
     {% endif %}
     <div class="path-card__eyebrow">Start with the stuck point</div>
