@@ -58,7 +58,7 @@ hero_image_height: 1024
       <h3>Threshold Spell</h3>
       <p class="ritual-library__preview">First step: stand in the doorway, breathe, and face the light.</p>
       <div class="ritual-entry__actions">
-        <a class="ritual-chip" href="#cave-bear-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/spellbook/threshold-spell.html' | relative_url }}">Open ritual</a>
         <a class="ritual-chip" href="{{ '/site/printables/tide-marks-buddy-ping.html' | relative_url }}">Tool page</a>
       </div>
     </article>
@@ -67,7 +67,7 @@ hero_image_height: 1024
       <h3>Goblin Deal</h3>
       <p class="ritual-library__preview">First step: pre-select the reward before the distraction hits.</p>
       <div class="ritual-entry__actions">
-        <a class="ritual-chip" href="#dopamine-goblin-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/spellbook/goblin-deal.html' | relative_url }}">Open ritual</a>
         <a class="ritual-chip" href="{{ '/site/printables/single-task-oath-card.html' | relative_url }}">Tool page</a>
       </div>
     </article>
@@ -76,7 +76,7 @@ hero_image_height: 1024
       <h3>Ugly First Pass</h3>
       <p class="ritual-library__preview">First step: make the whole shape before polishing any sentence.</p>
       <div class="ritual-entry__actions">
-        <a class="ritual-chip" href="#perfection-wyrm-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/spellbook/ugly-first-pass.html' | relative_url }}">Open ritual</a>
         <a class="ritual-chip" href="{{ '/site/printables/perfection-wyrm-done-is-better.html' | relative_url }}">Tool page</a>
       </div>
     </article>
@@ -85,7 +85,7 @@ hero_image_height: 1024
       <h3>Reply Scaffold</h3>
       <p class="ritual-library__preview">First step: choose the reply shape before you write the message.</p>
       <div class="ritual-entry__actions">
-        <a class="ritual-chip" href="#rejection-wisp-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/spellbook/reply-scaffold.html' | relative_url }}">Open ritual</a>
         <a class="ritual-chip" href="{{ '/site/printables/rejection-wisp-reply-scaffold.html' | relative_url }}">Tool page</a>
       </div>
     </article>
@@ -94,7 +94,7 @@ hero_image_height: 1024
       <h3>Reduce Inputs First</h3>
       <p class="ritual-library__preview">First step: lower the loudest, brightest, or scratchiest input first.</p>
       <div class="ritual-entry__actions">
-        <a class="ritual-chip" href="#sensory-storm-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/spellbook/reduce-inputs-first.html' | relative_url }}">Open ritual</a>
         <a class="ritual-chip" href="{{ '/site/printables/sensory-storm-reset-card.html' | relative_url }}">Tool page</a>
       </div>
     </article>
@@ -103,7 +103,7 @@ hero_image_height: 1024
       <h3>Minimum Viable Day</h3>
       <p class="ritual-library__preview">First step: list only the true essentials before you plan anything else.</p>
       <div class="ritual-entry__actions">
-        <a class="ritual-chip" href="#burnout-dragon-rituals">Jump to anchor</a>
+        <a class="ritual-chip" href="{{ '/spellbook/minimum-viable-day.html' | relative_url }}">Open ritual</a>
         <a class="ritual-chip" href="{{ '/site/printables/burnout-dragon-minimum-viable-day.html' | relative_url }}">Tool page</a>
       </div>
     </article>

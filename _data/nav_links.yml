@@ -23,3 +23,8 @@
   description: "Read the grounding promises and framework notes behind the toolkit."
   cta: "Read the Codex"
   style: tertiary
+- label: Shop
+  url: "/shop/"
+  description: "Grab the card deck, support the project, or wait for the physical edition."
+  cta: "Visit Shop"
+  style: tertiary

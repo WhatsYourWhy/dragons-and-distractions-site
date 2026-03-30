@@ -16,7 +16,7 @@ you_might_be_here_if:
   - "You call it 'making it better' even when the real problem is fear."
 start_here_ritual:
   label: "Ugly First Pass"
-  url: "/spellbook/#perfection-wyrm-rituals"
+  url: "/spellbook/ugly-first-pass.html"
   description: "Make one deliberately imperfect pass, define what 'useful enough' means, and stop when the draft crosses that line."
 featured_printable:
   label: "Done Is Better worksheet"

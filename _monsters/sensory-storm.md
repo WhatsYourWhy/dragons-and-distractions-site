@@ -16,7 +16,7 @@ you_might_be_here_if:
   - "Relief comes faster from reducing input than from trying harder."
 start_here_ritual:
   label: "Reduce Inputs First"
-  url: "/spellbook/#sensory-storm-rituals"
+  url: "/spellbook/reduce-inputs-first.html"
   description: "Lower one major input, add one sensory anchor, and give your body a smaller environment before asking it to function."
 featured_printable:
   label: "Sensory Reset card"

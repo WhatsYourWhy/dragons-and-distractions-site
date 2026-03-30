@@ -16,7 +16,7 @@ you_might_be_here_if:
   - "A doorway step or a text to another person helps more than building a bigger plan."
 start_here_ritual:
   label: "Threshold Spell"
-  url: "/spellbook/#cave-bear-rituals"
+  url: "/spellbook/threshold-spell.html"
   description: "Move to the doorway, take one body-first step, and use a social rope if you need outside help getting started."
 featured_printable:
   label: "Buddy Ping template"
