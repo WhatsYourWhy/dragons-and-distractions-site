@@ -280,7 +280,7 @@ def check_required_links(check: LinkCheck) -> list[str]:
 def check_broken_pdf_links(
     content_files: list[Path], *, require_existing_pdfs: bool = True
 ) -> list[str]:
-    missing: dict[Path, list[str]] = {}
+    missing: dict[str, list[str]] = {}
 
     for md_file in content_files:
         pdf_links = find_pdf_links(md_file, include_non_printables=True)

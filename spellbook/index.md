@@ -7,8 +7,16 @@ hero_intro: "Come here when you want the counter-spells without rereading the fu
 show_breadcrumbs: true
 hero_image: "/assets/generated/spellbook-banner.png"
 hero_image_webp: "/assets/generated/spellbook-banner.webp"
+hero_image_srcset:
+  - path: "/assets/generated/spellbook-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/spellbook-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/spellbook-banner-1536.webp"
+    width: 1536
+hero_image_sizes: "(min-width: 880px) 42vw, 100vw"
 hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spell tools"
-hero_image_width: 1024
+hero_image_width: 1536
 hero_image_height: 1024
 ---
 

@@ -7,9 +7,22 @@ hero_intro: "Use this cabinet when you want the lowest-friction version of the s
 show_breadcrumbs: false
 hero_image: "/assets/generated/printables-banner.png"
 hero_image_webp: "/assets/generated/printables-banner.webp"
+hero_image_srcset:
+  - path: "/assets/generated/printables-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/printables-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/printables-banner-1536.webp"
+    width: 1536
+hero_image_sizes: "(min-width: 880px) 42vw, 100vw"
 hero_image_alt: "Organized tabletop with printable cards, checklists, folders, and practical support tools"
-hero_image_width: 1024
+hero_image_width: 1536
 hero_image_height: 1024
+image:
+  path: "/assets/generated/printables-banner.png"
+  width: 1536
+  height: 1024
+  alt: "Organized tabletop with printable cards, checklists, folders, and practical support tools"
 ---
 
 <div class="section-callout">
