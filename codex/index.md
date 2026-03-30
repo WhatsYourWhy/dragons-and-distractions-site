@@ -7,9 +7,23 @@ hero_intro: "The mythic language is here to lower shame and increase recognition
 show_breadcrumbs: true
 show_nav_cards: false
 hero_image: "/assets/generated/codex-banner.png"
+hero_image_webp: "/assets/generated/codex-banner.webp"
+hero_image_srcset:
+  - path: "/assets/generated/codex-banner-640.webp"
+    width: 640
+  - path: "/assets/generated/codex-banner-1024.webp"
+    width: 1024
+  - path: "/assets/generated/codex-banner-1536.webp"
+    width: 1536
+hero_image_sizes: "(min-width: 880px) 42vw, 100vw"
 hero_image_alt: "Guild charter desk with illuminated manuscript pages, lantern, and quiet study tools"
-hero_image_width: 1024
+hero_image_width: 1536
 hero_image_height: 1024
+image:
+  path: "/assets/generated/codex-banner.png"
+  width: 1536
+  height: 1024
+  alt: "Guild charter desk with illuminated manuscript pages, lantern, and quiet study tools"
 ---
 
 <section class="landing-section">

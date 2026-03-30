@@ -73,15 +73,6 @@ hero_microcopy: "If overwhelmed, start here. One monster match is enough for now
 
 <section class="landing-section">
   <div class="section-heading">
-    <p class="section-heading__eyebrow">Choose by feeling</p>
-    <h2>Skip the taxonomy and go straight to the match</h2>
-    <p>Each card below gives you signs, one ritual, and one fast tool. Start with the thing making today harder.</p>
-  </div>
-  {% include chooser-grid.html %}
-</section>
-
-<section class="landing-section">
-  <div class="section-heading">
     <p class="section-heading__eyebrow">What to do next</p>
     <h2>Pick the depth that fits your energy</h2>
   </div>

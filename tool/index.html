@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /tool/
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting to Fast Tools</title>
+    <meta http-equiv="refresh" content="0; url={{ '/site/' | relative_url }}">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ '/site/' | absolute_url }}">
+    <script>
+      window.location.replace({{ '/site/' | relative_url | jsonify }});
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ '/site/' | relative_url }}">Fast Tools</a>.</p>
+  </body>
+</html>

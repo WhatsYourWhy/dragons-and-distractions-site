@@ -16,7 +16,7 @@ you_might_be_here_if:
   - "The problem is not knowing what matters; it is keeping the shiny thing from hijacking the session."
 start_here_ritual:
   label: "Goblin deal"
-  url: "/spellbook/goblin-deal.html"
+  url: "/spellbook/#dopamine-goblin-rituals"
   description: "Make a short work contract, pre-select the reward, and let the goblin earn its shiny."
 featured_printable:
   label: "Single-Task Oath card"
