@@ -89,6 +89,21 @@ CHECKS: list[LinkCheck] = [
 ]
 
 
+def display_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(ROOT)).replace("\\", "/")
+    except ValueError:
+        return str(path).replace("\\", "/")
+
+
+def display_outside_target(target: Path) -> str:
+    raw = str(target)
+    normalized = raw.replace("\\", "/")
+    if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]+:/", normalized) or normalized.startswith("//"):
+        return normalized
+    return raw
+
+
 def find_pdf_links(path: Path, *, include_non_printables: bool = False) -> list[Path]:
     links: list[Path] = []
     text = path.read_text(encoding="utf-8", errors="ignore")
@@ -174,14 +189,12 @@ def resolve_link_target(link: str, source: Path) -> Path:
 
     target = Path(link)
     if target.is_absolute():
-        return target.resolve()
+        return target
 
     return (source.parent / target).resolve()
 
 
-def display_path(path) -> str:
-    if isinstance(path, str):
-        path = Path(path)
+def display_path(path: Path) -> str:
     return path.as_posix()
 
 
@@ -295,7 +308,10 @@ def check_broken_pdf_links(
             broken.append("missing printable link for monster entry")
 
         if broken:
-            missing[md_file.relative_to(ROOT)] = broken
+            try:
+                missing[md_file.relative_to(ROOT)] = broken
+            except ValueError:
+                missing[md_file] = broken
 
     errors: list[str] = []
     for md_path, issues in missing.items():
@@ -309,7 +325,7 @@ def check_broken_pdf_links(
 def check_yaml_pdf_links(
     yaml_files: list[Path], *, require_existing_pdfs: bool = True
 ) -> list[str]:
-    missing: dict[Path, list[str]] = {}
+    missing: dict[str, list[str]] = {}
 
     for yaml_file in yaml_files:
         pdf_links = extract_yaml_pdf_links(yaml_file)
@@ -333,7 +349,7 @@ def check_yaml_pdf_links(
                 broken.append(display_path(rel_target))
 
         if broken:
-            missing[yaml_file.relative_to(ROOT)] = broken
+            missing[display_path(yaml_file)] = broken
 
     errors: list[str] = []
     for yaml_path, issues in missing.items():
