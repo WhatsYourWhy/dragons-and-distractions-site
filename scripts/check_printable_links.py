@@ -179,7 +179,9 @@ def resolve_link_target(link: str, source: Path) -> Path:
     return (source.parent / target).resolve()
 
 
-def display_path(path: Path) -> str:
+def display_path(path) -> str:
+    if isinstance(path, str):
+        path = Path(path)
     return path.as_posix()
 
 
