@@ -1,13 +1,22 @@
 ﻿---
 layout: hub
 title: "Dragons & Distractions"
+description: "A fantasy toolkit for executive-function battles: identify the stuck pattern, choose the monster, and take one practical step."
 hero_title: "A fantasy toolkit for real executive-function battles"
-hero_intro: "Name the stuck feeling, choose the monster, and take one practical step without losing the wonder."
+hero_intro: "Name the stuck feeling, choose the monster, and take one practical ADHD-friendly ritual, tool, or printable without losing the wonder."
 show_breadcrumbs: false
 show_quick_actions: false
 show_nav_cards: false
 hero_image: "/assets/generated/homepage-hero-web.png"
+hero_image_webp: "/assets/generated/homepage-hero-web.webp"
 hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
+hero_image_width: 1536
+hero_image_height: 1024
+image:
+  path: "/assets/generated/homepage-hero-web.png"
+  width: 1536
+  height: 1024
+  alt: "Mythic tabletop landscape with a lantern, ritual cards, and a path opening toward dawn"
 ---
 
 <section class="landing-section">
@@ -64,15 +73,6 @@ hero_image_alt: "Mythic tabletop landscape with a lantern, ritual cards, and a p
       <p>This site is a practical companion, not a diagnosis, treatment plan, or substitute for professional mental health care.</p>
     </article>
   </div>
-</section>
-
-<section class="landing-section">
-  <div class="section-heading">
-    <p class="section-heading__eyebrow">Choose by feeling</p>
-    <h2>Skip the taxonomy and go straight to the match</h2>
-    <p>Each card below gives you signs, one ritual, and one fast tool. Start with the thing making today harder.</p>
-  </div>
-  {% include chooser-grid.html %}
 </section>
 
 <section class="landing-section">

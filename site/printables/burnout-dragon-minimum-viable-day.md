@@ -1,5 +1,6 @@
 ---
 title: "Minimum Viable Day"
+description: "A planning sheet for depleted days that helps you set a smaller, kinder, and more survivable plan."
 hero_intro: "A planning sheet for depleted days. Use it when the honest plan needs to be smaller, kinder, and more survivable."
 ink_pdf: "/site/printables/pdf/burnout-dragon-minimum-viable-day-ink.pdf"
 related_ritual:

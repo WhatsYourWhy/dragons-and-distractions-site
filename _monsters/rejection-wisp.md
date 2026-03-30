@@ -2,7 +2,7 @@
 name: "The Rejection Wisp"
 emoji: "👻"
 sigil: "/assets/generated/rejection-wisp-sigil.png"
-banner_image: "/assets/generated/rejection-wisp-banner.png"
+banner_image: "/assets/generated/rejection-wisp-banner.webp"
 banner_image_alt: "Lantern-lit desk with a sealed letter, soft ghostly ring, and open doorway at dusk"
 tagline: "One hard interaction that fogs the whole inbox"
 description: "Reduce message dread with reply scaffolds, acknowledgement scripts, and gentler re-entry after a social sting."

@@ -1,6 +1,7 @@
 ﻿---
 layout: hub
 title: "Choose Your Monster"
+description: "Start with the stuck feeling you recognize and get one first ritual and one fast tool without digging through the whole bestiary."
 permalink: "/choose-your-monster/"
 hero_title: "Choose Your Monster"
 hero_intro: "Start with the stuck feeling you recognize. Each path gives you plain-language signs, one first ritual, and one fast tool."
@@ -8,7 +9,15 @@ show_breadcrumbs: false
 show_quick_actions: false
 show_nav_cards: false
 hero_image: "/assets/generated/choose-your-monster-banner.png"
+hero_image_webp: "/assets/generated/choose-your-monster-banner.webp"
 hero_image_alt: "Branching tabletop map with glowing paths toward different monster routes"
+hero_image_width: 1024
+hero_image_height: 1024
+image:
+  path: "/assets/generated/choose-your-monster-banner.png"
+  width: 1024
+  height: 1024
+  alt: "Branching tabletop map with glowing paths toward different monster routes"
 ---
 
 <div class="section-callout">

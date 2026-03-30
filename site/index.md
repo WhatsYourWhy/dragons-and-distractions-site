@@ -1,11 +1,15 @@
 ﻿---
 layout: hub
 title: "Printables"
+description: "Printable cards, checklists, and templates from the toolkit - ink-friendly PDFs and quick links from each monster path."
 hero_title: "Fast Tools, Cards, and Templates"
 hero_intro: "Use this cabinet when you want the lowest-friction version of the support: a card to print, a checklist to keep nearby, or a script to send."
 show_breadcrumbs: false
 hero_image: "/assets/generated/printables-banner.png"
+hero_image_webp: "/assets/generated/printables-banner.webp"
 hero_image_alt: "Organized tabletop with printable cards, checklists, folders, and practical support tools"
+hero_image_width: 1024
+hero_image_height: 1024
 ---
 
 <div class="section-callout">

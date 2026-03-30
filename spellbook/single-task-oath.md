@@ -1,5 +1,6 @@
 ---
 title: "Single-Task Oath"
+description: "A short ritual for overwhelm spirals that helps you name one task, stay in one lane, and stop the list from multiplying."
 hero_intro: "A short ritual for overwhelm spirals. Use it when the list keeps multiplying and you need one visible task instead of ten competing ones."
 ---
 

@@ -1,6 +1,7 @@
 ﻿---
 layout: hub
 title: "Monster Index"
+description: "Browse every monster in the bestiary with short hooks, first rituals, and fast tools - or filter the list when you know part of the name or feeling."
 hero_title: "Map the Monsters"
 hero_intro: "Start with the monster that matches your current stuck point, or use the guided chooser if you want plain-language routing first."
 show_breadcrumbs: false

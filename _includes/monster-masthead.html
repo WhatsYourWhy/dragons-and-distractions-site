@@ -1,7 +1,11 @@
+{% assign default_banner_width = 1536 %}
+{% assign default_banner_height = 1024 %}
+{% assign default_sigil_width = 1024 %}
+{% assign default_sigil_height = 1024 %}
 <section class="monster-masthead{% if page.banner_image %} monster-masthead--illustrated{% endif %}" aria-labelledby="monster-masthead-name">
   {% if page.banner_image %}
   <div class="monster-masthead__media">
-    <img src="{{ page.banner_image | relative_url }}" alt="{{ page.banner_image_alt | default: page.name }}">
+    <img src="{{ page.banner_image | relative_url }}" alt="{{ page.banner_image_alt | default: page.name }}" width="{{ page.banner_image_width | default: default_banner_width }}" height="{{ page.banner_image_height | default: default_banner_height }}" decoding="async">
   </div>
   {% endif %}
   <div class="monster-masthead__body">
@@ -9,11 +13,11 @@
     <div class="monster-masthead__title-row">
       {% if page.sigil %}
       <figure class="monster-masthead__sigil">
-        <img src="{{ page.sigil | relative_url }}" alt="{{ page.name }} sigil">
+        <img src="{{ page.sigil | relative_url }}" alt="" width="{{ page.sigil_width | default: default_sigil_width }}" height="{{ page.sigil_height | default: default_sigil_height }}" loading="lazy" decoding="async">
       </figure>
       {% endif %}
       <div class="monster-masthead__heading">
-        <p id="monster-masthead-name" class="monster-masthead__name">{{ page.name }}</p>
+        <h1 id="monster-masthead-name" class="monster-masthead__name">{{ page.name }}</h1>
         <p class="monster-masthead__tagline">{{ page.tagline }}</p>
       </div>
     </div>
@@ -30,11 +34,11 @@
 
     <div class="monster-masthead__actions">
       <a class="cta-button" href="{{ page.start_here_ritual.url | relative_url }}">
-        <span class="cta-button__emoji" aria-hidden="true">⚔️</span>
+        <span class="cta-button__emoji" aria-hidden="true">&#9876;&#65039;</span>
         <span>{{ page.start_here_ritual.label }}</span>
       </a>
       <a class="cta-button" href="{{ page.featured_printable.url | relative_url }}">
-        <span class="cta-button__emoji" aria-hidden="true">🧰</span>
+        <span class="cta-button__emoji" aria-hidden="true">&#129520;</span>
         <span>{{ page.featured_printable.label }}</span>
       </a>
     </div>

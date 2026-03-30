@@ -1,5 +1,6 @@
 ---
 title: "Tide Mark Calendar"
+description: "A pre-commitment ritual for time blindness that makes a real start time visible before the deadline panic hits."
 hero_intro: "A pre-commitment ritual for time blindness. Use it when deadlines feel imaginary until they are suddenly on top of you."
 ---
 

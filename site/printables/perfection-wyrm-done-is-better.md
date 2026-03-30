@@ -1,5 +1,6 @@
 ---
 title: "Done Is Better Worksheet"
+description: "A stopping tool for revision spirals that helps you spot when improving has turned into hiding."
 hero_intro: "A stopping tool for revision spirals. Use it when polishing has quietly turned into hiding."
 ink_pdf: "/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf"
 related_ritual:

@@ -2,7 +2,7 @@
 name: "The Cave Bear"
 emoji: "🐻"
 sigil: "/assets/generated/cave-bear-sigil.png"
-banner_image: "/assets/generated/cave-bear-banner.png"
+banner_image: "/assets/generated/cave-bear-banner.webp"
 banner_image_alt: "Warm cave opening toward daylight with a gentle bear presence and a path back outside"
 tagline: "Avoidance & hibernation holes"
 description: "Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave."

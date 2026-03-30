@@ -1,5 +1,6 @@
 ---
 title: "Reply Scaffold"
+description: "A gentle re-entry card for scary threads and inbox dread that helps you reopen the channel without overexplaining."
 hero_intro: "A gentle re-entry card for scary threads and inbox dread. Use it when a message feels bigger than it is."
 ink_pdf: "/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf"
 related_ritual:

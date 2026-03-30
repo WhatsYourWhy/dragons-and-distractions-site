@@ -1,5 +1,6 @@
 ---
 title: "Tide Mark Calendar"
+description: "A one-page planning card for time blindness that makes a start time visible before the deadline feels real."
 hero_intro: "A one-page planning card for time blindness. Use it to make a start time real before the deadline feels real."
 ink_pdf: "/site/printables/pdf/tide-mark-calendar-card-ink.pdf"
 related_ritual:

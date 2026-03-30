@@ -1,5 +1,6 @@
 ---
 title: "Wake Invocation"
+description: "A bedside ritual for hard starts that helps you move before the morning negotiation gets louder."
 hero_intro: "A bedside ritual for hard starts. Use it when mornings become negotiations before your feet hit the floor."
 ---
 
