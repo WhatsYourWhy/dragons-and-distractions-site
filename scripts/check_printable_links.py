@@ -308,7 +308,10 @@ def check_broken_pdf_links(
             broken.append("missing printable link for monster entry")
 
         if broken:
-            missing[display_path(md_file)] = broken
+            try:
+                missing[md_file.relative_to(ROOT)] = broken
+            except ValueError:
+                missing[md_file] = broken
 
     errors: list[str] = []
     for md_path, issues in missing.items():
