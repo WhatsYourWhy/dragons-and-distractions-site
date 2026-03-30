@@ -16,7 +16,7 @@ you_might_be_here_if:
   - "You need fewer expectations, not better productivity hacks."
 start_here_ritual:
   label: "Minimum Viable Day"
-  url: "/spellbook/#burnout-dragon-rituals"
+  url: "/spellbook/minimum-viable-day.html"
   description: "Cut the day down to essentials, protect one recovery action, and stop pretending you have capacity you do not have."
 featured_printable:
   label: "Minimum Viable Day sheet"

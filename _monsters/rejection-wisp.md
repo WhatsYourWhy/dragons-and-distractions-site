@@ -16,7 +16,7 @@ you_might_be_here_if:
   - "A tiny script helps more than trying to improvise while flooded."
 start_here_ritual:
   label: "Reply Scaffold"
-  url: "/spellbook/#rejection-wisp-rituals"
+  url: "/spellbook/reply-scaffold.html"
   description: "Choose the smallest reply shape that moves the thread forward instead of waiting for the perfect emotional state."
 featured_printable:
   label: "Reply Scaffold card"
