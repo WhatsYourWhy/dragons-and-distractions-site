@@ -19,6 +19,7 @@ header_include: site-header.html
 plugins:
   - jekyll-optional-front-matter
   - jekyll-titles-from-headings
+  - jekyll-sitemap
 
 titles_from_headings:
   strip_title: true
