@@ -4,7 +4,23 @@
       <span class="site-banner__brand-title">{{ site.title }}</span>
       <span class="site-banner__brand-subtitle">Practical tools before the lore</span>
     </a>
-    <nav class="site-banner__nav" aria-label="Primary">
+    <div class="site-banner__controls">
+      <button
+        class="site-banner__menu-toggle js-menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="Open menu"
+      >
+        <span class="site-banner__menu-toggle-box" aria-hidden="true">
+          <span class="site-banner__menu-toggle-line"></span>
+          <span class="site-banner__menu-toggle-line"></span>
+          <span class="site-banner__menu-toggle-line"></span>
+        </span>
+        <span class="site-banner__menu-toggle-text">Menu</span>
+      </button>
+    </div>
+    <nav id="site-navigation" class="site-banner__nav js-site-nav" aria-label="Primary">
       <ul class="site-banner__links">
         {% assign nav_links = site.data.nav_links %}
         {% for link in nav_links %}

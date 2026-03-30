@@ -1677,6 +1677,66 @@ h6 {
   padding: 0.5rem 0.8rem;
 }
 
+.site-banner__controls {
+  display: none;
+  margin-left: auto;
+  position: relative;
+  z-index: 45;
+}
+
+.site-banner__menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(220, 227, 243, 0.95);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-strong);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.site-banner__menu-toggle:hover,
+.site-banner__menu-toggle:focus,
+.site-banner__menu-toggle:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+  box-shadow: var(--shadow-focus-ring);
+}
+
+.site-banner__menu-toggle-box {
+  display: inline-grid;
+  gap: 0.22rem;
+}
+
+.site-banner__menu-toggle-line {
+  width: 1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform var(--transition-medium), opacity var(--transition-medium);
+}
+
+.site-banner__menu-toggle-text {
+  line-height: 1;
+}
+
+body.nav-open .site-banner__menu-toggle-line:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+body.nav-open .site-banner__menu-toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+body.nav-open .site-banner__menu-toggle-line:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
 .page-hero {
   margin: 0 0 2rem;
   padding: 1.4rem;
@@ -1949,6 +2009,79 @@ h6 {
 @media (max-width: 760px) {
   .page-content {
     padding-top: 1rem;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .site-banner__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem 1rem;
+  }
+
+  .site-banner__brand {
+    min-width: 0;
+  }
+
+  .site-banner__controls {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    margin-left: 0;
+  }
+
+  .site-banner__menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-banner__nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+    padding: 5.75rem 1.5rem 1.5rem;
+    background: rgba(255, 252, 247, 0.96);
+    backdrop-filter: blur(18px);
+    overflow-y: auto;
+  }
+
+  body.nav-open .site-banner__nav {
+    display: grid;
+    place-content: start center;
+  }
+
+  body.nav-open .site-banner__controls {
+    position: fixed;
+    top: 0.9rem;
+    right: 1rem;
+  }
+
+  .site-banner__nav .site-banner__links {
+    width: min(100%, 28rem);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    margin: auto 0;
+    padding-bottom: 2rem;
+  }
+
+  .site-banner__nav .site-banner__item {
+    width: 100%;
+  }
+
+  .site-banner__nav .site-banner__link,
+  .site-banner__nav .theme-toggle {
+    width: 100%;
+    justify-content: center;
+    padding: 0.95rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
   }
 
   .page-hero {

@@ -17,6 +17,8 @@
         const storageKey = "dd-theme";
         const className = "theme-low-stim";
         const root = document.documentElement;
+        const navOpenClass = "nav-open";
+        const mobileOverlayQuery = "(max-width: 760px)";
 
         const getStoredPreference = () => {
           try {
@@ -61,8 +63,23 @@
           });
         };
 
+        const isMobileOverlayModeActive = () => window.matchMedia(mobileOverlayQuery).matches;
+
+        const applyNavState = (isOpen) => {
+          document.body.classList.toggle(navOpenClass, isOpen);
+          document.querySelectorAll(".js-menu-toggle").forEach((button) => {
+            button.setAttribute("aria-expanded", String(isOpen));
+            button.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+            const label = button.querySelector(".site-banner__menu-toggle-text");
+            if (label) {
+              label.textContent = isOpen ? "Close" : "Menu";
+            }
+          });
+        };
+
         const initialTheme = getPreferredTheme();
         applyTheme(initialTheme);
+        applyNavState(false);
 
         const mediaQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
         if (mediaQuery && !getStoredPreference()) {
@@ -74,6 +91,8 @@
 
         document.addEventListener("DOMContentLoaded", () => {
           applyTheme(document.body.classList.contains(className) ? "low-stim" : "default");
+          applyNavState(false);
+
           document.querySelectorAll(".js-theme-toggle").forEach((button) => {
             button.addEventListener("click", () => {
               const isLowStim = document.body.classList.toggle(className);
@@ -81,6 +100,47 @@
               applyTheme(theme);
               setStoredPreference(theme);
             });
+          });
+
+          document.querySelectorAll(".js-menu-toggle").forEach((button) => {
+            button.addEventListener("click", () => {
+              const isOpen = !document.body.classList.contains(navOpenClass);
+              applyNavState(isOpen);
+            });
+          });
+
+          document.querySelectorAll(".js-site-nav").forEach((nav) => {
+            nav.addEventListener("click", (event) => {
+              if (event.target === nav) {
+                applyNavState(false);
+              }
+            });
+
+            nav.querySelectorAll("a").forEach((link) => {
+              link.addEventListener("click", () => applyNavState(false));
+            });
+
+            nav.querySelectorAll("button").forEach((button) => {
+              if (!button.classList.contains("js-menu-toggle")) {
+                button.addEventListener("click", () => {
+                  if (isMobileOverlayModeActive()) {
+                    applyNavState(false);
+                  }
+                });
+              }
+            });
+          });
+
+          window.addEventListener("resize", () => {
+            if (!isMobileOverlayModeActive()) {
+              applyNavState(false);
+            }
+          });
+
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+              applyNavState(false);
+            }
           });
         });
       })();
