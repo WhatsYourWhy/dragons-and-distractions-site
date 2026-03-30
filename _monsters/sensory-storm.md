@@ -2,12 +2,14 @@
 name: "The Sensory Storm"
 emoji: "⛈️"
 sigil: "/assets/generated/sensory-storm-sigil.png"
+card_art: "/assets/generated/cards/monster-sensory-storm-card-front-web.webp"
 banner_image: "/assets/generated/sensory-storm-banner.webp"
 banner_image_alt: "Sheltered refuge beneath swirling storm patterns, lantern light, and a calm center"
 tagline: "Too much input, not enough shelter"
 description: "Reduce overload with input triage, one-sense anchors, and a reset plan that protects your nervous system before asking for performance."
 plain_name: "sensory overload, saturation, and shutdown risk"
 challenge_summary: "Sensory Storm appears when sound, light, texture, motion, or social input pile up until your body starts protecting itself by scattering, freezing, or shutting down."
+accent_color: "#7a5aa0"
 you_might_be_here_if:
   - "Noise, brightness, touch, or too many people are making it hard to think."
   - "You are getting snappier, foggier, or more fragile by the minute."
@@ -18,8 +20,8 @@ start_here_ritual:
   description: "Lower one major input, add one sensory anchor, and give your body a smaller environment before asking it to function."
 featured_printable:
   label: "Sensory Reset card"
-  url: "/site/printables/pdf/sensory-storm-reset-card-ink.pdf"
-  description: "A fast triage card for naming the input, reducing it, and choosing the next smallest safe move."
+  url: "/site/printables/sensory-storm-reset-card.html"
+  description: "A readable reset page for naming the input, reducing it, and choosing the next smallest safe move."
 support_boundary: "This page is for sensory regulation and load reduction, not for forcing yourself through environments that are actively harming you. If you need to leave, cancel, or use accommodations, that is real support, not failure."
 cta: "Find shelter"
 badges:
@@ -46,6 +48,14 @@ tags:
   - monster-page
   - obsidian
 ---
+
+<div class="monster-hero">
+  <img src="{{ "/Sensory-Storm.png" | relative_url }}" alt="Illustration of the Sensory Storm swirling around a sheltered calm center">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Sensory Storm Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/Sensory-Storm.png" | relative_url }}">PNG</a> | <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+  </div>
+</div>
 
 <div class="battle-card">
   <div class="battle-card__eyebrow">Battle Card</div>

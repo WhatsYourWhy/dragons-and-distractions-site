@@ -1,0 +1,76 @@
+<div class="monster-index-filter">
+  <label for="monster-index-filter-input" class="monster-index-filter__label">Filter monsters</label>
+  <div class="monster-index-filter__input-wrap">
+    <input
+      id="monster-index-filter-input"
+      class="monster-index-filter__input"
+      type="search"
+      placeholder="Name, feeling, tagline, or badge text"
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <button
+      type="button"
+      class="monster-index-filter__clear"
+      aria-label="Clear monster filter"
+      hidden
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <p id="monster-index-filter-status" class="monster-index-filter__status" role="status" aria-live="polite"></p>
+</div>
+<script>
+  (function () {
+    const initMonsterIndexFilter = () => {
+      const input = document.getElementById("monster-index-filter-input");
+      const clearButton = document.querySelector(".monster-index-filter__clear");
+      const grid = document.querySelector(".monster-grid--index");
+      if (!input || !grid) return;
+
+      const cards = Array.from(grid.querySelectorAll(".monster-card--index"));
+      const status = document.getElementById("monster-index-filter-status");
+      const norm = (s) => (s || "").trim().toLowerCase();
+
+      const updateClearButton = () => {
+        if (!clearButton) return;
+        clearButton.hidden = !input.value;
+      };
+
+      const applyFilter = () => {
+        const q = norm(input.value);
+        let visible = 0;
+        cards.forEach((card) => {
+          const hay = norm(card.getAttribute("data-search") || "");
+          const match = !q || hay.includes(q);
+          card.classList.toggle("is-filter-hidden", !match);
+          if (match) visible += 1;
+        });
+        if (status) {
+          status.textContent = q
+            ? visible + " monster" + (visible === 1 ? " matches" : "s match") + " your search"
+            : "";
+        }
+        updateClearButton();
+      };
+
+      input.addEventListener("input", applyFilter);
+
+      if (clearButton) {
+        clearButton.addEventListener("click", () => {
+          input.value = "";
+          applyFilter();
+          input.focus();
+        });
+      }
+
+      applyFilter();
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initMonsterIndexFilter, { once: true });
+    } else {
+      initMonsterIndexFilter();
+    }
+  })();
+</script>

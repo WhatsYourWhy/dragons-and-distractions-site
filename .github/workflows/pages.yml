@@ -1,8 +1,10 @@
-﻿name: Deploy Jekyll site to Pages
+name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["**"]
+    branches: [main, work]
+  pull_request:
+    branches: [main, work]
   workflow_dispatch:
 
 permissions:
@@ -19,12 +21,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler: "4.0.3"
+          bundler-cache: true
 
       - name: Install PDF dependencies
         run: |
@@ -40,17 +49,20 @@ jobs:
       - name: Check monster metadata
         run: python scripts/check_monster_metadata.py
 
+      - name: Check CODEX prompt contracts
+        run: python scripts/validate_codex_prompts.py
+
+      - name: Run pytest suite
+        run: pytest -q
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: .
-          destination: _site
+        run: bundle exec jekyll build --source . --destination _site
 
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
@@ -68,4 +80,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

@@ -8,8 +8,7 @@ hero_intro: "Start with the stuck feeling you recognize. Each path gives you pla
 show_breadcrumbs: false
 show_quick_actions: false
 show_nav_cards: false
-hero_image: "/assets/generated/choose-your-monster-banner.png"
-hero_image_webp: "/assets/generated/choose-your-monster-banner.webp"
+hero_image: "/assets/generated/choose-your-monster-banner.webp"
 hero_image_alt: "Branching tabletop map with glowing paths toward different monster routes"
 hero_image_width: 1024
 hero_image_height: 1024
@@ -25,10 +24,14 @@ image:
 </div>
 
 <section class="landing-section">
+  {% include oracle.html %}
+</section>
+
+<section class="landing-section">
   <div class="section-heading">
-    <p class="section-heading__eyebrow">Pick one lane</p>
-    <h2>Choose the stuck feeling, not the lore category</h2>
-    <p>Each card below takes you to one monster, one first ritual, and one tool. You do not need to compare every option before starting.</p>
+    <p class="section-heading__eyebrow">Or compare all paths</p>
+    <h2>Browse the full chooser when you want to scan everything</h2>
+    <p>Each card below takes you to one monster, one first ritual, and one tool. You do not need to compare every option before starting, but the full map is here if it helps.</p>
   </div>
   {% include chooser-grid.html %}
 </section>

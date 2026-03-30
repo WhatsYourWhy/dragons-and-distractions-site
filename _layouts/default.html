@@ -7,10 +7,19 @@
     {%- seo -%}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/design.css?v=20260325" | relative_url }}">
     {%- feed_meta -%}
-  </head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BBWE83NT3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4BBWE83NT3');
+  </script>
+</head>
   <body>
     <script>
       (function () {
@@ -19,6 +28,15 @@
         const root = document.documentElement;
         const navOpenClass = "nav-open";
         const mobileOverlayQuery = "(max-width: 760px)";
+        const navFocusableSelector = [
+          "a[href]",
+          "button:not([disabled])",
+          "input:not([disabled]):not([type='hidden'])",
+          "select:not([disabled])",
+          "textarea:not([disabled])",
+          "[tabindex]:not([tabindex='-1'])"
+        ].join(",");
+        let lastMenuToggleButton = null;
 
         const getStoredPreference = () => {
           try {
@@ -41,8 +59,7 @@
           if (stored === "low-stim" || stored === "default") {
             return stored;
           }
-          const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-          return prefersDark ? "low-stim" : "default";
+          return "default";
         };
 
         const applyTheme = (theme) => {
@@ -51,22 +68,34 @@
           document.body.dataset.theme = theme;
           root.dataset.theme = theme;
           document.querySelectorAll(".js-theme-toggle").forEach((button) => {
-            button.setAttribute("aria-pressed", String(isLowStim));
-            const text = button.querySelector(".theme-toggle__text");
+            button.setAttribute("aria-checked", String(isLowStim));
             const status = button.querySelector(".theme-toggle__status");
-            if (text) {
-              text.textContent = isLowStim ? "Low-stim on" : "Low-stim off";
-            }
+            button.setAttribute("aria-label", isLowStim ? "Low Stim on" : "Low Stim off");
             if (status) {
-              status.textContent = isLowStim ? "Reduced color & motion" : "Standard mode";
+              status.textContent = isLowStim ? "On" : "Standard mode";
             }
           });
         };
 
         const isMobileOverlayModeActive = () => window.matchMedia(mobileOverlayQuery).matches;
 
-        const applyNavState = (isOpen) => {
+        const getNavFocusableElements = (nav = document.querySelector(".js-site-nav")) => {
+          if (!nav) {
+            return [];
+          }
+
+          return Array.from(nav.querySelectorAll(navFocusableSelector)).filter((element) => {
+            if (element.getAttribute("aria-hidden") === "true") {
+              return false;
+            }
+            return element.getClientRects().length > 0;
+          });
+        };
+
+        const applyNavState = (isOpen, options = {}) => {
+          const shouldRestoreFocus = options.restoreFocus !== false;
           document.body.classList.toggle(navOpenClass, isOpen);
+          root.dataset.navOpen = isOpen ? "open" : "closed";
           document.querySelectorAll(".js-menu-toggle").forEach((button) => {
             button.setAttribute("aria-expanded", String(isOpen));
             button.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
@@ -75,23 +104,29 @@
               label.textContent = isOpen ? "Close" : "Menu";
             }
           });
+
+          if (isOpen && isMobileOverlayModeActive()) {
+            const [firstFocusableItem] = getNavFocusableElements();
+            if (firstFocusableItem) {
+              firstFocusableItem.focus();
+            }
+          }
+
+          if (!isOpen && shouldRestoreFocus && isMobileOverlayModeActive()) {
+            const menuToggleButton = lastMenuToggleButton || document.querySelector(".js-menu-toggle");
+            if (menuToggleButton) {
+              menuToggleButton.focus();
+            }
+          }
         };
 
         const initialTheme = getPreferredTheme();
         applyTheme(initialTheme);
-        applyNavState(false);
-
-        const mediaQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-        if (mediaQuery && !getStoredPreference()) {
-          mediaQuery.addEventListener("change", (event) => {
-            const nextTheme = event.matches ? "low-stim" : "default";
-            applyTheme(nextTheme);
-          });
-        }
+        applyNavState(false, { restoreFocus: false });
 
         document.addEventListener("DOMContentLoaded", () => {
           applyTheme(document.body.classList.contains(className) ? "low-stim" : "default");
-          applyNavState(false);
+          applyNavState(false, { restoreFocus: false });
 
           document.querySelectorAll(".js-theme-toggle").forEach((button) => {
             button.addEventListener("click", () => {
@@ -104,6 +139,7 @@
 
           document.querySelectorAll(".js-menu-toggle").forEach((button) => {
             button.addEventListener("click", () => {
+              lastMenuToggleButton = button;
               const isOpen = !document.body.classList.contains(navOpenClass);
               applyNavState(isOpen);
             });
@@ -119,29 +155,58 @@
             nav.querySelectorAll("a").forEach((link) => {
               link.addEventListener("click", () => applyNavState(false));
             });
-
-            nav.querySelectorAll("button").forEach((button) => {
-              if (!button.classList.contains("js-menu-toggle")) {
-                button.addEventListener("click", () => {
-                  if (isMobileOverlayModeActive()) {
-                    applyNavState(false);
-                  }
-                });
-              }
-            });
-          });
-
-          window.addEventListener("resize", () => {
-            if (!isMobileOverlayModeActive()) {
-              applyNavState(false);
-            }
           });
 
           document.addEventListener("keydown", (event) => {
+            if (
+              event.key === "Tab" &&
+              document.body.classList.contains(navOpenClass) &&
+              isMobileOverlayModeActive()
+            ) {
+              const nav = document.querySelector(".js-site-nav");
+              const focusableElements = getNavFocusableElements(nav);
+              if (!nav || focusableElements.length === 0) {
+                return;
+              }
+
+              const firstFocusable = focusableElements[0];
+              const lastFocusable = focusableElements[focusableElements.length - 1];
+              const activeElement = document.activeElement;
+
+              if (event.shiftKey) {
+                if (activeElement === firstFocusable || !nav.contains(activeElement)) {
+                  event.preventDefault();
+                  lastFocusable.focus();
+                }
+              } else if (activeElement === lastFocusable || !nav.contains(activeElement)) {
+                event.preventDefault();
+                firstFocusable.focus();
+              }
+            }
+
             if (event.key === "Escape") {
               applyNavState(false);
             }
           });
+
+          const backTop = document.querySelector(".js-back-to-top");
+          if (backTop) {
+            const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+            const toggleBackTop = () => {
+              const y = window.scrollY || document.documentElement.scrollTop;
+              backTop.hidden = y < 420;
+            };
+            toggleBackTop();
+            window.addEventListener("scroll", toggleBackTop, { passive: true });
+            backTop.addEventListener("click", () => {
+              const instant = motionQuery.matches;
+              window.scrollTo({ top: 0, behavior: instant ? "auto" : "smooth" });
+              const mainEl = document.getElementById("main-content");
+              if (mainEl) {
+                mainEl.focus({ preventScroll: true });
+              }
+            });
+          }
         });
       })();
     </script>
@@ -153,11 +218,15 @@
       {%- endif -%}
     </header>
 
-    <main id="main-content" class="page-content" aria-label="Content">
+    <main id="main-content" class="page-content" aria-label="Content" tabindex="-1">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
+
+    <button type="button" class="back-to-top js-back-to-top" hidden aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
 
     {%- include footer.html -%}
   </body>

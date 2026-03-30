@@ -2,12 +2,14 @@
 name: "The Rejection Wisp"
 emoji: "👻"
 sigil: "/assets/generated/rejection-wisp-sigil.png"
+card_art: "/assets/generated/cards/monster-rejection-wisp-card-front-web.webp"
 banner_image: "/assets/generated/rejection-wisp-banner.webp"
 banner_image_alt: "Lantern-lit desk with a sealed letter, soft ghostly ring, and open doorway at dusk"
 tagline: "One hard interaction that fogs the whole inbox"
 description: "Reduce message dread with reply scaffolds, acknowledgement scripts, and gentler re-entry after a social sting."
 plain_name: "rejection sensitivity, unread messages, and social avoidance"
 challenge_summary: "Rejection Wisp appears when one ambiguous message, criticism, or silence expands into a whole-body warning signal and replying starts to feel unsafe."
+accent_color: "#4cc8c8"
 you_might_be_here_if:
   - "You can handle the task itself, but not the feeling around the reply."
   - "One awkward thread makes every unopened message feel charged."
@@ -18,8 +20,8 @@ start_here_ritual:
   description: "Choose the smallest reply shape that moves the thread forward instead of waiting for the perfect emotional state."
 featured_printable:
   label: "Reply Scaffold card"
-  url: "/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf"
-  description: "A low-stakes response guide for acknowledging, buying time, clarifying, or saying no."
+  url: "/site/printables/rejection-wisp-reply-scaffold.html"
+  description: "A readable response guide for acknowledging, buying time, clarifying, or saying no before you print."
 support_boundary: "This page is for reducing social dread and reply paralysis, not for pushing yourself through abusive dynamics or unsafe contact. If a conversation feels harmful, prioritize boundaries and support over responsiveness."
 cta: "Reopen the thread"
 badges:
@@ -46,6 +48,14 @@ tags:
   - monster-page
   - obsidian
 ---
+
+<div class="monster-hero">
+  <img src="{{ "/Rejection-Wisp.png" | relative_url }}" alt="Illustration of the Rejection Wisp haunting a lantern-lit desk and unread messages">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Rejection Wisp Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/Rejection-Wisp.png" | relative_url }}">PNG</a> | <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+  </div>
+</div>
 
 <div class="battle-card">
   <div class="battle-card__eyebrow">Battle Card</div>
