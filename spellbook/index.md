@@ -6,6 +6,7 @@ hero_title: "Rituals You Can Use Right Away"
 hero_intro: "Come here when you want the counter-spells without rereading the full bestiary. Pick the stuck point, then take the smallest useful action."
 show_breadcrumbs: true
 hero_image: "/assets/generated/spellbook-banner.png"
+hero_image_webp: "/assets/generated/spellbook-banner.webp"
 hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spell tools"
 hero_image_width: 1024
 hero_image_height: 1024
@@ -16,8 +17,15 @@ hero_image_height: 1024
 </div>
 
 <section class="landing-section">
-  <h2>Match the ritual to the problem</h2>
-  {% include chooser-grid.html %}
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Find the right ritual</p>
+    <h2>Use the chooser when the stuck feeling is clearer than the ritual name</h2>
+    <p><a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a> routes you to one ritual and one fast tool without asking you to scan the whole directory first.</p>
+  </div>
+  <div class="section-actions">
+    <a class="cta-button cta-button--primary" href="{{ '/choose-your-monster/' | relative_url }}"><span>Open Choose Your Monster</span></a>
+    <a class="cta-button" href="#task-hydra-rituals"><span>Jump to the ritual directory</span></a>
+  </div>
 </section>
 
 <section class="landing-section">
