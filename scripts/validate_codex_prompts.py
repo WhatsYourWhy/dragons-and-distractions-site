@@ -81,6 +81,18 @@ def _has_non_empty_description(data: dict[str, object]) -> bool:
     return isinstance(value, str) and bool(value.strip())
 
 
+def _markdown_body_after_front_matter(path: Path) -> str:
+    """Return file content after the closing YAML front matter delimiter, or full text if none."""
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("---"):
+        return text
+    lines = text.splitlines()
+    for index in range(1, len(lines)):
+        if lines[index].strip() == "---":
+            return "\n".join(lines[index + 1 :])
+    return text
+
+
 def validate_homepage_hero(path: Path = HOMEPAGE_PATH) -> list[str]:
     """CODEX cover+CTA contract when ``hero_actions`` is set; else hub-style hero fields + body CTA."""
     errors: list[str] = []
@@ -129,7 +141,7 @@ def validate_homepage_hero(path: Path = HOMEPAGE_PATH) -> list[str]:
             f"{', '.join(sorted(EXPECTED_HOMEPAGE_HERO_IMAGES))}"
         )
 
-    body = path.read_text(encoding="utf-8")
+    body = _markdown_body_after_front_matter(path)
     if "Choose Your Monster" not in body:
         errors.append(
             f"{display_path(path)}: homepage body must include the Choose Your Monster CTA"

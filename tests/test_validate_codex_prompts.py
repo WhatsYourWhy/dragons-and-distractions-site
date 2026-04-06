@@ -75,6 +75,32 @@ def test_validate_homepage_hero_hub_empty_hero_image_reports_once(tmp_path: Path
     assert "missing non-empty 'hero_image'" in hero_image_msgs[0]
 
 
+def test_validate_homepage_hero_hub_cta_must_appear_in_body_not_only_front_matter(
+    tmp_path: Path,
+):
+    homepage = tmp_path / "index.md"
+    homepage.write_text(
+        "\n".join(
+            [
+                "---",
+                'hero_title: "Title"',
+                'hero_intro: "Choose Your Monster only in front matter"',
+                'hero_image: "/assets/generated/homepage-hero-web.png"',
+                "---",
+                "",
+                "<section>No matching CTA label in the body.</section>",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_homepage_hero(homepage)
+
+    assert any(
+        "homepage body must include the Choose Your Monster CTA" in e for e in errors
+    )
+
+
 def test_validate_spellbook_directory_checks_exact_ritual_keys(tmp_path: Path):
     spellbook = tmp_path / "index.md"
     spellbook.write_text(
