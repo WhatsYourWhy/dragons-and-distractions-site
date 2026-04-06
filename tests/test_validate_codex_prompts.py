@@ -52,6 +52,55 @@ def test_validate_homepage_hero_rejects_wrong_ctas(tmp_path: Path):
     assert any("hero_actions must exactly match the homepage CTA contract" in error for error in errors)
 
 
+def test_validate_homepage_hero_hub_empty_hero_image_reports_once(tmp_path: Path):
+    homepage = tmp_path / "index.md"
+    homepage.write_text(
+        "\n".join(
+            [
+                "---",
+                'hero_title: "Title"',
+                'hero_intro: "Intro"',
+                'hero_image: ""',
+                "---",
+                "Choose Your Monster\n",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_homepage_hero(homepage)
+    hero_image_msgs = [e for e in errors if "hero_image" in e]
+
+    assert len(hero_image_msgs) == 1
+    assert "missing non-empty 'hero_image'" in hero_image_msgs[0]
+
+
+def test_validate_homepage_hero_hub_cta_must_appear_in_body_not_only_front_matter(
+    tmp_path: Path,
+):
+    homepage = tmp_path / "index.md"
+    homepage.write_text(
+        "\n".join(
+            [
+                "---",
+                'hero_title: "Title"',
+                'hero_intro: "Choose Your Monster only in front matter"',
+                'hero_image: "/assets/generated/homepage-hero-web.png"',
+                "---",
+                "",
+                "<section>No matching CTA label in the body.</section>",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_homepage_hero(homepage)
+
+    assert any(
+        "homepage body must include the Choose Your Monster CTA" in e for e in errors
+    )
+
+
 def test_validate_spellbook_directory_checks_exact_ritual_keys(tmp_path: Path):
     spellbook = tmp_path / "index.md"
     spellbook.write_text(
@@ -146,3 +195,25 @@ def test_validate_header_markup_requires_mobile_nav_and_theme_toggle(tmp_path: P
     )
 
     assert checks.validate_header_markup((header,)) == []
+
+
+def test_validate_page_descriptions_reports_missing_front_matter_delimiter(tmp_path: Path):
+    page = tmp_path / "no_delimiter.md"
+    page.write_text("# Title only\n", encoding="utf-8")
+
+    errors = checks.validate_page_descriptions((page,))
+
+    assert len(errors) == 1
+    assert "no_delimiter.md" in errors[0]
+    assert "invalid or unreadable YAML front matter" in errors[0]
+
+
+def test_validate_page_descriptions_reports_invalid_yaml_in_front_matter(tmp_path: Path):
+    page = tmp_path / "bad_yaml.md"
+    page.write_text("---\nfoo: [\n---\n\nBody.\n", encoding="utf-8")
+
+    errors = checks.validate_page_descriptions((page,))
+
+    assert len(errors) == 1
+    assert "bad_yaml.md" in errors[0]
+    assert "invalid or unreadable YAML front matter" in errors[0]
