@@ -145,7 +145,7 @@ def test_validate_header_markup_requires_mobile_nav_and_theme_toggle(tmp_path: P
         encoding="utf-8",
     )
 
-    assert errors == ["public-page.md: expected public page is missing"]
+    assert checks.validate_header_markup((header,)) == []
 
 
 def test_validate_page_descriptions_reports_missing_front_matter_delimiter(tmp_path: Path):

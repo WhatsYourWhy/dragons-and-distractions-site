@@ -356,6 +356,23 @@ def test_check_broken_pdf_links_ignores_files_under_skipped_directories(
     assert errors == []
 
 
+def test_check_yaml_pdf_links_flags_external_https_pdf(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    data_file = root / "_data" / "external.yml"
+    data_file.parent.mkdir(parents=True, exist_ok=True)
+    data_file.write_text(
+        "pdf: https://example.com/doc.pdf\n",
+        encoding="utf-8",
+    )
+
+    errors = checks.check_yaml_pdf_links([data_file])
+
+    assert errors == [
+        "_data/external.yml:",
+        "  • https://example.com/doc.pdf (outside repo)",
+    ]
+
+
 def test_check_yaml_pdf_links_reads_nested_data_file_values(monkeypatch, tmp_path):
     root = configure_temp_repo(monkeypatch, tmp_path)
     pdf_dir = root / "site" / "printables" / "pdf"
