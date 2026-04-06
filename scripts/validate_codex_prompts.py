@@ -122,7 +122,8 @@ def validate_homepage_hero(path: Path = HOMEPAGE_PATH) -> list[str]:
             )
 
     hero_image = data.get("hero_image")
-    if isinstance(hero_image, str) and hero_image.strip() not in EXPECTED_HOMEPAGE_HERO_IMAGES:
+    hero_image_stripped = hero_image.strip() if isinstance(hero_image, str) else ""
+    if hero_image_stripped and hero_image_stripped not in EXPECTED_HOMEPAGE_HERO_IMAGES:
         errors.append(
             f"{display_path(path)}: hero_image must point to one of "
             f"{', '.join(sorted(EXPECTED_HOMEPAGE_HERO_IMAGES))}"

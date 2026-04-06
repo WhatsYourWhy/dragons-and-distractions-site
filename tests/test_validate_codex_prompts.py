@@ -52,6 +52,29 @@ def test_validate_homepage_hero_rejects_wrong_ctas(tmp_path: Path):
     assert any("hero_actions must exactly match the homepage CTA contract" in error for error in errors)
 
 
+def test_validate_homepage_hero_hub_empty_hero_image_reports_once(tmp_path: Path):
+    homepage = tmp_path / "index.md"
+    homepage.write_text(
+        "\n".join(
+            [
+                "---",
+                'hero_title: "Title"',
+                'hero_intro: "Intro"',
+                'hero_image: ""',
+                "---",
+                "Choose Your Monster\n",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_homepage_hero(homepage)
+    hero_image_msgs = [e for e in errors if "hero_image" in e]
+
+    assert len(hero_image_msgs) == 1
+    assert "missing non-empty 'hero_image'" in hero_image_msgs[0]
+
+
 def test_validate_spellbook_directory_checks_exact_ritual_keys(tmp_path: Path):
     spellbook = tmp_path / "index.md"
     spellbook.write_text(
