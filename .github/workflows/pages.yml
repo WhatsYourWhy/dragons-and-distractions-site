@@ -40,6 +40,9 @@ jobs:
       - name: Check monster metadata
         run: python scripts/check_monster_metadata.py
 
+      - name: Validate page descriptions
+        run: python scripts/validate_codex_prompts.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

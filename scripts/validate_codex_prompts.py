@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
+import yaml
 
 CURRENT_ROOT = Path(__file__).resolve().parent.parent
 if str(CURRENT_ROOT) not in sys.path:
@@ -42,12 +43,6 @@ def display_path(path: Path) -> str:
         return path.name
 
 
-def _has_non_empty_description(path: Path) -> bool:
-    data = extract_front_matter(path)
-    value = data.get("description")
-    return isinstance(value, str) and bool(value.strip())
-
-
 def validate_page_descriptions(paths: tuple[Path, ...] = PAGE_DESCRIPTION_PATHS) -> list[str]:
     errors: list[str] = []
 
@@ -56,8 +51,24 @@ def validate_page_descriptions(paths: tuple[Path, ...] = PAGE_DESCRIPTION_PATHS)
             errors.append(f"{display_path(path)}: expected public page is missing")
             continue
 
-        if not _has_non_empty_description(path):
-            errors.append(f"{display_path(path)}: missing non-empty top-level description front matter")
+        try:
+            data = extract_front_matter(path)
+        except ValueError as exc:
+            errors.append(
+                f"{display_path(path)}: invalid or unreadable YAML front matter ({exc})"
+            )
+            continue
+        except yaml.YAMLError as exc:
+            errors.append(
+                f"{display_path(path)}: invalid or unreadable YAML front matter ({exc})"
+            )
+            continue
+
+        value = data.get("description")
+        if not isinstance(value, str) or not value.strip():
+            errors.append(
+                f"{display_path(path)}: missing non-empty top-level description front matter"
+            )
 
     return errors
 

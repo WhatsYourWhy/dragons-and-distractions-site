@@ -17,7 +17,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import re
 import sys
-from typing import Iterable
+from typing import Iterable, TypeAlias
 
 try:
     import yaml
@@ -35,6 +35,21 @@ LIQUID_RELATIVE_URL_PATTERN = re.compile(
     r"""\{\{\s*["'](?P<path>[^"']+)["']\s*(\|\s*relative_url\s*)?\}\}"""
 )
 URL_SCHEME_PATTERN = re.compile(r"^[a-zA-Z][a-zA-Z0-9+.-]*://")
+
+SKIPPED_PATH_PARTS = frozenset(
+    {
+        ".git",
+        ".claude",
+        "tmp",
+        ".pytest_cache",
+        "vendor",
+        ".bundle",
+        "_site",
+        "__pycache__",
+    }
+)
+
+LinkTarget: TypeAlias = Path | str
 
 
 @dataclass
@@ -95,7 +110,9 @@ def display_path(path: Path) -> str:
         return str(path).replace("\\", "/")
 
 
-def display_outside_target(target: Path) -> str:
+def display_outside_target(target: LinkTarget) -> str:
+    if isinstance(target, str):
+        return target
     raw = str(target)
     normalized = raw.replace("\\", "/")
     if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]+:/", normalized) or normalized.startswith("//"):
@@ -103,8 +120,23 @@ def display_outside_target(target: Path) -> str:
     return raw
 
 
-def find_pdf_links(path: Path, *, include_non_printables: bool = False) -> list[Path]:
-    links: list[Path] = []
+def iter_content_files(root: Path) -> list[Path]:
+    """Markdown and HTML under root, excluding tooling and cache directories."""
+    paths: list[Path] = []
+    for pattern in ("**/*.md", "**/*.html"):
+        for path in sorted(root.glob(pattern)):
+            try:
+                rel = path.relative_to(root)
+            except ValueError:
+                continue
+            if SKIPPED_PATH_PARTS.intersection(rel.parts):
+                continue
+            paths.append(path)
+    return paths
+
+
+def find_pdf_links(path: Path, *, include_non_printables: bool = False) -> list[LinkTarget]:
+    links: list[LinkTarget] = []
     text = path.read_text(encoding="utf-8", errors="ignore")
     for link in find_link_targets(text):
         normalized = normalize_link_target(link)
@@ -112,6 +144,10 @@ def find_pdf_links(path: Path, *, include_non_printables: bool = False) -> list[
             continue
 
         target = resolve_link_target(normalized, path)
+        if isinstance(target, str):
+            links.append(target)
+            continue
+
         try:
             rel_target = target.relative_to(ROOT)
         except ValueError:
@@ -132,6 +168,9 @@ def find_printable_page_links(path: Path) -> list[Path]:
             continue
 
         target = resolve_link_target(normalized, path)
+        if isinstance(target, str):
+            continue
+
         try:
             rel_target = target.relative_to(ROOT)
         except ValueError:
@@ -176,9 +215,9 @@ def normalize_link_target(raw_link: str) -> str:
     return stripped
 
 
-def resolve_link_target(link: str, source: Path) -> Path:
+def resolve_link_target(link: str, source: Path) -> LinkTarget:
     if URL_SCHEME_PATTERN.match(link) or link.startswith("//"):
-        return Path(link)
+        return link
 
     if link.startswith("/site/"):
         return (ROOT / link.lstrip("/")).resolve()
@@ -237,7 +276,7 @@ def check_required_links(check: LinkCheck) -> list[str]:
         return [f"File not found: {resolved_path}"]
 
     content = resolved_path.read_text(encoding="utf-8")
-    links: set[Path] = set()
+    links: set[LinkTarget] = set()
     for link in find_link_targets(content):
         normalized = normalize_link_target(link)
         links.add(resolve_link_target(normalized, resolved_path))
@@ -268,6 +307,10 @@ def check_broken_pdf_links(
         printable_page_links = find_printable_page_links(md_file)
         broken = []
         for target in pdf_links:
+            if isinstance(target, str):
+                broken.append(f"{display_outside_target(target)} (outside repo)")
+                continue
+
             try:
                 rel_target = target.relative_to(ROOT)
             except ValueError:
@@ -351,7 +394,7 @@ def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
 
 
 def main() -> int:
-    content_files = sorted(ROOT.glob("**/*.md")) + sorted(ROOT.glob("**/*.html"))
+    content_files = iter_content_files(ROOT)
     data_files = sorted(ROOT.glob("_data/*.yml"))
     errors: list[str] = []
     pdfs_generated = any(PDF_DIR.glob("*.pdf"))
@@ -384,6 +427,8 @@ def main() -> int:
     referenced: set[Path] = set()
     for md in content_files:
         for link in find_pdf_links(md):
+            if isinstance(link, str):
+                continue
             try:
                 referenced.add(link.relative_to(ROOT))
             except ValueError:

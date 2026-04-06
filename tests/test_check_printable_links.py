@@ -253,7 +253,7 @@ def test_check_broken_pdf_links_flags_external_html_pdf(monkeypatch, tmp_path):
 
     assert errors == [
         "site/printables/external.html:",
-        "  • https:/example.com/printable.pdf (outside repo)",
+        "  • https://example.com/printable.pdf (outside repo)",
     ]
 
 
@@ -316,6 +316,42 @@ def test_check_broken_pdf_links_accepts_monster_printable_page_link(monkeypatch,
     )
 
     errors = checks.check_broken_pdf_links([monster_md])
+
+    assert errors == []
+
+
+def test_iter_content_files_skips_tooling_directories(monkeypatch, tmp_path):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    (root / "tmp").mkdir(parents=True)
+    (root / ".claude").mkdir(parents=True)
+    junk = root / "tmp" / "junk.md"
+    junk.write_text("[broken](./pdf/missing.pdf)", encoding="utf-8")
+    nested_junk = root / ".claude" / "note.md"
+    nested_junk.write_text("[broken](../site/printables/pdf/missing.pdf)", encoding="utf-8")
+
+    good = root / "site" / "tracked.md"
+    good.parent.mkdir(parents=True, exist_ok=True)
+    good.write_text("ok", encoding="utf-8")
+
+    files = checks.iter_content_files(root)
+
+    assert junk not in files
+    assert nested_junk not in files
+    assert good in files
+
+
+def test_check_broken_pdf_links_ignores_files_under_skipped_directories(
+    monkeypatch, tmp_path
+):
+    root = configure_temp_repo(monkeypatch, tmp_path)
+    pdf_dir = root / "site" / "printables" / "pdf"
+    pdf_dir.mkdir(parents=True)
+    (pdf_dir / "present.pdf").touch()
+
+    (root / "tmp").mkdir(parents=True)
+    (root / "tmp" / "noise.md").write_text("[bad](./pdf/missing.pdf)", encoding="utf-8")
+
+    errors = checks.check_broken_pdf_links(checks.iter_content_files(root))
 
     assert errors == []
 
