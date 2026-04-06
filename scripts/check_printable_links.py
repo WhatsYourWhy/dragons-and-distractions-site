@@ -42,6 +42,8 @@ SKIPPED_PATH_PARTS = frozenset(
         ".claude",
         "tmp",
         ".pytest_cache",
+        ".venv",
+        "venv",
         "vendor",
         ".bundle",
         "_site",

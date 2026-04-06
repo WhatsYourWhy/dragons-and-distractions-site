@@ -40,6 +40,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run pytest suite
+        run: pytest -q tests
+
       - name: Regenerate printable PDFs
         run: python scripts/generate_printable_pdfs.py
 
