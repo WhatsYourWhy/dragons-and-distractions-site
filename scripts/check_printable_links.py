@@ -35,6 +35,7 @@ LIQUID_RELATIVE_URL_PATTERN = re.compile(
     r"""\{\{\s*["'](?P<path>[^"']+)["']\s*(\|\s*relative_url\s*)?\}\}"""
 )
 URL_SCHEME_PATTERN = re.compile(r"^[a-zA-Z][a-zA-Z0-9+.-]*://")
+IGNORED_CONTENT_ROOTS = {".git", ".pytest_cache", ".venv", "__pycache__", "_site"}
 
 SKIPPED_PATH_PARTS = frozenset(
     {
@@ -222,7 +223,7 @@ def resolve_link_target(link: str, source: Path) -> LinkTarget:
     if link.startswith("/site/"):
         return (ROOT / link.lstrip("/")).resolve()
 
-    if link.startswith("/") or link.startswith("\\"):
+    if link.startswith(("/", "\\")):
         return Path(link)
 
     target = Path(link)
@@ -230,6 +231,24 @@ def resolve_link_target(link: str, source: Path) -> LinkTarget:
         return target
 
     return (source.parent / target).resolve()
+
+
+def display_path(path: Path) -> str:
+    return path.as_posix()
+
+
+def display_outside_repo_target(path: Path) -> str:
+    if path.parts and str(path.parts[0]).endswith(":"):
+        return path.as_posix()
+    return str(path)
+
+
+def should_scan_path(path: Path) -> bool:
+    try:
+        rel_path = path.relative_to(ROOT)
+    except ValueError:
+        return False
+    return not any(part in IGNORED_CONTENT_ROOTS for part in rel_path.parts)
 
 
 def extract_yaml_pdf_links(yaml_path: Path) -> list[str]:
@@ -314,15 +333,15 @@ def check_broken_pdf_links(
             try:
                 rel_target = target.relative_to(ROOT)
             except ValueError:
-                broken.append(f"{display_outside_target(target)} (outside repo)")
+                broken.append(f"{display_outside_repo_target(target)} (outside repo)")
                 continue
 
             if rel_target.parts[:3] != PRINTABLE_PDF_PARTS:
-                broken.append(f"{display_path(ROOT / rel_target)} (unexpected location)")
+                broken.append(f"{display_path(rel_target)} (unexpected location)")
                 continue
 
             if require_existing_pdfs and not target.exists():
-                broken.append(display_path(ROOT / rel_target))
+                broken.append(display_path(rel_target))
 
         if (
             MONSTER_DIR in md_file.relative_to(ROOT).parts
@@ -332,11 +351,14 @@ def check_broken_pdf_links(
             broken.append("missing printable link for monster entry")
 
         if broken:
-            missing[display_path(md_file)] = broken
+            try:
+                missing[md_file.relative_to(ROOT)] = broken
+            except ValueError:
+                missing[md_file] = broken
 
     errors: list[str] = []
     for md_path, issues in missing.items():
-        errors.append(f"{md_path}:")
+        errors.append(f"{display_path(md_path)}:")
         for issue in issues:
             errors.append(f"  • {issue}")
 
@@ -359,22 +381,22 @@ def check_yaml_pdf_links(
             try:
                 rel_target = target.relative_to(ROOT)
             except ValueError:
-                broken.append(f"{display_outside_target(target)} (outside repo)")
+                broken.append(f"{display_outside_repo_target(target)} (outside repo)")
                 continue
 
             if rel_target.parts[:3] != PRINTABLE_PDF_PARTS:
-                broken.append(f"{display_path(ROOT / rel_target)} (unexpected location)")
+                broken.append(f"{display_path(rel_target)} (unexpected location)")
                 continue
 
             if require_existing_pdfs and not target.exists():
-                broken.append(display_path(ROOT / rel_target))
+                broken.append(display_path(rel_target))
 
         if broken:
             missing[display_path(yaml_file)] = broken
 
     errors: list[str] = []
     for yaml_path, issues in missing.items():
-        errors.append(f"{yaml_path}:")
+        errors.append(f"{display_path(yaml_path)}:")
         for issue in issues:
             errors.append(f"  • {issue}")
 
@@ -390,7 +412,7 @@ def report_orphaned_pdfs(pdf_dir: Path, referenced: set[Path]) -> None:
     if orphaned:
         print("Orphaned PDFs (not linked in content files):")
         for pdf in sorted(orphaned):
-            print(f"- {pdf}")
+            print(f"- {display_path(pdf)}")
 
 
 def main() -> int:

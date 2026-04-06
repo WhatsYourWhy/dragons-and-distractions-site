@@ -3,8 +3,10 @@
 """Validate monster entry front matter for required product fields."""
 
 from pathlib import Path
+import re
 import sys
 from typing import Any
+from urllib.parse import urlsplit
 
 import yaml
 
@@ -12,6 +14,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 MONSTER_DIR = ROOT / "_monsters"
 FRONT_MATTER_DELIMITER = "---"
+ANCHOR_PATTERN = re.compile(r'id="(?P<html>[^"]+)"|\{#(?P<markdown>[^}]+)\}')
 REQUIRED_STRING_FIELDS = (
     "name",
     "plain_name",
@@ -30,6 +33,9 @@ REQUIRED_LIST_FIELDS = (
 REQUIRED_LINK_GROUPS = {
     "start_here_ritual": ("label", "url", "description"),
     "featured_printable": ("label", "url", "description"),
+}
+OPTIONAL_ASSET_PATH_FIELDS = {
+    "card_art": "/assets/generated/cards/",
 }
 
 
@@ -60,6 +66,57 @@ def extract_front_matter(path: Path) -> dict[str, Any]:
 
 def _is_non_empty_string(value: Any) -> bool:
     return isinstance(value, str) and bool(value.strip())
+
+
+def spellbook_dir() -> Path:
+    return ROOT / "spellbook"
+
+
+def spellbook_index() -> Path:
+    return spellbook_dir() / "index.md"
+
+
+def collect_named_anchors(path: Path) -> set[str]:
+    text = path.read_text(encoding="utf-8-sig", errors="ignore")
+    anchors: set[str] = set()
+    for match in ANCHOR_PATTERN.finditer(text):
+        anchor = match.group("html") or match.group("markdown")
+        if anchor:
+            anchors.add(anchor)
+    return anchors
+
+
+def resolve_spellbook_url(url: str) -> tuple[Path | None, str | None]:
+    parsed = urlsplit(url)
+    path = parsed.path or "/spellbook/"
+
+    if path in {"/spellbook", "/spellbook/", "/spellbook/index.html"}:
+        return spellbook_index(), parsed.fragment or None
+
+    if not path.startswith("/spellbook/"):
+        return None, parsed.fragment or None
+
+    relative_path = path[len("/spellbook/") :].strip("/")
+    if not relative_path:
+        return spellbook_index(), parsed.fragment or None
+
+    if relative_path.endswith(".html"):
+        relative_path = relative_path[:-5] + ".md"
+    elif not relative_path.endswith(".md"):
+        relative_path = relative_path + ".md"
+
+    return spellbook_dir() / relative_path, parsed.fragment or None
+
+
+def validate_spellbook_target(url: str) -> str | None:
+    target_path, anchor = resolve_spellbook_url(url)
+    if target_path is None:
+        return "must point to an existing spellbook page or anchor"
+    if not target_path.exists():
+        return f"target does not exist: {url}"
+    if anchor and anchor not in collect_named_anchors(target_path):
+        return f"anchor '{anchor}' not found for {url}"
+    return None
 
 
 def validate_monster_file(path: Path) -> list[str]:
@@ -101,6 +158,10 @@ def validate_monster_file(path: Path) -> list[str]:
     ritual_url = data.get("start_here_ritual", {}).get("url")
     if _is_non_empty_string(ritual_url) and not str(ritual_url).startswith("/spellbook/"):
         errors.append(f"{rel_path}: 'start_here_ritual.url' must point into /spellbook/")
+    elif _is_non_empty_string(ritual_url):
+        spellbook_error = validate_spellbook_target(str(ritual_url))
+        if spellbook_error:
+            errors.append(f"{rel_path}: 'start_here_ritual.url' {spellbook_error}")
 
     printable_url = data.get("featured_printable", {}).get("url")
     if _is_non_empty_string(printable_url) and not str(printable_url).startswith(
@@ -123,6 +184,20 @@ def validate_monster_file(path: Path) -> list[str]:
                     errors.append(f"{rel_path}: 'quick_links[{index}].label' is required")
                 if not _is_non_empty_string(link.get("url")):
                     errors.append(f"{rel_path}: 'quick_links[{index}].url' is required")
+
+    for field, prefix in OPTIONAL_ASSET_PATH_FIELDS.items():
+        value = data.get(field)
+        if value is None:
+            continue
+        if not _is_non_empty_string(value):
+            errors.append(f"{rel_path}: '{field}' must be a non-empty string when present")
+            continue
+        if not str(value).startswith(prefix):
+            errors.append(f"{rel_path}: '{field}' must point into {prefix}")
+            continue
+        asset_path = ROOT / str(value).lstrip("/")
+        if not asset_path.exists():
+            errors.append(f"{rel_path}: '{field}' target does not exist: {value}")
 
     return errors
 

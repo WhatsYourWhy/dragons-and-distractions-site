@@ -2,32 +2,26 @@
 name: "The Perfection Wyrm"
 emoji: "🐉"
 sigil: "/assets/generated/perfection-wyrm-sigil.png"
-banner_image: "/assets/generated/perfection-wyrm-banner.png"
-banner_image_srcset:
-  - path: "/assets/generated/perfection-wyrm-banner-640.webp"
-    width: 640
-  - path: "/assets/generated/perfection-wyrm-banner-1024.webp"
-    width: 1024
-  - path: "/assets/generated/perfection-wyrm-banner-1536.webp"
-    width: 1536
-banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
+card_art: "/assets/generated/cards/monster-perfection-wyrm-card-front-web.webp"
+banner_image: "/assets/generated/perfection-wyrm-banner.webp"
 banner_image_alt: "Paper-scaled wyrm coiled around unfinished pages, ink, wax seal, and candlelight"
 tagline: "Polish loops that keep the work from ever leaving the cave"
 description: "Break revision spirals with an ugly first pass, a visible ship line, and permission to stop when the work is already useful."
 plain_name: "perfectionism, over-editing, and fear of shipping"
 challenge_summary: "Perfection Wyrm appears when finishing starts to feel riskier than endless improving, so the draft stays safe but never gets used."
+accent_color: "#a08020"
 you_might_be_here_if:
   - "You keep editing after the useful changes are already done."
   - "Starting feels okay, but finishing and sending feel strangely dangerous."
   - "You call it 'making it better' even when the real problem is fear."
 start_here_ritual:
   label: "Ugly First Pass"
-  url: "/spellbook/#perfection-wyrm-rituals"
+  url: "/spellbook/ugly-first-pass.html"
   description: "Make one deliberately imperfect pass, define what 'useful enough' means, and stop when the draft crosses that line."
 featured_printable:
   label: "Done Is Better worksheet"
-  url: "/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf"
-  description: "A stop-rule worksheet for deciding whether the next edit is real improvement or just another loop."
+  url: "/site/printables/perfection-wyrm-done-is-better.html"
+  description: "A readable worksheet page for deciding whether the next edit is real improvement or just another loop."
 support_boundary: "This page is for untangling revision fear and all-or-nothing thinking, not for excusing unsafe work or impossible expectations. If perfection pressure is tied to trauma, punishment, or severe anxiety, use gentler pacing and outside support."
 cta: "Ship the draft"
 badges:
@@ -54,6 +48,14 @@ tags:
   - monster-page
   - obsidian
 ---
+
+<div class="monster-hero">
+  <img src="{{ "/Perfection-Wyrm.png" | relative_url }}" alt="Illustration of the Perfection Wyrm coiled around unfinished pages and a candlelit desk">
+  <div class="monster-hero__caption">
+    <span class="monster-hero__label">Perfection Wyrm Portrait</span>
+    <span class="monster-hero__links">Download the art file: <a href="{{ "/Perfection-Wyrm.png" | relative_url }}">PNG</a> | <a href="{{ "/art/" | relative_url }}">Gallery</a></span>
+  </div>
+</div>
 
 <div class="battle-card">
   <div class="battle-card__eyebrow">Battle Card</div>

@@ -2,20 +2,14 @@
 name: "The Task Hydra"
 emoji: "🐲"
 sigil: "/assets/generated/task-hydra-sigil.png"
-banner_image: "/assets/generated/task-hydra-banner.png"
-banner_image_srcset:
-  - path: "/assets/generated/task-hydra-banner-640.webp"
-    width: 640
-  - path: "/assets/generated/task-hydra-banner-1024.webp"
-    width: 1024
-  - path: "/assets/generated/task-hydra-banner-1536.webp"
-    width: 1536
-banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
+card_art: "/assets/generated/cards/monster-task-hydra-card-front-web.webp"
+banner_image: "/assets/generated/task-hydra-banner.webp"
 banner_image_alt: "Many-headed hydra rising from scattered task lists, notes, and desk clutter"
 tagline: "Too many heads, not enough focus"
 description: "Pick one head to strike, apply the Single-Task Oath, and wield the 3-Item Rule to stop new heads from sprouting."
 plain_name: "overwhelm from too many tasks"
 challenge_summary: "Task Hydra shows up when too many open loops are screaming at once and choosing the first task feels harder than doing it."
+accent_color: "#6b5ae0"
 you_might_be_here_if:
   - "You keep reorganizing the list instead of starting."
   - "Every task feels urgent, so your brain treats them all like a threat cloud."

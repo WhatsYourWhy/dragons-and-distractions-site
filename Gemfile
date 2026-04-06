@@ -5,6 +5,7 @@ gem "github-pages", group: :jekyll_plugins
 
 # Additional plugins required by _config.yml that may not be in github-pages
 gem "jekyll-optional-front-matter"
+gem "jekyll-sitemap"
 gem "jekyll-titles-from-headings"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

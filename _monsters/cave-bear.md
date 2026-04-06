@@ -2,20 +2,14 @@
 name: "The Cave Bear"
 emoji: "🐻"
 sigil: "/assets/generated/cave-bear-sigil.png"
-banner_image: "/assets/generated/cave-bear-banner.png"
-banner_image_srcset:
-  - path: "/assets/generated/cave-bear-banner-640.webp"
-    width: 640
-  - path: "/assets/generated/cave-bear-banner-1024.webp"
-    width: 1024
-  - path: "/assets/generated/cave-bear-banner-1536.webp"
-    width: 1536
-banner_image_sizes: "(min-width: 1200px) 1180px, 100vw"
+card_art: "/assets/generated/cards/monster-cave-bear-card-front-web.webp"
+banner_image: "/assets/generated/cave-bear-banner.webp"
 banner_image_alt: "Warm cave opening toward daylight with a gentle bear presence and a path back outside"
 tagline: "Avoidance & hibernation holes"
 description: "Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave."
 plain_name: "shutdown, retreat, and hiding in the cave"
 challenge_summary: "Cave Bear takes over when retreat starts to feel safer than re-entering the world, even when you do not want to stay hidden."
+accent_color: "#8b2a2a"
 you_might_be_here_if:
   - "Rest keeps turning into retreat or isolation."
   - "Replying, leaving the room, or starting the errand feels too big to touch."
