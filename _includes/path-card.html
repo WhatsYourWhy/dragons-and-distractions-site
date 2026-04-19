@@ -22,9 +22,17 @@
   {% if matched_monster and card_media %}
   <figure class="path-card__media{% if matched_monster.card_art %} path-card__media--card{% else %} path-card__media--sigil{% endif %}">
     {%- if matched_monster.card_art -%}
-      {%- assign card_media_alt = matched_monster.card_art_alt | default: matched_monster.name | append: " monster card" -%}
+      {%- if matched_monster.card_art_alt -%}
+        {%- assign card_media_alt = matched_monster.card_art_alt -%}
+      {%- else -%}
+        {%- assign card_media_alt = matched_monster.name | append: " monster card" -%}
+      {%- endif -%}
     {%- else -%}
-      {%- assign card_media_alt = matched_monster.sigil_alt | default: matched_monster.name | append: " sigil" -%}
+      {%- if matched_monster.sigil_alt -%}
+        {%- assign card_media_alt = matched_monster.sigil_alt -%}
+      {%- else -%}
+        {%- assign card_media_alt = matched_monster.name | append: " sigil" -%}
+      {%- endif -%}
     {%- endif -%}
     <img src="{{ card_media | relative_url }}" alt="{{ card_media_alt }}" loading="lazy" decoding="async" width="{{ card_media_width }}" height="{{ card_media_height }}">
   </figure>

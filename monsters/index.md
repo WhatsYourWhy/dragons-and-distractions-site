@@ -49,7 +49,12 @@ show_breadcrumbs: false
     <article class="monster-card monster-card--index" data-search="{{ monster_search | strip | downcase | escape }}" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
       {% if monster.sigil %}
       <figure class="monster-card__media monster-card__media--sigil monster-card__media--index">
-        <img class="monster-card__media-image monster-card__media-image--sigil" src="{{ monster.sigil | relative_url }}" alt="{{ monster.sigil_alt | default: monster.name | append: ' sigil' }}" loading="lazy" decoding="async">
+        {%- if monster.sigil_alt -%}
+          {%- assign _sigil_alt = monster.sigil_alt -%}
+        {%- else -%}
+          {%- assign _sigil_alt = monster.name | append: ' sigil' -%}
+        {%- endif -%}
+        <img class="monster-card__media-image monster-card__media-image--sigil" src="{{ monster.sigil | relative_url }}" alt="{{ _sigil_alt }}" loading="lazy" decoding="async">
       </figure>
       {% endif %}
       <div class="monster-card__body">
