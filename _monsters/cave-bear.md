@@ -5,6 +5,11 @@ sigil: "/assets/generated/cave-bear-sigil.png"
 card_art: "/assets/generated/cards/monster-cave-bear-card-front-web.webp"
 banner_image: "/assets/generated/cave-bear-banner.webp"
 banner_image_alt: "Warm cave opening toward daylight with a gentle bear presence and a path back outside"
+image:
+  path: "/assets/generated/cave-bear-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Warm cave opening toward daylight with a gentle bear presence and a path back outside"
 tagline: "Avoidance & hibernation holes"
 description: "Step into the light with threshold spells, micro-movements, and social ropes that pull you out of the cave."
 plain_name: "shutdown, retreat, and hiding in the cave"

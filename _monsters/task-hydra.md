@@ -5,6 +5,11 @@ sigil: "/assets/generated/task-hydra-sigil.png"
 card_art: "/assets/generated/cards/monster-task-hydra-card-front-web.webp"
 banner_image: "/assets/generated/task-hydra-banner.webp"
 banner_image_alt: "Many-headed hydra rising from scattered task lists, notes, and desk clutter"
+image:
+  path: "/assets/generated/task-hydra-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Many-headed hydra rising from scattered task lists, notes, and desk clutter"
 tagline: "Too many heads, not enough focus"
 description: "Pick one head to strike, apply the Single-Task Oath, and wield the 3-Item Rule to stop new heads from sprouting."
 plain_name: "overwhelm from too many tasks"

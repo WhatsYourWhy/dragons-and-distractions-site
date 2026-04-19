@@ -26,8 +26,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/design.css?v=20260325" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/design.css?v=20260419" | relative_url }}">
     {%- feed_meta -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Dragons & Distractions",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@type": "Organization",
+        "name": "Dragons & Distractions",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.baseurl }}/assets/icon-512.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "sameAs": [
+        "https://x.com/whatsyourwhy",
+        "https://substack.com/@whatsyourwhy85",
+        "https://github.com/WhatsYourWhy",
+        "https://whatsyourwhy85.gumroad.com",
+        "https://buymeacoffee.com/whatsyourwhy85",
+        "https://www.linkedin.com/in/justin-shank/"
+      ]{% if page.url == "/" %},
+      "creator": {
+        "@type": "Person",
+        "name": "Justin Shank",
+        "url": "{{ site.url }}{{ site.baseurl }}/#about",
+        "sameAs": [
+          "https://x.com/whatsyourwhy",
+          "https://substack.com/@whatsyourwhy85",
+          "https://github.com/WhatsYourWhy",
+          "https://www.linkedin.com/in/justin-shank/"
+        ],
+        "knowsAbout": [
+          "ADHD support tools",
+          "executive function",
+          "printable tools",
+          "behavioral scaffolding",
+          "creative systems"
+        ]
+      }{% endif %}
+    }
+    </script>
     <!--
       Analytics and ads are consent-gated. AdSense is disabled until we
       actually have ad units to serve. GA4 loads only after the visitor

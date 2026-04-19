@@ -5,6 +5,11 @@ sigil: "/assets/generated/perfection-wyrm-sigil.png"
 card_art: "/assets/generated/cards/monster-perfection-wyrm-card-front-web.webp"
 banner_image: "/assets/generated/perfection-wyrm-banner.webp"
 banner_image_alt: "Paper-scaled wyrm coiled around unfinished pages, ink, wax seal, and candlelight"
+image:
+  path: "/assets/generated/perfection-wyrm-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Paper-scaled wyrm coiled around unfinished pages, ink, wax seal, and candlelight"
 tagline: "Polish loops that keep the work from ever leaving the cave"
 description: "Break revision spirals with an ugly first pass, a visible ship line, and permission to stop when the work is already useful."
 plain_name: "perfectionism, over-editing, and fear of shipping"

@@ -5,6 +5,11 @@ sigil: "/assets/generated/dopamine-goblin-sigil.png"
 card_art: "/assets/generated/cards/monster-dopamine-goblin-card-front-web.webp"
 banner_image: "/assets/generated/dopamine-goblin-banner.webp"
 banner_image_alt: "Treasure-like desk of shiny distractions circling a tempting empty work space"
+image:
+  path: "/assets/generated/dopamine-goblin-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Treasure-like desk of shiny distractions circling a tempting empty work space"
 tagline: "Shiny distractions & impulse trades"
 description: "Contain novelty cravings with reward binding, goblin jars, and clear boundaries around the work you choose."
 plain_name: "shiny distractions and impulse trades"

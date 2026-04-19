@@ -4,7 +4,7 @@ url: "https://dragonsanddistractions.com"
 baseurl: ""
 
 # Social sharing / Open Graph
-logo: "/assets/generated/homepage-hero-web.png"
+logo: "/assets/icon-512.png"
 social:
   name: "Dragons & Distractions"
   links: []

@@ -5,6 +5,11 @@ sigil: "/assets/generated/slumber-troll-sigil.png"
 card_art: "/assets/generated/cards/monster-slumber-troll-card-front-web.webp"
 banner_image: "/assets/generated/slumber-troll-banner.webp"
 banner_image_alt: "Sleepy dawn bridge from blankets to morning light with a quiet river crossing"
+image:
+  path: "/assets/generated/slumber-troll-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Sleepy dawn bridge from blankets to morning light with a quiet river crossing"
 tagline: "Sleep inertia & morning bridges"
 description: "Cross from blankets to momentum with wake invocations, light cues, and accountability ropes."
 plain_name: "morning inertia and transition friction"
