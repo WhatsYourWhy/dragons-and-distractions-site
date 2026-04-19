@@ -52,37 +52,27 @@
         "https://whatsyourwhy85.gumroad.com",
         "https://buymeacoffee.com/whatsyourwhy85",
         "https://www.linkedin.com/in/justin-shank/"
-      ]
-    }
-    </script>
-    {%- if page.url == "/" -%}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Justin Shank",
-      "url": "{{ site.url }}{{ site.baseurl }}/#about",
-      "sameAs": [
-        "https://x.com/whatsyourwhy",
-        "https://substack.com/@whatsyourwhy85",
-        "https://github.com/WhatsYourWhy",
-        "https://www.linkedin.com/in/justin-shank/"
-      ],
-      "knowsAbout": [
-        "ADHD support tools",
-        "executive function",
-        "printable tools",
-        "behavioral scaffolding",
-        "creative systems"
-      ],
+      ]{% if page.url == "/" %},
       "creator": {
-        "@type": "CreativeWork",
-        "name": "Dragons & Distractions",
-        "url": "{{ site.url }}{{ site.baseurl }}/"
-      }
+        "@type": "Person",
+        "name": "Justin Shank",
+        "url": "{{ site.url }}{{ site.baseurl }}/#about",
+        "sameAs": [
+          "https://x.com/whatsyourwhy",
+          "https://substack.com/@whatsyourwhy85",
+          "https://github.com/WhatsYourWhy",
+          "https://www.linkedin.com/in/justin-shank/"
+        ],
+        "knowsAbout": [
+          "ADHD support tools",
+          "executive function",
+          "printable tools",
+          "behavioral scaffolding",
+          "creative systems"
+        ]
+      }{% endif %}
     }
     </script>
-    {%- endif -%}
     <!--
       Analytics and ads are consent-gated. AdSense is disabled until we
       actually have ad units to serve. GA4 loads only after the visitor
