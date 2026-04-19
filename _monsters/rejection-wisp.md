@@ -72,12 +72,25 @@ The Rejection Wisp is small enough to fit inside a notification bubble and loud 
 
 The Wisp is persuasive because it moves faster than language. Your body reacts before your thoughts can sort the signal from the story.
 
+In old folklore, wisps lured travellers off the path with a little bobbing light. The Rejection Wisp does the same thing with a single notification bubble. You were on your way. Now you are standing in the swamp at 2 a.m. rereading one message and writing a courtroom speech in your head. The point is not that the light is fake. The point is that the path home is still there, and you are allowed to step back onto it.
+
 ## Monster Ecology {#lore-ecology}
 
 - Rejection sensitivity can turn ambiguity into alarm.
 - Message avoidance grows when the inbox becomes associated with shame or danger.
 - Improvising while flooded is much harder than replying from a prepared script.
 - Gentle structure often works better than "just be less emotional."
+- Silence is usually bandwidth, not a verdict — but the body does not know that in real time.
+- One unresolved thread often contaminates unrelated ones, which is why re-entry works better thread-by-thread than inbox-wide.
+
+## Real-World Examples
+
+- Seeing a one-word reply and spending an hour reading tone into it.
+- Leaving an unread notification for days because opening it feels like bracing for impact.
+- Drafting a long apology for something the other person did not actually notice.
+- Going quiet with someone you care about because you are convinced they are already upset.
+- Checking a thread obsessively, then not responding, then feeling worse for not responding.
+- Writing a reply, staring at it, and closing the tab without sending anything at all.
 
 ## The Rejection Wisp's Weaknesses {#weaknesses}
 
@@ -86,6 +99,7 @@ The Wisp is persuasive because it moves faster than language. Your body reacts b
 - Separate the written message from the story your brain is adding.
 - Re-enter one thread at a time, not the whole inbox at once.
 - Pair messages with body regulation: stand up, exhale, unclench, then send.
+- Remember the Wisp moves faster than language. Slow is a counter-spell.
 
 ## Rituals and Counter-Spells {#rituals}
 
@@ -100,6 +114,10 @@ The Wisp is persuasive because it moves faster than language. Your body reacts b
 **Borrowed Words**
 - Keep one or two safe scripts nearby for "I saw this," "I need more time," and "I cannot do that."
 
+**Story vs. Message**
+- Write the story your brain is telling on a separate line.
+- Then write the actual message the other person sent. Notice the gap. Reply to the message.
+
 Find the practical write-up in the [Spellbook]({{ "/spellbook/#rejection-wisp-rituals" | relative_url }}).
 
 ## Tools and Printables {#tools}
@@ -107,3 +125,31 @@ Find the practical write-up in the [Spellbook]({{ "/spellbook/#rejection-wisp-ri
 - [Reply Scaffold card]({{ "/site/printables/rejection-wisp-reply-scaffold.html" | relative_url }})
 - [Ink-friendly PDF]({{ "/site/printables/pdf/rejection-wisp-reply-scaffold-ink.pdf" | relative_url }})
 - If you need another human to help the thread feel survivable, use the [Buddy Ping template]({{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }}).
+- If the reply is also a "finished work" problem, pair this with [Perfection Wyrm]({{ "/monsters/perfection-wyrm/" | relative_url }}).
+
+## Command Phrases
+
+- "Acknowledge first, explain later."
+- "Reply to the message, not to the story."
+- "Silence is bandwidth, not a verdict."
+- "Clear enough is clear enough."
+- "One thread at a time."
+
+## Science and Reason
+
+- Rejection-related distress activates threat responses in the body before the thinking brain finishes parsing the words.
+- Pre-written scripts and response templates reduce cognitive load during exactly the moments when improvising is hardest.
+- Brief, concrete acknowledgements tend to de-escalate ambiguity faster than long, hedged replies.
+- Gradual re-exposure to avoided threads, one at a time, is generally kinder to the nervous system than inbox zero by force.
+
+*(This is support, not therapy. If rejection sensitivity is tied to trauma, relational harm, or persistent distress, working with a real human who can hold that with you is worth it.)*
+
+## Challenge for the Reader
+
+- Pick one avoided thread. Open it once. Do not reply yet.
+- Write the story your brain is telling on a separate line.
+- Draft the smallest useful acknowledgement — one sentence is fine.
+- Send it. Close the app.
+- Notice whether the sky fell. It usually does not. Write down what actually happened.
+
+> "The Wisp moves faster than language. You move slower on purpose — and that is how you find your way back to the path."

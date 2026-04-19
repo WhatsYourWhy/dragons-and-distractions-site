@@ -72,12 +72,25 @@ The Sensory Storm does not ask permission before it rolls in. It thickens the ai
 
 When the Storm takes the sky, your nervous system starts choosing safety over performance. That is not laziness or failure. It is weather response.
 
+In older stories, sailors learned that you do not argue with a storm. You take in the sails, point into the wind, and ride low until it passes. The Sensory Storm works the same way. It is not a personal failure that you cannot "think through" it. The first move is not cleverness; it is shelter. Reduce the weather. Then you can think again.
+
 ## Monster Ecology {#lore-ecology}
 
 - Sensory overload often looks like irritability, distraction, shutdown, or escape.
 - Too much input can make executive function collapse even when the original task was manageable.
 - Regulation usually starts with changing the environment, not lecturing yourself.
 - One lowered input can create enough space for thinking to return.
+- Small sensory loads can stack silently through the day and arrive as a sudden storm by evening.
+- Recovery after overload is usually longer than people expect — treating it like a short break often backfires.
+
+## Real-World Examples
+
+- A fluorescent-lit room quietly eating your focus until you cannot remember what you came for.
+- Trying to hold a conversation over loud music and feeling your words unspool.
+- An itchy label or tight waistband that derails a whole afternoon.
+- Grocery stores, airports, or open-plan offices turning a "quick task" into a recovery day.
+- Getting sharp with someone you love and only later realizing you had been overloaded for hours.
+- Needing silence in the car after a busy day because your body is still clearing input.
 
 ## The Sensory Storm's Weaknesses {#weaknesses}
 
@@ -86,6 +99,7 @@ When the Storm takes the sky, your nervous system starts choosing safety over pe
 - Shrink the environment before you plan the next task.
 - Name "overloaded" early so you do not confuse it with a character flaw.
 - Protect recovery time after the storm passes.
+- Leave, pause, or use accommodations — that is strategy, not defeat.
 
 ## Rituals and Counter-Spells {#rituals}
 
@@ -100,6 +114,10 @@ When the Storm takes the sky, your nervous system starts choosing safety over pe
 - Move to the smallest workable environment.
 - If the task matters, bring only the next tiny action into shelter with you.
 
+**Storm Log**
+- After it passes, note what built up and what helped.
+- Over time this becomes your personal weather map, not a scoreboard.
+
 Find the practical write-up in the [Spellbook]({{ "/spellbook/#sensory-storm-rituals" | relative_url }}).
 
 ## Tools and Printables {#tools}
@@ -107,3 +125,31 @@ Find the practical write-up in the [Spellbook]({{ "/spellbook/#sensory-storm-rit
 - [Sensory Reset card]({{ "/site/printables/sensory-storm-reset-card.html" | relative_url }})
 - [Ink-friendly PDF]({{ "/site/printables/pdf/sensory-storm-reset-card-ink.pdf" | relative_url }})
 - If the Storm is followed by retreat or exhaustion, pair this with [Cave Bear]({{ "/monsters/cave-bear/" | relative_url }}) or [Burnout Dragon]({{ "/monsters/burnout-dragon/" | relative_url }}).
+- If social load is the dominant input, see [Rejection Wisp]({{ "/monsters/rejection-wisp/" | relative_url }}) for re-entry tools afterward.
+
+## Command Phrases
+
+- "Reduce the weather before you plan the day."
+- "Shelter first, strategy second."
+- "One anchor, not ten."
+- "Overloaded is information, not a flaw."
+- "Leaving is a tool."
+
+## Science and Reason
+
+- Sensory overload can overwhelm the nervous system's capacity to filter input, which is why executive function collapses even on tasks that felt easy an hour earlier.
+- Short, structured regulation — pressure, cold, rhythm, quiet — is often faster at restoring function than willpower or reassurance.
+- Reducing a single dominant input (light, sound, touch, social demand) often produces disproportionately large relief.
+- Recovery time after sensory overload is real, measurable, and usually longer than a standard break. Budgeting for it reduces rebound overload.
+
+*(This page is for regulation and load reduction. If sensory overload is tied to ongoing harm, unsafe environments, or conditions that need clinical support, please seek real-world help alongside these tools.)*
+
+## Challenge for the Reader
+
+- Notice your current sensory load before you do anything else today.
+- Pick the loudest input and reduce it by one notch.
+- Choose one anchor: pressure, cold, rhythm, or quiet. Use it.
+- Plan one recovery window after your next predictably loud environment.
+- Write a line in your Storm Log tonight. One sentence is enough.
+
+> "You are not failing the day. You are weathering it. Shelter first — then the work can happen again."
