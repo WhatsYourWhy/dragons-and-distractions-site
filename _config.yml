@@ -27,6 +27,22 @@ titles_from_headings:
 optional_front_matter:
   remove_originals: true
 
+exclude:
+  - docs/
+  - tests/
+  - scripts/
+  - codex/
+  - tmp/
+  - output/
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - requirements.txt
+  - pytest.ini
+  - "*.zip"
+  - "Website functionality testing.pdf"
+
 collections:
   monsters:
     output: true
