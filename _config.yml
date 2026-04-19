@@ -28,6 +28,18 @@ optional_front_matter:
   remove_originals: true
 
 exclude:
+  # Jekyll defaults (must be re-listed when providing a custom exclude:)
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  # Project-specific
   - docs/
   - tests/
   - scripts/
@@ -36,8 +48,6 @@ exclude:
   - output/
   - README.md
   - LICENSE
-  - Gemfile
-  - Gemfile.lock
   - requirements.txt
   - pytest.ini
   - "*.zip"
