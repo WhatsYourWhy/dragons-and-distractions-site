@@ -72,12 +72,25 @@ The Perfection Wyrm does not breathe fire. It coils around the nearly-finished t
 
 It likes respectable excuses: polish, standards, quality, professionalism. Sometimes those are real. Often they are armor for fear. The Wyrm would rather keep the work hidden and untouched than let it enter the world with one rough edge still showing.
 
+In older legends, wyrms guarded treasure they never used. The Perfection Wyrm does the same thing with your draft. It does not want the work to be bad. It wants the work to stay. As long as it is still being "improved," it cannot be judged, rejected, or finished. The cave stays sealed. The treasure stays safe. And nobody ever gets to read it.
+
 ## Monster Ecology {#lore-ecology}
 
 - Perfectionism often looks productive from the outside because it uses the language of care.
 - Fear of evaluation can hide inside "I am just fixing a few things."
 - All-or-nothing thinking turns "not finished" into "not allowed to exist."
 - Executive dysfunction can make closing a task feel murkier than starting it.
+- Every extra revision can lower anxiety for five minutes and raise the stakes for the next round.
+- "Good enough" is a skill, not a failure — and the Wyrm hates that you can learn it.
+
+## Real-World Examples
+
+- Rewriting the same email six times because sending feels heavier than drafting.
+- Finishing a project and then quietly never showing it to anyone.
+- Opening the document "just to tweak one line" and closing an hour later with the same line still in question.
+- Editing past the point where the reader would have noticed any difference at all.
+- Waiting for a feeling of confidence that the Wyrm will never actually grant.
+- Calling procrastination "care" so you do not have to call it fear.
 
 ## The Perfection Wyrm's Weaknesses {#weaknesses}
 
@@ -86,6 +99,7 @@ It likes respectable excuses: polish, standards, quality, professionalism. Somet
 - Limit revision rounds instead of editing until the fear goes quiet.
 - Ask "does this improve usefulness?" instead of "does this soothe me?"
 - Send to a real person or place as soon as the draft crosses the line.
+- Separate the edit you would make from the edit the Wyrm is asking for.
 
 ## Rituals and Counter-Spells {#rituals}
 
@@ -101,6 +115,10 @@ It likes respectable excuses: polish, standards, quality, professionalism. Somet
 - Set a timer for the final pass.
 - When the timer ends, send, submit, or publish before reopening the file.
 
+**Witness Move**
+- Tell one person the version you just sent is the version.
+- Naming it out loud makes it harder for the Wyrm to re-open the file behind your back.
+
 Find the practical write-up in the [Spellbook]({{ "/spellbook/#perfection-wyrm-rituals" | relative_url }}).
 
 ## Tools and Printables {#tools}
@@ -108,3 +126,31 @@ Find the practical write-up in the [Spellbook]({{ "/spellbook/#perfection-wyrm-r
 - [Done Is Better worksheet]({{ "/site/printables/perfection-wyrm-done-is-better.html" | relative_url }})
 - [Ink-friendly PDF]({{ "/site/printables/pdf/perfection-wyrm-done-is-better-ink.pdf" | relative_url }})
 - If the Wyrm is mixed with overwhelm, pair this with the [Single-Task Oath]({{ "/spellbook/single-task-oath.html" | relative_url }}).
+- If fear of the reply is a bigger issue than the draft itself, see [Rejection Wisp]({{ "/monsters/rejection-wisp/" | relative_url }}).
+
+## Command Phrases
+
+- "Shipped beats polished."
+- "Useful enough is the win condition."
+- "The next edit is fear, not craft."
+- "Send, then breathe, then revise if it actually matters."
+- "The cave opens today."
+
+## Science and Reason
+
+- Maladaptive perfectionism is linked to procrastination, avoidance, and higher anxiety — not to higher quality work.
+- Defining a stop rule in advance reduces the grip of escalating revision, because the decision is made while calm, not while flooded.
+- Exposure to "sending imperfect work" tends to lower the fear response over time, in the same way other exposure-based approaches do.
+- Small, published work usually creates more learning and feedback than large, hidden work.
+
+*(This is guidance, not therapy. If perfectionism is tied to trauma, punishment, or severe anxiety, please work with a real human who can hold that with you.)*
+
+## Challenge for the Reader
+
+- Pick one unfinished thing today and define "useful enough" for it in one sentence.
+- Make a deliberately ugly first pass of something small. Let it stay ugly.
+- Set a timer for your final edit. When it ends, send.
+- Tell one person you shipped, even if the thing is tiny.
+- Notice whether the sky fell. Write down what actually happened instead of what the Wyrm predicted.
+
+> "The Wyrm would rather the work stayed hidden forever than risk one rough edge. The hero finishes anyway."
