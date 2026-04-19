@@ -71,6 +71,18 @@ hero_microcopy: "If overwhelmed, start here. One monster match is enough for now
   </div>
 </section>
 
+<section class="landing-section landing-section--about" id="about">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">About the creator</p>
+    <h2>Made by someone who also needed the map</h2>
+  </div>
+  <div class="about-block">
+    <p>Dragons &amp; Distractions was built by <strong>Justin Shank</strong>, a writer, maker, and pattern-goblin who wanted executive-function support to feel less like a clinical worksheet and more like a map you might actually keep nearby.</p>
+    <p>The idea is simple: when a stuck feeling has a name, it gets easier to face. Task Hydra. Dopamine Goblin. Temporal Shark. Burnout Dragon. The monsters are not here to make the struggle cute — they are here to make it recognizable, less shame-loaded, and easier to answer with one practical move.</p>
+    <p>Every part of the toolkit points back to the same promise: one monster, one ritual, one workable next step. Use what helps. Ignore what does not. Come back when the next beast starts chewing on the furniture.</p>
+  </div>
+</section>
+
 <section class="landing-section">
   <div class="section-heading">
     <p class="section-heading__eyebrow">What to do next</p>

@@ -31,7 +31,7 @@
     <div class="monster-masthead__title-row">
       {% if masthead_title_media %}
       <figure class="monster-masthead__sigil{% if page.card_art %} monster-masthead__sigil--card{% endif %}">
-        <img src="{{ masthead_title_media | relative_url }}" alt="" width="{{ masthead_title_media_width }}" height="{{ masthead_title_media_height }}" loading="lazy" decoding="async">
+        <img src="{{ masthead_title_media | relative_url }}" alt="{% if page.card_art %}{{ page.name }} monster card{% else %}{{ page.name }} sigil{% endif %}" width="{{ masthead_title_media_width }}" height="{{ masthead_title_media_height }}" loading="lazy" decoding="async">
       </figure>
       {% endif %}
       <div class="monster-masthead__heading">

@@ -3,6 +3,7 @@
     <div class="site-footer__brand">
       <p class="site-footer__title">{{ site.title }}</p>
       <p class="site-footer__summary">A practical fantasy toolkit for executive-function battles. Start with one monster, one ritual, and one workable next step.</p>
+      {% include newsletter-form.html variant="footer" input_id="bd-email-footer" heading="Get one tool a week" blurb="Short emails when a new ritual, printable, or monster lands. No spam, unsubscribe anytime." %}
     </div>
 
     <nav class="site-footer__nav" aria-label="Footer">
@@ -12,7 +13,20 @@
       <a href="{{ '/spellbook/' | relative_url }}">Rituals</a>
       <a href="{{ '/codex/' | relative_url }}">Codex</a>
       <a href="{{ '/shop/' | relative_url }}">Shop</a>
-      <a href="{{ '/feedback/' | relative_url }}">Feedback & Privacy</a>
+      <a href="{{ '/#about' | relative_url }}">About</a>
+      <a href="{{ '/feedback/' | relative_url }}">Feedback &amp; Privacy</a>
     </nav>
+
+    <div class="site-footer__social" aria-labelledby="footer-social-heading">
+      <p id="footer-social-heading" class="site-footer__social-heading">Elsewhere in the dungeon</p>
+      <ul class="site-footer__social-list">
+        <li><a href="https://x.com/whatsyourwhy" target="_blank" rel="me noopener">X / Twitter</a></li>
+        <li><a href="https://substack.com/@whatsyourwhy85" target="_blank" rel="me noopener">Substack</a></li>
+        <li><a href="https://github.com/WhatsYourWhy" target="_blank" rel="me noopener">GitHub</a></li>
+        <li><a href="https://whatsyourwhy85.gumroad.com" target="_blank" rel="me noopener">Gumroad</a></li>
+        <li><a href="https://buymeacoffee.com/whatsyourwhy85" target="_blank" rel="me noopener">Buy Me a Coffee</a></li>
+        <li><a href="https://www.linkedin.com/in/justin-shank/" target="_blank" rel="me noopener">LinkedIn</a></li>
+      </ul>
+    </div>
   </div>
 </footer>

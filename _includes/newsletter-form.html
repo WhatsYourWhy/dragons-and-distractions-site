@@ -1,0 +1,25 @@
+{% assign heading = include.heading | default: "Get one tool a week" %}
+{% assign blurb = include.blurb | default: "Short emails when a new ritual, printable, or monster lands. No spam, unsubscribe anytime." %}
+{% assign button_label = include.button_label | default: "Subscribe" %}
+{% assign variant = include.variant | default: "default" %}
+{% assign input_id = include.input_id | default: "bd-email" %}
+
+<section class="newsletter newsletter--{{ variant }}" aria-labelledby="{{ input_id }}-heading">
+  <h3 id="{{ input_id }}-heading" class="newsletter__heading">{{ heading }}</h3>
+  <p class="newsletter__blurb">{{ blurb }}</p>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/WhatsYourWhy"
+    method="post"
+    target="_blank"
+    class="newsletter__form embeddable-buttondown-form"
+  >
+    <label class="newsletter__label" for="{{ input_id }}">Enter your email</label>
+    <div class="newsletter__row">
+      <input class="newsletter__input" type="email" name="email" id="{{ input_id }}" placeholder="you@example.com" required>
+      <button class="newsletter__submit cta-button cta-button--primary" type="submit">{{ button_label }}</button>
+    </div>
+    <p class="newsletter__fine-print">
+      Powered by <a href="https://buttondown.com/refer/WhatsYourWhy" target="_blank" rel="noopener">Buttondown</a>.
+    </p>
+  </form>
+</section>

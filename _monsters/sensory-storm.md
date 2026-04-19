@@ -5,6 +5,11 @@ sigil: "/assets/generated/sensory-storm-sigil.png"
 card_art: "/assets/generated/cards/monster-sensory-storm-card-front-web.webp"
 banner_image: "/assets/generated/sensory-storm-banner.webp"
 banner_image_alt: "Sheltered refuge beneath swirling storm patterns, lantern light, and a calm center"
+image:
+  path: "/assets/generated/sensory-storm-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Sheltered refuge beneath swirling storm patterns, lantern light, and a calm center"
 tagline: "Too much input, not enough shelter"
 description: "Reduce overload with input triage, one-sense anchors, and a reset plan that protects your nervous system before asking for performance."
 plain_name: "sensory overload, saturation, and shutdown risk"

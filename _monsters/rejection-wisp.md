@@ -5,6 +5,11 @@ sigil: "/assets/generated/rejection-wisp-sigil.png"
 card_art: "/assets/generated/cards/monster-rejection-wisp-card-front-web.webp"
 banner_image: "/assets/generated/rejection-wisp-banner.webp"
 banner_image_alt: "Lantern-lit desk with a sealed letter, soft ghostly ring, and open doorway at dusk"
+image:
+  path: "/assets/generated/rejection-wisp-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Lantern-lit desk with a sealed letter, soft ghostly ring, and open doorway at dusk"
 tagline: "One hard interaction that fogs the whole inbox"
 description: "Reduce message dread with reply scaffolds, acknowledgement scripts, and gentler re-entry after a social sting."
 plain_name: "rejection sensitivity, unread messages, and social avoidance"

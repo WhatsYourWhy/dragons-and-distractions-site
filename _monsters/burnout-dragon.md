@@ -5,6 +5,11 @@ sigil: "/assets/generated/burnout-dragon-sigil.png"
 card_art: "/assets/generated/cards/monster-burnout-dragon-card-front-web.webp"
 banner_image: "/assets/generated/burnout-dragon-banner.webp"
 banner_image_alt: "Resting dragon curled around a small ember in a quiet cavern"
+image:
+  path: "/assets/generated/burnout-dragon-banner.webp"
+  width: 1536
+  height: 1024
+  alt: "Resting dragon curled around a small ember in a quiet cavern"
 tagline: "When everything costs too much"
 description: "Scale down to a minimum viable day, protect your remaining energy, and stop treating depletion like a motivation problem."
 plain_name: "burnout, deep depletion, and task collapse"

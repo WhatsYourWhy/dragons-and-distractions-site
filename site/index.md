@@ -1,6 +1,6 @@
 ---
 layout: hub
-title: "Printables"
+title: "Tool Cabinet"
 description: "Printable cards, checklists, and templates from the toolkit—ink-friendly PDFs and quick links from each monster path."
 hero_title: "Fast Tools, Cards, and Templates"
 hero_intro: "Use this cabinet when you want the lowest-friction version of the support: a card to print, a checklist to keep nearby, or a script to send."
