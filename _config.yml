@@ -43,7 +43,6 @@ exclude:
   - docs/
   - tests/
   - scripts/
-  - codex/
   - tmp/
   - output/
   - README.md
