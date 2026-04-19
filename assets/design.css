@@ -260,6 +260,17 @@ nav a {
   outline-offset: 3px;
 }
 
+.site-banner__link[aria-current="page"] {
+  color: var(--color-accent-light);
+  border-color: var(--color-accent);
+  box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+
+.site-banner__link.cta-button--primary[aria-current="page"],
+.site-banner__link.cta-button--secondary[aria-current="page"] {
+  box-shadow: 0 0 0 2px var(--color-accent-light), 0 0 12px rgba(245, 200, 66, 0.35);
+}
+
 .site-banner__link.cta-button--primary,
 .site-banner__link.cta-button--primary:visited {
   color: var(--color-text-contrast);

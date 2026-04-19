@@ -118,7 +118,7 @@ In old folklore, wisps lured travellers off the path with a little bobbing light
 - Write the story your brain is telling on a separate line.
 - Then write the actual message the other person sent. Notice the gap. Reply to the message.
 
-Find the practical write-up in the [Spellbook]({{ "/spellbook/#rejection-wisp-rituals" | relative_url }}).
+Find the practical write-up in the [Rituals]({{ "/spellbook/#rejection-wisp-rituals" | relative_url }}) page.
 
 ## Tools and Printables {#tools}
 

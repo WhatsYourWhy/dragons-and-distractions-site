@@ -40,14 +40,21 @@
       <ul class="site-banner__links">
         {% assign nav_links = site.data.nav_links %}
         {% for link in nav_links %}
-        <li class="site-banner__item{% if link.style %} site-banner__item--{{ link.style }}{% endif %}">
+        {%- assign _current_url = page.url | default: '' -%}
+        {%- assign _is_current = false -%}
+        {%- if link.url == _current_url -%}
+          {%- assign _is_current = true -%}
+        {%- elsif link.url != '/' and _current_url contains link.url -%}
+          {%- assign _is_current = true -%}
+        {%- endif -%}
+        <li class="site-banner__item{% if link.style %} site-banner__item--{{ link.style }}{% endif %}{% if _is_current %} is-current{% endif %}">
           {%- assign link_classes = "site-banner__link" -%}
           {%- if link.style == "primary" -%}
             {%- assign link_classes = link_classes | append: " cta-button cta-button--primary" -%}
           {%- elsif link.style == "secondary" -%}
             {%- assign link_classes = link_classes | append: " cta-button cta-button--secondary" -%}
           {%- endif -%}
-          <a class="{{ link_classes }}" href="{{ link.url | relative_url }}">
+          <a class="{{ link_classes }}" href="{{ link.url | relative_url }}"{% if _is_current %} aria-current="page"{% endif %}>
             <span class="site-banner__text">{{ link.label }}</span>
           </a>
         </li>

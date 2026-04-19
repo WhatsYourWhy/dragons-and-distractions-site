@@ -129,7 +129,7 @@ image:
     </div>
     <div class="section-actions">
       <a class="cta-button" href="{{ '/choose-your-monster/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧭</span><span>Choose Your Monster</span></a>
-      <a class="cta-button" href="{{ '/spellbook/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">⚔️</span><span>Open the Spellbook</span></a>
+      <a class="cta-button" href="{{ '/spellbook/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">⚔️</span><span>Open the Rituals</span></a>
       <a class="cta-button" href="{{ '/site/' | relative_url }}"><span class="cta-button__emoji" aria-hidden="true">🧰</span><span>Grab a Tool</span></a>
     </div>
   </div>

@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
+    {%- if page.robots -%}
+    <meta name="robots" content="{{ page.robots }}">
+    {%- endif -%}
+    {%- assign _twitter_title = page.title | default: site.title -%}
+    {%- assign _twitter_description = page.description | default: site.description -%}
+    <meta name="twitter:title" content="{{ _twitter_title }}{% if page.title and site.title %} | {{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ _twitter_description }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32.png" | relative_url }}">
     <link rel="icon" type="image/png" sizes="64x64" href="{{ "/assets/favicon-64.png" | relative_url }}">
     <link rel="icon" type="image/svg+xml" href="{{ "/assets/favicon.svg" | relative_url }}">
@@ -241,7 +248,7 @@
     {%- include footer.html -%}
     <a class="back-to-top" href="#main-content" aria-label="Back to top">
       <span class="back-to-top__icon" aria-hidden="true">&#8593;</span>
-      <span>Back to top</span>
+      <span>Top</span>
     </a>
   </body>
 </html>

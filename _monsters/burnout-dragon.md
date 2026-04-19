@@ -118,7 +118,7 @@ In older stories, dragons hoarded gold inside a mountain and slept on it for cen
 - When the fire is this low, shrink the cave. Fewer rooms, fewer people, fewer screens.
 - Defend one quiet corner even if the rest of the day is loud.
 
-Find the practical write-up in the [Spellbook]({{ "/spellbook/#burnout-dragon-rituals" | relative_url }}).
+Find the practical write-up in the [Rituals]({{ "/spellbook/#burnout-dragon-rituals" | relative_url }}) page.
 
 ## Tools and Printables {#tools}
 

@@ -1,4 +1,10 @@
-﻿# Dragons & Distractions Image Brief
+﻿---
+title: "Image Brief (internal)"
+sitemap: false
+robots: noindex, nofollow
+---
+
+# Dragons & Distractions Image Brief
 
 This brief is the next visual layer for the site. It is meant to keep new assets cohesive even if they are generated in batches over time.
 

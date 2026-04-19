@@ -26,7 +26,7 @@ show_breadcrumbs: false
     </article>
     <article class="landing-card">
       <h3>Want the shortest practical version?</h3>
-      <p>Go to the <a href="{{ '/spellbook/' | relative_url }}">Spellbook</a> or the <a href="{{ '/site/' | relative_url }}">tool cabinet</a> if you need action before lore.</p>
+      <p>Go to the <a href="{{ '/spellbook/' | relative_url }}">Rituals</a> or the <a href="{{ '/site/' | relative_url }}">Tool Cabinet</a> if you need action before lore.</p>
     </article>
     <article class="landing-card">
       <h3>Want the full pattern and examples?</h3>
@@ -49,7 +49,7 @@ show_breadcrumbs: false
     <article class="monster-card monster-card--index" data-search="{{ monster_search | strip | downcase | escape }}" style="--monster-accent: {{ monster.accent_color | default: '#c8900a' }};">
       {% if monster.sigil %}
       <figure class="monster-card__media monster-card__media--sigil monster-card__media--index">
-        <img class="monster-card__media-image monster-card__media-image--sigil" src="{{ monster.sigil | relative_url }}" alt="" loading="lazy" decoding="async">
+        <img class="monster-card__media-image monster-card__media-image--sigil" src="{{ monster.sigil | relative_url }}" alt="{{ monster.sigil_alt | default: monster.name | append: ' sigil' }}" loading="lazy" decoding="async">
       </figure>
       {% endif %}
       <div class="monster-card__body">
