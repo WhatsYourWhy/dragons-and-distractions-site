@@ -260,6 +260,17 @@ nav a {
   outline-offset: 3px;
 }
 
+.site-banner__link[aria-current="page"] {
+  color: var(--color-accent-light);
+  border-color: var(--color-accent);
+  box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+
+.site-banner__link.cta-button--primary[aria-current="page"],
+.site-banner__link.cta-button--secondary[aria-current="page"] {
+  box-shadow: 0 0 0 2px var(--color-accent-light), 0 0 12px rgba(245, 200, 66, 0.35);
+}
+
 .site-banner__link.cta-button--primary,
 .site-banner__link.cta-button--primary:visited {
   color: var(--color-text-contrast);
@@ -2953,4 +2964,52 @@ body.theme-low-stim .ritual-library__card {
   .site-banner__nav {
     grid-column: 1 / -1;
   }
+}
+
+.consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: var(--color-surface-strong, #261b0d);
+  color: var(--color-text, #f6ecd6);
+  border-top: 1px solid var(--color-accent, #c8900a);
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.45);
+}
+
+.consent-banner[hidden] { display: none; }
+
+.consent-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+}
+
+.consent-banner__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1 1 22rem;
+}
+
+.consent-banner__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+body.theme-low-stim .consent-banner {
+  background: var(--color-surface, #f3e9d2);
+  color: var(--color-text, #2e2410);
+  border-top-color: var(--color-accent, #8a6a1e);
+}
+
+@media (max-width: 640px) {
+  .consent-banner__inner { flex-direction: column; align-items: stretch; }
+  .consent-banner__actions { justify-content: stretch; }
+  .consent-banner__actions .cta-button { flex: 1 1 auto; text-align: center; }
 }

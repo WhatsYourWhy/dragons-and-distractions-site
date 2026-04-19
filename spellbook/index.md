@@ -1,6 +1,7 @@
 ---
 layout: hub
-title: "Spellbook"
+title: "Rituals"
+breadcrumb_label: "Rituals"
 description: "Counter-spells and rituals you can use today: step-by-step pages linked from each monster without rereading the full bestiary."
 hero_title: "Rituals You Can Use Right Away"
 hero_intro: "Come here when you want the counter-spells without rereading the full bestiary. Pick the stuck point, then take the smallest useful action."

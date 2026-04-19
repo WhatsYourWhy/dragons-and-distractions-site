@@ -63,7 +63,7 @@ image:
 
 <section class="landing-section">
   <div class="section-callout">
-    Want the full context behind a tool? The <a href="{{ '/spellbook/' | relative_url }}">Spellbook</a> keeps the longer write-ups, examples, and matching ritual notes together.
+    Want the full context behind a tool? The <a href="{{ '/spellbook/' | relative_url }}">Rituals</a> page keeps the longer write-ups, examples, and matching ritual notes together.
   </div>
 </section>
 

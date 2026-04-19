@@ -21,7 +21,20 @@
 <article class="path-card{% if card_media %} path-card--with-media{% endif %}{% if matched_monster.card_art %} path-card--with-card-art{% endif %}{% if include.extra_class %} {{ include.extra_class }}{% endif %}"{% if include.card_id %} id="{{ include.card_id }}"{% endif %} aria-labelledby="{{ heading_id }}" style="--monster-accent: {{ matched_monster.accent_color | default: '#c8900a' }};">
   {% if matched_monster and card_media %}
   <figure class="path-card__media{% if matched_monster.card_art %} path-card__media--card{% else %} path-card__media--sigil{% endif %}">
-    <img src="{{ card_media | relative_url }}" alt="" loading="lazy" decoding="async" width="{{ card_media_width }}" height="{{ card_media_height }}">
+    {%- if matched_monster.card_art -%}
+      {%- if matched_monster.card_art_alt -%}
+        {%- assign card_media_alt = matched_monster.card_art_alt -%}
+      {%- else -%}
+        {%- assign card_media_alt = matched_monster.name | append: " monster card" -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- if matched_monster.sigil_alt -%}
+        {%- assign card_media_alt = matched_monster.sigil_alt -%}
+      {%- else -%}
+        {%- assign card_media_alt = matched_monster.name | append: " sigil" -%}
+      {%- endif -%}
+    {%- endif -%}
+    <img src="{{ card_media | relative_url }}" alt="{{ card_media_alt }}" loading="lazy" decoding="async" width="{{ card_media_width }}" height="{{ card_media_height }}">
   </figure>
   {% endif %}
   <div class="path-card__body">

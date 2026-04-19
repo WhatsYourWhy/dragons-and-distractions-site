@@ -119,7 +119,7 @@ In older legends, wyrms guarded treasure they never used. The Perfection Wyrm do
 - Tell one person the version you just sent is the version.
 - Naming it out loud makes it harder for the Wyrm to re-open the file behind your back.
 
-Find the practical write-up in the [Spellbook]({{ "/spellbook/#perfection-wyrm-rituals" | relative_url }}).
+Find the practical write-up in the [Rituals]({{ "/spellbook/#perfection-wyrm-rituals" | relative_url }}) page.
 
 ## Tools and Printables {#tools}
 

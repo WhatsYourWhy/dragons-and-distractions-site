@@ -118,7 +118,7 @@ In older stories, sailors learned that you do not argue with a storm. You take i
 - After it passes, note what built up and what helped.
 - Over time this becomes your personal weather map, not a scoreboard.
 
-Find the practical write-up in the [Spellbook]({{ "/spellbook/#sensory-storm-rituals" | relative_url }}).
+Find the practical write-up in the [Rituals]({{ "/spellbook/#sensory-storm-rituals" | relative_url }}) page.
 
 ## Tools and Printables {#tools}
 

@@ -1,0 +1,43 @@
+<div class="consent-banner js-consent-banner" role="region" aria-label="Privacy and analytics" hidden>
+  <div class="wrapper consent-banner__inner">
+    <p class="consent-banner__text">
+      We use <strong>privacy-light analytics</strong> (Google Analytics with IP anonymisation) to see which pages help people.
+      Nothing loads until you choose. See the <a href="{{ '/feedback/' | relative_url }}">privacy notes</a>.
+    </p>
+    <div class="consent-banner__actions">
+      <button type="button" class="cta-button cta-button--primary js-consent-accept">Accept analytics</button>
+      <button type="button" class="cta-button cta-button--secondary js-consent-decline">Decline</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var storageKey = "dd-consent";
+    var banner = document.querySelector(".js-consent-banner");
+    if (!banner) return;
+
+    var stored;
+    try { stored = localStorage.getItem(storageKey); } catch (_) { stored = null; }
+
+    if (stored === "accepted" || stored === "declined") {
+      banner.hidden = true;
+      return;
+    }
+
+    banner.hidden = false;
+
+    function setChoice(choice) {
+      try { localStorage.setItem(storageKey, choice); } catch (_) { /* ignore */ }
+      banner.hidden = true;
+      if (choice === "accepted" && typeof window.__ddLoadAnalytics === "function") {
+        window.__ddLoadAnalytics();
+      }
+    }
+
+    var accept = banner.querySelector(".js-consent-accept");
+    var decline = banner.querySelector(".js-consent-decline");
+    if (accept) accept.addEventListener("click", function () { setChoice("accepted"); });
+    if (decline) decline.addEventListener("click", function () { setChoice("declined"); });
+  })();
+</script>
