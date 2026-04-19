@@ -25,17 +25,39 @@
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/design.css?v=20260325" | relative_url }}">
     {%- feed_meta -%}
-    <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9310837374819126"
-   crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BBWE83NT3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4BBWE83NT3');
-  </script>
+    <!--
+      Analytics and ads are consent-gated. AdSense is disabled until we
+      actually have ad units to serve. GA4 loads only after the visitor
+      accepts the consent banner (see _includes/consent-banner.html).
+    -->
+    <script>
+      (function () {
+        var GA_ID = "G-4BBWE83NT3";
+        var storageKey = "dd-consent";
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag("js", new Date());
+
+        function loadAnalytics() {
+          if (window.__ddAnalyticsLoaded) return;
+          window.__ddAnalyticsLoaded = true;
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+          document.head.appendChild(s);
+          gtag("config", GA_ID, { anonymize_ip: true });
+        }
+
+        try {
+          if (localStorage.getItem(storageKey) === "accepted") {
+            loadAnalytics();
+          }
+        } catch (_) { /* ignore */ }
+
+        window.__ddLoadAnalytics = loadAnalytics;
+      })();
+    </script>
 </head>
   <body>
     <script>
@@ -246,6 +268,7 @@
     </button>
 
     {%- include footer.html -%}
+    {%- include consent-banner.html -%}
     <a class="back-to-top" href="#main-content" aria-label="Back to top">
       <span class="back-to-top__icon" aria-hidden="true">&#8593;</span>
       <span>Top</span>
