@@ -69,8 +69,7 @@ dragons-and-distractions-site/
 ### Navigation state
 
 * A shared `nav-cards.html` include renders a five-link grid (Monsters, Spellbook, Codex, Art, Site tools) on the homepage and the index pages for monsters, spellbook, codex, and site tools.
-* A `_sidebar.md` file under `site/` provides a sidebar tree with quick links to monsters, the spellbook, site tools, the codex, art, and repo docs for builds that support sidebar navigation.
-* Future refinements could include expanding the sidebar as new pages arrive and adding an always-visible header/footer nav if desired, but the core cross-page navigation has been summoned.
+* The primary navigation is rendered from `_data/nav_links.yml` via `_includes/site-banner.html` as a full header nav on desktop and a hamburger-triggered overlay on mobile.
 
 ## 🧙 Next Logical Spell to Cast
 

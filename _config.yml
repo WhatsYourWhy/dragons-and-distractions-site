@@ -50,7 +50,6 @@ exclude:
   - requirements.txt
   - pytest.ini
   - "*.zip"
-  - "Website functionality testing.pdf"
 
 collections:
   monsters:
