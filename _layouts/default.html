@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/design.css?v=20260420" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/design.css?v=20260420b" | relative_url }}">
     {%- feed_meta -%}
     <script type="application/ld+json">
     {
@@ -110,191 +110,123 @@
   <body>
     <script>
       (function () {
-        const storageKey = "dd-theme";
-        const className = "theme-low-stim";
-        const root = document.documentElement;
-        const navOpenClass = "nav-open";
-        const mobileOverlayQuery = "(max-width: 760px)";
-        const navFocusableSelector = [
-          "a[href]",
-          "button:not([disabled])",
-          "input:not([disabled]):not([type='hidden'])",
-          "select:not([disabled])",
-          "textarea:not([disabled])",
-          "[tabindex]:not([tabindex='-1'])"
-        ].join(",");
-        let lastMenuToggleButton = null;
+        var storageKey = "dd-theme";
+        var themeClass = "theme-low-stim";
+        var navOpenClass = "nav-open";
+        var root = document.documentElement;
 
-        const getStoredPreference = () => {
-          try {
-            return localStorage.getItem(storageKey);
-          } catch (error) {
-            return null;
-          }
-        };
+        function getStored(key) {
+          try { return localStorage.getItem(key); } catch (e) { return null; }
+        }
+        function setStored(key, val) {
+          try { localStorage.setItem(key, val); } catch (e) { /* ignore */ }
+        }
 
-        const setStoredPreference = (theme) => {
-          try {
-            localStorage.setItem(storageKey, theme);
-          } catch (error) {
-            /* ignore write errors */
-          }
-        };
-
-        const getPreferredTheme = () => {
-          const stored = getStoredPreference();
-          if (stored === "low-stim" || stored === "default") {
-            return stored;
-          }
-          return "default";
-        };
-
-        const applyTheme = (theme) => {
-          const isLowStim = theme === "low-stim";
-          document.body.classList.toggle(className, isLowStim);
+        function applyTheme(theme) {
+          var isLowStim = theme === "low-stim";
+          document.body.classList.toggle(themeClass, isLowStim);
           document.body.dataset.theme = theme;
           root.dataset.theme = theme;
-          document.querySelectorAll(".js-theme-toggle").forEach((button) => {
-            button.setAttribute("aria-checked", String(isLowStim));
-            const status = button.querySelector(".theme-toggle__status");
-            button.setAttribute("aria-label", isLowStim ? "Low Stim on" : "Low Stim off");
-            if (status) {
-              status.textContent = isLowStim ? "On" : "Standard mode";
-            }
-          });
-        };
-
-        const isMobileOverlayModeActive = () => window.matchMedia(mobileOverlayQuery).matches;
-
-        const getNavFocusableElements = (nav = document.querySelector(".js-site-nav")) => {
-          if (!nav) {
-            return [];
+          var toggles = document.querySelectorAll(".js-theme-toggle");
+          for (var i = 0; i < toggles.length; i++) {
+            var btn = toggles[i];
+            btn.setAttribute("aria-checked", String(isLowStim));
+            btn.setAttribute("aria-label", isLowStim ? "Low Stim on" : "Low Stim off");
+            var status = btn.querySelector(".theme-toggle__status");
+            if (status) status.textContent = isLowStim ? "On" : "Standard mode";
           }
+        }
 
-          return Array.from(nav.querySelectorAll(navFocusableSelector)).filter((element) => {
-            if (element.getAttribute("aria-hidden") === "true") {
-              return false;
-            }
-            return element.getClientRects().length > 0;
-          });
-        };
-
-        const applyNavState = (isOpen, options = {}) => {
-          const shouldRestoreFocus = options.restoreFocus !== false;
+        function setNavState(isOpen) {
           document.body.classList.toggle(navOpenClass, isOpen);
           root.dataset.navOpen = isOpen ? "open" : "closed";
-          document.querySelectorAll(".js-menu-toggle").forEach((button) => {
-            button.setAttribute("aria-expanded", String(isOpen));
-            button.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-            const label = button.querySelector(".site-banner__menu-toggle-text");
-            if (label) {
-              label.textContent = isOpen ? "Close" : "Menu";
-            }
-          });
-
-          if (isOpen && isMobileOverlayModeActive()) {
-            const [firstFocusableItem] = getNavFocusableElements();
-            if (firstFocusableItem) {
-              firstFocusableItem.focus();
-            }
+          var toggles = document.querySelectorAll(".js-menu-toggle");
+          for (var i = 0; i < toggles.length; i++) {
+            var btn = toggles[i];
+            btn.setAttribute("aria-expanded", String(isOpen));
+            btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+            var label = btn.querySelector(".site-banner__menu-toggle-text");
+            if (label) label.textContent = isOpen ? "Close" : "Menu";
           }
+        }
 
-          if (!isOpen && shouldRestoreFocus && isMobileOverlayModeActive()) {
-            const menuToggleButton = lastMenuToggleButton || document.querySelector(".js-menu-toggle");
-            if (menuToggleButton) {
-              menuToggleButton.focus();
-            }
-          }
-        };
+        // Apply stored theme ASAP to avoid flash.
+        var stored = getStored(storageKey);
+        applyTheme(stored === "low-stim" ? "low-stim" : "default");
 
-        const initialTheme = getPreferredTheme();
-        applyTheme(initialTheme);
-        applyNavState(false, { restoreFocus: false });
+        function init() {
+          applyTheme(document.body.classList.contains(themeClass) ? "low-stim" : "default");
+          setNavState(false);
 
-        document.addEventListener("DOMContentLoaded", () => {
-          applyTheme(document.body.classList.contains(className) ? "low-stim" : "default");
-          applyNavState(false, { restoreFocus: false });
-
-          document.querySelectorAll(".js-theme-toggle").forEach((button) => {
-            button.addEventListener("click", () => {
-              const isLowStim = document.body.classList.toggle(className);
-              const theme = isLowStim ? "low-stim" : "default";
+          // Theme toggle
+          var themeToggles = document.querySelectorAll(".js-theme-toggle");
+          for (var i = 0; i < themeToggles.length; i++) {
+            themeToggles[i].addEventListener("click", function () {
+              var isLowStim = !document.body.classList.contains(themeClass);
+              var theme = isLowStim ? "low-stim" : "default";
               applyTheme(theme);
-              setStoredPreference(theme);
+              setStored(storageKey, theme);
             });
-          });
+          }
 
-          document.querySelectorAll(".js-menu-toggle").forEach((button) => {
-            button.addEventListener("click", () => {
-              lastMenuToggleButton = button;
-              const isOpen = !document.body.classList.contains(navOpenClass);
-              applyNavState(isOpen);
+          // Menu toggle — open/close on click
+          var menuToggles = document.querySelectorAll(".js-menu-toggle");
+          for (var j = 0; j < menuToggles.length; j++) {
+            menuToggles[j].addEventListener("click", function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var willOpen = !document.body.classList.contains(navOpenClass);
+              setNavState(willOpen);
             });
-          });
+          }
 
-          document.querySelectorAll(".js-site-nav").forEach((nav) => {
-            nav.addEventListener("click", (event) => {
-              if (event.target === nav) {
-                applyNavState(false);
-              }
+          // Close nav when a link inside it is clicked (navigation still happens)
+          var navLinks = document.querySelectorAll(".js-site-nav a");
+          for (var k = 0; k < navLinks.length; k++) {
+            navLinks[k].addEventListener("click", function () {
+              setNavState(false);
             });
+          }
 
-            nav.querySelectorAll("a").forEach((link) => {
-              link.addEventListener("click", () => applyNavState(false));
+          // Close nav when clicking the backdrop (nav element itself, not children)
+          var navs = document.querySelectorAll(".js-site-nav");
+          for (var m = 0; m < navs.length; m++) {
+            navs[m].addEventListener("click", function (e) {
+              if (e.target === e.currentTarget) setNavState(false);
             });
-          });
+          }
 
-          document.addEventListener("keydown", (event) => {
-            if (
-              event.key === "Tab" &&
-              document.body.classList.contains(navOpenClass) &&
-              isMobileOverlayModeActive()
-            ) {
-              const nav = document.querySelector(".js-site-nav");
-              const focusableElements = getNavFocusableElements(nav);
-              if (!nav || focusableElements.length === 0) {
-                return;
-              }
-
-              const firstFocusable = focusableElements[0];
-              const lastFocusable = focusableElements[focusableElements.length - 1];
-              const activeElement = document.activeElement;
-
-              if (event.shiftKey) {
-                if (activeElement === firstFocusable || !nav.contains(activeElement)) {
-                  event.preventDefault();
-                  lastFocusable.focus();
-                }
-              } else if (activeElement === lastFocusable || !nav.contains(activeElement)) {
-                event.preventDefault();
-                firstFocusable.focus();
-              }
-            }
-
-            if (event.key === "Escape") {
-              applyNavState(false);
+          // Escape closes
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && document.body.classList.contains(navOpenClass)) {
+              setNavState(false);
             }
           });
 
-          const backTop = document.querySelector(".js-back-to-top");
+          // Back-to-top
+          var backTop = document.querySelector(".js-back-to-top");
           if (backTop) {
-            const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-            const toggleBackTop = () => {
-              const y = window.scrollY || document.documentElement.scrollTop;
+            var motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+            var toggleBackTop = function () {
+              var y = window.scrollY || document.documentElement.scrollTop;
               backTop.hidden = y < 420;
             };
             toggleBackTop();
             window.addEventListener("scroll", toggleBackTop, { passive: true });
-            backTop.addEventListener("click", () => {
-              const instant = motionQuery.matches;
+            backTop.addEventListener("click", function () {
+              var instant = motionQuery.matches;
               window.scrollTo({ top: 0, behavior: instant ? "auto" : "smooth" });
-              const mainEl = document.getElementById("main-content");
-              if (mainEl) {
-                mainEl.focus({ preventScroll: true });
-              }
+              var mainEl = document.getElementById("main-content");
+              if (mainEl) mainEl.focus({ preventScroll: true });
             });
           }
-        });
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", init);
+        } else {
+          init();
+        }
       })();
     </script>
     <a class="skip-to-content" href="#main-content">Skip to content</a>
