@@ -80,7 +80,7 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+🏰 I. Lore
 
 > The Cave Bear is the ancient beast of isolation and retreat.
 > It drags you back into the cave with promises of rest, doomscrolling, or hiding until it all blows over.

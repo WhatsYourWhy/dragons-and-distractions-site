@@ -1,6 +1,6 @@
 - label: Monsters
   url: "/monsters/"
-  description: "Browse the bestiary if you want to explore each pattern in more depth."
+  description: "Browse every monster if you want to explore each pattern in more depth."
   cta: "Browse Monsters"
 - label: Tool Cabinet
   url: "/site/"

@@ -41,11 +41,11 @@ show_breadcrumbs: false
   <div class="landing-grid landing-grid--compact">
     <article class="landing-card">
       <h3>Build printables</h3>
-      <p>Pair the artwork with the <a href="{{ '/site/' | relative_url }}">tool cabinet</a> if you want print-ready support cards or worksheets.</p>
+      <p>Pair the artwork with the <a href="{{ '/site/' | relative_url }}">Tool Cabinet</a> if you want print-ready support cards or worksheets.</p>
     </article>
     <article class="landing-card">
       <h3>Browse context</h3>
-      <p>Use the <a href="{{ '/monsters/' | relative_url }}">Monster Index</a> when you want the story and support framing behind each creature.</p>
+      <p>Use the <a href="{{ '/monsters/' | relative_url }}">monsters page</a> when you want the story and support framing behind each creature.</p>
     </article>
     <article class="landing-card">
       <h3>Watch the gallery grow</h3>

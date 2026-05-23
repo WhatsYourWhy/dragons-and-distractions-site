@@ -1,7 +1,7 @@
 ﻿---
 layout: hub
 title: "Choose Your Monster"
-description: "Start with the stuck feeling you recognize and get one first ritual and one fast tool without digging through the whole bestiary."
+description: "Start with the stuck feeling you recognize and get one first ritual and one fast tool without digging through every monster."
 permalink: "/choose-your-monster/"
 hero_title: "Choose Your Monster"
 hero_intro: "Start with the stuck feeling you recognize. Each path gives you plain-language signs, one first ritual, and one fast tool."
