@@ -80,7 +80,7 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+🏰 I. Lore
 
 > The Temporal Shark stalks the waters of your day, invisible until a deadline bleeds.
 > It moves silently through hours you swore you had, then strikes when time is too tight to escape.

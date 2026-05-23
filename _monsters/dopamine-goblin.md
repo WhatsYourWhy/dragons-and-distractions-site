@@ -80,7 +80,7 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+🏰 I. Lore
 
 > The Dopamine Goblin is small but mighty.
 > It scuttles around the edges of your mind, waving shiny objects and shrieking “THIS is better!”

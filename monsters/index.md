@@ -1,7 +1,7 @@
 ---
 layout: hub
-title: "Monster Index"
-description: "Browse every monster in the bestiary with short hooks, first rituals, and fast tools—or filter the list when you know part of the name or feeling."
+title: "Monsters"
+description: "Browse every monster with short hooks, first rituals, and fast tools—or filter the list when you know part of the name or feeling."
 hero_title: "Map the Monsters"
 hero_intro: "Start with the monster that matches your current stuck point, or use the guided chooser if you want plain-language routing first."
 show_breadcrumbs: false
@@ -16,7 +16,7 @@ show_breadcrumbs: false
 <section class="landing-section">
   <div class="section-heading">
     <p class="section-heading__eyebrow">Use the map, not the whole dungeon</p>
-    <h2>How to use the bestiary without getting lost in it</h2>
+    <h2>How to use the monster list without getting lost in it</h2>
     <p>These monster pages are here to help you recognize the pattern, grab one useful move, and stop before browsing turns into another avoidance side quest.</p>
   </div>
   <div class="landing-grid landing-grid--compact">
@@ -26,7 +26,7 @@ show_breadcrumbs: false
     </article>
     <article class="landing-card">
       <h3>Want the shortest practical version?</h3>
-      <p>Go to the <a href="{{ '/spellbook/' | relative_url }}">Rituals</a> or the <a href="{{ '/site/' | relative_url }}">Tool Cabinet</a> if you need action before lore.</p>
+      <p>Open the <a href="{{ '/spellbook/' | relative_url }}">Spellbook</a> or the <a href="{{ '/site/' | relative_url }}">Tool Cabinet</a> if you need action before lore.</p>
     </article>
     <article class="landing-card">
       <h3>Want the full pattern and examples?</h3>
@@ -37,7 +37,7 @@ show_breadcrumbs: false
 
 <section class="landing-section">
   <div class="section-heading">
-    <p class="section-heading__eyebrow">Browse the full bestiary</p>
+    <p class="section-heading__eyebrow">Browse every monster</p>
     <h2>Pick the monster that feels most true right now</h2>
     <p>Each card gives you the monster, one true hook line, one first ritual, and one fast tool so you can choose without opening every page.</p>
   </div>

@@ -80,7 +80,7 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+🏰 I. Lore
 
 > The Task Hydra is the many-headed beast of overwhelm.
 > For every task you complete, two more seem to sprout.

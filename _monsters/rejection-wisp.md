@@ -71,7 +71,7 @@ tags:
   </ul>
 </div>
 
-## Bestiary Entry {#lore}
+## Lore {#lore}
 
 The Rejection Wisp is small enough to fit inside a notification bubble and loud enough to haunt the rest of your day. It feeds on uncertainty. A delayed reply becomes a verdict. A short message becomes a tone. A real correction becomes proof that you should disappear.
 

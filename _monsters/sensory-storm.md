@@ -71,7 +71,7 @@ tags:
   </ul>
 </div>
 
-## Bestiary Entry {#lore}
+## Lore {#lore}
 
 The Sensory Storm does not ask permission before it rolls in. It thickens the air, sharpens every edge, and turns ordinary input into weather. Light gets louder. Noise gets closer. Fabric feels hostile. Conversation becomes hail.
 

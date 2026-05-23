@@ -80,7 +80,7 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+🏰 I. Lore
 
 > Deep beneath the blankets of your mind’s realm lives the Slumber Troll.
 > A hulking, smothering creature whose favorite meal is your lost time.

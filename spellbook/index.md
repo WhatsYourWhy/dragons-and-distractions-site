@@ -1,10 +1,10 @@
 ---
 layout: hub
-title: "Rituals"
-breadcrumb_label: "Rituals"
-description: "Counter-spells and rituals you can use today: step-by-step pages linked from each monster without rereading the full bestiary."
-hero_title: "Rituals You Can Use Right Away"
-hero_intro: "Come here when you want the counter-spells without rereading the full bestiary. Pick the stuck point, then take the smallest useful action."
+title: "Spellbook"
+breadcrumb_label: "Spellbook"
+description: "Counter-spells and rituals you can use today: step-by-step pages linked from each monster without rereading every page."
+hero_title: "Rituals — your spellbook of counter-moves"
+hero_intro: "Come here when you want the counter-spells without rereading every monster page. Pick the stuck point, then take the smallest useful action."
 show_breadcrumbs: true
 hero_image: "/assets/generated/spellbook-banner.png"
 hero_image_webp: "/assets/generated/spellbook-banner.webp"
@@ -16,7 +16,7 @@ hero_image_srcset:
   - path: "/assets/generated/spellbook-banner-1536.webp"
     width: 1536
 hero_image_sizes: "(min-width: 880px) 42vw, 100vw"
-hero_image_alt: "Ritual table with candles, notebooks, cards, and practical spell tools"
+hero_image_alt: "Ritual table with candles, notebooks, cards, and practical ritual tools"
 hero_image_width: 1536
 hero_image_height: 1024
 ---
@@ -24,6 +24,8 @@ hero_image_height: 1024
 <div class="section-callout">
   Want the fastest route? Start with <a href="{{ '/choose-your-monster/' | relative_url }}">Choose Your Monster</a>. Every path below still links you to the full ritual and the printable version.
 </div>
+
+<p class="page-bridge">The spellbook is the collection; a ritual is the move you do. Pick the stuck point, take the smallest one.</p>
 
 <section class="landing-section">
   <div class="section-heading">
@@ -40,7 +42,7 @@ hero_image_height: 1024
 <section class="landing-section">
   <div class="section-heading">
     <h2>Core Ritual Directory</h2>
-    <p>Nine practical starting rituals, one for each monster. Open the spell if it exists, or jump to the matching anchor when the ritual still lives inside the field guide page.</p>
+    <p>Nine practical starting rituals, one for each monster. Open the ritual if it exists, or jump to the matching anchor when the ritual still lives inside the field guide page.</p>
   </div>
   <div class="ritual-library">
     <article class="ritual-library__card" data-ritual-key="task-hydra">
@@ -129,7 +131,7 @@ hero_image_height: 1024
 
 <section class="landing-section">
   <div class="section-heading">
-    <h2>Printables Cabinet</h2>
+    <h2>Tool Cabinet</h2>
   </div>
   {% include printable-groups.html %}
 </section>
@@ -150,7 +152,7 @@ hero_image_height: 1024
           <li>Pick <strong>one</strong> task, put all other tools away, and work until the first stump is cauterized.</li>
         </ul>
         <div class="ritual-entry__actions">
-          <a class="ritual-chip" href="{{ '/spellbook/single-task-oath.html' | relative_url }}">Spell write-up</a>
+          <a class="ritual-chip" href="{{ '/spellbook/single-task-oath.html' | relative_url }}">Ritual write-up</a>
           <a class="ritual-chip" href="{{ '/site/printables/single-task-oath-card.html' | relative_url }}">Printable card</a>
           <a class="ritual-chip" href="{{ '/site/printables/pdf/single-task-oath-card-ink.pdf' | relative_url }}">Ink-friendly PDF</a>
         </div>
