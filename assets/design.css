@@ -809,6 +809,30 @@ body.theme-low-stim a.cta-button--primary:visited {
   text-decoration: none;
 }
 
+.path-card__actions--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.path-card__action--primary {
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.1rem;
+  border-color: var(--color-accent);
+  background: var(--color-surface-alt);
+  text-align: center;
+}
+
+.path-card__action--primary strong {
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.path-card__action--primary:hover,
+.path-card__action--primary:focus {
+  background: var(--color-surface);
+  border-color: var(--color-accent);
+}
+
 .signal-list {
   display: grid;
   gap: 0.45rem;

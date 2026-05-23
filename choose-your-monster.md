@@ -34,7 +34,7 @@ image:
       <span class="chooser-disclosure__title">Show all nine monsters side by side</span>
     </summary>
     <div class="chooser-disclosure__body">
-      <p>Each card below takes you to one monster, one first ritual, and one tool.</p>
+      <p>Each card opens one monster page where the first ritual and a fast tool are already waiting.</p>
       {% include chooser-grid.html %}
     </div>
   </details>
