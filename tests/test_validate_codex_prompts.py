@@ -15,7 +15,7 @@ def test_validate_homepage_hero_accepts_cover_cta_contract(tmp_path: Path):
                 '  - label: "Choose Your Monster"',
                 '    url: "/choose-your-monster/"',
                 '    style: "primary"',
-                '  - label: "Browse the Bestiary"',
+                '  - label: "Browse Monsters"',
                 '    url: "/monsters/"',
                 '    style: "secondary"',
                 "---",
