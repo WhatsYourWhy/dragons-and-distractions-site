@@ -80,110 +80,103 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Lore
+## Lore {#lore}
 
-> The Dopamine Goblin is small but mighty.
-> It scuttles around the edges of your mind, waving shiny objects and shrieking “THIS is better!”
-> It is a trickster spirit. It thrives on novelty, instant rewards, urgent distractions.
-> It cannot kill you directly—but it can steal your hours one bite at a time.
-> It promises fun. It delivers delay. It feeds on your need for stimulation.
->
-> In myth, goblins are thieves, mischief-makers, lords of chaos.
-> Your Dopamine Goblin is the spirit of just one more scroll, just one more game, just one more idea.
->
-> You cannot kill the Goblin. But you can bargain with it. You can trap it. You can bribe it to work for you.
+The Dopamine Goblin is small but mighty. It scuttles around the edges of your mind, waving shiny objects and shrieking *"THIS is better!"* It is a trickster — it thrives on novelty, instant rewards, and urgent distractions. It cannot kill you directly, but it can steal your hours one bite at a time. It promises fun. It delivers delay.
 
-## 🔎 Monster Ecology (Lore and Sources) {#lore}
+In myth, goblins are thieves, mischief-makers, and minor lords of chaos. Your Dopamine Goblin is the spirit of just one more scroll, just one more game, just one more idea.
 
-- Goblins in folklore → clever, greedy, can’t resist shiny things.
-- ADHD brains = novelty-seeking, reward-driven, boredom-averse. (Barkley, 2015)
-- Dopamine deficit → strong bias for immediate over delayed rewards. (Volkow et al., 2009)
-- Delay discounting → prefer smaller-sooner over larger-later. (Sonuga-Barke, 2003)
-- Digital distractions = infinite supply of shiny bait.
+You cannot kill the Goblin. But you can bargain with it. You can trap it. You can bribe it to work for you.
 
-🧠 III. Clinical / Psychological Explanation
+## Monster Ecology {#lore-ecology}
 
-- ADHD is not a knowledge deficit—it’s a performance consistency problem.
-- Dopamine‐regulated reward systems favor novelty and immediacy.
-- Screens, social media, games → hyperstimulating, easy hits.
-- Hard, boring tasks = low dopamine payoff → micro-avoidance.
-- Solution = intentional salience, delayed gratification training, environmental design.
+- Folklore goblins are clever, greedy, and constitutionally unable to walk past something shiny.
+- ADHD brains tend to be novelty-seeking, reward-driven, and notably boredom-averse.
+- Reward systems tuned for immediate payoff make boring-but-important tasks feel disproportionately costly.
+- Smaller-sooner usually wins over larger-later, even when the larger-later is what you actually want.
+- Digital environments are an effectively infinite supply of shiny bait, refreshed on a schedule designed to keep the goblin fed.
 
-🔍 IV. Real-World Examples
+## Real-World Examples
 
-- Reaching for the phone mid-task.
-- Starting work, then opening social media.
-- Checking email obsessively.
-- Watching “just one more” video.
-- Having 20 open tabs of new ideas.
-- Switching hobbies instead of finishing.
+- Reaching for the phone the moment a task gets boring.
+- Starting work, then opening social media within minutes.
+- Checking email obsessively when something else is hard.
+- Watching "just one more" video three or four times in a row.
+- Twenty open tabs of new ideas, none acted on.
+- Switching hobbies instead of finishing the current one.
 
-## 🗝️ The Dopamine Goblin’s Weaknesses {#weaknesses}
+## The Dopamine Goblin's Weaknesses {#weaknesses}
 
-- Pre-negotiated rewards.
-- Clear time boundaries.
-- High-salience framing for boring tasks.
-- Environmental friction (blocking distractions).
-- Novelty channeled into useful places.
-- Humor → trick the Goblin to help.
+- Pre-negotiated rewards turn distraction into a contract instead of an interruption.
+- Clear time boundaries give the goblin a finish line to wait for.
+- High-salience framing makes a boring task interesting enough to actually start.
+- Environmental friction — blockers, distance, friction in the physical setup — reduces impulse capture.
+- Novelty channeled on purpose is satisfaction; novelty hijacked is depletion.
+- A little humor goes a long way; you can trick the goblin into working for you.
 
-## 🪄 Rituals and Counter-Spells {#rituals}
+## Rituals and Counter-Spells {#rituals}
 
-⭐ **Invocation: “Goblin, make a deal.”**
-- Negotiate: “If I do X for 20 min, I get Y.”
+**Goblin Deal**
+- "Goblin, make a deal." Negotiate explicitly: "If I do X for 20 minutes, I get Y."
+- The goblin earns its shiny rather than stealing it.
 
-⭐ **Goblin Jar**
-- Write impulses on paper, seal them for later.
-- Ritual of containment.
+**Goblin Jar**
+- When an impulse strikes, write it down on paper and drop it in a jar or note.
+- Promise: "If I work for 20 minutes, I may pull one shiny from the jar."
 
-⭐ **Boundaries of the Realm**
-- Use blockers or timers.
-- Physical distance → no phone on desk.
+**Boundaries of the Realm**
+- Phone off the desk. App blockers on. Timer running.
+- Physical distance changes the math more than willpower does.
 
-⭐ **Reward Binding**
-- Explicit promise: “After I do X, I get Y.”
-- Forces the Goblin to earn its keep.
+**Reward Binding**
+- "After I do X, I get Y." Make the reward immediate and small — tea, a meme, a stretch.
+- The point is to make the boring task pay before the goblin gets bored.
 
-⭐ **Novelty Ritual**
-- Rotate music, workspace, tools intentionally.
-- Controlled novelty to satisfy its itch.
+**Novelty Ritual**
+- Rotate music, workspace, or tools on purpose between work blocks.
+- Controlled novelty satisfies the itch without burning the session.
 
-## 🛠️ Artifacts and Weapons {#tools}
+Find the practical write-up on the [Rituals]({{ "/spellbook/#dopamine-goblin-rituals" | relative_url }}) page.
 
-- **Goblin Jar** → Physical place for postponed ideas.
-- **Contract Scroll** → Written deal with yourself.
-- **Time Stone** → Timer or Pomodoro app.
-- **Shield of Friction** → App blockers, filters.
-- **Bait of Choice** → Pre-selected reward.
-- **Mirror of Intent** → Written session goal.
+## Tools and Printables {#tools}
 
-⚡️ VIII. Command Phrases
+- **Goblin Jar** — a physical place for postponed ideas.
+- **Contract Scroll** — the written deal you made with yourself this session.
+- **Time Stone** — timer or Pomodoro app you can actually see.
+- **Shield of Friction** — app blockers, filters, or physical distance.
+- **Bait of Choice** — the pre-selected reward, decided before you sit down.
+- **Mirror of Intent** — the written session goal where the goblin cannot ignore it.
 
-"Goblin, make a deal.”
-“Earn your shiny.”
-“Not now, little monster.”
-“Later is not never.”
-“Contain the chaos.”
-“I choose the reward.”
+- [Single-Task Oath card]({{ "/site/printables/single-task-oath-card.html" | relative_url }})
+- [Ink-friendly PDF]({{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }})
+- If the distractions are external pings rather than internal novelty cravings, pair this with [Sensory Storm]({{ "/monsters/sensory-storm/" | relative_url }}).
+- If the goblin keeps winning because everything feels equally boring, see [Burnout Dragon]({{ "/monsters/burnout-dragon/" | relative_url }}) — low energy makes the shiny disproportionately tempting.
 
-🧪 IX. Science and Reason
+## Command Phrases
 
-- Delay discounting is steeper for ADHD brains. (Sonuga-Barke, 2003)
-- “If-Then” plans increase follow-through. (Gollwitzer, 1999)
-- Environmental friction reduces impulsivity.
-- Behavioral Activation → intentional reward binding.
-- Self-monitoring curbs mindless switching.
+- "Goblin, make a deal."
+- "Earn your shiny."
+- "Not now, little monster."
+- "Later is not never."
+- "I choose the reward."
 
-🛡️ X. Challenge for the Reader
+## Science and Reason
 
-- Name *YOUR* Dopamine Goblin.
-- Define its favorite lie.
-- Write your personal deal phrase.
-- Build your Goblin Jar.
-- Plan your reward binding.
-- Test it for 7 days.
-- Share your contract with the Guild.
+- Smaller-sooner rewards tend to win over larger-later ones more steeply in ADHD brains; the playing field is uneven by default.
+- "If-then" plans (implementation intentions) increase follow-through by deciding the next action before the moment of temptation.
+- Environmental friction reduces impulsivity more reliably than self-talk.
+- Behavioral activation works in reverse too — choosing the reward in advance binds action to outcome.
+- Self-monitoring (even informal) curbs mindless switching by making the switch visible.
 
+*(For deeper context, see Sonuga-Barke 2003 on delay discounting, Gollwitzer 1999 on implementation intentions, and Volkow et al. 2009 on the dopamine reward system in ADHD.)*
+
+## Challenge for the Reader
+
+- Name your Dopamine Goblin. What does it wave at you most often?
+- Define its favorite lie. ("Just one more video" is a classic.)
+- Write your personal deal phrase and use it for one work block today.
+- Build your Goblin Jar — physical or digital, but pick one place.
+- Notice whether the sky fell when you did not give the goblin what it wanted.
 
 > "The Goblin is clever. Be cleverer."
 
