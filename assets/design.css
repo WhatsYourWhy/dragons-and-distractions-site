@@ -3206,3 +3206,57 @@ body.theme-low-stim .newsletter__input {
   color: var(--color-accent-light);
   border-bottom-color: var(--color-accent);
 }
+
+.chooser-disclosure {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  overflow: hidden;
+}
+
+.chooser-disclosure__summary {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.1rem 1.3rem;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 3rem;
+}
+
+.chooser-disclosure__summary::-webkit-details-marker {
+  display: none;
+}
+
+.chooser-disclosure__summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 1.3rem;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+}
+
+.chooser-disclosure[open] .chooser-disclosure__summary::after {
+  content: "\2212";
+}
+
+.chooser-disclosure__summary:hover,
+.chooser-disclosure__summary:focus-visible {
+  background: var(--color-surface-soft);
+}
+
+.chooser-disclosure__title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.chooser-disclosure__body {
+  padding: 0 1.3rem 1.3rem;
+  display: grid;
+  gap: 1rem;
+}
+
