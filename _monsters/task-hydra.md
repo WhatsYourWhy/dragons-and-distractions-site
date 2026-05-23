@@ -80,129 +80,100 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Lore
+## Lore {#lore}
 
-> The Task Hydra is the many-headed beast of overwhelm.
-> For every task you complete, two more seem to sprout.
-> It lives in endless lists, scattered priorities, open tabs, overflowing inboxes, the kitchen junk drawer of your mind.
->
-> It doesn’t roar—it hisses:
-> “You’ll never finish.” “You don’t even know where to start.” “Why bother at all?”
->
-> In ancient myth, the Hydra was nearly invincible because cut heads regrew. Heroes needed strategy, fire, and persistence.
-> The Task Hydra is no different. You can’t kill it all at once—you must choose which head to strike, cauterize the stump, and call on allies to hold the torch while you swing.
+The Task Hydra is the many-headed beast of overwhelm. For every task you complete, two more seem to sprout. It lives in endless lists, scattered priorities, open tabs, overflowing inboxes, and the kitchen junk drawer of your mind.
 
-## 🔎 Monster Ecology (Lore and Sources) {#lore}
+It does not roar. It hisses. *"You'll never finish."* *"You don't even know where to start."* *"Why bother at all?"*
 
-✅ The Lernaean Hydra → Greek myth.
-✅ Heads regrow unless burned shut = metaphor for unclosed tasks multiplying.
-✅ ADHD = Executive dysfunction in prioritization and task-switching. (Barkley, 2015)
-✅ Overwhelm = task paralysis → avoidance, anxiety.
-✅ Zeigarnik Effect → open loops stick in working memory, creating cognitive load. (Zeigarnik, 1927)
-✅ Context switching penalty → reduced efficiency. (Monsell, 2003)
+In ancient myth, the Hydra was nearly invincible because cut heads regrew. Heroes needed strategy, fire, and persistence. The Task Hydra works the same way. You cannot kill it all at once — you choose which head to strike, cauterize the stump, and call on allies to hold the torch while you swing.
 
-🧠 III. Clinical / Psychological Explanation
+## Monster Ecology {#lore-ecology}
 
-✅ Problem: ADHDers struggle to prioritize and sequence.
-✅ Weak working memory → holding too many tasks at once fails.
-✅ Task initiation impaired → starting feels harder when overwhelmed.
-✅ Emotional dysregulation → panic and avoidance.
-✅ Brain seeks salience → ignores boring but important tasks.
-✅ Solution = externalization, chunking, prioritization, closure.
+- The Lernaean Hydra of Greek myth could not be slain by brute force — heads regrew unless burned shut.
+- Overwhelm tends to multiply tasks rather than reveal priorities; the open loops keep talking until something forces closure.
+- ADHD brains often struggle most at the prioritization layer, not the execution layer.
+- Unclosed tasks stay loud in working memory even when you are not actively thinking about them.
+- Context-switching has a real cost; "I'll come back to this" is rarely free.
 
-🔍 IV. Real-World Examples
+## Real-World Examples
 
 - Staring at a giant to-do list and doing nothing.
-- Starting five chores at once, finishing none.
-- Making a new list instead of acting.
-- Endless “planning” without execution.
-- Feeling defeated before even beginning.
-- Procrastinating because you can’t pick where to start.
+- Starting five chores at once and finishing none.
+- Making a new list instead of acting on the current one.
+- Endless "planning" that never converts to execution.
+- Feeling defeated before you have even begun.
+- Procrastinating because you cannot pick where to start.
 
-## 🗝️ The Task Hydra’s Weaknesses {#weaknesses}
+## The Task Hydra's Weaknesses {#weaknesses}
 
-✅ Prioritization Rituals → Limit decision fatigue.
-✅ Chunking → Break tasks into small, defined steps.
-✅ Single-Tasking → Refuse to grow new heads mid-swing.
-✅ Externalized Lists → Offload working memory.
-✅ Time Blocking → Precommit to focus.
-✅ Closure Rituals → “Burn the stump” so the head doesn’t regrow.
-✅ Humor & Story → Turn tasks into quests.
+- Prioritization rituals reduce decision fatigue at the start of a session.
+- Chunking turns one large task into a sequence of smaller, defined steps.
+- Single-tasking refuses to grow new heads mid-swing.
+- Externalized lists — whiteboards, sticky notes, kanban boards — get the Hydra out of your head and onto a surface you can see.
+- Time blocking pre-commits your focus before the new tabs and pings arrive.
+- Closure rituals "burn the stump" so the same head does not quietly regrow.
+- An accountability spell — telling another person what you will do — turns the social contract into something real.
 
-⭐ Externalization
-- Whiteboard, Post-its, Kanban → “Get the Hydra out of my head.”
+## Rituals and Counter-Spells {#rituals}
 
-⭐ Closure Phrase
-- “Cauterize the stump.” (Ritual statement for completion)
+**Choose the Head**
+- "Which task is THE priority?" Name it out loud or in writing.
+- One head only. The others can sprout while you swing.
 
-⭐ Accountability Spell
-- Text or tell someone what you’ll do → Social contract.
+**Torch Ritual**
+- Light a candle or lamp as a physical cue that focus time has started.
+- "This is my hunting torch."
 
-## 🪄 Rituals and Counter-Spells {#rituals}
+**Single-Task Oath**
+- "I do not grow new heads."
+- Put other tools away. No switching mid-battle.
 
-⭐ **Invocation:**
-> “Choose the head.”
-- Ask: “Which task is THE priority?”
-- Name it.
+**3-Item Rule**
+- Limit today's list to three critical tasks.
+- The fourth one is a Hydra head trying to grow back.
 
-⭐ **Torch Ritual:**
-- Light a candle or lamp → physical cue of focus.
-- “This is my hunting torch.”
+Find the practical write-up on the [Rituals]({{ "/spellbook/#task-hydra-rituals" | relative_url }}) page.
 
-⭐ **Single-Task Oath:**
-- “I do not grow new heads.”
-- No switching mid-battle.
+## Tools and Printables {#tools}
 
-⭐ **3-Item Rule:**
-- Daily list limited to **3** critical tasks.
-- Research-backed prioritization.
+- **Torch of Focus** — candle or lamp marking work time.
+- **Blade of Choice** — a physical object (pen, knife) pointed at today's single task.
+- **Scroll of Tasks** — an externalized list outside your head.
+- **Seal of Completion** — strike-through, checkmark, or physical closure ritual.
+- **Shield of Limits** — a timer or alarm for work sessions.
+- **Bag of Holding** — an inbox or bucket to catch new tasks without acting on them yet.
 
-## 🛠️ Artifacts and Weapons {#tools}
+- [Single-Task Oath card]({{ "/site/printables/single-task-oath-card.html" | relative_url }})
+- [Ink-friendly PDF]({{ "/site/printables/pdf/single-task-oath-card-ink.pdf" | relative_url }})
+- If your overwhelm is mixed with deadline panic, pair this with [Temporal Shark]({{ "/monsters/temporal-shark/" | relative_url }}).
+- If the heads are sprouting because of constant pings rather than real tasks, see [Sensory Storm]({{ "/monsters/sensory-storm/" | relative_url }}).
 
-- Torch of Focus → Candle or lamp to mark work time.
-- Blade of Choice → A physical object (pen, knife) to point at today’s single task.
-- Scroll of Tasks → Externalized list.
-- Seal of Completion → Strike-through, checkmark, physical closure.
-- Shield of Limits → Timer or alarm for work sessions.
-- Bag of Holding → Inbox or bucket to catch new tasks without acting immediately.
+## Command Phrases
 
-## 🧰 Printables to Equip
+- "Choose the head."
+- "No new heads today."
+- "Cauterize the stump."
+- "One quest at a time."
+- "List outside, brain clear."
 
-{% include printable-groups.html slugs="task-hydra" %}
+## Science and Reason
 
-⚡️ VIII. Command Phrases
+- Open, unfinished tasks occupy working memory and create background cognitive load that does not go away on its own.
+- Externalizing the list reduces that load — the page holds the task so your brain does not have to.
+- Chunking and clear prioritization reduce decision fatigue at the start of a session.
+- Single-tasking is consistently more efficient than rapid switching; the switch cost is real even when each switch feels small.
+- Ritual cues drive action when motivation alone is not enough.
 
-“Choose the head.”
-“No new heads today.”
-“Cauterize the stump.”
-“One quest at a time.”
-“Torch lit, Hydra dies.”
-“List outside, brain clear.”
-“I am the hero of this battle.”
+*(For deeper context, see Zeigarnik 1927 on unfinished tasks, Monsell 2003 on switch costs, and Barkley 2015 on executive function in ADHD.)*
 
-🧪 IX. Science and Reason
+## Challenge for the Reader
 
-✅ Zeigarnik Effect → Open tasks occupy working memory.
-✅ Externalization reduces cognitive load.
-✅ Chunking → Proven strategy for memory and execution.
-✅ Prioritization reduces decision fatigue.
-✅ Single-tasking improves efficiency. (Monsell, 2003)
-✅ Behavioral Activation → Ritual cues drive action.
-
-*(Sources: Zeigarnik, 1927; Barkley, 2015; Monsell, 2003)*
-
-🛡️ X. Challenge for the Reader
-
-- Name **YOUR** Task Hydra.
-- Define its favorite lie.
-- Choose your personal command phrase.
-- Build your hunting ritual.
-- Externalize your list.
-- Limit it to 3 heads.
-- “Burn” each stump as you finish.
-- Track it for 7 days.
-- Share your victories with the Guild.
-
+- Name your Task Hydra out loud. What is it actually demanding right now?
+- Define its favorite lie. ("Everything is equally urgent" is a common one.)
+- Choose your one head for today and ignore the rest until it is struck.
+- Light your torch — pick the physical cue you will use to mark focus time.
+- Notice whether the sky fell. It usually does not.
 
 > "The Hydra cannot be slain in one swing. But one head at a time? That's how heroes win."
 
