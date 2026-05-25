@@ -1,4 +1,4 @@
-fpdf2>=2.7
+fpdf2==2.7.9
 pypdf>=5.0
 PyYAML>=6.0
 reportlab>=4.0
