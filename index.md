@@ -22,7 +22,7 @@ hero_actions:
   - label: "Choose Your Monster"
     url: "/choose-your-monster/"
     style: "primary"
-  - label: "Browse the Bestiary"
+  - label: "Browse Monsters"
     url: "/monsters/"
     style: "secondary"
 hero_microcopy: "If overwhelmed, start here. One monster match is enough for now."
@@ -80,26 +80,5 @@ hero_microcopy: "If overwhelmed, start here. One monster match is enough for now
     <p>Dragons &amp; Distractions was built by <strong>Justin Shank</strong>, a writer, maker, and pattern-goblin who wanted executive-function support to feel less like a clinical worksheet and more like a map you might actually keep nearby.</p>
     <p>The idea is simple: when a stuck feeling has a name, it gets easier to face. Task Hydra. Dopamine Goblin. Temporal Shark. Burnout Dragon. The monsters are not here to make the struggle cute — they are here to make it recognizable, less shame-loaded, and easier to answer with one practical move.</p>
     <p>Every part of the toolkit points back to the same promise: one monster, one ritual, one workable next step. Use what helps. Ignore what does not. Come back when the next beast starts chewing on the furniture.</p>
-  </div>
-</section>
-
-<section class="landing-section">
-  <div class="section-heading">
-    <p class="section-heading__eyebrow">What to do next</p>
-    <h2>Pick the depth that fits your energy</h2>
-  </div>
-  <div class="landing-grid landing-grid--compact">
-    <article class="landing-card">
-      <h3>Need the fastest possible support?</h3>
-      <p>Open the <a href="{{ '/site/' | relative_url }}">tool cabinet</a> and use one page without printing anything yet.</p>
-    </article>
-    <article class="landing-card">
-      <h3>Need context and examples?</h3>
-      <p>Use the <a href="{{ '/monsters/' | relative_url }}">Monster Index</a> if you want to browse the full bestiary more slowly.</p>
-    </article>
-    <article class="landing-card">
-      <h3>Need the grounding promises?</h3>
-      <p>Read the <a href="{{ '/codex/' | relative_url }}">Codex</a> for how the metaphors work and where the support boundaries live.</p>
-    </article>
   </div>
 </section>

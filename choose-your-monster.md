@@ -1,7 +1,7 @@
 ﻿---
 layout: hub
 title: "Choose Your Monster"
-description: "Start with the stuck feeling you recognize and get one first ritual and one fast tool without digging through the whole bestiary."
+description: "Start with the stuck feeling you recognize and get one first ritual and one fast tool without digging through every monster."
 permalink: "/choose-your-monster/"
 hero_title: "Choose Your Monster"
 hero_intro: "Start with the stuck feeling you recognize. Each path gives you plain-language signs, one first ritual, and one fast tool."
@@ -28,12 +28,16 @@ image:
 </section>
 
 <section class="landing-section">
-  <div class="section-heading">
-    <p class="section-heading__eyebrow">Or compare all paths</p>
-    <h2>Browse the full chooser when you want to scan everything</h2>
-    <p>Each card below takes you to one monster, one first ritual, and one tool. You do not need to compare every option before starting, but the full map is here if it helps.</p>
-  </div>
-  {% include chooser-grid.html %}
+  <details class="chooser-disclosure">
+    <summary class="chooser-disclosure__summary">
+      <span class="section-heading__eyebrow">Or compare all paths</span>
+      <span class="chooser-disclosure__title">Show all nine monsters side by side</span>
+    </summary>
+    <div class="chooser-disclosure__body">
+      <p>Each card opens one monster page where the first ritual and a fast tool are already waiting.</p>
+      {% include chooser-grid.html %}
+    </div>
+  </details>
 </section>
 
 <section class="landing-section">
@@ -52,7 +56,7 @@ image:
     </article>
     <article class="landing-card">
       <h3>You just want the fastest support</h3>
-      <p>Skip straight to the <a href="{{ '/site/' | relative_url }}">printables cabinet</a> and use the on-page print button on the first tool that looks doable.</p>
+      <p>Skip straight to the <a href="{{ '/site/' | relative_url }}">Tool Cabinet</a> and use the on-page print button on the first tool that looks doable.</p>
     </article>
   </div>
 </section>

@@ -80,109 +80,102 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+## Lore {#lore}
 
-> The Temporal Shark stalks the waters of your day, invisible until a deadline bleeds.
-> It moves silently through hours you swore you had, then strikes when time is too tight to escape.
-> You hear its theme song only when you open the calendar and realize: “Oh no… it’s today.”
->
-> In legend, sharks smell blood from miles away. The Temporal Shark smells urgency and surfs it to the surface.
-> It loves the taste of panic productivity and will starve you of preparation so the frenzy feels delicious.
-> But you can tag it, track it, and swim with allies.
+The Temporal Shark stalks the waters of your day, invisible until a deadline bleeds. It moves silently through hours you swore you had, then strikes when time is too tight to escape. You hear its theme song only when you open the calendar and realize: *"Oh no — it's today."*
 
-## 🔎 Monster Ecology (Lore and Sources) {#lore}
+In legend, sharks smell blood from miles away. The Temporal Shark smells urgency and surfs it to the surface. It loves the taste of panic productivity, and it will starve you of preparation so the frenzy feels delicious.
 
-✅ Shark myths → sensing blood = sensing urgency.
-✅ ADHD time blindness → difficulty sensing future cost until immediate.
-✅ “Deadline adrenaline” → hyperfocus under stress.
-✅ Planning fallacy → underestimating duration (Kahneman & Tversky, 1979).
-✅ Future discounting → value now > value later.
+But you can tag it. You can track it. You can swim with allies.
 
-🧠 III. Clinical / Psychological Explanation
+## Monster Ecology {#lore-ecology}
 
-✅ Working memory limits → future steps vanish until triggered.
-✅ Interoception gaps → brain doesn’t feel time passing reliably.
-✅ Emotional regulation → panic becomes the ignition source.
-✅ Hyperfocus → surge of dopamine when urgency spikes.
-✅ Solution = externalized time cues, precommitment, staged alarms.
+- Shark myths trade on the same instinct: sensing the bleed long before you see the fin. The Temporal Shark senses urgency and feeds on it.
+- ADHD brains often experience time blindness — future cost stays abstract until it is immediate.
+- Deadline adrenaline is real; the brain can muster hyperfocus under threat in a way it cannot under calm.
+- The planning fallacy is structural: most people underestimate how long a task will take, and ADHD brains tend to underestimate more.
+- Future discounting makes "value now" feel disproportionately larger than "value later," even when later is what actually matters.
 
-🔍 IV. Real-World Examples
+## Real-World Examples
 
-- “I have all afternoon” turning into “Meeting starts in 7 minutes.”
-- Starting a report at 10pm because the due date feels real only then.
+- "I have all afternoon" turning into "Meeting starts in 7 minutes."
+- Starting a report at 10pm because the due date only feels real then.
 - Ignoring prep emails until the calendar alarm screams.
-- Assuming a 2-hour task fits into a 45-minute window.
-- Feeling weirdly calm until the shark fin appears.
+- Assuming a two-hour task fits into a 45-minute window.
+- Feeling weirdly calm right up until the shark fin appears.
 
-## 🗝️ The Temporal Shark’s Weaknesses {#weaknesses}
+## The Temporal Shark's Weaknesses {#weaknesses}
 
-✅ Time beacons → visible, audible reminders before danger.
-✅ Pre-decision → decide start times while calm.
-✅ Chunked prep → small bites before the feeding frenzy.
-✅ Externalized duration → clocks, timers, and timeboxing.
-✅ Safe harbors → coworking, body-doubling, or office hours.
+- Time beacons — visible, audible reminders well before the danger window — replace the missing internal urgency signal.
+- Pre-decision: choose the start time while you are calm, not while you are panicking.
+- Chunked prep: a 10-minute "first bite" the day before makes the actual start much smaller.
+- Externalized duration — clocks, timers, time-boxing — gives time a body so you can see it passing.
+- Safe harbors like coworking, body-doubling, or scheduled office hours add gentle social pressure that the shark cannot eat.
 
-⭐ Tide Mark Ritual
-- Place start times on your calendar as events, not wishes.
-- Set two alarms: T-60 and T-15. Label them with the first action.
+## Rituals and Counter-Spells {#rituals}
 
-⭐ Sandbar Sprints
-- Do a 10-minute “first bite” the day before: open doc, title it, add bullet outline.
+**Tide Mark Calendar**
+- Place start times on your calendar as real events, not wishes.
+- Set two alarms — T-60 and T-15 — labeled with the first verb ("Open slides," "Email draft").
 
-⭐ Buddy Buoy
+**Name the Feeding Window**
+- "I swim at 2:00. I'm in the water by 1:50." Write it, say it, set it.
+- Verbal precommitment makes the time feel less optional.
+
+**Sandbar Sprint**
+- The day before, spend 10 minutes opening the doc, titling it, and sketching the outline.
+- The point is to make the water safe to enter, not to finish anything.
+
+**Three Anchors**
+- Visual: a timer visible on the desk.
+- Auditory: an alarm with a distinct chime.
+- Physical: the task object (laptop, book, paper) already placed in your workspace.
+
+**Buddy Buoy**
 - Share the start time with a friend; ask for a ping at T-10.
+- After the work, send the start and end times so your brain learns what 45 minutes actually felt like.
 
-## 🪄 Rituals and Counter-Spells {#rituals}
+Find the practical write-up on the [Rituals]({{ "/spellbook/#temporal-shark-rituals" | relative_url }}) page.
 
-⭐ **Name the Feeding Window:**
-> “I swim at 2:00. I’m in the water by 1:50.”
-- Write it. Say it. Set it.
+## Tools and Printables {#tools}
 
-⭐ **Three Anchors:**
-- Visual: timer visible on desk.
-- Auditory: alarm with a distinct chime.
-- Physical: place the task object (laptop, book) in your workspace.
+- **Fin Tracker** — wall clock, time-timer, or Pomodoro app you can see.
+- **Beacon Stones** — calendar alerts labeled with verbs, not nouns.
+- **Shark Cage** — do-not-disturb block or noise-cancelling headphones during the swim.
+- **Buoy Buddy** — coworking room, stream-with-me link, or friend ping at T-10.
+- **Breadcrumb Trail** — checklist of steps taped where you cannot miss it.
 
-⭐ **Post-Frenzy Cooldown:**
-- After urgent work, walk for 5 minutes and log start/end times.
-- Teach the brain what 45 minutes *feels* like.
+- [Tide Mark calendar card]({{ "/site/printables/tide-mark-calendar-card.html" | relative_url }})
+- [Buddy Ping template]({{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }})
+- [Ink-friendly PDF]({{ "/site/printables/pdf/tide-mark-calendar-card-ink.pdf" | relative_url }})
+- If the deadline panic is mostly because the task is mid-multiplication, pair this with [Task Hydra]({{ "/monsters/task-hydra/" | relative_url }}).
+- If "start at 2:00" keeps failing because mornings already lost the day, see [Slumber Troll]({{ "/monsters/slumber-troll/" | relative_url }}).
 
-## 🛠️ Artifacts and Weapons {#tools}
+## Command Phrases
 
-- Fin Tracker → wall clock, time timer, or Pomodoro app.
-- Beacon Stones → calendar alerts with verbs (“Open slides,” “Email draft”).
-- Shark Cage → do-not-disturb block or noise-canceling headphones.
-- Buoy Buddy → coworking room, stream-with-me link, or friend ping.
-- Breadcrumb Trail → checklist of steps taped to monitor.
+- "Tag the shark before it bites."
+- "Time is visible."
+- "The calendar is the ocean-floor map."
+- "First bite beats full frenzy."
+- "I swim with allies."
 
-## 🧰 Printables to Equip
+## Science and Reason
 
-{% include printable-groups.html slugs="temporal-shark,buddy-support" %}
+- Time blindness is common in ADHD; external timers consistently increase time awareness more than internal effort does.
+- Precommitment improves follow-through and reduces procrastination by deciding before the moment of resistance arrives.
+- "If T-60 alert rings, I open the doc" — implementation intentions outperform open intentions for time-sensitive tasks.
+- Body doubling increases initiation through gentle social presence, not pressure.
+- Short recon tasks (a 10-minute first look) reduce avoidance by lowering the perceived threat of the larger task.
 
-⚡️ VIII. Command Phrases
+*(For deeper context, see Barkley 2010 on time blindness, Kahneman & Tversky 1979 on the planning fallacy, and Gollwitzer 1999 on implementation intentions.)*
 
-“Tag the shark before it bites.”
-“Time is visible.”
-“Calendar is the ocean floor map.”
-“First bite beats full frenzy.”
-“I swim with allies.”
+## Challenge for the Reader
 
-🧪 IX. Science and Reason
-
-✅ Time blindness → common in ADHD; external timers increase awareness.
-✅ Precommitment improves follow-through and reduces procrastination.
-✅ Implementation intentions (“If T-60 alert rings, I open the doc.”) increase action rates.
-✅ Body doubling increases initiation via social pressure.
-✅ Short recon tasks reduce avoidance by lowering threat level.
-
-🛡️ X. Challenge for the Reader
-
-- Set two Tide Marks for a real task today (T-60, T-15) with verbs.
-- Do one Sandbar Sprint for tomorrow’s task.
-- Choose your Fin Tracker and keep it in sight.
-- Ask one ally to be today’s Buoy Buddy.
-- After your next deadline, log how long each step actually took.
-
+- Set two Tide Marks for one real task today (T-60 and T-15), each labeled with a verb.
+- Do one Sandbar Sprint for tomorrow's task — 10 minutes is enough.
+- Choose your Fin Tracker and keep it in your line of sight.
+- Ask one ally to be today's Buoy Buddy.
+- After the next deadline, log how long each step actually took. Show the shark to your brain.
 
 > "The shark is real. So is the clock. Make time visible, and you decide when to dive."
 
