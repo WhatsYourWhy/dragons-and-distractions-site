@@ -71,7 +71,7 @@ tags:
   </ul>
 </div>
 
-## Bestiary Entry {#lore}
+## Lore {#lore}
 
 The Perfection Wyrm does not breathe fire. It coils around the nearly-finished thing and whispers that one more pass will make it safe. Then one more. Then one more.
 

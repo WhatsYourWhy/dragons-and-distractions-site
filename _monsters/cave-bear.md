@@ -80,112 +80,98 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+## Lore {#lore}
 
-> The Cave Bear is the ancient beast of isolation and retreat.
-> It drags you back into the cave with promises of rest, doomscrolling, or hiding until it all blows over.
-> It is heavy, warm, and persuasive; it smells like blankets, dark rooms, and endless “later.”
->
-> In myth, bears hibernate to survive the winter. In life, the Cave Bear convinces you every season is winter.
-> It hoards your energy for a threat that never comes, until your world shrinks to the glow of a screen.
-> Heroes are not made in caves—but they are forged by leaving them.
+The Cave Bear is the ancient beast of isolation and retreat. It drags you back into the cave with promises of rest, doomscrolling, or hiding until it all blows over. It is heavy, warm, and persuasive — it smells like blankets, dark rooms, and endless "later."
 
-## 🔎 Monster Ecology (Lore and Sources) {#lore}
+In myth, bears hibernate to survive the winter. In life, the Cave Bear convinces you every season is winter. It hoards your energy for a threat that never comes, until your world shrinks to the glow of a screen.
 
-✅ Folklore bears = strength + hibernation → here, strength turned inward.
-✅ ADHD inertia → difficulty re-engaging after rest; comfort becomes trap.
-✅ Social withdrawal and avoidance → anxiety feeds isolation.
-✅ Dopamine loop of scrolling → false safety, real depletion.
-✅ Sensory seeking/avoiding → the cave is predictable, outside is noisy.
+Heroes are not made in caves — but they are forged by leaving them.
 
-🧠 III. Clinical / Psychological Explanation
+## Monster Ecology {#lore-ecology}
 
-✅ Executive dysfunction → “starting” is harder than “staying hidden.”
-✅ Rejection sensitivity → cave shields from perceived judgment.
-✅ Low arousal → body seeks warmth/darkness to conserve effort.
-✅ Depression overlap → stillness masquerades as self-care.
-✅ Solution = gentle activation, social tethering, light cues.
+- Folklore bears were both strength and hibernation; the Cave Bear is strength turned inward and held there too long.
+- ADHD inertia makes re-engaging after rest disproportionately hard — comfort tips into trap without anyone noticing.
+- Social withdrawal feeds anxiety, and anxiety feeds more withdrawal; the loop closes around itself.
+- Infinite scrolling offers the shape of safety while quietly depleting reserves.
+- The cave is predictable, and the outside world is noisy; the body often chooses the predictable.
 
-🔍 IV. Real-World Examples
+## Real-World Examples
 
 - Ghosting messages because replying feels like facing a blizzard.
-- Lying in bed, scrolling, telling yourself you’ll rise at the next video.
-- Avoiding errands until everything becomes urgent.
+- Lying in bed, scrolling, telling yourself you'll rise after the next video.
+- Avoiding errands until everything becomes urgent at the same time.
 - Cancelling plans even when you miss people.
-- Wearing the same “cave clothes” for days.
+- Wearing the same "cave clothes" for days because changing feels like overcommitment.
 
-## 🗝️ The Cave Bear’s Weaknesses {#weaknesses}
+## The Cave Bear's Weaknesses {#weaknesses}
 
-✅ Light & sound → crack the cave’s darkness.
-✅ Body-first activation → move before you plan.
-✅ Micro-quests → tiny exits from the cave.
-✅ Social rope → someone outside holding tension.
-✅ Time-boxed hibernation → rest on purpose, not forever.
+- Light and sound crack the cave's darkness in ways argument never will.
+- Body-first activation: move before you negotiate with yourself.
+- Micro-quests are small enough to count — sit up, feet on floor, drink water.
+- A social rope held by someone outside the cave changes the math more than another internal pep talk.
+- Time-boxed hibernation is real rest; open-ended hiding is the trap.
 
-⭐ Beacon Ritual
+## Rituals and Counter-Spells {#rituals}
+
+**Threshold Spell**
+- "Step to the mouth of the cave."
+- Stand in the doorway. Breathe. Feel fresh air or light.
+
+**Three Breaths, Three Moves**
+- Inhale: sit up. Exhale: feet down. Inhale: stand.
+- Exhale: walk to the sink. Inhale: splash water.
+
+**Beacon Ritual**
 - Open curtains or turn on your brightest lamp.
-- Play a single song as your “sunrise.”
+- Play a single song as your "sunrise."
 
-⭐ Pawstep Quest
-- Sit up. Put feet on floor. Drink water. (Count each as a win.)
+**Rope of Returning**
+- Text a friend: "Pull me out in 10?"
+- When the timer rings, reply with a selfie outside the blankets.
 
-⭐ Rope of Returning
-- Text a friend: “Pull me out in 10?”
-- Set a timer; when it rings, reply with a selfie outside the blankets.
-
-## 🪄 Rituals and Counter-Spells {#rituals}
-
-⭐ **Threshold Spell:**
-> “Step to the mouth of the cave.”
-- Stand in a doorway. Breathe. Feel fresh air or light.
-
-⭐ **Three Breaths, Three Moves:**
-- Inhale: sit up.
-- Exhale: feet down.
-- Inhale: stand.
-- Exhale: walk to sink.
-- Inhale: splash water.
-
-⭐ **Hibernation with a Clock:**
+**Hibernation with a Clock**
 - If you rest, set a timer (20–90 minutes).
 - Name the wake-up action before you lie down.
 
-## 🛠️ Artifacts and Weapons {#tools}
+Find the practical write-up on the [Rituals]({{ "/spellbook/#cave-bear-rituals" | relative_url }}) page.
 
-- Lantern of Dawn → sunrise alarm, bright lamp, open blinds.
-- Warm Cloak of Action → hoodie you only wear once you’re up.
-- Rope of Returning → friend text, accountability buddy, coworking link.
-- Trail of Pebbles → sticky notes leading from bed to desk/door.
-- Shield of Noise → playlist that marks “out of cave” mode.
+## Tools and Printables {#tools}
 
-## 🧰 Printables to Equip
+- **Lantern of Dawn** — sunrise alarm, bright lamp, or fully open blinds.
+- **Warm Cloak of Action** — a hoodie or layer you only wear once you are up.
+- **Rope of Returning** — friend text, accountability buddy, or coworking link.
+- **Trail of Pebbles** — sticky notes leading from bed to desk or door.
+- **Shield of Noise** — a playlist that marks "out of cave" mode.
 
-{% include printable-groups.html slugs="buddy-support" %}
+- [Buddy Ping template]({{ "/site/printables/tide-marks-buddy-ping.html" | relative_url }})
+- [Ink-friendly PDF]({{ "/site/printables/pdf/tide-marks-buddy-ping-ink.pdf" | relative_url }})
+- If you cannot tell whether you need rest or activation, see [Burnout Dragon]({{ "/monsters/burnout-dragon/" | relative_url }}) for the depletion version of this question.
+- If the cave is specifically about morning crossing, pair this with [Slumber Troll]({{ "/monsters/slumber-troll/" | relative_url }}).
 
-⚡️ VIII. Command Phrases
+## Command Phrases
 
-“Cave time ends at the bell.”
-“Lantern on, bear moves.”
-“Feet on floor is victory.”
-“Rope pulled—I’m coming out.”
-“One pawstep, then another.”
+- "Cave time ends at the bell."
+- "Lantern on, bear moves."
+- "Feet on floor is victory."
+- "Rope pulled — I'm coming out."
+- "One pawstep, then another."
 
-🧪 IX. Science and Reason
+## Science and Reason
 
-✅ Behavioral activation → small movements improve mood and momentum.
-✅ Light exposure anchors circadian rhythm; bright light reduces sleep inertia.
-✅ Social accountability increases follow-through.
-✅ Implementation intentions (“When X, I will Y”) boost action.
-✅ Somatic cues (water, movement) shift state faster than willpower alone.
+- Small movements improve mood and momentum before motivation arrives, not after.
+- Bright light exposure anchors the circadian rhythm and reduces the heavy fog of sleep inertia.
+- Social accountability reliably outperforms private resolve for re-entry from withdrawal.
+- "When X happens, I will Y" plans (implementation intentions) survive low-arousal states better than open intentions.
+- Somatic cues — water, cold, walking — shift state faster than willpower alone.
 
-🛡️ X. Challenge for the Reader
+## Challenge for the Reader
 
-- Name your Cave Bear. What scent keeps it docile?
-- Choose your Lantern of Dawn.
-- Write your Rope of Returning message now; save it as a template.
-- Test a 10-minute “cave leave” and record how you feel.
-- Share your cave exit ritual with another adventurer.
-
+- Name your Cave Bear. What does it smell like? What does it promise?
+- Choose your Lantern of Dawn — write down exactly what you will turn on or open first.
+- Write your Rope of Returning message now and save it as a template you can fire in one tap.
+- Test a 10-minute "cave leave" and note how you feel ten minutes after.
+- Notice whether the world was actually waiting like the cave said it was.
 
 > "The cave kept you safe once. Now it keeps you small. Step out. The world is waiting."
 
