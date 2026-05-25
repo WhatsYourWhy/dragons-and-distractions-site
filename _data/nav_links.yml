@@ -1,30 +1,16 @@
-- label: Choose Your Monster
-  url: "/choose-your-monster/"
-  description: "Match the stuck feeling to a monster, then jump straight to one ritual and one tool."
-  cta: "Choose Your Monster"
-  style: primary
+- label: Monsters
+  url: "/monsters/"
+  description: "Browse every monster if you want to explore each pattern in more depth."
+  cta: "Browse Monsters"
 - label: Tool Cabinet
   url: "/site/"
   description: "Jump to the quickest printable or interactive tool when you need immediate support."
   cta: "Open Tool Cabinet"
-  style: secondary
-- label: Monsters
-  url: "/monsters/"
-  description: "Browse the full bestiary if you want to explore each pattern in more depth."
-  cta: "Browse Monsters"
-  style: tertiary
-- label: Rituals
+- label: Spellbook
   url: "/spellbook/"
   description: "Go straight to rituals, scripts, and plain-language counter-moves."
-  cta: "Open Rituals"
-  style: tertiary
+  cta: "Open Spellbook"
 - label: Codex
   url: "/codex/"
   description: "Read the grounding promises and framework notes behind the toolkit."
   cta: "Read the Codex"
-  style: tertiary
-- label: Shop
-  url: "/shop/"
-  description: "Grab the card deck, support the project, or wait for the physical edition."
-  cta: "Visit Shop"
-  style: tertiary

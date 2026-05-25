@@ -80,109 +80,101 @@ tags:
   <a href="#tools">Tools</a>
 </div>
 
-🏰 I. Bestiary Entry
+## Lore {#lore}
 
-> Deep beneath the blankets of your mind’s realm lives the Slumber Troll.
-> A hulking, smothering creature whose favorite meal is your lost time.
-> It snores in caverns of soft pillows and trades dreams for delay.
-> It sings the Lullaby of “Just Five More Minutes,” and wraps you in the Cloak of Comfort.
->
-> Trolls in folklore were creatures of inertia and entrapment—lurking under bridges you must cross, demanding a toll of inaction or fear.
-> In your life, the Slumber Troll is that threshold monster blocking the crossing from rest to movement, from sleep to wakefulness, from stillness to momentum.
->
-> Facing the Slumber Troll is the first quest in any hero’s day. Without crossing this bridge, no other monster can be fought.
+Deep beneath the blankets of your mind's realm lives the Slumber Troll. A hulking, smothering creature whose favorite meal is your lost time. It snores in caverns of soft pillows and trades dreams for delay. It sings the lullaby of *"just five more minutes"* and wraps you in the cloak of comfort.
 
-## 🔎 Monster Ecology (Lore and Sources) {#lore}
+Trolls in folklore were creatures of inertia and entrapment — lurking under bridges you must cross, demanding a toll of inaction or fear. In your life, the Slumber Troll is the threshold monster blocking the crossing from rest to movement, from sleep to wakefulness, from stillness to momentum.
 
-✅ Trolls in European folklore guard boundaries: caves, bridges, roads.
-✅ ADHDers face “Initiation Impairment” (Russell Barkley, 2010) → struggle to cross from intention to action.
-✅ Dopamine deficit reduces motivation for non-immediate rewards. (Volkow et al., 2009)
-✅ Behavioral Activation → Rituals and environmental cues improve transitions. (Martell et al., 2001)
-✅ Circadian cues (light, movement) anchor wakefulness and reduce sleep inertia.
+Facing the Slumber Troll is the first quest in any day. Without crossing this bridge, no other monster can be fought.
 
-🧠 III. Clinical / Psychological Explanation
+## Monster Ecology {#lore-ecology}
 
-- Transition problems: starting is harder than staying still.
-- Low arousal → body clings to warmth and darkness.
-- Rejection sensitivity → hiding from the day feels safer.
-- Overlap with depression and anxiety → rest becomes avoidance.
-- Solution = body-first activation, light, accountability, pre-decided rewards.
+- Trolls in European folklore guard boundaries — caves, bridges, roads — and demand a toll for crossing.
+- Initiation impairment is a real ADHD phenomenon: the gap between intention and action is wider than for neurotypical brains.
+- Reward systems undershoot on low-salience tasks like "stand up," which is why willpower alone tends to lose.
+- Behavioral activation — rituals and environmental cues — improves transitions more reliably than internal pep talks.
+- Circadian cues (light, movement, temperature change) anchor wakefulness and reduce the heavy fog of sleep inertia.
 
-🔍 IV. Real-World Examples
+## Real-World Examples
 
-- Snoozing repeatedly until you feel behind.
+- Snoozing repeatedly until you feel behind on the whole day.
 - Scrolling in bed instead of standing up.
-- Skipping morning rituals because “it’s already too late.”
+- Skipping morning rituals because "it's already too late."
 - Cancelling early plans to stay cocooned.
-- Avoiding showers, clothes, or daylight because it feels like “too much.”
+- Avoiding showers, clothes, or daylight because all of it feels like "too much."
 
-## 🗝️ The Slumber Troll’s Weaknesses {#weaknesses}
+## The Slumber Troll's Weaknesses {#weaknesses}
 
-✅ Fire (salience) → light, scent, sound cues that break the fog.
-✅ Body-first activation → move before you negotiate.
-✅ Time-boxed rest → hibernation with a clock.
-✅ Social rope → someone outside the cave holding tension.
-✅ Reward as fuel → coffee, memes, sunlight earned by movement.
+- Light, scent, and sound cues break the fog in ways argument cannot.
+- Body-first activation: move before you negotiate.
+- Time-boxed rest is real rest; open-ended hibernation is the trap.
+- A social rope held by someone outside the bed changes the math.
+- Reward as fuel: coffee, sunlight, music — earned by standing up, not by lying down longer.
 
-## 🪄 Rituals and Counter-Spells {#rituals}
+## Rituals and Counter-Spells {#rituals}
 
-⭐ **Invocation:** “Arise, motherfucker.” (Speak aloud as personal spell.)
+**Wake Invocation**
+- "Arise, motherfucker." Speak it aloud as a personal command phrase.
+- Count 3-2-1, then move before your brain negotiates.
 
-⭐ **3-2-1 Go Rule:**
-- No negotiation. Count down—and move.
-- Source: Mel Robbins, *The 5 Second Rule*.
+**3-2-1 Go Rule**
+- No negotiation. Count down and move on "one."
+- The countdown bypasses the part of you that bargains.
 
-⭐ **Beacon of Dawn:**
-- Light on, curtains open, alarm away from bed.
-- Play one hype song the moment you stand.
+**Beacon of Dawn**
+- Lights on, curtains open, alarm placed away from bed so standing is mandatory.
+- Play one hype song the moment your feet hit the floor.
 
-⭐ **Accountability Rope:**
-- Text “I’m vertical” to a friend or coworking chat.
+**Accountability Rope**
+- Text "I'm vertical" to a friend or coworking chat.
 - Send a photo outside the blankets at the agreed time.
 
-⭐ **Time-Boxed Hibernation:**
+**Hibernation with a Clock**
 - If you return to rest, set a timer (20–90 minutes).
 - Name the wake-up action before you lie down.
 
-## 🛠️ Artifacts and Weapons {#tools}
+Find the practical write-up on the [Rituals]({{ "/spellbook/#slumber-troll-rituals" | relative_url }}) page.
 
-- **Cloak of Readiness** → Clothes laid out the night before.
-- **Sword of 3-2-1 Go** → Irrefutable countdown.
-- **Sigil of Accountability** → Text to a friend: “I’m up.”
-- **Potion of Wakefulness** → Cold water or coffee.
-- **Horn of Dawn** → Alarm that can’t be silenced without standing.
-- **Candle of Resolve** → Light as ritual signifier.
+## Tools and Printables {#tools}
 
-## 🧰 Printables to Equip
+- **Cloak of Readiness** — clothes laid out the night before.
+- **Sword of 3-2-1 Go** — the irrefutable countdown.
+- **Sigil of Accountability** — the "I'm up" text to a friend.
+- **Potion of Wakefulness** — cold water or coffee within arm's reach.
+- **Horn of Dawn** — an alarm that cannot be silenced without standing.
+- **Candle of Resolve** — light as a ritual signifier that morning has started.
 
-{% include printable-groups.html slugs="slumber-troll" %}
+- [Wake Invocation checklist]({{ "/site/printables/wake-invocation-checklist.html" | relative_url }})
+- [Ink-friendly PDF]({{ "/site/printables/pdf/wake-invocation-checklist-ink.pdf" | relative_url }})
+- If the morning resistance has tipped into full retreat, see [Cave Bear]({{ "/monsters/cave-bear/" | relative_url }}) for a gentler re-entry.
+- If you are reliably exhausted no matter how much you sleep, pair this with [Burnout Dragon]({{ "/monsters/burnout-dragon/" | relative_url }}) — the troll might be feeding on depletion.
 
-⚡️ VIII. Command Phrases
+## Command Phrases
 
-“Arise, motherfucker.”
-“Light the fire.”
-“No negotiation.”
-“The bed is lava.”
-“I cross the bridge now.”
+- "Arise, motherfucker."
+- "Light the fire."
+- "No negotiation."
+- "The bed is lava."
+- "I cross the bridge now."
 
-🧪 IX. Science and Reason
+## Science and Reason
 
-- ADHD brings time blindness → weaker urgency signal. (Barkley, 2010)
-- Initiation impairment = transition problem, not knowledge deficit.
-- Dopamine system undershoots for low-salience tasks.
-- Behavioral Activation reduces avoidance through action first.
-- Environmental cues become conditioned triggers for movement.
+- Time blindness weakens the urgency signal that helps neurotypical brains pop out of bed when they should.
+- Initiation impairment is a transition problem, not a knowledge deficit — you already know what to do; the gap is doing it.
+- The reward system undershoots on low-salience tasks, which is why "stand up" reliably loses to "stay in bed" unless something else tips the scale.
+- Behavioral activation reduces avoidance by leading with action and letting motivation follow.
+- Environmental cues — light, sound, movement — become conditioned triggers for state change with surprising speed.
 
-🛡️ X. Challenge for the Reader
+*(For deeper context, see Barkley 2010 on initiation impairment and Martell et al. 2001 on behavioral activation.)*
 
-- Name *YOUR* Slumber Troll.
-- Define its favorite lie.
-- Choose your personal command phrase.
-- Build your anti-Troll ritual.
-- Use your artifacts and weapons.
-- Track it for 7 days.
-- Share your victory (or battle scars) with the Guild.
+## Challenge for the Reader
 
+- Name your Slumber Troll. What lullaby does it sing to you most mornings?
+- Choose your command phrase and say it tomorrow morning, out loud, before you negotiate.
+- Place your alarm somewhere that makes standing mandatory.
+- Set up your Accountability Rope tonight — pick the person, pre-write the message.
+- Notice whether crossing the bridge was as expensive as the troll said it would be.
 
 > "The Troll is strongest before dawn. Slay it once, and the rest of the day is yours."
 

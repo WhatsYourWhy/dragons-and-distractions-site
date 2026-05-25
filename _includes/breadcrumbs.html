@@ -23,9 +23,9 @@
     {%- elsif current_url contains '/spellbook/' or current_url == '/spellbook/' -%}
       <li class="breadcrumbs__item">
         {%- if current_url == '/spellbook/' -%}
-          <span class="breadcrumbs__current" aria-current="page">Rituals</span>
+          <span class="breadcrumbs__current" aria-current="page">Spellbook</span>
         {%- else -%}
-          <a class="breadcrumbs__link" href="{{ '/spellbook/' | relative_url }}">Rituals</a>
+          <a class="breadcrumbs__link" href="{{ '/spellbook/' | relative_url }}">Spellbook</a>
         {%- endif -%}
       </li>
       {%- unless current_url == '/spellbook/' -%}

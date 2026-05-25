@@ -71,7 +71,7 @@ tags:
   </ul>
 </div>
 
-## Bestiary Entry {#lore}
+## Lore {#lore}
 
 The Burnout Dragon is not dramatic at first. It begins as smoke in the rafters. A little less margin. A little less joy. A little more cost for everything. Then one day the whole cave is hot and even the smallest task asks for more fuel than you have.
 

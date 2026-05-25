@@ -26,7 +26,7 @@ HEADER_INCLUDES = (
 )
 EXPECTED_HOMEPAGE_ACTIONS = [
     {"label": "Choose Your Monster", "url": "/choose-your-monster/", "style": "primary"},
-    {"label": "Browse the Bestiary", "url": "/monsters/", "style": "secondary"},
+    {"label": "Browse Monsters", "url": "/monsters/", "style": "secondary"},
 ]
 EXPECTED_HOMEPAGE_HERO_IMAGES = frozenset(
     {
