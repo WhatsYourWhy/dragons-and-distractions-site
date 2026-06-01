@@ -80,7 +80,10 @@
     -->
     <script>
       (function () {
-        var GA_ID = "G-4BBWE83NT3";
+        // GT-PJ4PKQMZ is the combined Google Tag that routes to GA4
+        // destination G-4BBWE83NT3. Configure it once — additional
+        // destinations are managed in the Google Tag admin.
+        var GTAG_ID = "GT-PJ4PKQMZ";
         var storageKey = "dd-consent";
         window.dataLayer = window.dataLayer || [];
         function gtag(){ window.dataLayer.push(arguments); }
@@ -92,9 +95,9 @@
           window.__ddAnalyticsLoaded = true;
           var s = document.createElement("script");
           s.async = true;
-          s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=" + GTAG_ID;
           document.head.appendChild(s);
-          gtag("config", GA_ID, { anonymize_ip: true });
+          gtag("config", GTAG_ID, { anonymize_ip: true });
         }
 
         try {
