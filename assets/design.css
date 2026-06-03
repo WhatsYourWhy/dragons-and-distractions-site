@@ -207,6 +207,19 @@ nav a {
   font-size: 0.74rem;
 }
 
+.section-heading__eyebrow,
+.path-card__eyebrow,
+.monster-start__eyebrow,
+.content-page__eyebrow,
+.printable-page__eyebrow,
+.battle-card__eyebrow,
+.monster-masthead__eyebrow,
+.ritual-cluster__eyebrow,
+.page-hero__eyebrow {
+  font-size: 0.84rem;
+  letter-spacing: 0.07em;
+}
+
 .site-nav {
   margin-left: auto;
   float: none;
@@ -1764,8 +1777,8 @@ body.theme-low-stim .oracle__choice-index {
 .ritual-cluster__eyebrow {
   color: var(--color-text-muted);
   font-family: "Cinzel", serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.84rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
@@ -2625,8 +2638,8 @@ body.nav-open .site-banner__menu-toggle-line:nth-child(3) {
   margin: 0;
   color: var(--color-text-muted);
   font-family: "Cinzel", serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  font-size: 0.84rem;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
