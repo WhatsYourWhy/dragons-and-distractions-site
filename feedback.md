@@ -31,9 +31,10 @@ This is a static site hosted on GitHub Pages.
 - Two browser-side preferences are stored in `localStorage`:
   - `dd-theme` — your low-stim theme choice.
   - `dd-consent` — whether you have accepted or declined analytics via the consent banner.
-- Analytics: we use Google Analytics 4 (measurement ID `G-4BBWE83NT3`) with IP anonymisation. The analytics script only loads after you click **Accept** on the consent banner; declining keeps it off. You can reset your choice any time by clearing `dd-consent` from your browser's site storage.
+- Analytics: we use Google Tag `GT-PJ4PKQMZ` to load Google Analytics 4 destination `G-4BBWE83NT3` with IP anonymisation. The Google Tag only loads after you click **Accept analytics tag** on the consent banner; declining keeps it off. You can reset your choice any time by clearing `dd-consent` from your browser's site storage.
+- Consent scope: accepting the analytics tag grants analytics storage only. Google Consent Mode defaults and updates keep `ad_storage`, `ad_user_data`, and `ad_personalization` denied.
 - We do not load Google AdSense or any other ad network on the site.
-- If additional tracking is added later, this page will be updated before or at the same time.
+- If additional Google Tag destinations or tracking uses are added later, this page and the consent banner will be updated before or at the same time.
 
 ## Support boundary
 
