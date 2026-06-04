@@ -11,7 +11,7 @@
     action="https://buttondown.com/api/emails/embed-subscribe/WhatsYourWhy"
     method="post"
     target="_blank"
-    referrerpolicy="origin"
+    referrerpolicy="no-referrer"
     class="newsletter__form embeddable-buttondown-form"
   >
     <label class="newsletter__label" for="{{ input_id }}">Enter your email</label>
@@ -20,7 +20,7 @@
       <button class="newsletter__submit cta-button cta-button--primary" type="submit">{{ button_label }}</button>
     </div>
     <p class="newsletter__fine-print">
-      Powered by <a href="https://buttondown.com/refer/WhatsYourWhy" target="_blank" rel="noopener">Buttondown</a>.
+      Your email goes to Buttondown. <a href="{{ '/feedback/' | relative_url }}">Privacy notes</a>. Powered by <a href="https://buttondown.com/refer/WhatsYourWhy" target="_blank" rel="noopener noreferrer">Buttondown</a>.
     </p>
   </form>
 </section>
