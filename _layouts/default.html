@@ -75,24 +75,38 @@
     </script>
     <!--
       Analytics and ads are consent-gated. AdSense is disabled until we
-      actually have ad units to serve. GA4 loads only after the visitor
-      accepts the consent banner (see _includes/consent-banner.html).
+      actually have ad units to serve. The Google Tag that routes to GA4
+      loads only after the visitor accepts the consent banner (see
+      _includes/consent-banner.html). Consent Mode keeps non-analytics
+      storage and personalization denied.
     -->
     <script>
       (function () {
         // GT-PJ4PKQMZ is the combined Google Tag that routes to GA4
-        // destination G-4BBWE83NT3. Configure it once — additional
-        // destinations are managed in the Google Tag admin.
+        // destination G-4BBWE83NT3. Keep non-analytics consent denied
+        // unless the banner and privacy notes are updated for that scope.
         var GTAG_ID = "GT-PJ4PKQMZ";
         var storageKey = "dd-consent";
         window.dataLayer = window.dataLayer || [];
         function gtag(){ window.dataLayer.push(arguments); }
         window.gtag = gtag;
+        gtag("consent", "default", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied"
+        });
         gtag("js", new Date());
 
         function loadAnalytics() {
           if (window.__ddAnalyticsLoaded) return;
           window.__ddAnalyticsLoaded = true;
+          gtag("consent", "update", {
+            analytics_storage: "granted",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+          });
           var s = document.createElement("script");
           s.async = true;
           s.src = "https://www.googletagmanager.com/gtag/js?id=" + GTAG_ID;
