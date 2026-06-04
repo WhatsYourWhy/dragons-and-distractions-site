@@ -66,6 +66,12 @@ body.theme-low-stim a:focus {
   color: var(--color-magic);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   background: var(--color-page-bg);
@@ -79,6 +85,12 @@ body {
   color: var(--color-text-base);
   font-family: "Lora", Georgia, serif;
   line-height: 1.75;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
 }
 
 hr {
@@ -119,6 +131,17 @@ h6 {
 h1 {
   font-weight: 700;
   text-shadow: 0 0 40px rgba(200, 144, 10, 0.4);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  overflow-wrap: break-word;
 }
 
 h2,
@@ -346,7 +369,7 @@ nav a {
 
 .nav-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 1.5rem;
   margin: 1.75rem 0;
   padding: 0;
@@ -581,11 +604,11 @@ nav a {
 .landing-grid--compact,
 .trust-grid,
 .monster-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
 }
 
 .path-grid {
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
   align-items: stretch;
 }
 
@@ -1707,7 +1730,7 @@ body.theme-low-stim .oracle__choice-index {
 }
 
 .ritual-glance {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
 }
 
 .ritual-glance__item,
@@ -1783,7 +1806,7 @@ body.theme-low-stim .oracle__choice-index {
 }
 
 .ritual-cluster__entries {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
 }
 
 .ritual-entry {
@@ -1855,7 +1878,7 @@ body.theme-low-stim .ritual-cluster {
 .principles-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
 }
 
 .principle-card,
@@ -1916,7 +1939,7 @@ body.theme-low-stim .next-steps-panel {
 .field-guide__grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
 }
 
 .field-guide__card {
@@ -2314,7 +2337,7 @@ body.theme-low-stim .monster-card__action--primary {
   }
 
   .path-card__actions {
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
   }
 
   .monster-start__grid {
@@ -2362,6 +2385,40 @@ body.theme-low-stim .monster-card__action--primary {
   .wrapper {
     padding-right: 16px;
     padding-left: 16px;
+  }
+
+  .page-hero,
+  .content-page__hero,
+  .printable-page__hero,
+  .path-card,
+  .monster-page__content,
+  .ritual-cluster,
+  .next-steps-panel {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .page-hero__title,
+  .content-page__title,
+  .printable-page__title {
+    font-size: clamp(1.95rem, 11vw, 2.75rem);
+  }
+
+  .page-hero__intro,
+  .content-page__intro,
+  .printable-page__intro,
+  .landing-lead,
+  .section-heading p {
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .landing-section {
+    margin: 1.75rem 0 2rem;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.55rem, 9vw, 2.2rem);
   }
 
   .monster-masthead__title-row {
@@ -2822,7 +2879,7 @@ body.theme-low-stim a.cta-button--secondary:visited {
 .ritual-library {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
 }
 
 .ritual-library__card {
@@ -2950,6 +3007,7 @@ body.theme-low-stim .ritual-library__card {
 
   .page-hero--cover {
     min-height: 22rem;
+    min-height: min(26rem, 78svh);
   }
 
   .page-hero--split .page-hero__media {
@@ -2974,6 +3032,16 @@ body.theme-low-stim .ritual-library__card {
   .theme-toggle__status {
     display: none;
   }
+
+  .printable-group {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.95rem;
+  }
+
+  .printable-group table {
+    min-width: 32rem;
+  }
 }
 
 @media (min-width: 760px) {
@@ -2995,6 +3063,10 @@ body.theme-low-stim .ritual-library__card {
 
 /* ── Mobile nav header fix ─────────────────────────────── */
 @media (max-width: 480px) {
+  .site-banner {
+    padding: 0.65rem 0;
+  }
+
   .site-banner__inner {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -3023,6 +3095,33 @@ body.theme-low-stim .ritual-library__card {
 
   .site-banner__nav {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 380px) {
+  .wrapper {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .site-banner__controls {
+    gap: 0.35rem;
+  }
+
+  .theme-toggle,
+  .site-banner__menu-toggle {
+    min-height: 2.35rem;
+    padding: 0.5rem 0.62rem;
+  }
+
+  .site-banner__brand-subtitle {
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .page-hero--cover {
+    min-height: 22rem;
+    min-height: min(23rem, 74svh);
   }
 }
 
