@@ -19,11 +19,14 @@ HOMEPAGE_PATH = ROOT / "index.md"
 SPELLBOOK_INDEX = ROOT / "spellbook" / "index.md"
 MONSTER_INDEX = ROOT / "monsters" / "index.md"
 MONSTER_FILTER_INCLUDE = ROOT / "_includes" / "monster-index-filter.html"
+DEFAULT_LAYOUT = ROOT / "_layouts" / "default.html"
+FEEDBACK_PAGE = ROOT / "feedback.md"
 HEADER_INCLUDES = (
     ROOT / "_includes" / "site-header.html",
     ROOT / "_includes" / "header-nav.html",
     ROOT / "_includes" / "site-banner.html",
 )
+DISCLOSED_GA4_ID = "G-4BBWE83NT3"
 EXPECTED_HOMEPAGE_ACTIONS = [
     {"label": "Choose Your Monster", "url": "/choose-your-monster/", "style": "primary"},
     {"label": "Browse Monsters", "url": "/monsters/", "style": "secondary"},
@@ -264,6 +267,40 @@ def validate_header_markup(paths: tuple[Path, ...] = HEADER_INCLUDES) -> list[st
     return errors
 
 
+def validate_analytics_scope(
+    layout_path: Path = DEFAULT_LAYOUT, privacy_path: Path = FEEDBACK_PAGE
+) -> list[str]:
+    """Ensure consented analytics loads only the GA4 ID disclosed to visitors."""
+    errors: list[str] = []
+    layout_text = layout_path.read_text(encoding="utf-8")
+    privacy_text = privacy_path.read_text(encoding="utf-8")
+
+    expected_assignment = f'var GTAG_ID = "{DISCLOSED_GA4_ID}";'
+    if expected_assignment not in layout_text:
+        errors.append(
+            f"{display_path(layout_path)}: analytics loader must use disclosed GA4 ID {DISCLOSED_GA4_ID}"
+        )
+
+    if "googletagmanager.com/gtag/js?id=\" + GTAG_ID" not in layout_text:
+        errors.append(
+            f"{display_path(layout_path)}: analytics script URL must be built from GTAG_ID"
+        )
+
+    if DISCLOSED_GA4_ID not in privacy_text:
+        errors.append(
+            f"{display_path(privacy_path)}: privacy notes must disclose GA4 ID {DISCLOSED_GA4_ID}"
+        )
+
+    combined_tag_ids = set(re.findall(r"\bGT-[A-Z0-9]+\b", layout_text + "\n" + privacy_text))
+    if combined_tag_ids:
+        errors.append(
+            "analytics scope must not use combined Google Tag IDs: "
+            + ", ".join(sorted(combined_tag_ids))
+        )
+
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     errors.extend(validate_homepage_hero())
@@ -272,6 +309,7 @@ def main() -> int:
     errors.extend(validate_monster_filter_include())
     errors.extend(validate_page_descriptions())
     errors.extend(validate_header_markup())
+    errors.extend(validate_analytics_scope())
 
     if errors:
         print("Launch-content validation problems detected:\n")

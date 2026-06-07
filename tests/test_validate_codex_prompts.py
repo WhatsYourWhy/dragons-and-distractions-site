@@ -197,6 +197,51 @@ def test_validate_header_markup_requires_mobile_nav_and_theme_toggle(tmp_path: P
     assert checks.validate_header_markup((header,)) == []
 
 
+def test_validate_analytics_scope_accepts_disclosed_ga4_id(tmp_path: Path):
+    layout = tmp_path / "default.html"
+    layout.write_text(
+        "\n".join(
+            [
+                'var GTAG_ID = "G-4BBWE83NT3";',
+                's.src = "https://www.googletagmanager.com/gtag/js?id=" + GTAG_ID;',
+                'gtag("config", GTAG_ID, { anonymize_ip: true });',
+            ]
+        ),
+        encoding="utf-8",
+    )
+    privacy = tmp_path / "feedback.md"
+    privacy.write_text(
+        "Analytics: we load Google Analytics 4 measurement ID `G-4BBWE83NT3`.",
+        encoding="utf-8",
+    )
+
+    assert checks.validate_analytics_scope(layout, privacy) == []
+
+
+def test_validate_analytics_scope_rejects_combined_google_tag(tmp_path: Path):
+    layout = tmp_path / "default.html"
+    layout.write_text(
+        "\n".join(
+            [
+                'var GTAG_ID = "GT-PJ4PKQMZ";',
+                's.src = "https://www.googletagmanager.com/gtag/js?id=" + GTAG_ID;',
+                'gtag("config", GTAG_ID, { anonymize_ip: true });',
+            ]
+        ),
+        encoding="utf-8",
+    )
+    privacy = tmp_path / "feedback.md"
+    privacy.write_text(
+        "Analytics: we use Google Tag `GT-PJ4PKQMZ` to load GA4 destination `G-4BBWE83NT3`.",
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_analytics_scope(layout, privacy)
+
+    assert any("analytics loader must use disclosed GA4 ID" in e for e in errors)
+    assert any("must not use combined Google Tag IDs: GT-PJ4PKQMZ" in e for e in errors)
+
+
 def test_validate_page_descriptions_reports_missing_front_matter_delimiter(tmp_path: Path):
     page = tmp_path / "no_delimiter.md"
     page.write_text("# Title only\n", encoding="utf-8")
