@@ -75,17 +75,15 @@
     </script>
     <!--
       Analytics and ads are consent-gated. AdSense is disabled until we
-      actually have ad units to serve. The Google Tag that routes to GA4
-      loads only after the visitor accepts the consent banner (see
-      _includes/consent-banner.html). Consent Mode keeps non-analytics
-      storage and personalization denied.
+      actually have ad units to serve. The GA4 tag loads only after the
+      visitor accepts the consent banner (see _includes/consent-banner.html).
+      Consent Mode keeps non-analytics storage and personalization denied.
     -->
     <script>
       (function () {
-        // GT-PJ4PKQMZ is the combined Google Tag that routes to GA4
-        // destination G-4BBWE83NT3. Keep non-analytics consent denied
-        // unless the banner and privacy notes are updated for that scope.
-        var GTAG_ID = "GT-PJ4PKQMZ";
+        // Keep this bound to the disclosed GA4 measurement ID. Loading a
+        // combined Google Tag could enable destinations outside the banner scope.
+        var GTAG_ID = "G-4BBWE83NT3";
         var storageKey = "dd-consent";
         window.dataLayer = window.dataLayer || [];
         function gtag(){ window.dataLayer.push(arguments); }
