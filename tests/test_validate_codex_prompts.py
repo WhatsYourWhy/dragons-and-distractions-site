@@ -242,6 +242,59 @@ def test_validate_analytics_scope_rejects_combined_google_tag(tmp_path: Path):
     assert any("must not use combined Google Tag IDs: GT-PJ4PKQMZ" in e for e in errors)
 
 
+def test_validate_newsletter_form_privacy_accepts_form_noreferrer(tmp_path: Path):
+    form = tmp_path / "newsletter-form.html"
+    form.write_text(
+        "\n".join(
+            [
+                '<form action="https://buttondown.com/api/emails/embed-subscribe/WhatsYourWhy"',
+                '  method="post"',
+                '  target="_blank"',
+                '  rel="noreferrer"',
+                '>',
+                '</form>',
+            ]
+        ),
+        encoding="utf-8",
+    )
+    privacy = tmp_path / "feedback.md"
+    privacy.write_text(
+        'Newsletter submissions use form `rel="noreferrer"`.',
+        encoding="utf-8",
+    )
+
+    assert checks.validate_newsletter_form_privacy(form, privacy) == []
+
+
+def test_validate_newsletter_form_privacy_rejects_referrerpolicy_only(tmp_path: Path):
+    form = tmp_path / "newsletter-form.html"
+    form.write_text(
+        "\n".join(
+            [
+                '<form action="https://buttondown.com/api/emails/embed-subscribe/WhatsYourWhy"',
+                '  method="post"',
+                '  target="_blank"',
+                '  referrerpolicy="no-referrer"',
+                '>',
+                '  <a rel="noopener noreferrer">Buttondown</a>',
+                '</form>',
+            ]
+        ),
+        encoding="utf-8",
+    )
+    privacy = tmp_path / "feedback.md"
+    privacy.write_text(
+        'Newsletter submissions use form `referrerpolicy="no-referrer"`.',
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_newsletter_form_privacy(form, privacy)
+
+    assert any('newsletter form must use rel="noreferrer"' in e for e in errors)
+    assert any("must not rely on non-standard referrerpolicy" in e for e in errors)
+    assert any('privacy notes must document newsletter form rel="noreferrer"' in e for e in errors)
+
+
 def test_validate_page_descriptions_reports_missing_front_matter_delimiter(tmp_path: Path):
     page = tmp_path / "no_delimiter.md"
     page.write_text("# Title only\n", encoding="utf-8")
