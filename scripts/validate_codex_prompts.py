@@ -21,6 +21,7 @@ MONSTER_INDEX = ROOT / "monsters" / "index.md"
 MONSTER_FILTER_INCLUDE = ROOT / "_includes" / "monster-index-filter.html"
 DEFAULT_LAYOUT = ROOT / "_layouts" / "default.html"
 FEEDBACK_PAGE = ROOT / "feedback.md"
+NEWSLETTER_FORM = ROOT / "_includes" / "newsletter-form.html"
 HEADER_INCLUDES = (
     ROOT / "_includes" / "site-header.html",
     ROOT / "_includes" / "header-nav.html",
@@ -94,6 +95,15 @@ def _markdown_body_after_front_matter(path: Path) -> str:
         if lines[index].strip() == "---":
             return "\n".join(lines[index + 1 :])
     return text
+
+
+def _attribute_value(tag_text: str, name: str) -> str | None:
+    match = re.search(
+        rf"\b{re.escape(name)}\s*=\s*([\"'])(.*?)\1",
+        tag_text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    return match.group(2) if match else None
 
 
 def validate_homepage_hero(path: Path = HOMEPAGE_PATH) -> list[str]:
@@ -301,6 +311,39 @@ def validate_analytics_scope(
     return errors
 
 
+def validate_newsletter_form_privacy(
+    form_path: Path = NEWSLETTER_FORM, privacy_path: Path = FEEDBACK_PAGE
+) -> list[str]:
+    """Ensure newsletter submissions suppress sensitive source page referrers."""
+    errors: list[str] = []
+    form_text = form_path.read_text(encoding="utf-8")
+    privacy_text = privacy_path.read_text(encoding="utf-8")
+
+    form_tag_match = re.search(r"<form\b[^>]*>", form_text, flags=re.IGNORECASE | re.DOTALL)
+    if not form_tag_match:
+        return [f"{display_path(form_path)}: newsletter form markup missing <form> tag"]
+
+    form_tag = form_tag_match.group(0)
+    rel_value = _attribute_value(form_tag, "rel")
+    rel_tokens = set(rel_value.lower().split()) if rel_value else set()
+    if "noreferrer" not in rel_tokens:
+        errors.append(
+            f'{display_path(form_path)}: newsletter form must use rel="noreferrer" to suppress referrers'
+        )
+
+    if re.search(r"\breferrerpolicy\s*=", form_tag, flags=re.IGNORECASE):
+        errors.append(
+            f'{display_path(form_path)}: form referrer control must not rely on non-standard referrerpolicy'
+        )
+
+    if 'rel="noreferrer"' not in privacy_text:
+        errors.append(
+            f'{display_path(privacy_path)}: privacy notes must document newsletter form rel="noreferrer"'
+        )
+
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     errors.extend(validate_homepage_hero())
@@ -310,6 +353,7 @@ def main() -> int:
     errors.extend(validate_page_descriptions())
     errors.extend(validate_header_markup())
     errors.extend(validate_analytics_scope())
+    errors.extend(validate_newsletter_form_privacy())
 
     if errors:
         print("Launch-content validation problems detected:\n")
