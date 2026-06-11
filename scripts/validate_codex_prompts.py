@@ -21,6 +21,7 @@ MONSTER_INDEX = ROOT / "monsters" / "index.md"
 MONSTER_FILTER_INCLUDE = ROOT / "_includes" / "monster-index-filter.html"
 DEFAULT_LAYOUT = ROOT / "_layouts" / "default.html"
 FEEDBACK_PAGE = ROOT / "feedback.md"
+PRIVACY_PAGE = ROOT / "privacy.md"
 NEWSLETTER_FORM = ROOT / "_includes" / "newsletter-form.html"
 HEADER_INCLUDES = (
     ROOT / "_includes" / "site-header.html",
@@ -51,8 +52,11 @@ EXPECTED_RITUAL_KEYS = (
 )
 PAGE_DESCRIPTION_PATHS = (
     ROOT / "index.md",
+    ROOT / "about.md",
     ROOT / "choose-your-monster.md",
+    ROOT / "contact.md",
     ROOT / "feedback.md",
+    ROOT / "privacy.md",
     ROOT / "404.md",
     ROOT / "monsters" / "index.md",
     ROOT / "codex" / "index.md",
@@ -278,7 +282,7 @@ def validate_header_markup(paths: tuple[Path, ...] = HEADER_INCLUDES) -> list[st
 
 
 def validate_analytics_scope(
-    layout_path: Path = DEFAULT_LAYOUT, privacy_path: Path = FEEDBACK_PAGE
+    layout_path: Path = DEFAULT_LAYOUT, privacy_path: Path = PRIVACY_PAGE
 ) -> list[str]:
     """Ensure consented analytics loads only the GA4 ID disclosed to visitors."""
     errors: list[str] = []
@@ -312,7 +316,7 @@ def validate_analytics_scope(
 
 
 def validate_newsletter_form_privacy(
-    form_path: Path = NEWSLETTER_FORM, privacy_path: Path = FEEDBACK_PAGE
+    form_path: Path = NEWSLETTER_FORM, privacy_path: Path = PRIVACY_PAGE
 ) -> list[str]:
     """Ensure newsletter submissions suppress sensitive source page referrers."""
     errors: list[str] = []
