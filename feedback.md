@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Feedback & Privacy"
+title: "Feedback & Support Boundaries"
 permalink: "/feedback/"
-description: "How to share feedback, what this site stores, and the support boundaries for Dragons & Distractions."
-hero_title: "Feedback, Privacy, and Support Boundaries"
+description: "How to share feedback and the support boundaries for Dragons & Distractions."
+hero_title: "Feedback and Support Boundaries"
 hero_intro: "If something here is confusing, broken, or unexpectedly helpful, here is the clearest way to reach out and the clearest version of what this site does and does not do."
 ---
 
@@ -22,21 +22,9 @@ If you write in, the most helpful note is:
 - what happened instead
 - device or browser if it looks like a display issue
 
-## Privacy notes
+## Privacy
 
-This is a static site hosted on GitHub Pages.
-
-- There are no user accounts.
-- There are no on-site comments.
-- Newsletter and shop waitlist signup forms are the only on-site forms. They ask for your email address and submit it directly to Buttondown, the third-party newsletter service that stores and processes the subscription. The shop waitlist uses the same Buttondown list as the general newsletter, so signing up may also send you occasional tools and rituals between deck updates.
-- Newsletter submissions use form `rel="noreferrer"` so the browser should not send Buttondown the specific page path you were reading when you subscribed. The Buttondown link in the form also uses `rel="noopener noreferrer"` to avoid sending referrer details when opened. Buttondown may still receive normal request metadata needed to process the signup, and its own privacy practices apply after submission.
-- Two browser-side preferences are stored in `localStorage`:
-  - `dd-theme` — your low-stim theme choice.
-  - `dd-consent` — whether you have accepted or declined analytics via the consent banner.
-- Analytics: we load Google Analytics 4 measurement ID `G-4BBWE83NT3` with IP anonymisation. The GA4 tag only loads after you click **Accept analytics tag** on the consent banner; declining keeps it off. You can reset your choice any time by clearing `dd-consent` from your browser's site storage.
-- Consent scope: accepting the analytics tag grants analytics storage only. Google Consent Mode defaults and updates keep `ad_storage`, `ad_user_data`, and `ad_personalization` denied.
-- We do not load Google AdSense or any other ad network on the site.
-- If additional Google Tag destinations or tracking uses are added later, this page and the consent banner will be updated before or at the same time.
+What this site stores, how analytics and advertising work, and the choices you have now live on the dedicated [Privacy Policy]({{ "/privacy/" | relative_url }}) page.
 
 ## Support boundary
 
