@@ -74,10 +74,12 @@
     }
     </script>
     <!--
-      Analytics and ads are consent-gated. AdSense is disabled until we
-      actually have ad units to serve. The GA4 tag loads only after the
-      visitor accepts the consent banner (see _includes/consent-banner.html).
-      Consent Mode keeps non-analytics storage and personalization denied.
+      Analytics and ads are consent-gated. Nothing loads until the visitor
+      accepts the consent banner (see _includes/consent-banner.html). On
+      accept we load the GA4 tag and Google AdSense. AdSense runs in
+      non-personalized mode (requestNonPersonalizedAds = 1), so Consent Mode
+      keeps ad_storage, ad_user_data, and ad_personalization denied and ads
+      are served from page context rather than cross-site tracking.
     -->
     <script>
       (function () {
@@ -85,6 +87,7 @@
         // combined Google Tag could enable destinations outside the banner scope.
         var GTAG_ID = "G-4BBWE83NT3";
         var storageKey = "dd-consent";
+        var acceptedValue = "accepted-analytics-ads-v1";
         window.dataLayer = window.dataLayer || [];
         function gtag(){ window.dataLayer.push(arguments); }
         window.gtag = gtag;
@@ -112,13 +115,30 @@
           gtag("config", GTAG_ID, { anonymize_ip: true });
         }
 
+        function loadAds() {
+          if (window.__ddAdsLoaded) return;
+          window.__ddAdsLoaded = true;
+          // Privacy-light: request non-personalized ads only. Ad storage,
+          // ad user data, and ad personalization stay denied in Consent Mode;
+          // AdSense serves contextual, non-personalized ads via cookieless pings.
+          window.adsbygoogle = window.adsbygoogle || [];
+          window.adsbygoogle.requestNonPersonalizedAds = 1;
+          var a = document.createElement("script");
+          a.async = true;
+          a.crossOrigin = "anonymous";
+          a.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9310837374819126";
+          document.head.appendChild(a);
+        }
+
         try {
-          if (localStorage.getItem(storageKey) === "accepted") {
+          if (localStorage.getItem(storageKey) === acceptedValue) {
             loadAnalytics();
+            loadAds();
           }
         } catch (_) { /* ignore */ }
 
         window.__ddLoadAnalytics = loadAnalytics;
+        window.__ddLoadAds = loadAds;
       })();
     </script>
 </head>

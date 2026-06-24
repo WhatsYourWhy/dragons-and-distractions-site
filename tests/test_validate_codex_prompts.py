@@ -242,6 +242,68 @@ def test_validate_analytics_scope_rejects_combined_google_tag(tmp_path: Path):
     assert any("must not use combined Google Tag IDs: GT-PJ4PKQMZ" in e for e in errors)
 
 
+def test_validate_ads_consent_versioning_accepts_current_value(tmp_path: Path):
+    layout = tmp_path / "default.html"
+    layout.write_text(
+        "\n".join(
+            [
+                'var acceptedValue = "accepted-analytics-ads-v1";',
+                "if (localStorage.getItem(storageKey) === acceptedValue) {",
+                "  loadAnalytics();",
+                "  loadAds();",
+                "}",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    banner = tmp_path / "consent-banner.html"
+    banner.write_text(
+        "\n".join(
+            [
+                'var acceptedValue = "accepted-analytics-ads-v1";',
+                'if (stored === acceptedValue || stored === "declined") {',
+                "  banner.hidden = true;",
+                "}",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    assert checks.validate_ads_consent_versioning(layout, banner) == []
+
+
+def test_validate_ads_consent_versioning_rejects_legacy_accepted(tmp_path: Path):
+    layout = tmp_path / "default.html"
+    layout.write_text(
+        "\n".join(
+            [
+                'var acceptedValue = "accepted-analytics-ads-v1";',
+                'if (localStorage.getItem(storageKey) === "accepted") {',
+                "  loadAnalytics();",
+                "  loadAds();",
+                "}",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    banner = tmp_path / "consent-banner.html"
+    banner.write_text(
+        "\n".join(
+            [
+                'var acceptedValue = "accepted-analytics-ads-v1";',
+                'if (stored === "accepted" || stored === "declined") {',
+                "  banner.hidden = true;",
+                "}",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    errors = checks.validate_ads_consent_versioning(layout, banner)
+
+    assert any("must not treat legacy dd-consent=accepted" in e for e in errors)
+
+
 def test_validate_newsletter_form_privacy_accepts_form_noreferrer(tmp_path: Path):
     form = tmp_path / "newsletter-form.html"
     form.write_text(
