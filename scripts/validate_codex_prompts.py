@@ -54,8 +54,11 @@ EXPECTED_RITUAL_KEYS = (
 )
 PAGE_DESCRIPTION_PATHS = (
     ROOT / "index.md",
+    ROOT / "about.md",
     ROOT / "choose-your-monster.md",
+    ROOT / "contact.md",
     ROOT / "feedback.md",
+    ROOT / "privacy.md",
     ROOT / "404.md",
     ROOT / "monsters" / "index.md",
     ROOT / "codex" / "index.md",
