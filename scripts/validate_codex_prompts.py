@@ -20,6 +20,7 @@ SPELLBOOK_INDEX = ROOT / "spellbook" / "index.md"
 MONSTER_INDEX = ROOT / "monsters" / "index.md"
 MONSTER_FILTER_INCLUDE = ROOT / "_includes" / "monster-index-filter.html"
 DEFAULT_LAYOUT = ROOT / "_layouts" / "default.html"
+CONSENT_BANNER = ROOT / "_includes" / "consent-banner.html"
 FEEDBACK_PAGE = ROOT / "feedback.md"
 PRIVACY_PAGE = ROOT / "privacy.md"
 NEWSLETTER_FORM = ROOT / "_includes" / "newsletter-form.html"
@@ -29,6 +30,7 @@ HEADER_INCLUDES = (
     ROOT / "_includes" / "site-banner.html",
 )
 DISCLOSED_GA4_ID = "G-4BBWE83NT3"
+CURRENT_ADS_CONSENT_VALUE = "accepted-analytics-ads-v1"
 EXPECTED_HOMEPAGE_ACTIONS = [
     {"label": "Choose Your Monster", "url": "/choose-your-monster/", "style": "primary"},
     {"label": "Browse Monsters", "url": "/monsters/", "style": "secondary"},
@@ -315,6 +317,35 @@ def validate_analytics_scope(
     return errors
 
 
+def validate_ads_consent_versioning(
+    layout_path: Path = DEFAULT_LAYOUT, banner_path: Path = CONSENT_BANNER
+) -> list[str]:
+    """Ensure legacy analytics consent is not reused for advertising consent."""
+    errors: list[str] = []
+    layout_text = layout_path.read_text(encoding="utf-8")
+    banner_text = banner_path.read_text(encoding="utf-8")
+
+    expected_assignment = f'var acceptedValue = "{CURRENT_ADS_CONSENT_VALUE}";'
+    for path, text in ((layout_path, layout_text), (banner_path, banner_text)):
+        if expected_assignment not in text:
+            errors.append(
+                f"{display_path(path)}: consent acceptance must use current versioned value "
+                f"{CURRENT_ADS_CONSENT_VALUE}"
+            )
+
+    legacy_accept_patterns = (
+        r"localStorage\.getItem\(storageKey\)\s*===\s*['\"]accepted['\"]",
+        r"\bstored\s*===\s*['\"]accepted['\"]",
+    )
+    combined_text = layout_text + "\n" + banner_text
+    if any(re.search(pattern, combined_text) for pattern in legacy_accept_patterns):
+        errors.append(
+            "ads consent must not treat legacy dd-consent=accepted as current acceptance"
+        )
+
+    return errors
+
+
 def validate_newsletter_form_privacy(
     form_path: Path = NEWSLETTER_FORM, privacy_path: Path = PRIVACY_PAGE
 ) -> list[str]:
@@ -357,6 +388,7 @@ def main() -> int:
     errors.extend(validate_page_descriptions())
     errors.extend(validate_header_markup())
     errors.extend(validate_analytics_scope())
+    errors.extend(validate_ads_consent_versioning())
     errors.extend(validate_newsletter_form_privacy())
 
     if errors:

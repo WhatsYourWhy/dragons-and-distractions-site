@@ -42,16 +42,19 @@ Additional cookies are only set by the third-party analytics and advertising ser
 
 With your consent, we load **Google Analytics 4** (measurement ID `G-4BBWE83NT3`) with IP anonymisation, so we can see which pages actually help people. The analytics tag only loads after you click **Accept** on the consent banner; declining keeps it off. You can reset your choice at any time by clearing `dd-consent` from your browser's site storage.
 
-We use Google Consent Mode. Accepting grants analytics storage only; `ad_storage`, `ad_user_data`, and `ad_personalization` remain denied unless you separately consent to advertising.
+We use Google Consent Mode. Accepting grants analytics storage and loads advertising in **non-personalized** mode, so `ad_storage`, `ad_user_data`, and `ad_personalization` remain denied — Google shows ads based on the content of the page rather than tracking you across sites.
 
 ## Advertising
 
-We use, or are in the process of enabling, **Google AdSense** to display advertising on this site. When advertising is active:
+This site is free to use. Advertising is here only to help cover the cost of running it — not to make money from tracking you. We deliberately keep it light and non-personalized, because a calm, low-distraction experience matters more to us than ad revenue.
 
-- Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this site and other sites.
-- Google's use of advertising cookies (including the DoubleClick DART cookie) enables it and its partners to serve ads to you based on your visits to this and/or other sites on the internet.
-- You can opt out of personalized advertising by visiting [Google Ads Settings](https://www.google.com/settings/ads).
-- You can opt out of some third-party vendors' use of cookies for personalized advertising by visiting [aboutads.info](https://www.aboutads.info/choices/) or [Your Online Choices](https://www.youronlinechoices.eu/).
+We use **Google AdSense** (publisher ID `ca-pub-9310837374819126`) to display this advertising. To keep things privacy-light, we request **non-personalized ads only**:
+
+- Ads are based on the content of the page and general context — **not** on tracking your activity across other sites or building an advertising profile of you.
+- We run Google Consent Mode with `ad_storage`, `ad_user_data`, and `ad_personalization` denied, so personalized advertising cookies (such as the DoubleClick DART cookie) are not used to personalize ads to you.
+- Google may still receive standard technical information (such as your IP address) to serve and frequency-cap ads and to prevent fraud, acting as our advertising provider.
+- The AdSense tag only loads after you click **Accept** on the consent banner; declining keeps it off.
+- You can review your ad settings at any time via [Google Ads Settings](https://www.google.com/settings/ads), and learn more at [aboutads.info](https://www.aboutads.info/choices/) or [Your Online Choices](https://www.youronlinechoices.eu/).
 
 For more information on how Google uses data when you use our partners' sites or apps, see [Google's Privacy &amp; Terms](https://policies.google.com/technologies/partner-sites).
 

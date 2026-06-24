@@ -1,12 +1,12 @@
-<div class="consent-banner js-consent-banner" role="region" aria-label="Privacy and analytics" hidden>
+<div class="consent-banner js-consent-banner" role="region" aria-label="Privacy, analytics, and advertising" hidden>
   <div class="wrapper consent-banner__inner">
     <p class="consent-banner__text">
-      <span class="consent-banner__text-full">We use a <strong>privacy-light Google Tag</strong> for GA4 analytics with IP anonymisation to see which pages help people. Ad storage, ad user data, and ad personalization stay off. Nothing loads until you choose.</span>
-      <span class="consent-banner__text-short"><strong>Privacy-light Google Tag?</strong> GA4 analytics only; ads and personalization stay off.</span>
+      <span class="consent-banner__text-full">Dragons &amp; Distractions is free, and we'd like to keep it that way. A few <strong>non-personalized ads</strong> help cover the costs &mdash; they're matched to the page's topic, never to a profile of you, with no cross-site tracking. We also use a <strong>privacy-light</strong> GA4 tag (IP anonymised) to see which pages genuinely help. Nothing loads until you choose.</span>
+      <span class="consent-banner__text-short"><strong>Privacy-light:</strong> a few non-personalized ads help keep this free, plus GA4 analytics. No profiles, no cross-site tracking. Nothing loads until you choose.</span>
       <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>.
     </p>
     <div class="consent-banner__actions">
-      <button type="button" class="cta-button cta-button--primary js-consent-accept">Accept analytics tag</button>
+      <button type="button" class="cta-button cta-button--primary js-consent-accept">Accept analytics &amp; ads</button>
       <button type="button" class="cta-button cta-button--secondary js-consent-decline">Decline</button>
     </div>
   </div>
@@ -15,13 +15,16 @@
 <script>
   (function () {
     var storageKey = "dd-consent";
+    var acceptedValue = "accepted-analytics-ads-v1";
     var banner = document.querySelector(".js-consent-banner");
     if (!banner) return;
 
     var stored;
     try { stored = localStorage.getItem(storageKey); } catch (_) { stored = null; }
 
-    if (stored === "accepted" || stored === "declined") {
+    // The old "accepted" value covered analytics only. Show the updated
+    // analytics-and-ads disclosure before loading ads for returning visitors.
+    if (stored === acceptedValue || stored === "declined") {
       banner.hidden = true;
       return;
     }
@@ -29,10 +32,12 @@
     banner.hidden = false;
 
     function setChoice(choice) {
-      try { localStorage.setItem(storageKey, choice); } catch (_) { /* ignore */ }
+      var storedChoice = choice === "accepted" ? acceptedValue : choice;
+      try { localStorage.setItem(storageKey, storedChoice); } catch (_) { /* ignore */ }
       banner.hidden = true;
-      if (choice === "accepted" && typeof window.__ddLoadAnalytics === "function") {
-        window.__ddLoadAnalytics();
+      if (choice === "accepted") {
+        if (typeof window.__ddLoadAnalytics === "function") window.__ddLoadAnalytics();
+        if (typeof window.__ddLoadAds === "function") window.__ddLoadAds();
       }
     }
 
