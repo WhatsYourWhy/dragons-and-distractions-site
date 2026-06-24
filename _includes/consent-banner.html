@@ -15,13 +15,16 @@
 <script>
   (function () {
     var storageKey = "dd-consent";
+    var acceptedValue = "accepted-analytics-ads-v1";
     var banner = document.querySelector(".js-consent-banner");
     if (!banner) return;
 
     var stored;
     try { stored = localStorage.getItem(storageKey); } catch (_) { stored = null; }
 
-    if (stored === "accepted" || stored === "declined") {
+    // The old "accepted" value covered analytics only. Show the updated
+    // analytics-and-ads disclosure before loading ads for returning visitors.
+    if (stored === acceptedValue || stored === "declined") {
       banner.hidden = true;
       return;
     }
@@ -29,7 +32,8 @@
     banner.hidden = false;
 
     function setChoice(choice) {
-      try { localStorage.setItem(storageKey, choice); } catch (_) { /* ignore */ }
+      var storedChoice = choice === "accepted" ? acceptedValue : choice;
+      try { localStorage.setItem(storageKey, storedChoice); } catch (_) { /* ignore */ }
       banner.hidden = true;
       if (choice === "accepted") {
         if (typeof window.__ddLoadAnalytics === "function") window.__ddLoadAnalytics();

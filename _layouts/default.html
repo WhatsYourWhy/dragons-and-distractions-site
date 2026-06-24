@@ -87,6 +87,7 @@
         // combined Google Tag could enable destinations outside the banner scope.
         var GTAG_ID = "G-4BBWE83NT3";
         var storageKey = "dd-consent";
+        var acceptedValue = "accepted-analytics-ads-v1";
         window.dataLayer = window.dataLayer || [];
         function gtag(){ window.dataLayer.push(arguments); }
         window.gtag = gtag;
@@ -130,7 +131,7 @@
         }
 
         try {
-          if (localStorage.getItem(storageKey) === "accepted") {
+          if (localStorage.getItem(storageKey) === acceptedValue) {
             loadAnalytics();
             loadAds();
           }
