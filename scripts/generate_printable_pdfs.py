@@ -196,10 +196,14 @@ def parse_blocks(lines: list[str]) -> list[Block]:
         if stripped.startswith("- "):
             items: list[str] = []
             while index < len(lines):
-                current_stripped = normalize_text(lines[index])
+                current = lines[index].rstrip()
+                current_stripped = normalize_text(current)
                 if not current_stripped.startswith("- "):
                     break
-                items.append(current_stripped[2:].strip())
+                if current[:1].isspace():
+                    items.append(current_stripped)
+                else:
+                    items.append(current_stripped[2:].strip())
                 index += 1
             blocks.append(Block(type="bullet_list", items=items))
             continue
@@ -405,12 +409,14 @@ def make_bullet_rows(
 ) -> list:
     rows: list = []
     for item in items:
-        text = item[2:].strip() if item.startswith("- ") else item
+        is_nested = item.startswith("- ")
+        text = item[2:].strip() if is_nested else item
         content = make_fill_line(text, styles) if "____" in text else paragraph(text, styles["body_compact"])
-        rows.append(
+        row_indent = indent + (16 if is_nested and marker == "[ ]" else 0)
+        row = (
             Table(
-                [[paragraph(marker, styles["marker"]), content]],
-                colWidths=[0.42 * inch, CONTENT_WIDTH - 20 - indent - 0.42 * inch],
+                [[paragraph("-" if is_nested else marker, styles["marker"]), content]],
+                colWidths=[0.42 * inch, CONTENT_WIDTH - 20 - row_indent - 0.42 * inch],
                 style=TableStyle(
                     [
                         ("LEFTPADDING", (0, 0), (-1, -1), 0),
@@ -422,6 +428,20 @@ def make_bullet_rows(
                 ),
             )
         )
+        if row_indent:
+            row = Table(
+                [[row]],
+                colWidths=[CONTENT_WIDTH - 20],
+                style=TableStyle(
+                    [
+                        ("LEFTPADDING", (0, 0), (-1, -1), row_indent),
+                        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+                        ("TOPPADDING", (0, 0), (-1, -1), 0),
+                        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+                    ]
+                ),
+            )
+        rows.append(row)
     return rows
 
 
@@ -431,24 +451,7 @@ def make_ordered_list(items: list[str], styles: dict[str, ParagraphStyle]) -> li
 
     for item in items:
         if item.startswith("- "):
-            nested_rows = make_bullet_rows([item], styles, marker="-", indent=16)
-            flowables.extend(
-                [
-                    Table(
-                        [[nested_row]],
-                        colWidths=[CONTENT_WIDTH - 30],
-                        style=TableStyle(
-                            [
-                                ("LEFTPADDING", (0, 0), (-1, -1), 16),
-                                ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-                                ("TOPPADDING", (0, 0), (-1, -1), 0),
-                                ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-                            ]
-                        ),
-                    )
-                    for nested_row in nested_rows
-                ]
-            )
+            flowables.extend(make_bullet_rows([item], styles, marker="-", indent=16))
             continue
 
         label = f"{counter}."
