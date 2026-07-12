@@ -14,3 +14,7 @@
   url: "/codex/"
   description: "Read the grounding promises and framework notes behind the toolkit."
   cta: "Read the Codex"
+- label: Shop
+  url: "/shop/"
+  description: "Get the Digital Card Kit, join the physical deck waitlist, or support the project."
+  cta: "Visit the Shop"
