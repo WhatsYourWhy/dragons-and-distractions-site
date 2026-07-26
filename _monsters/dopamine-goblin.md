@@ -24,9 +24,9 @@ start_here_ritual:
   url: "/spellbook/#dopamine-goblin-rituals"
   description: "Make a short work contract, pre-select the reward, and let the goblin earn its shiny."
 featured_printable:
-  label: "Single-Task Oath card"
+  label: "Reuse the Single-Task Oath card"
   url: "/site/printables/single-task-oath-card.html"
-  description: "A visible one-task contract that pairs well with reward binding and distraction blocking."
+  description: "Borrow the Task Hydra's one-task contract as the visible half of your Goblin deal."
 support_boundary: "Use these tools to add friction and structure, not to punish yourself for needing novelty. If compulsive use or self-control struggles are severe, bring in additional support."
 cta: "Boundaries guide"
 badges:
