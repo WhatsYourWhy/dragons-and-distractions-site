@@ -8,14 +8,13 @@ hero_intro: "Every adventurer needs supplies. Grab the card deck, support the qu
 
   <section class="field-guide__card">
     <h2>Digital Card Kit</h2>
-    <p class="field-guide__subhead">Printable monster cards, ritual cards, and a chooser spread for the moments when your brain needs a visible next step.</p>
+    <p class="field-guide__subhead">Printable monster cards and ritual cards for the moments when your brain needs a visible next step.</p>
     <p>The Digital Card Kit turns the Dragons &amp; Distractions toolkit into something you can print, cut, shuffle, tape to a wall, or keep beside your desk like a tiny goblin-control panel.</p>
     <p>Use it when the stuck feeling is real but vague. Pick the monster, grab the matching ritual, and take one small move before the day mutates again.</p>
     <p><strong>What's inside:</strong></p>
     <ul>
       <li>9 monster cards for common executive-function battles</li>
       <li>9 matching ritual cards with practical first moves</li>
-      <li>A chooser spread for finding the right monster when everything feels tangled</li>
       <li>Print-friendly pages for home use</li>
       <li>Desk, journal, and wall-friendly layouts</li>
       <li>Low-friction prompts for overwhelm, time blindness, shutdown, distraction, perfection loops, sensory overload, and burnout</li>
