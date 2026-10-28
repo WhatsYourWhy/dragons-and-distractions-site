@@ -31,7 +31,10 @@ GEM
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 2.0)
       kramdown (>= 1.17, < 3)
-      liquid (~> 4.0)
+      kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
+    kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
+  liquid (~> 4.0)
       mercenary (~> 0.3.3)
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
@@ -92,6 +95,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.10.0)
+  kramdown-parser-gfm (= 1.1.0)
   minima (= 2.5.1)
   http_parser.rb (~> 0.6.0)
   jekyll-optional-front-matter
