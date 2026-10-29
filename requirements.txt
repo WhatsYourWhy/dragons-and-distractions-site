@@ -1,5 +1,5 @@
 pypdf==6.21.2
 PyYAML==6.0.2
 pytest==9.0.3
-fpdf2==2.8.5
+fpdf2==2.8.8
 reportlab==4.4.1
