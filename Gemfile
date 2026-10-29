@@ -1,9 +1,12 @@
 source "https://rubygems.org"
 
-# GitHub Pages gem (includes Jekyll and many plugins)
-gem "github-pages", group: :jekyll_plugins
+# Keep the existing Jekyll/Minima versions without the unused remote-theme
+# downloader (github-pages pins jekyll-remote-theme to a vulnerable rubyzip).
+gem "jekyll", "= 3.10.0"
+gem "minima", "= 2.5.1"
+gem "kramdown-parser-gfm", "= 1.1.0"
 
-# Additional plugins required by _config.yml that may not be in github-pages
+# Plugins used by _config.yml
 gem "jekyll-optional-front-matter"
 gem "jekyll-sitemap"
 gem "jekyll-titles-from-headings"
